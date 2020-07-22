@@ -1,5 +1,8 @@
 package idm.control;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,6 +23,16 @@ public class CanController {
 	{  
 		return "home";  
 	}
+	
+	 @ModelAttribute("favoriteFrameworks")
+	   public List<String> getWebFrameworkList() {
+	      List<String> webFrameworkList = new ArrayList<String>();
+	      webFrameworkList.add("Java");
+	      webFrameworkList.add("Python");
+	      webFrameworkList.add("Angular");
+	      webFrameworkList.add("Maven");
+	      return webFrameworkList;
+	   }
 
 	@RequestMapping("/candidatura")    
 	public String showform(Model m){    
@@ -35,4 +48,6 @@ public class CanController {
 		dao.salva(can);    
 		return "canconf";//will derict to canconf   
 	}  
+	
+	
 }

@@ -6,9 +6,10 @@
 <html>  
 	<body>  
 	<p>La tua registrazione si è conclusa con successo. Controlla i tuoi dati.</p>  
-	Nome : ${Candidato.nome} <br>  
-	
-	<% /*
+	Nome : ${can.nome} <br>  
+	</body>  
+	</html> 
+	<% /* 
 	Last Name : ${reservation.lastName}  <br>
 	Gender: ${reservation.gender}  <br>  
 	Meals:   
@@ -19,5 +20,3 @@
 	</ul>  
 	Leaving From : ${reservation.cityFrom} <br>  
 	Going To : ${reservation.cityTo} */ %>
-	</body>  
-</html> 

@@ -23,6 +23,10 @@
           <td>telefono : </td>   
           <td><form:input path="telefono"  /></td>  
          </tr>
+          <tr>
+            <td><form:label path = "favoriteFrameworks">Favorite Web Frameworks</form:label></td>
+            <td><form:checkboxes items = "${webFrameworkList}" path = "favoriteFrameworks" /></td>       
+         </tr> 
          <tr>    
           <td>competenze :</td>    
           <td><form:textarea path="competenze" rows="5" cols="30" /></td>  

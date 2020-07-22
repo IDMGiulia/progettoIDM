@@ -7,6 +7,7 @@ public class Candidato {
 	private String email;
 	private String telefono;
 	private String competenze;
+	private String [] favoriteFrameworks;
 
 	public int getId() {
 		return id;
@@ -44,6 +45,12 @@ public class Candidato {
 	public void setCompetenze(String competenze) {
 		this.competenze = competenze;
 	}
+	public String[] getFavoriteFrameworks() {
+	      return favoriteFrameworks;
+	   }
+	   public void setFavoriteFrameworks(String[] favoriteFrameworks) {
+	      this.favoriteFrameworks = favoriteFrameworks;
+	   }
 
 
 }

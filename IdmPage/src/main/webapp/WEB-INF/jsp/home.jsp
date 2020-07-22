@@ -32,7 +32,7 @@
 		</button>
 		<div class="collapse navbar-collapse" id="collapsibleNavbar">
 			<ul class="navbar-nav">
-				<li class="nav-item"><a class="nav-link" href="#">Candidati</a>
+				<li class="nav-item"><a class="nav-link" href="candidatura">Candidati</a>
 				</li>
 			</ul>
 		</div>
@@ -45,11 +45,12 @@
 				<div id="demo" class="carousel slide" data-ride="carousel">
 
 					<!-- Indicators -->
+					
 					<ul class="carousel-indicators">
 						<li data-target="#demo" data-slide-to="0" class="active"></li>
 						<li data-target="#demo" data-slide-to="1"></li>
 						<li data-target="#demo" data-slide-to="2"></li>
-					</ul>
+					</ul> 
 
 					<!-- The slideshow -->
 					<div class="carousel-inner">
