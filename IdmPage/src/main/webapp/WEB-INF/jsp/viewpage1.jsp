@@ -3,6 +3,6 @@
 <!DOCTYPE html>
 <html>  
 <body>  
-<p>starï¿½ continuando sul mio ramo?</p>  
+<p>starò continuando sul mio ramo?</p>  
 </body>  
 </html>  
