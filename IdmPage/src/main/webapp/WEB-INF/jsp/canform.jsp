@@ -22,7 +22,11 @@
           <td>telefono : </td>   
           <td><form:input path="telefono"  /></td>  
          </tr>
+<<<<<<< HEAD
           <%/* <tr>
+=======
+         <tr>
+>>>>>>> af8a3d3ce31d39bcd865725b9079092a670ed451
             <td><form:label path = "favoriteFrameworks">Favorite Web Frameworks</form:label></td>
             <td><form:checkboxes items = "${webFrameworkList}" path = "favoriteFrameworks" /></td>       
          </tr> */%>
