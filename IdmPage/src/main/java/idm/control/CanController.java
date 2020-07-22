@@ -17,6 +17,12 @@ import idm.dao.CanDao;
 public class CanController {
 	 @Autowired    
 	 CanDao dao;
+	 
+	 @RequestMapping("/presentazione")  
+	    public String display()  
+	    {  
+	        return "viewpage1";  
+	    }
 	
 	 @RequestMapping("/candidatura")    
 	    public String showform(Model m){    
