@@ -5,6 +5,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
 import idm.beans.Candidato;
 import idm.dao.CanDao;
 
@@ -28,7 +30,7 @@ public class CanController {
 	/*It saves object into database. The @ModelAttribute puts request data  
 	 *  into model object. You need to mention RequestMethod.POST method   
 	 *  because default request is GET*/    
-	@RequestMapping(value="/savataggio")    
+	@RequestMapping(value="/save",method = RequestMethod.POST)    
 	public String save(@ModelAttribute("can") Candidato can){ 
 		System.out.println("entro qui");
 		dao.salva(can);    

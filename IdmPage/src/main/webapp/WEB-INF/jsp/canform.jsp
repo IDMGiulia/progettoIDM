@@ -5,7 +5,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>    
   
         <h1><b> Candidati! </b></h1>  
-       <form:form method="POST" action="salvataggio">    
+       <form:form method="POST" action="save">    
         <table >    
          <tr>    
           <td>Nome : </td>   

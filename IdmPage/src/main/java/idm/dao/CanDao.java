@@ -15,8 +15,7 @@ public class CanDao {
 		this.template = template;    
 	}    
 	public int salva(Candidato p){    
-		System.out.println("sono entrata");
-		String sql="insert into candidati(nome,cognome,email,telefono,competenze) values('"+p.getNome()+"',"+p.getCognome()+",'"+p.getEmail()+"',"+p.getTelefono()+",'"+p.getCompetenze()+"')";  
+		String sql="insert into candidati(nome,cognome,email,telefono,competenze) values('"+p.getNome()+"','"+p.getCognome()+"','"+p.getEmail()+"','"+p.getTelefono()+"','"+p.getCompetenze()+"')";  
 		return template.update(sql);    
 	}
 	/*

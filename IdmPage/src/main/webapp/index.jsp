@@ -4,3 +4,4 @@
 
 <!DOCTYPE html>
 <a href="presentazione">presentazione Accademy</a>
+<a href="candidatura">candidatura</a>  
