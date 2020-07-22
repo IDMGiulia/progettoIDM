@@ -42,8 +42,11 @@
 		<div class="row">
 			<div class="col-sm-4">
 				<h2>Sedi Formative</h2>
+				<div class="container">           
+				  <img src="/IdmPage/src/main/webapp/WEB-INF/jsp/roma.jpg" class="rounded" alt="Cinque Terre" width="304" height="236"> 
+				</div>
 				<div id="demo" class="carousel slide" data-ride="carousel">
-
+					
 					<!-- Indicators -->
 					
 					<ul class="carousel-indicators">
@@ -53,7 +56,7 @@
 					</ul> 
 
 					<!-- The slideshow -->
-					<div class="carousel-inner">
+					 <div class="carousel-inner">
 						<div class="carousel-item active">
 							<img src="torino.jpg" alt="Torino">
 						</div>
@@ -70,8 +73,9 @@
 						<span class="carousel-control-prev-icon"></span>
 					</a> <a class="carousel-control-next" href="#demo" data-slide="next">
 						<span class="carousel-control-next-icon"></span>
-					</a>
-
+					</a>/
+					 
+					 
 				</div>
 				<p>le sedi possibili sono Torino o Milano</p>
 				<br><br><br>

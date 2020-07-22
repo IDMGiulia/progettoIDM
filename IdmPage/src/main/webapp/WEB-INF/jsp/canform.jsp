@@ -2,10 +2,9 @@
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>    
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>    
-  
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>   
         <h1><b> Candidati! </b></h1>  
-       <form:form method="POST" action="save">    
+       <form:form method="POST" action="save" bgcolor="lime" >    
         <table >    
          <tr>    
           <td>Nome : </td>   
@@ -23,10 +22,10 @@
           <td>telefono : </td>   
           <td><form:input path="telefono"  /></td>  
          </tr>
-          <tr>
+          <%/* <tr>
             <td><form:label path = "favoriteFrameworks">Favorite Web Frameworks</form:label></td>
             <td><form:checkboxes items = "${webFrameworkList}" path = "favoriteFrameworks" /></td>       
-         </tr> 
+         </tr> */%>
          <tr>    
           <td>competenze :</td>    
           <td><form:textarea path="competenze" rows="5" cols="30" /></td>  
