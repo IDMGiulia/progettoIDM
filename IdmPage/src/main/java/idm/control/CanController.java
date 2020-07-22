@@ -5,17 +5,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-
 import idm.beans.Candidato;
 import idm.dao.CanDao;
-
-
-
-
-
-
-
-
 
 @Controller    
 public class CanController {
@@ -25,7 +16,7 @@ public class CanController {
 	@RequestMapping("/presentazione")  
 	public String display()  
 	{  
-		return "viewpage1";  
+		return "home";  
 	}
 
 	@RequestMapping("/candidatura")    
