@@ -7,6 +7,7 @@
 	<body>  
 	<p>La tua registrazione si è conclusa con successo. Controlla i tuoi dati.</p>  
 	Nome : ${can.nome} <br>  
+	
 	</body>  
 	</html> 
 	<% /* 
