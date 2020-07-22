@@ -13,9 +13,20 @@ public class CanDao {
 
 	public void setTemplate(JdbcTemplate template) {    
 		this.template = template;    
-	}    
+	}   
+	
+	public String gestisciComp (String [] framework) {
+		String elementoString="";
+		for ( String x: framework) {
+			elementoString=elementoString.concat(x);
+		}
+		return elementoString;
+	}
+		
+
 	public int salva(Candidato p){    
-		String sql="insert into candidati(nome,cognome,email,telefono,competenze) values('"+p.getNome()+"','"+p.getCognome()+"','"+p.getEmail()+"','"+p.getTelefono()+"','"+p.getCompetenze()+"')";  
+		String competenze= p.getCompetenze().concat(gestisciComp(p.getFavoriteFrameworks()));
+		String sql="insert into candidati(nome,cognome,email,telefono,competenze) values('"+p.getNome()+"','"+p.getCognome()+"','"+p.getEmail()+"','"+p.getTelefono()+"','"+competenze+"')";  
 		return template.update(sql);    
 	}
 	/*
