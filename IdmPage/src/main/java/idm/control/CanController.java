@@ -9,6 +9,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import idm.beans.Candidato;
 import idm.dao.CanDao;
 
+
+
+
+
+
+
+
+
 @Controller    
 public class CanController {
 	 @Autowired    
@@ -17,7 +25,7 @@ public class CanController {
 	 @RequestMapping("/presentazione")  
 	    public String display()  
 	    {  
-	        return "home";  
+	        return "viewpage1";  
 	    }
 	
 	 @RequestMapping("/candidatura")    
