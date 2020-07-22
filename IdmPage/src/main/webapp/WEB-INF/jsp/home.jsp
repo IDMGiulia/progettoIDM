@@ -51,21 +51,21 @@
       <hr class="d-sm-none">
     </div>
     <div class="col-sm-8">
-      <h2>Cos'è l'Accademy?</h2>
+      <h2>Cos&#39;e&#768; l'Accademy?</h2>
       <div class="fakeimg">Fake Image</div>
-      <p>L&#39;Academy è ideata con l&#39;obiettivo di introdurre metodologie qualificate e riconosciute dal mercato in un
-sistema di formazione e training adeguato alla flessibilità del mondo ICT.
-Con i nostri corsi avrai modo di formarti per divenire un “JUNIOR JAVA FULL STACK” ovvero consulente in
-ambito Java. Oltre alle conoscenze teoriche legate all’argomento Java, imparerai il comportamento da
-tenere presso la società cliente, principalmente realtà di System Integrator, la gestione ed organizzazione di
-progetti, le metodologie di sviluppo e organizzazione delle attività, la valutazione dei tempi di una attività,
-le figure coinvolte in un progetto IT e la gestione delle relazioni all’interno del gruppo di lavoro.
-I nostri corsi, della durata di 40 h/60 h teoriche vengono realizzati di presenza in aula, ed alternano
-momenti di formazione didattica frontale a momenti di formazione esperienziale. In questo modo potrai
-mettere in pratica quanto appreso durante la lezione attraverso esercizi pratici e il confronto con il docente
-ed i tuoi colleghi.
-Se sei una persona curiosa, dinamica e l’universo Java è la tua passione, l’Academy IDM Consulting è quello
-che fa per te!</p>
+      <p>L&#39;Academy 	e&#768; ideata con l&#39;obiettivo di introdurre metodologie qualificate e riconosciute dal mercato in un
+		sistema di formazione e training adeguato alla flessibilita&#768; del mondo ICT.
+		Con i nostri corsi avrai modo di formarti per divenire un &quot;JUNIOR JAVA FULL STACK&quot; ovvero consulente in
+		ambito Java. Oltre alle conoscenze teoriche legate all&#39;argomento Java, imparerai il comportamento da
+		tenere presso la societa&#768; cliente, principalmente realta&#768; di System Integrator, la gestione ed organizzazione di
+		progetti, le metodologie di sviluppo e organizzazione delle attivita&#768;, la valutazione dei tempi di una attivita&#768;,
+		le figure coinvolte in un progetto IT e la gestione delle relazioni all&#39;interno del gruppo di lavoro.
+		I nostri corsi, della durata di 40h / 60h teoriche vengono realizzati di presenza in aula, ed alternano
+		momenti di formazione didattica frontale a momenti di formazione esperienziale. In questo modo potrai
+		mettere in pratica quanto appreso durante la lezione attraverso esercizi pratici e il confronto con il docente
+		ed i tuoi colleghi.
+		Se sei una persona curiosa, dinamica e l&#39;universo Java e&#768; la tua passione, l’Academy IDM Consulting e&#768; quello
+		che fa per te!</p>
       <br>
       <h2>TITLE HEADING</h2>
       <h5>Title description, Sep 2, 2017</h5>
