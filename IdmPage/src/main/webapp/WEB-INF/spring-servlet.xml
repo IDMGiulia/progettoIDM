@@ -33,7 +33,7 @@
 		<property name="dataSource" ref="ds"></property>
 	</bean>
 
-	<bean id="dao" class="idm.dao.CanDao">
+	<!-- <bean id="dao" class="idm.dao.CanDao">
 		<property name="template" ref="jt"></property>
-	</bean>
+	</bean>  -->
 </beans>  
