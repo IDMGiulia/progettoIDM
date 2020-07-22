@@ -3,6 +3,6 @@
 <!DOCTYPE html>
 <html>  
 <body>  
-<p>Welcome to Spring MVC Tutorial</p>  
+<p>Prova di modifica</p>  
 </body>  
 </html>  
