@@ -21,7 +21,7 @@
 
 <div class="jumbotron text-center" style="margin-bottom:0">
   <h1>Accademy IDM</h1>
-  <p>Crea il tuo futuro insieme a noi!</p> 
+  <h2>Crea il tuo futuro insieme a noi!</h2>
 </div>
 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
@@ -44,30 +44,19 @@
       <h2>Sedi Formative</h2>
       <div class="fakeimg">Immagine Torino</div>
       <p>le sedi possibili sono Torino o Milano</p>
-      <h3>Some Links</h3>
+      <h3>Precedenti edizioni</h3>
       <p>Lorem ipsum dolor sit ame.</p>
       <ul class="nav nav-pills flex-column">
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Active</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Disabled</a>
-        </li>
       </ul>
       <hr class="d-sm-none">
     </div>
     <div class="col-sm-8">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description, Dec 7, 2017</h5>
+      <h2>Cos'è l'Accademy?</h2>
       <div class="fakeimg">Fake Image</div>
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+      <p>Academye ideata con obiettivo di introdurre metodologie qualificate e riconosciute dal mercato in un
+		sistema di formazione e training adeguato alla flessibilità del mondo ICT.
+		Con i nostri corsi avrai modo di formarti per divenire un “JUNIOR JAVA FULL STACK” ovvero consulente in
+		ambito Java. </p>
       <br>
       <h2>TITLE HEADING</h2>
       <h5>Title description, Sep 2, 2017</h5>
