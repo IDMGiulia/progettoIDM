@@ -32,7 +32,6 @@ public class CanController {
 	 *  because default request is GET*/    
 	@RequestMapping(value="/save",method = RequestMethod.POST)    
 	public String save(@ModelAttribute("can") Candidato can){ 
-		System.out.println("entro qui");
 		dao.salva(can);    
 		return "canconf";//will derict to canconf   
 	}  
