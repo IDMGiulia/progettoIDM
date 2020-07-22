@@ -15,28 +15,28 @@ import idm.dao.CanDao;
 
 @Controller    
 public class CanController {
-	 @Autowired    
-	 CanDao dao;
-	 
-	 @RequestMapping("/presentazione")  
-	    public String display()  
-	    {  
-	        return "viewpage1";  
-	    }
-	
-	 @RequestMapping("/candidatura")    
-	    public String showform(Model m){    
-	        m.addAttribute("command", new Candidato());  
-	        return "canform";   
-	    } 
-	 
-	    /*It saves object into database. The @ModelAttribute puts request data  
-	     *  into model object. You need to mention RequestMethod.POST method   
-	     *  because default request is GET*/    
-	    @RequestMapping(value="/savataggio")    
-	    public String save(@ModelAttribute("can") Candidato can){ 
-	    	System.out.println("entro qui");
-	        dao.salva(can);    
-	        return "canconf";//will derict to canconf   
-	    }  
+	@Autowired    
+	CanDao dao;
+
+	@RequestMapping("/presentazione")  
+	public String display()  
+	{  
+		return "viewpage1";  
+	}
+
+	@RequestMapping("/candidatura")    
+	public String showform(Model m){    
+		m.addAttribute("command", new Candidato());  
+		return "canform";   
+	} 
+
+	/*It saves object into database. The @ModelAttribute puts request data  
+	 *  into model object. You need to mention RequestMethod.POST method   
+	 *  because default request is GET*/    
+	@RequestMapping(value="/savataggio")    
+	public String save(@ModelAttribute("can") Candidato can){ 
+		System.out.println("entro qui");
+		dao.salva(can);    
+		return "canconf";//will derict to canconf   
+	}  
 }

@@ -7,7 +7,7 @@ public class Candidato {
 	private String email;
 	private String telefono;
 	private String competenze;
-	
+
 	public int getId() {
 		return id;
 	}
@@ -44,6 +44,6 @@ public class Candidato {
 	public void setCompetenze(String competenze) {
 		this.competenze = competenze;
 	}
-	
-	
+
+
 }
