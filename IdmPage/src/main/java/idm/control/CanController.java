@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import idm.beans.Candidato;
+import idm.beans.Competenze;
 import idm.dao.CanDao;
 
 @Controller    
@@ -24,7 +25,7 @@ public class CanController {
 		return "home";  
 	}
 	
-	 @ModelAttribute("favoriteFrameworks")
+	 @ModelAttribute("webFrameworkList")
 	   public List<String> getWebFrameworkList() {
 	      List<String> webFrameworkList = new ArrayList<String>();
 	      webFrameworkList.add("Java");
@@ -36,9 +37,17 @@ public class CanController {
 
 	@RequestMapping("/candidatura")    
 	public String showform(Model m){   
-		String [] favoriteFrameworks = new String[4];
 		Candidato candidato= new Candidato();
-		candidato.setFavoriteFrameworks(favoriteFrameworks);
+//		 List<Competenze> webFrameworkList = new ArrayList<Competenze>();
+//		 Competenze c = new Competenze();
+//		 c.setCompetenza("Java");
+//		 c.setTipo("base");
+//		 Competenze c1 = new Competenze();
+//		 c1.setCompetenza("Python");
+//		 c1.setTipo("base");
+//		 webFrameworkList.add(c);
+//		 webFrameworkList.add(c1);
+//	     candidato.setFavoriteFrameworks(webFrameworkList);
 		m.addAttribute("command", candidato);  
 		return "canform";   
 	} 

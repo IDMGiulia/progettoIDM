@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
+
+<title>IDM Academy</title>
 <meta charset="utf-8" />
 <meta name="viewport"
 	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-<title>Academy | IDM - We simplify your work</title>
 
 <link rel="alternate" type="application/rss+xml" title="RSS2.0"
 	href="https://www.idmconsulting.it/feed/" />
@@ -15,15 +15,11 @@
 
 <link rel="shortcut icon"
 	href="https://www.idmconsulting.it/wp-content/uploads/2016/01/idm-favicon.png" />
+
+<!-- This site is optimized with the Yoast SEO plugin v9.2.1 - https://yoast.com/wordpress/plugins/seo/ -->
 <meta name="description"
 	content="IDM Consulting ottimizza la gestione dei processi aziendali riducendone i costi. Propone soluzioni strategiche di archivio garantendo sicurezza, affidabilità e innovazione." />
 <link rel="canonical" href="https://www.idmconsulting.it/" />
-<meta property="og:locale" content="it_IT" />
-<meta property="og:type" content="website" />
-<meta property="og:title" content="IDM - We simplify your work" />
-<meta property="og:description"
-	content="IDM Consulting ottimizza la gestione dei processi aziendali riducendone i costi. Propone soluzioni strategiche di archivio garantendo sicurezza, affidabilità e innovazione." />
-<meta property="og:url" content="https://www.idmconsulting.it/" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:description"
 	content="IDM Consulting ottimizza la gestione dei processi aziendali riducendone i costi. Propone soluzioni strategiche di archivio garantendo sicurezza, affidabilità e innovazione." />
@@ -33,20 +29,6 @@
 <script type='application/ld+json'>{"@context":"https:\/\/schema.org","@type":"WebSite","@id":"#website","url":"https:\/\/www.idmconsulting.it\/","name":"","potentialAction":{"@type":"SearchAction","target":"https:\/\/www.idmconsulting.it\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
 <!-- / Yoast SEO plugin. -->
 
-<link rel='dns-prefetch' href='//fonts.googleapis.com' />
-<link rel='dns-prefetch' href='//s.w.org' />
-<link rel="alternate" type="application/rss+xml" title=" &raquo; Feed"
-	href="https://www.idmconsulting.it/feed/" />
-<link rel="alternate" type="application/rss+xml"
-	title=" &raquo; Feed dei commenti"
-	href="https://www.idmconsulting.it/comments/feed/" />
-<link rel="alternate" type="application/rss+xml"
-	title=" &raquo; Homepage Feed dei commenti"
-	href="https://www.idmconsulting.it/homepage/feed/" />
-<!-- This site uses the Google Analytics by MonsterInsights plugin v7.10.0 - Using Analytics tracking - https://www.monsterinsights.com/ -->
-<!-- Note: MonsterInsights is not currently configured on this site. The site owner needs to authenticate with Google Analytics in the MonsterInsights settings panel. -->
-<!-- No UA code set -->
-<!-- / Google Analytics by MonsterInsights -->
 <script type="text/javascript">
 			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.idmconsulting.it\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.15"}};
 			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
@@ -165,7 +147,7 @@ img.wp-smiley, img.emoji {
 	src='https://www.idmconsulting.it/wp-content/themes/dart/js/smoothscroll.js?ver=4.9.15'></script>
 <script type='text/javascript'>
 /* <![CDATA[ */
-var _EPYT_ = {"ajaxurl":"https:\/\/www.idmconsulting.it\/wp-admin\/admin-ajax.php","security":"5f590b1437","gallery_scrolloffset":"20","eppathtoscripts":"https:\/\/www.idmconsulting.it\/wp-content\/plugins\/youtube-embed-plus\/scripts\/","epresponsiveselector":"[\"iframe.__youtube_prefs_widget__\"]","epdovol":"1","version":"12.2","evselector":"iframe.__youtube_prefs__[src], iframe[src*=\"youtube.com\/embed\/\"], iframe[src*=\"youtube-nocookie.com\/embed\/\"]","ajax_compat":"","ytapi_load":"light","stopMobileBuffer":"1","vi_active":"","vi_js_posttypes":[]};
+var _EPYT_ = {"ajaxurl":"https:\/\/www.idmconsulting.it\/wp-admin\/admin-ajax.php","security":"5c2de9d53e","gallery_scrolloffset":"20","eppathtoscripts":"https:\/\/www.idmconsulting.it\/wp-content\/plugins\/youtube-embed-plus\/scripts\/","epresponsiveselector":"[\"iframe.__youtube_prefs_widget__\"]","epdovol":"1","version":"12.2","evselector":"iframe.__youtube_prefs__[src], iframe[src*=\"youtube.com\/embed\/\"], iframe[src*=\"youtube-nocookie.com\/embed\/\"]","ajax_compat":"","ytapi_load":"light","stopMobileBuffer":"1","vi_active":"","vi_js_posttypes":[]};
 /* ]]> */
 </script>
 <script type='text/javascript'
@@ -478,7 +460,6 @@ a:hover, a:focus, a:active, .footer-custom-menu li a:hover {
 }
 /****************** MAIN NAVIGATION *******************/
 nav ul.nav.navbar-nav {
-	background: #ffffff;
 	background-attachment: fixed;
 	background-position: right top;
 }
@@ -516,11 +497,27 @@ nav ul.navbar-nav ul.dropdown-menu>li>a {
 }
 
 h1 {
+	color: #20bcda;
 	font-weight: normal;
 }
 
 .inner-title-content h2 {
 	color: #20bcda;
+	font-weight: normal;
+}
+
+h2x {
+	color: #3C3C3C;
+	font-weight: 600;
+}
+
+h2 {
+	color: #3C3C3C;
+	font-weight: 400;
+}
+
+h3 {
+	color: #000000;
 	font-weight: normal;
 }
 </style>
@@ -558,358 +555,228 @@ h1 {
 	margin-top: 44px !important;
 }
 </style>
-
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<style>
+.fakeimg {
+	height: 200px;
+	background: #aaa;
+}
+</style>
 </head>
-<body
-	class="home page-template page-template-homepage-template page-template-homepage-template-php page page-id-1339 wpb-js-composer js-comp-ver-5.5.4 vc_responsive animsition"
-	data-spy="scroll" data-target="#header" data-offset="62">
-
-	<!-- Page Main Wrapper -->
-
-	<div class="body-inner ">
-
-		<!-- Header Container -->
-
-		<header id="header" class="navbar-fixed-top main-nav" role="banner">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<!-- Logo start -->
-						<div class="navbar-header">
-							<button type="button" class="navbar-toggle"
-								data-toggle="collapse" data-target=".navbar-collapse">
-								<span class="sr-only">Toggle navigation</span> <span
-									class="icon-bar"></span> <span class="icon-bar"></span> <span
-									class="icon-bar"></span>
-							</button>
-							<a class="navbar-brand" href="https://www.idmconsulting.it">
-								<img
-								src="https://www.idmconsulting.it/wp-content/uploads/2016/09/idm-consulting-logo-1.png"
-								alt="" class="img-responsive" />
-
-							</a>
-						</div>
-						<!--/ Logo end -->
-						<nav class="collapse navbar-collapse clearfix" role="navigation">
-							<!-- menu nella barra in alto -->
-							<ul id="main-menu" class="nav navbar-nav navbar-right">
-								<li id="menu-item-1175"
-									class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1175 dropdown"><a
-									href="#" class="dropdown-toggle" data-toggle="dropdown"
-									data-target="#chi-siamo">Chi Siamo<i
-										class="fa fa-caret-down"></i></a>
-									<ul class="dropdown-menu">
-										<li id="menu-item-1191"
-											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1191"><a
-											href="https://www.idmconsulting.it/chi-siamo/mission/"
-											class="page-scroll" data-target="#mission">Mission</a></li>
-										<li id="menu-item-1190"
-											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1190"><a
-											href="https://www.idmconsulting.it/chi-siamo/case-studies/"
-											class="page-scroll" data-target="#case-studies">Case
-												Studies</a></li>
-										<li id="menu-item-1189"
-											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1189"><a
-											href="https://www.idmconsulting.it/chi-siamo/partners/"
-											class="page-scroll" data-target="#partners">Partners</a></li>
-										<li id="menu-item-1445"
-											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1445"><a
-											href="https://www.idmconsulting.it/chi-siamo/contatti/"
-											class="page-scroll" data-target="#contatti">Contatti</a></li>
-									</ul></li>
-								<li id="menu-item-1163"
-									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1163 dropdown"><a
-									href="https://www.idmconsulting.it/soluzioni/"
-									class="dropdown-toggle" data-toggle="dropdown"
-									data-target="#soluzioni">Soluzioni<i
-										class="fa fa-caret-down"></i></a>
-									<ul class="dropdown-menu">
-										<li id="menu-item-1169"
-											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1169"><a
-											href="https://www.idmconsulting.it/soluzioni/enterprise-content-management/"
-											class="page-scroll"
-											data-target="#enterprise-content-management">Enterprise
-												Content Management</a></li>
-										<li id="menu-item-1165"
-											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1165"><a
-											href="https://www.idmconsulting.it/soluzioni/business-process-management/"
-											class="page-scroll"
-											data-target="#business-process-management">Business
-												Process Management</a></li>
-										<li id="menu-item-1168"
-											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1168"><a
-											href="https://www.idmconsulting.it/soluzioni/collaboration/"
-											class="page-scroll" data-target="#collaboration">Collaboration</a></li>
-										<li id="menu-item-1167"
-											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1167"><a
-											href="https://www.idmconsulting.it/soluzioni/corporate-portal/"
-											class="page-scroll" data-target="#corporate-portal">Corporate
-												Portal</a></li>
-										<li id="menu-item-1859"
-											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1859"><a
-											href="https://www.idmconsulting.it/soluzioni/system-management/"
-											class="page-scroll" data-target="#system-management">System
-												Management</a></li>
-										<li id="menu-item-1166"
-											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1166"><a
-											href="https://www.idmconsulting.it/soluzioni/business-intelligence/"
-											class="page-scroll" data-target="#business-intelligence">Business
-												Intelligence</a></li>
-									</ul></li>
-								<li id="menu-item-1170"
-									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1170 dropdown"><a
-									href="https://www.idmconsulting.it/software/"
-									class="dropdown-toggle" data-toggle="dropdown"
-									data-target="#software">Software<i class="fa fa-caret-down"></i></a>
-									<ul class="dropdown-menu">
-										<li id="menu-item-1599"
-											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1599"><a
-											href="https://www.idmconsulting.it/software/winder/"
-											class="page-scroll" data-target="#winder">WINDER</a></li>
-										<li id="menu-item-1606"
-											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1606"><a
-											href="https://www.idmconsulting.it/software/ibm/"
-											class="page-scroll" data-target="#ibm">IBM</a></li>
-										<li id="menu-item-1601"
-											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1601"><a
-											href="https://www.idmconsulting.it/software/kofax/"
-											class="page-scroll" data-target="#kofax">KOFAX</a></li>
-										<li id="menu-item-1605"
-											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1605"><a
-											href="https://www.idmconsulting.it/software/cvision/"
-											class="page-scroll" data-target="#cvision">CVISION</a></li>
-										<li id="menu-item-2469"
-											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2469"><a
-											href="https://www.idmconsulting.it/software/panda/"
-											class="page-scroll" data-target="#panda">PANDA</a></li>
-										<li id="menu-item-1600"
-											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1600"><a
-											href="https://www.idmconsulting.it/software/infocert/"
-											class="page-scroll" data-target="#infocert">INFOCERT</a></li>
-										<li id="menu-item-1602"
-											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1602"><a
-											href="https://www.idmconsulting.it/software/vmware/"
-											class="page-scroll" data-target="#vmware">VMWARE</a></li>
-									</ul></li>
-								<li id="menu-item-2160"
-									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2160 dropdown"><a
-									href="https://www.idmconsulting.it/servizi/"
-									class="dropdown-toggle" data-toggle="dropdown"
-									data-target="#servizi">Servizi<i class="fa fa-caret-down"></i></a>
-									<ul class="dropdown-menu">
-										<li id="menu-item-1401"
-											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1401"><a
-											href="https://www.idmconsulting.it/progetti/"
-											class="page-scroll" data-target="#progetti">Progetti</a></li>
-										<li id="menu-item-1398"
-											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1398"><a
-											href="https://www.idmconsulting.it/consulenza/"
-											class="page-scroll" data-target="#consulenza">Consulenza</a></li>
-										<li id="menu-item-1399"
-											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1399"><a
-											href="https://www.idmconsulting.it/formazione/"
-											class="page-scroll" data-target="#formazione">Formazione</a></li>
-										<li id="menu-item-1400"
-											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1400"><a
-											href="https://www.idmconsulting.it/assistenza/"
-											class="page-scroll" data-target="#assistenza">Assistenza</a></li>
-										<li id="menu-item-1173"
-											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1173"><a
-											href="https://www.idmconsulting.it/supporto/"
-											class="page-scroll" data-target="#supporto">Supporto</a></li>
-									</ul></li>
-								<li id="menu-item-1317"
-									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1317"><a
-									href="https://www.idmconsulting.it/news/" class="page-scroll"
-									data-target="#news">News</a></li>
-								<li id="menu-item-2161"
-									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2161"><a
-									href="https://www.idmconsulting.it/chi-siamo/offerte-di-lavoro/"
-									class="page-scroll" data-target="#lavora-con-noi">Lavora
-										con noi</a></li>
-							</ul>
-						</nav>
-					</div>
-				</div>
-			</div>
-		</header>
-
-		<!-- Sezione Centrale della Pagina -->
-
+<body>
+	<header id="header" class="navbar-fixed-top main-nav" role="banner">
 		<div class="pageHead"></div>
-		<section class="main-wrapper pagecustom-1339">
-			<div class="container" style="margin-top: 30px">
-				<h1 style="text-align: center">
-					<img src="https://ecoautoparts.com.ar/assets/img/cv.jpg" alt="">
-				</h1>
+		<div class="row">
+			<div class="col-md-12">
+				<!-- Logo start -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse"
+						data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span> <span
+							class="icon-bar"></span> <span class="icon-bar"></span> <span
+							class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="https://www.idmconsulting.it"> <img
+						src="https://www.idmconsulting.it/wp-content/uploads/2016/09/idm-consulting-logo-1.png"
+						alt="" class="img-responsive" />
 
-				<!-- TESTO PRESENTAZIONE IDM ACADEMY -->
+					</a>
+				</div>
+				<!--/ Logo end -->
 
-				<div style="text-align: center">
-					<h1>Academy IDM</h1>
-					<h5 style="text-align: left">Ideata con l&#39 obiettivo di introdurre metodologie
-						qualificate e riconosciute dal mercato in un sistema di formazione
-						e training adeguato alla flessibilit&#224 del mondo ICT.<br>
-						Con i nostri corsi avrai modo di formarti per divenire un &quot;JUNIOR
-						JAVA FULL STACK&quot; ovvero consulente in ambito Java.<br>
-						Oltre alle conoscenze teoriche legate all&#39; argomento Java, imparerai il
-						comportamento da tenere presso la societ&#224 cliente,
-						principalmente realt&#224 di System Integrator, la gestione ed
-						organizzazione di progetti, le metodologie di sviluppo e
-						organizzazione delle attivit&#224, la valutazione dei tempi di una
-						attivit&#224, le figure coinvolte in un progetto IT e la gestione
-						delle relazioni all&#39 interno del gruppo di lavoro.<br>
-						I nostri corsi, della durata di 40h / 60h teoriche vengono realizzati di
-						presenza in aula, ed alternano momenti di formazione didattica
-						frontale a momenti di formazione esperienziale.<br>
-						In questo modo potrai mettere in pratica quanto appreso durante la lezione
-						attraverso esercizi pratici e il confronto con il docente ed i
-						tuoi colleghi.<br> 
-						Se sei una persona curiosa, dinamica e l&#39
-						universo Java &#232; la tua passione, l&#39 Academy di IDM
-						Consulting &#232 quello che fa per te!</h5>
-					<br>
-				</div>
+			</div>
+		</div>
+	</header>
 
-				<div class="row">
-				<div class="col-sm-4">
-				<div style="text-align: center">
-				
-					<h2><b>Sedi Formative</b></h2>
-					<div class="container">
-					<!-- INSERIRE IL CAROSELLO -->
-					</div>
+	<div class="container" style="margin-top: 30px">
+		<div class="jumbotron text-center" style="margin-bottom: 0">
+			<br>
+			<h1>Academy IDM</h1>
+			<h2x>Crea il tuo futuro insieme a noi!</h2x>
+			
+		</div>
+		<div class="row">
+			<div class="col-sm-4">
+				<br>
+				<h2>Sedi Formative</h2>
+				<div class="container">           
 				</div>
-					<p>Le sedi possibili sono Torino o Milano</p>
-				</div>
-				
-				<div class="col-sm-4">
-				<div style="text-align: center">
-				
-					<h2><b>Edizioni</b></h2>
-					<h3>Prossima Edizione:</h3>
-					<h5>Novembre 2020</h5>
-					<a href="candidatura">candidati per la prossima Accademy</a>
+				<div id="demo" class="carousel slide" data-ride="carousel">
 					
-					<h3>Edizioni Precedenti</h3>
-					<h5>Gennaio 2018 - Novembre 2018</h5>
-					<h5>Marzo 2019 - Settembre 2019</h5>
-					<h5>Giugno 2020 - in corso</h5>
-					</div>
-					<ul class="nav nav-pills flex-column">
-					</ul>
-					<hr class="d-sm-none">
-				</div>
-				
-				<div class="col-sm-4">
-				<div style="text-align: center">
-				
-					<h2><b>Recensioni</b></h2>
-					<h5>Title description, Sep 2, 2017</h5>
-
-					<p>Some text..</p>
-					<p>Sunt in culpa qui officia deserunt mollit anim id est
-						laborum consectetur adipiscing elit, sed do eiusmod tempor
-						incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-						veniam, quis nostrud exercitation ullamco.</p>
+					<!-- The slideshow -->
+					 <div class="carousel-inner">
+						<div class="carousel-item active">
+							<img
+								src="http://www.italia.it/uploads/RTEmagicC_torino_x_copertina_mod_02.jpg.jpg"
+								alt="">
 						</div>
+						<div class="carousel-item">
+							<img
+								src="http://www.allergicamente.it/wp-content/uploads/2019/08/MILANO.jpg"
+								alt="">
+						</div>
+					</div>
+
+					<!-- Left and right controls -->
+					<a class="carousel-control-prev" href="#demo" data-slide="prev">
+						<span class="carousel-control-prev-icon"></span>
+					</a> <a class="carousel-control-next" href="#demo" data-slide="next">
+						<span class="carousel-control-next-icon"></span>
+					</a>
+					 
+					 
 				</div>
-				</div>
+				<p>Le sedi possibili sono Torino o Milano</p>
+				<br> <br>
+				<h3>Prossima Edizione:</h3>
+				<h5>Novembre 2020</h5>
+				<br>
+				<h3>Edizioni Precedenti</h3>
+				<h5>Gennaio 2018 - Novembre 2018</h5>
+				<h5>Marzo 2019 - Settembre 2019</h5>
+				<h5>Giugno 2020 - in corso</h5>
+				<ul class="nav nav-pills flex-column">
+				</ul>
+				<hr class="d-sm-none">
 			</div>
-		</section>
-
-		<!-- Sezione Footer della Pagina -->
-
-		<section id="footer-wrapper">
-			<footer id="footer">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-4">
-							<div class="footer-widget">
-								<div class="textwidget">
-									<div class="footer-about-us">
-										<img
-											src="https://www.idmconsulting.it/wp-content/uploads/2015/04/IDM-consulting-footer.png"
-											alt="about">
-										<p class="desc">
-											Via Accademia Albertina, 37 - 10123 Torino (TO)<br> T.
-											+39 011 777 0435<br> Via Copernico, 38 - 20125 - Milano
-											(MI)<br> T: +39 02 8725 9096<br> e-mail:
-											info@idmconsulting.it<br> PEC:
-											idmconsulting@legalmail.it<br>
-										<p class="footer-social">
-											<a href="https://twitter.com/idmconsulting"><i
-												class="fa fa-twitter"></i></a><a
-												href="https://www.facebook.com/IdmConsulting/?fref=ts"><i
-												class="fa fa-facebook"></i></a>
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="footer-widget">
-								<div class="textwidget">
-									<div style="padding-top: 65px;">
-										<p>
-											P.I. 07808140011<br> Numero REA 922825<br> Capitale
-											sociale interamente versato: &#8364 70.000,00<br> IDM
-											Consulting Srl &#232 una azienda certificata<br> UNI EN
-											ISO 9001:2015<br> Copyright &copy 2018-2019-2020 All
-											rights reserved .
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+			<div class="col-sm-8">
+				<br>
+				<img
+								src="https://www.idmconsulting.it/wp-content/uploads/2018/10/formazione-informatica-torino.jpg"
+								alt="">
+				<div class="jumbotron text-center" style="margin-bottom: 0">
+					<h2x>Cos&#39;e&#768; l'Academy?</h2x>
 				</div>
-			</footer>
-			<div class="footer-bottom">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-5 wow fadeInLeft">
-							<ul id="menu-idm" class="footer-bottom-menu">
-								<li id="menu-item-540"
-									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-540"><a
-									href="https://www.idmconsulting.it/chi-siamo/offerte-di-lavoro/">Lavora
-										con noi</a></li>
-								<li id="menu-item-539"
-									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-539"><a
-									href="https://www.idmconsulting.it/chi-siamo/contatti/">Contatti</a></li>
-								<li id="menu-item-1050"
-									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1050"><a
-									href="https://www.idmconsulting.it/cookie-policy/">Cookie
-										Policy</a></li>
-								<li id="menu-item-2502"
-									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2502"><a
-									href="https://www.idmconsulting.it/policy/">Policy</a></li>
-							</ul>
-						</div>
-						<div class="col-md-2">
-							<a id="back-to-top" href="#" class="scroll-up back-to-top"
-								role="button" title="Click to return to the top of page"
-								data-toggle="tooltip" data-placement="left"> <img
-								class="wow flipInY"
-								src="https://www.idmconsulting.it/wp-content/uploads/2015/04/IDM-footer2.png"
-								alt="to top">
-							</a>
-						</div>
-						<div class="col-md-5 wow fadeInRight">
-							<div class="copyright-info"></div>
-						</div>
-					</div>
-				</div>
+				<br>
+				<h5>L&#39;Academy e&#768; ideata con l&#39;obiettivo di
+					introdurre metodologie qualificate e riconosciute dal mercato in un
+					sistema di formazione e training adeguato alla flessibilita&#768;
+					del mondo ICT. Con i nostri corsi avrai modo di formarti per
+					divenire un &quot;JUNIOR JAVA FULL STACK&quot; ovvero consulente in
+					ambito Java. Oltre alle conoscenze teoriche legate
+					all&#39;argomento Java, imparerai il comportamento da tenere presso
+					la societa&#768; cliente, principalmente realta&#768; di System
+					Integrator, la gestione ed organizzazione di progetti, le
+					metodologie di sviluppo e organizzazione delle attivita&#768;, la
+					valutazione dei tempi di una attivita&#768;, le figure coinvolte in
+					un progetto IT e la gestione delle relazioni all&#39;interno del
+					gruppo di lavoro. I nostri corsi, della durata di 40h / 60h
+					teoriche vengono realizzati di presenza in aula, ed alternano
+					momenti di formazione didattica frontale a momenti di formazione
+					esperienziale. In questo modo potrai mettere in pratica quanto
+					appreso durante la lezione attraverso esercizi pratici e il
+					confronto con il docente ed i tuoi colleghi. Se sei una persona
+					curiosa, dinamica e l&#39;universo Java e&#768; la tua passione,
+					l’Academy IDM Consulting e&#768; quello che fa per te!</h5>
+				<br>
+				<a href="candidatura">candidatura</a>
+				<h2>TITLE HEADING</h2>
+				<h5>Title description, Sep 2, 2017</h5>
+				<div class="fakeimg">Fake Image</div>
+				<p>Some text..</p>
+				<p>Sunt in culpa qui officia deserunt mollit anim id est laborum
+					consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+					labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+					nostrud exercitation ullamco.</p>
 			</div>
-		</section>
+		</div>
 	</div>
 
-	<!--body inner-->
 
-	<script type="text/javascript">
+	<section id="footer-wrapper">
+		<footer id="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="footer-widget">
+							<div class="textwidget">
+								<div class="footer-about-us">
+									<img
+										src="https://www.idmconsulting.it/wp-content/uploads/2015/04/IDM-consulting-footer.png"
+										alt="about">
+									<p class="desc">
+										Via Accademia Albertina, 37 - 10123 Torino (TO)<br> T.
+										+39 011 777 0435<br> Via Copernico, 38 - 20125 – Milano
+										(MI)<br> T: + 39 02 8725 9096<br> e-mail:
+										info@idmconsulting.it<br> PEC: idmconsulting@legalmail.it<br>
+
+
+
+
+
+										<p class="footer-social">
+										<a href="https://twitter.com/idmconsulting"><i
+											class="fa fa-twitter"></i></a><a
+											href="https://www.facebook.com/IdmConsulting/?fref=ts"><i
+											class="fa fa-facebook"></i></a>
+									</p>
+</div>
+							</div>
+		</div>
+					</div>
+					<div class="col-md-4">
+						<div class="footer-widget">			<div class="textwidget">
+								<div style="padding-top:65px;">
+<p>P.I. 07808140011<br>
+Numero REA 922825<br>
+Capitale sociale interamente versato: € 70.000,00<br>
+IDM Consulting Srl è una azienda certificata<br>
+UNI EN ISO 9001:2015<br>
+Copyright © 2018-2019-2020 All rights reserved .</p>
+								</div>
+							</div>
+		</div>
+					</div>								</div>
+			</div>	
+		</footer>
+		<div class="footer-bottom">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-5 wow fadeInLeft">
+					<ul id="menu-idm" class="footer-bottom-menu">
+							<li id="menu-item-540"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-540"><a
+								href="https://www.idmconsulting.it/chi-siamo/offerte-di-lavoro/">Lavora con noi</a></li>
+<li id="menu-item-539"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-539"><a
+								href="https://www.idmconsulting.it/chi-siamo/contatti/">Contatti</a></li>
+<li id="menu-item-1050"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1050"><a
+								href="https://www.idmconsulting.it/cookie-policy/">Cookie Policy</a></li>
+<li id="menu-item-2502"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2502"><a
+								href="https://www.idmconsulting.it/policy/">Policy</a></li>
+</ul>				</div>
+				<div class="col-md-2">
+											<a id="back-to-top" href="#" class="scroll-up back-to-top"
+							role="button" title="Click to return to the top of page"
+							data-toggle="tooltip" data-placement="left">
+							<img class="wow flipInY"
+							src="https://www.idmconsulting.it/wp-content/uploads/2015/04/IDM-footer2.png"
+							alt="to top">
+						</a>
+									</div>
+				<div class="col-md-5 wow fadeInRight">
+					<div class="copyright-info">
+											</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+</div> <!--boddy inner-->
+		
+		<script type="text/javascript">
 		jQuery( 'body' ).wrapInner( '<div class="animsition"></div>' ).removeClass( 'animsition' );
 		</script>
-	<script type="text/javascript">
+					<script type="text/javascript">
 				function revslider_showDoubleJqueryError(sliderID) {
 					var errorMessage = "Revolution Slider Error: You have some jquery.js library include that comes after the revolution files js include.";
 					errorMessage += "<br> This includes make eliminates the revolution slider libraries, and make it not work.";
@@ -918,68 +785,67 @@ h1 {
 					errorMessage = "<span style='font-size:16px;color:#BC0C06;'>" + errorMessage + "</span>";
 						jQuery(sliderID).show().html(errorMessage);
 				}
-			
-</script>
-	<script type='text/javascript'>
+			</script>
+			<link rel='stylesheet' id='prettyphoto-css'  href='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/lib/prettyphoto/css/prettyPhoto.min.css?ver=5.5.4' type='text/css' media='all' />
+<link rel='stylesheet' id='vc_pageable_owl-carousel-css-css'  href='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/lib/owl-carousel2-dist/assets/owl.min.css?ver=5.5.4' type='text/css' media='all' />
+<link rel='stylesheet' id='animate-css-css'  href='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/lib/bower/animate-css/animate.min.css?ver=5.5.4' type='text/css' media='all' />
+<script type='text/javascript'>
 /* <![CDATA[ */
 var wpcf7 = {"apiSettings":{"root":"https:\/\/www.idmconsulting.it\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
 /* ]]> */
 </script>
-	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.1'></script>
-	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-content/plugins/responsive-accordion-and-collapse/js/bootstrap.js?ver=4.9.15'></script>
-	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-content/plugins/responsive-accordion-and-collapse/js/accordion.js?ver=4.9.15'></script>
-	<script type='text/javascript'>
+<script type='text/javascript' src='https://www.idmconsulting.it/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.1'></script>
+<script type='text/javascript' src='https://www.idmconsulting.it/wp-content/plugins/responsive-accordion-and-collapse/js/bootstrap.js?ver=4.9.15'></script>
+<script type='text/javascript' src='https://www.idmconsulting.it/wp-content/plugins/responsive-accordion-and-collapse/js/accordion.js?ver=4.9.15'></script>
+<script type='text/javascript'>
 /* <![CDATA[ */
 var wpcf7_redirect_forms = {"2541":{"page_id":"2558","external_url":"","use_external_url":"","open_in_new_tab":"","http_build_query":"","http_build_query_selectively":"","http_build_query_selectively_fields":"","delay_redirect":"0","after_sent_script":"","thankyou_page_url":"https:\/\/www.idmconsulting.it\/landing-page-webinar-download\/"},"1356":{"page_id":"","external_url":"","use_external_url":"","open_in_new_tab":"","http_build_query":"","http_build_query_selectively":"","http_build_query_selectively_fields":"","delay_redirect":"","after_sent_script":"","thankyou_page_url":""}};
 /* ]]> */
 </script>
+<script type='text/javascript'
+											src='https://www.idmconsulting.it/wp-content/plugins/wpcf7-redirect/js/wpcf7-redirect-script.js'></script>
+										<script type='text/javascript'
+											src='https://www.idmconsulting.it/wp-content/themes/dart/js/jquery.countdown.js?ver=3.2'></script>
 	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-content/plugins/wpcf7-redirect/js/wpcf7-redirect-script.js'></script>
+											src='https://www.idmconsulting.it/wp-content/themes/dart/js/jquery.easing.1.3.js?ver=3.2'></script>
 	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-content/themes/dart/js/jquery.countdown.js?ver=3.2'></script>
+											src='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/lib/bower/isotope/dist/isotope.pkgd.min.js?ver=5.5.4'></script>
 	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-content/themes/dart/js/jquery.easing.1.3.js?ver=3.2'></script>
+											src='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/lib/bower/flexslider/jquery.flexslider-min.js?ver=5.5.4'></script>
 	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/lib/bower/isotope/dist/isotope.pkgd.min.js?ver=5.5.4'></script>
+											src='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/lib/prettyphoto/js/jquery.prettyPhoto.min.js?ver=5.5.4'></script>
 	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/lib/bower/flexslider/jquery.flexslider-min.js?ver=5.5.4'></script>
+											src='https://www.idmconsulting.it/wp-content/themes/dart/js/jquery.waypoints.min.js?ver=3.2'></script>
 	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/lib/prettyphoto/js/jquery.prettyPhoto.min.js?ver=5.5.4'></script>
+											src='https://www.idmconsulting.it/wp-content/themes/dart/js/jquery.easy-pie-chart.js?ver=3.2'></script>
 	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-content/themes/dart/js/jquery.waypoints.min.js?ver=3.2'></script>
+											src='https://www.idmconsulting.it/wp-content/themes/dart/js/jflickrfeed.min.js?ver=3.2'></script>
 	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-content/themes/dart/js/jquery.easy-pie-chart.js?ver=3.2'></script>
+											src='https://www.idmconsulting.it/wp-content/themes/dart/js/jquery.validate.min.js?ver=3.2'></script>
 	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-content/themes/dart/js/jflickrfeed.min.js?ver=3.2'></script>
+											src='https://www.idmconsulting.it/wp-content/themes/dart/js/jquery.stellar.min.js?ver=3.2'></script>
 	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-content/themes/dart/js/jquery.validate.min.js?ver=3.2'></script>
+											src='https://www.idmconsulting.it/wp-content/themes/dart/js/jquery.mb.YTPlayer.js?ver=3.2'></script>
 	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-content/themes/dart/js/jquery.stellar.min.js?ver=3.2'></script>
+											src='https://www.idmconsulting.it/wp-content/themes/dart/js/custom.js?ver=3.2'></script>
 	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-content/themes/dart/js/jquery.mb.YTPlayer.js?ver=3.2'></script>
+											src='https://www.idmconsulting.it/wp-content/plugins/youtube-embed-plus/scripts/fitvids.min.js?ver=12.2'></script>
 	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-content/themes/dart/js/custom.js?ver=3.2'></script>
+											src='https://www.idmconsulting.it/wp-includes/js/wp-embed.min.js?ver=4.9.15'></script>
 	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-content/plugins/youtube-embed-plus/scripts/fitvids.min.js?ver=12.2'></script>
+											src='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=5.5.4'></script>
 	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-includes/js/wp-embed.min.js?ver=4.9.15'></script>
+											src='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/lib/bower/twbs-pagination/jquery.twbsPagination.min.js?ver=5.5.4'></script>
 	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=5.5.4'></script>
+											src='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/lib/owl-carousel2-dist/owl.carousel.min.js?ver=5.5.4'></script>
 	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/lib/bower/twbs-pagination/jquery.twbsPagination.min.js?ver=5.5.4'></script>
+											src='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/lib/bower/imagesloaded/imagesloaded.pkgd.min.js?ver=4.9.15'></script>
 	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/lib/owl-carousel2-dist/owl.carousel.min.js?ver=5.5.4'></script>
+											src='https://www.idmconsulting.it/wp-includes/js/underscore.min.js?ver=1.8.3'></script>
 	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/lib/bower/imagesloaded/imagesloaded.pkgd.min.js?ver=4.9.15'></script>
+											src='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/lib/waypoints/waypoints.min.js?ver=5.5.4'></script>
 	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-includes/js/underscore.min.js?ver=1.8.3'></script>
-	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/lib/waypoints/waypoints.min.js?ver=5.5.4'></script>
-	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/js/dist/vc_grid.min.js?ver=5.5.4'></script>
+											src='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/js/dist/vc_grid.min.js?ver=5.5.4'></script>
 
-</body>
+									</body>
 </html>

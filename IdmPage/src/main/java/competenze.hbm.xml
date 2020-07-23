@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD//EN"  
+ "http://hibernate.org/hibernate-mapping-3.0.dtd">  
+  
+ <hibernate-mapping>  
+  <class name="idm.beans.Competenze" table="competenze">  
+    <id name="competenza">  
+     <generator class="assigned"></generator>  
+    </id>      
+    <property name="tipo"></property>  
+	</class>  
+</hibernate-mapping>    

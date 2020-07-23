@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD//EN"  
+ "http://hibernate.org/hibernate-mapping-3.0.dtd">  
+  
+ <hibernate-mapping>  
+  <class name="idm.beans.Candidato" table="candidati">  
+    <id name="id">  
+     <generator class="increment"></generator>  
+    </id>      
+    <property name="nome"></property>  
+    <property name="cognome"></property>
+    <property name="email"></property>   
+    <property name="telefono"></property>   
+    <property name="competenze"></property>        
+    <list name="favoriteFrameworks" table="can_comp" fetch="select" cascade="all">  
+            <key column="can_id" />  
+               <index column="type"></index>   
+            <many-to-many class="idm.beans.Competenze" column="competenze" />  
+    </list> 
+	</class>  
+</hibernate-mapping>    

@@ -29,5 +29,17 @@
 			<attribute name="owner.project.facets" value="jst.web"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="/Java_Gemesio/lib/hibernate-core-5.2.17.Final.jar"/>
+	<classpathentry kind="lib" path="/Java_Gemesio/lib/hibernate-c3p0-5.2.17.Final.jar"/>
+	<classpathentry kind="lib" path="/Java_Gemesio/lib/hibernate-commons-annotations-5.0.1.Final.jar"/>
+	<classpathentry kind="lib" path="/Java_Gemesio/lib/hibernate-ehcache-5.2.17.Final.jar"/>
+	<classpathentry kind="lib" path="/Java_Gemesio/lib/hibernate-envers-5.2.17.Final.jar"/>
+	<classpathentry kind="lib" path="/Java_Gemesio/lib/hibernate-infinispan-5.2.17.Final-tests.jar"/>
+	<classpathentry kind="lib" path="/Java_Gemesio/lib/hibernate-infinispan-5.2.17.Final.jar"/>
+	<classpathentry kind="lib" path="/Java_Gemesio/lib/hibernate-jpa-2.1-api-1.0.0.Final.jar"/>
+	<classpathentry kind="lib" path="/Java_Gemesio/lib/hibernate-jpamodelgen-5.2.17.Final.jar"/>
+	<classpathentry kind="lib" path="/Java_Gemesio/lib/hibernate-osgi-5.2.17.Final.jar"/>
+	<classpathentry kind="lib" path="/Java_Gemesio/lib/hibernate-proxool-5.2.17.Final.jar"/>
+	<classpathentry kind="lib" path="/Java_Gemesio/lib/hibernate-spatial-5.2.17.Final.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

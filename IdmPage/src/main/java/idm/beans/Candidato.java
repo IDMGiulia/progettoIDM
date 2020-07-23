@@ -1,5 +1,7 @@
 package idm.beans;
 
+import java.util.List;
+
 public class Candidato {
 	private int id;
 	private String nome;
@@ -7,8 +9,15 @@ public class Candidato {
 	private String email;
 	private String telefono;
 	private String competenze;
-	private String [] favoriteFrameworks;
-
+	private List<Competenze> favoriteFrameworks;
+	private String [] comp; 
+	
+	public String[] getComp() {
+		return comp;
+	}
+	public void setComp(String[] comp) {
+		this.comp = comp;
+	}
 	public int getId() {
 		return id;
 	}
@@ -45,12 +54,15 @@ public class Candidato {
 	public void setCompetenze(String competenze) {
 		this.competenze = competenze;
 	}
-	public String[] getFavoriteFrameworks() {
-	      return favoriteFrameworks;
-	   }
-	   public void setFavoriteFrameworks(String[] favoriteFrameworks) {
-	      this.favoriteFrameworks = favoriteFrameworks;
-	   }
+	
+	public List<Competenze> getFavoriteFrameworks() {
+		return favoriteFrameworks;
+	}
+	public void setFavoriteFrameworks(List<Competenze> favoriteFrameworks) {
+		this.favoriteFrameworks = favoriteFrameworks;
+	}
+	
+	
 
 
 }
