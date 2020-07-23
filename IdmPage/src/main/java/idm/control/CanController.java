@@ -35,8 +35,11 @@ public class CanController {
 	   }
 
 	@RequestMapping("/candidatura")    
-	public String showform(Model m){    
-		m.addAttribute("command", new Candidato());  
+	public String showform(Model m){   
+		String [] favoriteFrameworks = new String[4];
+		Candidato candidato= new Candidato();
+		candidato.setFavoriteFrameworks(favoriteFrameworks);
+		m.addAttribute("command", candidato);  
 		return "canform";   
 	} 
 
