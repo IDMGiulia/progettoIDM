@@ -1,0 +1,26 @@
+// Sprint 1
+
+CREATE TABLE `springmvc`.`candidati` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nome` varchar(45) DEFAULT NULL,
+  `cognome` varchar(45) DEFAULT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  `telefono` varchar(45) DEFAULT NULL,
+  `competenze` varchar(4000) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) 
+
+
+CREATE TABLE `springmvc`.`competenze` (
+  `compenza` VARCHAR(45) NOT NULL,
+  `canId` INT NOT NULL,
+  `tipo` VARCHAR(45) NULL,
+  PRIMARY KEY (`compenza`));
+  
+  
+CREATE TABLE `springmvc`.`can_comp` (
+  `idcan` INT NOT NULL,
+  `competenza` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`idcan`, `competenza`));
+  
+  
