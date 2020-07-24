@@ -24,12 +24,12 @@
           <td><form:input path="telefono"  /></td>  
          </tr>
          <tr>
-              <td><form:label path = "comp">Favorite Web Frameworks</form:label></td>
+              <td><form:label path = "comp">Principale Competenze</form:label></td>
               <td><form:checkboxes items = "${webFrameworkList}" path = "comp" /></td>       
          </tr> 
          
          <tr>    
-          <td>competenze :</td>    
+          <td>altre competenze: inserirle separate da virgola</td>    
           <td><form:textarea path="competenze" rows="5" cols="30" /></td>  
          </tr>   
          <tr>    
