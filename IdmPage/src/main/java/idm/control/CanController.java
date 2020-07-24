@@ -29,25 +29,17 @@ public class CanController {
 	   public List<String> getWebFrameworkList() {
 	      List<String> webFrameworkList = new ArrayList<String>();
 	      webFrameworkList.add("Java");
-	      webFrameworkList.add("Python");
-	      webFrameworkList.add("Angular");
-	      webFrameworkList.add("Maven");
+	      webFrameworkList.add(".Net");
+	      webFrameworkList.add("Javascript");
+	      webFrameworkList.add("Angular JS");
+	      webFrameworkList.add("HTML");
+	      webFrameworkList.add("CSS");
 	      return webFrameworkList;
 	   }
 
 	@RequestMapping("/candidatura")    
 	public String showform(Model m){   
 		Candidato candidato= new Candidato();
-//		 List<Competenze> webFrameworkList = new ArrayList<Competenze>();
-//		 Competenze c = new Competenze();
-//		 c.setCompetenza("Java");
-//		 c.setTipo("base");
-//		 Competenze c1 = new Competenze();
-//		 c1.setCompetenza("Python");
-//		 c1.setTipo("base");
-//		 webFrameworkList.add(c);
-//		 webFrameworkList.add(c1);
-//	     candidato.setFavoriteFrameworks(webFrameworkList);
 		m.addAttribute("command", candidato);  
 		return "canform";   
 	} 
