@@ -24,6 +24,11 @@ public class CanController {
 	{  
 		return "home";  
 	}
+	@RequestMapping("/formregistrazione")  
+	public String form()  
+	{  
+		return "formregistrazione";  
+	}
 	
 	 @ModelAttribute("webFrameworkList")
 	   public List<String> getWebFrameworkList() {
