@@ -6,10 +6,12 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
+
+
 public class Candidato {
 	private int id;
 	
-	@NotEmpty(message="il nome non può essere nullo")
+	@NotEmpty()
 	@Size(max=50)
 	private String nome;
 	@NotEmpty(message="il nome non può essere nullo")

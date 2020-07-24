@@ -291,13 +291,16 @@ background
 
 
 
+
 :
 
 
 
 
 
+
 #1d70b7
+
 
 
 
@@ -310,13 +313,17 @@ background
 
 
 
+
 :
 
 
 
+ 
+
 
 
 rgba
+
 
 
 
@@ -342,15 +349,7 @@ rgba
 
 
 
-
-
-
-
 .9
-
-
-
-
 
 
 
@@ -362,11 +361,7 @@ rgba
 
 
 
-
-
 		
-
-
 
 
 
@@ -521,7 +516,6 @@ nav ul.navbar-nav ul.dropdown-menu>li>a {
 }
 
 h1 {
-	color: #20bcda;
 	font-weight: normal;
 }
 
@@ -565,43 +559,6 @@ h1 {
 }
 </style>
 
-<!-- STILE BOTTONE CANDIDATURA -->
-<style>
-.button {
-	border: none;
-	color: white;
-	padding: 16px 32px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-	margin: 4px 2px;
-	transition-duration: 0.4s;
-	cursor: pointer;
-}
-
-.button2 {
-	background-color: #DCF0FF;
-	color: black;
-	border: 2px solid #428BCA;
-}
-
-.button2:hover {
-	background-color: #428BCA;
-	color: white;
-	border: 2px solid #DCF0FF;
-}
-</style>
-
-<!-- STILE CAROSELLO -->
-<style>
-  /* Make the image fully responsive */
-  .carousel-inner img {
-    width: 100%;
-    height: 100%;
-  }
-</style>
-
 </head>
 <body
 	class="home page-template page-template-homepage-template page-template-homepage-template-php page page-id-1339 wpb-js-composer js-comp-ver-5.5.4 vc_responsive animsition"
@@ -612,6 +569,7 @@ h1 {
 	<div class="body-inner ">
 
 		<!-- Header Container -->
+
 		<header id="header" class="navbar-fixed-top main-nav" role="banner">
 			<div class="container">
 				<div class="row">
@@ -777,6 +735,8 @@ h1 {
 		</header>
 
 		<!-- Sezione Centrale della Pagina -->
+
+		<div class="pageHead"></div>
 		<section class="main-wrapper pagecustom-1339">
 			<div class="container" style="margin-top: 30px">
 				<h1 style="text-align: center">
@@ -784,6 +744,7 @@ h1 {
 				</h1>
 
 				<!-- TESTO PRESENTAZIONE IDM ACADEMY -->
+
 				<div style="text-align: center">
 					<h1>Academy IDM</h1>
 					<h5 style="text-align: left">Ideata con l&#39 obiettivo di introdurre metodologie
@@ -810,130 +771,55 @@ h1 {
 					<br>
 				</div>
 
-				<!-- PARTE CON LE 3 DIVERSIFICAZIONI DI STRUTTURA E DESCRIZIONE -->
 				<div class="row">
+				<div class="col-sm-4">
+				<div style="text-align: center">
 				
-					<!-- COLONNA PROGRAMMA DEI CORSI -->
-					<div class="col-sm-4">
-						<div style="text-align: center">
-
-							<h2>
-								<b>Programma dei Corsi Formativi</b>
-							</h2>
-
-							<p> &#10004; Java Enterprise Edition<br>
-								&#10004; Corso Sviluppo Microsoft<br>
-								&#10004; Sviluppo Javascript e AngularJS<br>
-								&#10004; J2EE back-end end Developer
-							</p>
-							
-							<p> Per ulteriori informazioni candidati<br>
-								premendo il pulsante qui sotto.<br>
-								Ti aspettiamo!
-							</p>
-							
-						</div>
-						<ul class="nav nav-pills flex-column">
-						</ul>
-						<hr class="d-sm-none">
+					<h2><b>Sedi Formative</b></h2>
+					<div class="container">
+					<!-- INSERIRE IL CAROSELLO -->
 					</div>
-					
-					<!-- COLONNA EDIZIONI -->
-					<div class="col-sm-4">
-						<div style="text-align: center">
-
-							<h2>
-								<b>Edizioni</b>
-							</h2>
-							<h3>Prossima Edizione:</h3>
-							<a href="candidatura"> 
-								<font color="428BCA"> 
-									<b>&#10148; Novembre 2020</b>
-								</font>
-							</a>
-
-							<h3>Edizioni Precedenti</h3>
-							<p> Gennaio 2018 - Novembre 2018<br>
-								Marzo 2019 - Settembre 2019<br>
-								Giugno 2020 - in corso</p>
-						</div>
-						<ul class="nav nav-pills flex-column">
-						</ul>
-						<hr class="d-sm-none">
-					</div>
-					
-					<!-- COLONNA SEDI FORMATIVE -->
-					<div class="col-sm-4">
-						<div style="text-align: center">
-
-							<h2>
-								<b>Sedi Formative</b>
-							</h2>
-							<img
-								src="https://www.trenitalia.com/content/dam/tcom/immagini/trenitalia-img/trasporto-regionale/416x359/416x359_OD--Reg-Piemonte_Milano-Torino.jpg"
-								alt="">
-						</div>
-						<p>Le sedi possibili sono Torino o Milano</p>
-						<ul class="nav nav-pills flex-column">
-						</ul>
-						<hr class="d-sm-none">
-					</div>
-
+				</div>
+					<p>Le sedi possibili sono Torino o Milano</p>
 				</div>
 				
-				<!-- SEZIONE RECENSIONI -->
-				<div class="row">
-					<div style="text-align: center">
-					<h2>
-						<b>Cosa ne pensano gli ex-alunni</b>
-					</h2>
-					</div>
-					<!-- RECENSIONE 1 -->
-					<div class="col-sm-4">
-						<div style="text-align: center">
-
-							<h4>Francesco Carlino</h4>
-
-							<p> Esperienza fantastica, corso completo<br> 
-								e ho iniziato subito a lavorare.</p>
-						</div>
-					</div>
+				<div class="col-sm-4">
+				<div style="text-align: center">
+				
+					<h2><b>Edizioni</b></h2>
+					<h3>Prossima Edizione:</h3>
+					<h5>Novembre 2020</h5>
+					<a href="candidatura">candidati per la prossima Accademy</a>
 					
-					<!-- RECENSIONE 2 -->
-					<div class="col-sm-4">
-						<div style="text-align: center">
-
-							<h4>Giacomo Francardo</h4>
-
-							<p> Il corso ha una struttura molto completa e con 
-								possibilit&#224 di modificare l&#39 ordine dei vari argomenti.</p>
-						</div>
+					<h3>Edizioni Precedenti</h3>
+					<h5>Gennaio 2018 - Novembre 2018</h5>
+					<h5>Marzo 2019 - Settembre 2019</h5>
+					<h5>Giugno 2020 - in corso</h5>
 					</div>
-					
-					<!-- RECENSIONE 3 -->
-					<div class="col-sm-4">
-						<div style="text-align: center">
-
-							<h4>Angela Ternico</h4>
-
-							<p> Avevo appena finito l'universit&#224 e questa esperienza mi<br>
-								ha permesso di far crescere e migliorare le mie abilit&#224.<br>
-								La consiglio vivamente.</p>
-						</div>
-					</div>
+					<ul class="nav nav-pills flex-column">
+					</ul>
+					<hr class="d-sm-none">
 				</div>
+				
+				<div class="col-sm-4">
+				<div style="text-align: center">
+				
+					<h2><b>Recensioni</b></h2>
+					<h5>Title description, Sep 2, 2017</h5>
 
-				<!-- BOTTONE CANDIDATURA -->
-				<div>
-					<div style="text-align: center">
-						<a href="candidatura" class="button button2">Candidati per il nuovo Corso</a>
-					</div>
+					<p>Some text..</p>
+					<p>Sunt in culpa qui officia deserunt mollit anim id est
+						laborum consectetur adipiscing elit, sed do eiusmod tempor
+						incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+						veniam, quis nostrud exercitation ullamco.</p>
+						</div>
 				</div>
-			
+				</div>
 			</div>
 		</section>
 
 		<!-- Sezione Footer della Pagina -->
+
 		<section id="footer-wrapper">
 			<footer id="footer">
 				<div class="container">
