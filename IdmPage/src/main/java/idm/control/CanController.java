@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import idm.beans.Candidato;
-import idm.beans.Competenze;
 import idm.dao.CanDao;
 
 @Controller    

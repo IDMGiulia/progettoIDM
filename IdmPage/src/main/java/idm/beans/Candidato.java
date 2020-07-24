@@ -25,7 +25,16 @@ public class Candidato {
 	private String competenze;
 	private List<Competenze> favoriteFrameworks;
 	private String [] comp; 
+	private String luogoCandidatura;
 	
+	
+	
+	public String getLuogoCandidatura() {
+		return luogoCandidatura;
+	}
+	public void setLuogoCandidatura(String luogoCandidatura) {
+		this.luogoCandidatura = luogoCandidatura;
+	}
 	public String[] getComp() {
 		return comp;
 	}

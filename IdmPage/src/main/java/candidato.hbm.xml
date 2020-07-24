@@ -12,6 +12,7 @@
     <property name="cognome"></property>
     <property name="email"></property>   
     <property name="telefono"></property>   
+    <property name="luogoCandidatura"></property> 
     <property name="competenze"></property>        
     <list name="favoriteFrameworks" table="can_comp" fetch="select" cascade="all">  
             <key column="can_id" />  

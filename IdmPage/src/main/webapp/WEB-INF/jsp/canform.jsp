@@ -31,10 +31,17 @@
            <form:errors path="email" cssClass="error"/> 
          </tr>
          <tr>
-              <td><form:label path = "comp">Principale Competenze</form:label></td>
-              <td><form:checkboxes items = "${webFrameworkList}" path = "comp" /></td>       
+          <td><form:label path = "luogoCandidatura">luogo di candidatura</form:label></td>
+               <td>
+                  <form:radiobutton path = "luogoCandidatura" value = "T" label = "Torino" />
+                  <form:radiobutton path = "luogoCandidatura" value = "M" label = "Milano" />
+                  <form:radiobutton path = "luogoCandidatura" value = "E" label = "Entrambi" />
+               </td>
+         </tr>    
+         <tr>
+           <td><form:label path = "comp">Principale Competenze</form:label></td>
+           <td><form:checkboxes items = "${webFrameworkList}" path = "comp" /></td>       
          </tr> 
-         
          <tr>    
           <td>altre competenze: inserirle separate da virgola</td>    
           <td><form:textarea path="competenze" rows="5" cols="30" /></td>  
