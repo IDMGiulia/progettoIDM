@@ -36,4 +36,9 @@
 	<bean id="dao" class="idm.dao.CanDao">
 		<property name="template" ref="jt"></property>
 	</bean>  
+	     <!-- bind your messages.properties -->
+	<bean class="org.springframework.context.support.ResourceBundleMessageSource"
+		id="messageSource">
+		<property name="basename" value="messages" />
+	</bean>
 </beans>  

@@ -3,9 +3,12 @@ package idm.control;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;  
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -37,8 +40,8 @@ public class CanController {
 	      webFrameworkList.add(".Net");
 	      webFrameworkList.add("Javascript");
 	      webFrameworkList.add("Angular JS");
-	      webFrameworkList.add("HTML");
-	      webFrameworkList.add("CSS");
+	      webFrameworkList.add("HTML/CSS");
+	      webFrameworkList.add("SQL");
 	      return webFrameworkList;
 	   }
 
@@ -53,7 +56,12 @@ public class CanController {
 	 *  into model object. You need to mention RequestMethod.POST method   
 	 *  because default request is GET*/    
 	@RequestMapping(value="/save",method = RequestMethod.POST)    
-	public String save(@ModelAttribute("can") Candidato can){ 
+	public String save(@Valid @ModelAttribute("can") Candidato can, BindingResult br){ 
+		System.out.println(br.hasErrors());
+		if(br.hasErrors())  
+        {  
+            return "canform";  
+        }
 		dao.salva(can);    
 		return "canconf";//will derict to canconf   
 	}  
