@@ -35,10 +35,12 @@ public class CanDao {
 		SessionFactory factory = meta.getSessionFactoryBuilder().build();  
 		int num = candidato.getComp().length;
 		String[] comp = candidato.getComp();
+		String descrizione=candidato.getCompetenze();
 		List<Competenze> webFrameworkList = new ArrayList<Competenze>();
 		for (int i=0; i<num;i++) {
 			Session session1 = factory.openSession();  
 			Transaction t1 = session1.beginTransaction();
+			descrizione=descrizione.concat(", "+comp[i]);
 			Competenze competenze= new Competenze();
 			competenze.setCompetenza(comp[i]);
 			competenze.setTipo("base");
@@ -47,6 +49,7 @@ public class CanDao {
 			t1.commit();
 			session1.close();
 		}
+		candidato.setCompetenze(descrizione);
 		candidato.setFavoriteFrameworks(webFrameworkList);
 		Session session = factory.openSession();  
 		Transaction t = session.beginTransaction();
