@@ -28,7 +28,7 @@
          <tr>    
           <td>telefono : </td>   
           <td><form:input path="telefono"  /></td>  
-           <form:errors path="email" cssClass="error"/> 
+           <form:errors path="telefono" cssClass="error"/> 
          </tr>
          <tr>
           <td><form:label path = "luogoCandidatura">luogo di candidatura</form:label></td>

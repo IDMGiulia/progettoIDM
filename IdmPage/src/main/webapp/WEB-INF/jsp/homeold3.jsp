@@ -44,6 +44,8 @@
 	title=" &raquo; Homepage Feed dei commenti"
 	href="https://www.idmconsulting.it/homepage/feed/" />
 <!-- This site uses the Google Analytics by MonsterInsights plugin v7.10.0 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+<!-- Note: MonsterInsights is not currently configured on this site. The site owner needs to authenticate with Google Analytics in the MonsterInsights settings panel. -->
+<!-- No UA code set -->
 <!-- / Google Analytics by MonsterInsights -->
 <script type="text/javascript">
 			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.idmconsulting.it\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.15"}};
@@ -141,9 +143,6 @@ img.wp-smiley, img.emoji {
 <link rel='stylesheet' id='page-transition-animsition-css'
 	href='https://www.idmconsulting.it/wp-content/plugins/page-transition/css/animsition.min.css?ver=1.3'
 	type='text/css' media='all' />
-	
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <script type='text/javascript'
 	src='https://www.idmconsulting.it/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
 <script type='text/javascript'
@@ -585,36 +584,25 @@ h1 {
 	background-color: #DCF0FF;
 	color: black;
 	border: 2px solid #428BCA;
-	border-radius: 8px;
 }
 
 .button2:hover {
 	background-color: #428BCA;
 	color: white;
 	border: 2px solid #DCF0FF;
-	border-radius: 8px;
 }
 </style>
 
 <!-- STILE CAROSELLO -->
 <style>
-/* Make the image fully responsive */
-.carousel-inner img {
-	width: 100%;
-	height: 100%;
-	border-radius: 8px;
-}
-
-.carousel-inner>.item{
-   /*disables white flash*/
-   -webkit-transition: -webkit-transform .5s ease-in-out;
-   -o-transition: -o-transform .5s ease-in-out;
-   transition: transform .5s ease-in-out;
-}
+  /* Make the image fully responsive */
+  .carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
 </style>
 
 </head>
-
 <body
 	class="home page-template page-template-homepage-template page-template-homepage-template-php page page-id-1339 wpb-js-composer js-comp-ver-5.5.4 vc_responsive animsition"
 	data-spy="scroll" data-target="#header" data-offset="62">
@@ -830,30 +818,20 @@ h1 {
 						<div style="text-align: center">
 
 							<h2>
-								<b>Programma dei Nostri Corsi Formativi</b>
+								<b>Programma dei Corsi Formativi</b>
 							</h2>
 
-							<div class="row">
-								<div class="col-sm-2"></div>
-								
-								<div class="col-sm-8">
-									<div style="text-align: left">
-										<p>
-											&#10004; Java Enterprise Edition<br> &#10004; Corso
-											Sviluppo Microsoft<br> &#10004; Sviluppo Javascript e
-											AngularJS<br> &#10004; J2EE back-end end Developer
-										</p>
-									</div>
-								</div>
-							
-								<div class="col-sm-2"></div>
-							</div>
-
-							<p>
-								Per ulteriori informazioni candidati<br> premendo il
-								pulsante qui sotto.<br> Ti aspettiamo!
+							<p> &#10004; Java Enterprise Edition<br>
+								&#10004; Corso Sviluppo Microsoft<br>
+								&#10004; Sviluppo Javascript e AngularJS<br>
+								&#10004; J2EE back-end end Developer
 							</p>
-
+							
+							<p> Per ulteriori informazioni candidati<br>
+								premendo il pulsante qui sotto.<br>
+								Ti aspettiamo!
+							</p>
+							
 						</div>
 						<ul class="nav nav-pills flex-column">
 						</ul>
@@ -891,27 +869,11 @@ h1 {
 							<h2>
 								<b>Sedi Formative</b>
 							</h2>
-							
-							<!-- CAROSELLO -->
-							<div class="container">
-
-								<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
-
-									<!-- IMMAGINI DEL CAROSELLO -->
-									<div class="carousel-inner">
-										<div class="item active">
-											<img src="https://dpv87w1mllzh1.cloudfront.net/alitalia_discover/attachments/data/000/000/476/original/torino-royal-torino-1920x1080.jpg?1519196650" alt="Torino">
-										</div>
-										<div class="item">
-											<img src="https://www.ignas.com/it/blog/wp-content/uploads/bfi_thumb/milano-duomo-6qup8lim192hqxovtp5e3f6mluy8cv4ibc8slx5xflc.jpg" alt="Milano">
-										</div>
-									</div>
-
-								</div>
-							</div>
-							<p>Le sedi disponibili sono Torino o Milano</p>
+							<img
+								src="https://www.trenitalia.com/content/dam/tcom/immagini/trenitalia-img/trasporto-regionale/416x359/416x359_OD--Reg-Piemonte_Milano-Torino.jpg"
+								alt="">
 						</div>
-						
+						<p>Le sedi possibili sono Torino o Milano</p>
 						<ul class="nav nav-pills flex-column">
 						</ul>
 						<hr class="d-sm-none">
@@ -984,7 +946,7 @@ h1 {
 											src="https://www.idmconsulting.it/wp-content/uploads/2015/04/IDM-consulting-footer.png"
 											alt="about">
 										<p class="desc">
-											Via Accademia Albertina, 37 - 10123 - Torino (TO)<br> T.
+											Via Accademia Albertina, 37 - 10123 Torino (TO)<br> T.
 											+39 011 777 0435<br> Via Copernico, 38 - 20125 - Milano
 											(MI)<br> T: +39 02 8725 9096<br> e-mail:
 											info@idmconsulting.it<br> PEC:
@@ -1132,7 +1094,6 @@ var wpcf7_redirect_forms = {"2541":{"page_id":"2558","external_url":"","use_exte
 		src='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/lib/waypoints/waypoints.min.js?ver=5.5.4'></script>
 	<script type='text/javascript'
 		src='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/js/dist/vc_grid.min.js?ver=5.5.4'></script>
-	
-</body>
 
+</body>
 </html>

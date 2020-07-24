@@ -58,11 +58,16 @@ public class CanController {
 	@RequestMapping(value="/save",method = RequestMethod.POST)    
 	public String save(@Valid @ModelAttribute("can") Candidato can, BindingResult br){ 
 		System.out.println(br.hasErrors());
-		if(br.hasErrors())  
-        {  
-            return "canform";  
-        }
-		dao.salva(can);    
+		try {
+			if(br.hasErrors())  
+	        {  
+	            return "canform";  
+	        }
+			dao.salva(can); 
+		} catch (Exception e) {
+			return "inde";  
+		}
+		   
 		return "canconf";//will derict to canconf   
 	}  
 	
