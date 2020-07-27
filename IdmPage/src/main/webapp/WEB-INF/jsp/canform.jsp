@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
-<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%> 
+ 
 <html lang="it">
 <head>
 <meta charset="utf-8" />
@@ -597,68 +598,20 @@ h1 {
 }
 </style>
 
+<!-- STILE CAROSELLO -->
 <style>
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: black;
+/* Make the image fully responsive */
+.carousel-inner img {
+	width: 100%;
+	height: 100%;
+	border-radius: 8px;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-/* Add padding to containers */
-.container {
-  padding: 16px;
-  background-color: white;
-}
-
-/* Full-width input fields */
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  display: inline-block;
-  border: none;
-  background: #f1f1f1;
-}
-
-input[type=text]:focus, input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
-}
-
-/* Overwrite default styles of hr */
-hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
-}
-
-/* Set a style for the submit button */
-.registerbtn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
-}
-
-.registerbtn:hover {
-  opacity: 1;
-}
-
-/* Add a blue text color to links */
-a {
-  color: dodgerblue;
-}
-
-/* Set a grey background color and center the text of the "sign in" section */
-.signin {
-  background-color: #f1f1f1;
-  text-align: center;
+.carousel-inner>.item{
+   /*disables white flash*/
+   -webkit-transition: -webkit-transform .5s ease-in-out;
+   -o-transition: -o-transform .5s ease-in-out;
+   transition: transform .5s ease-in-out;
 }
 </style>
 
@@ -839,61 +792,89 @@ a {
 
 		<!-- Sezione Centrale della Pagina -->
 		<section class="main-wrapper pagecustom-1339">
+			<div class="container" style="margin-top: 50px">
 
-			<br><br><br><br>
-
-			<div class="container" style="margin-top: 30px">
-				<form:form method="POST" action="save">
-					<tr>
-						<td>Nome: </td>
-						<td><form:input path="nome" /></td>
-						<form:errors path="nome" cssClass="error" />
-					</tr>
-					<tr>
-						<td>Cognome: </td>
-						<td><form:input path="cognome" /></td>
-						<form:errors path="cognome" cssClass="error" />
-					</tr>
-					<tr>
-						<td>Email: </td>
-						<td><form:input path="email" /></td>
-						<form:errors path="email" cssClass="error" />
-					</tr>
-					<tr>
-						<td>Telefono: </td>
-						<td><form:input path="telefono" /></td>
-						<form:errors path="telefono" cssClass="error" />
-					</tr>
-					<tr>
-						<td><form:label path="luogoCandidatura">Luogo di candidatura preferito: </form:label></td>
-						<td><form:radiobutton path="luogoCandidatura" value="T" label="Torino" />
-							<form:radiobutton path="luogoCandidatura" value="M" label="Milano" /> 
-							<form:radiobutton path="luogoCandidatura" value="E" label="Entrambi" />
-						</td>
-					</tr>
-					<br>
-					<tr>
-						<td><form:label path="comp">Competenze principali: </form:label></td>
-						<td><form:checkboxes items="${webFrameworkList}" path="comp" /></td>
-					</tr>
-					<br>
-					<tr>
-						<td>Altre competenze: (inserirle separate da virgola)</td>
-						<td><form:textarea path="competenze" rows="5" cols="30" /></td>
-					</tr>
-					<tr>
-
-						<td></td>
-
-						<div>
-							<div style="text-align: center">
-								<a class="button button2" input type="submit"
-									value="Invia la tua candidatura"></a>
+				<div style="text-align: center">
+					<h1>Candidati!</h1>
+					<h4>Completa il form con i tuoi dati per candidarti alla
+						prossima Academy di IDM</h4>
+				</div>
+				<div id="div_cv" class="row text-left">
+					<form:form method="POST" action="save">
+						<div class="col-md-12">
+							<legend
+								style="border-bottom: 1px solid #999; margin-top: 30px; margin-bottom: 20px">
+								Dati Personali</legend>
+						</div>
+						<div class="col-md-4"></div>
+						<div class="col-md-4">
+							<div class="form-group">
+								<label class="form-label">Nome *</label>
+								<form:input path="nome" class="form-control form-control-sm"
+									required="" placeholder="Inserisci il tuo nome" />
+								<form:errors path="nome" cssClass="error" />
 							</div>
 						</div>
-						</td>
-					</tr>
-				</form:form>
+
+						<div class="col-md-4">
+							<div class="form-group">
+								<label class="form-label">Cognome *</label>
+								<form:input path="cognome" class="form-control form-control-sm"
+									required="" placeholder="Inserisci il tuo cognome" />
+								<form:errors path="cognome" cssClass="error" />
+							</div>
+						</div>
+
+						<div class="col-md-4"></div>
+						<div class="col-md-4">
+							<div class="form-group">
+								<label class="form-label">Email *</label>
+								<form:input path="email" class="form-control form-control-sm"
+									required="" placeholder="Inserisci la tua email" />
+								<form:errors path="email" cssClass="error" />
+							</div>
+						</div>
+
+						<div class="col-md-4">
+							<div class="form-group">
+								<label class="form-label">Telefono *</label>
+								<form:input path="telefono" class="form-control form-control-sm"
+									required="" placeholder="Inserisci il tuo numero di telefono" />
+								<form:errors path="telefono" cssClass="error" />
+							</div>
+						</div>
+
+						<div class="col-md-4">
+							<form:label path="luogoCandidatura">Luogo di candidatura preferito: *</form:label>
+						</div>
+						<div class="col-md-2"></div>
+						<div class="col-md-4">
+							<form:radiobutton path="luogoCandidatura" value="T"
+								label="Torino" />
+							<form:radiobutton path="luogoCandidatura" value="M"
+								label="Milano" />
+							<form:radiobutton path="luogoCandidatura" value="E"
+								label="Entrambi" />
+						</div>
+						<div class="col-md-2"></div>
+						<br>
+						<div class="col-md-12">
+							<legend
+								style="border-bottom: 1px solid #999; margin-bottom: 20px">Competenze</legend>
+						</div>
+						<tr>
+							<td><form:label path="comp">Competenze principali: </form:label></td>
+							<td><form:checkboxes items="${webFrameworkList}" path="comp" /></td>
+						</tr>
+						<br>
+						<td>Altre competenze: (inserirle separate da virgola)</td>
+						<td><form:textarea path="competenze" rows="5" cols="30" /></td>
+
+						<div>
+							<input type="submit" value="Save" />
+						</div>
+					</form:form>
+				</div>
 			</div>
 		</section>
 
