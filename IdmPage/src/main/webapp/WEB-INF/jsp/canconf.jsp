@@ -693,10 +693,21 @@ h1 {
 		<section class="main-wrapper pagecustom-1339">
 			<div class="container" style="margin-top: 30px">
 				<br> <br> <br> <br> <br> <br>
+				<!-- RIEPILOGO DEI DATI -->
 				<p>La tua registrazione si è conclusa con successo. Controlla i
-					tuoi dati.</p>
+					tuoi dati:</p>
 				Nome : ${can.nome} <br>
+				Cognome : ${can.cognome} <br>
+				Email : ${can.email} <br>
+				Telefono : ${can.telefono} <br>
+				Competenze : ${can.competenze} <br>
 			</div>
+			<!-- BOTTONE PER TORNARE ALLA HOME -->
+				<div>
+					<div style="text-align: center">
+						<a href="presentazione" class="button button2"> Home </a>
+					</div>
+				</div>
 		</section>
 
 		<!-- Sezione Footer della Pagina -->
