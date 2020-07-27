@@ -56,17 +56,39 @@ public class CanController {
 	 *  into model object. You need to mention RequestMethod.POST method   
 	 *  because default request is GET*/    
 	@RequestMapping(value="/save",method = RequestMethod.POST)    
-	public String save(@Valid @ModelAttribute("can") Candidato can, BindingResult br){ 
-		System.out.println(br.hasErrors());
-		try {
-			if(br.hasErrors())  
-	        {  
-	            return "canform";  
-	        }
-			dao.salva(can); 
-		} catch (Exception e) {
-			return "inde";  
-		}
+	public String save(@Valid @ModelAttribute("can") Candidato can, BindingResult result){ 
+		
+		boolean error = false;
+	     
+	    System.out.println(can); //Verifying if information is same as input by user
+	     
+	    if(can.getNome().isEmpty()){
+	        result.rejectValue("nome", "errore");
+	        error = true;
+	    }
+	     
+	    if(can.getCognome().isEmpty()){
+	        result.rejectValue("cognome","er");
+	        error = true;
+	    }
+	     
+	    if(can.getEmail().isEmpty()){
+	        result.rejectValue("email", "errore");
+	        error = true;
+	    }
+	     
+	    if(error) {
+	        return "canform";
+	    }
+		//try {
+//			if(br.hasErrors())  
+//	        {  
+//	            return "canform";  
+//	        }
+	    dao.salva(can); 
+		//} //catch (Exception e) {
+			//return "inde";  
+		//}
 		   
 		return "canconf";//will derict to canconf   
 	}  
