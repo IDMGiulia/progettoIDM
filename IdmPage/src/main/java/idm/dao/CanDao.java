@@ -35,14 +35,12 @@ public class CanDao {
 		List<Competenze> webFrameworkList = new ArrayList<Competenze>();
 		for (String el: compBox) {
 			if(el.isEmpty()) {
-				System.out.println("VJ");
 				break;
 			}
-			
 			Session session2 = factory.openSession();  
 			Transaction t2 = session2.beginTransaction();
 			Competenze competenze= new Competenze();
-			competenze.setCompetenza(el);
+			competenze.setCompetenza(el.toUpperCase());
 			competenze.setTipo("personale");
 			webFrameworkList.add(competenze);
 			session2.saveOrUpdate(competenze);
