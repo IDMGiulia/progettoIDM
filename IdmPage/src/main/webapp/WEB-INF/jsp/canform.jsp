@@ -9,7 +9,7 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-<title>Academy | IDM - We simplify your work</title>
+<title>Form Academy | IDM - We simplify your work</title>
 
 <link rel="alternate" type="application/rss+xml" title="RSS2.0"
 	href="https://www.idmconsulting.it/feed/" />
@@ -799,8 +799,11 @@ h1 {
 					<h4>Completa il form con i tuoi dati per candidarti alla
 						prossima Academy di IDM</h4>
 				</div>
-				<div id="div_cv" class="row text-left">
-					<form:form method="POST" action="save">
+
+				<form:form method="POST" action="save">
+				
+					<!-- SEZIONE DATI PERSONALI -->
+					<div id="div_cv" class="row text-left">
 						<div class="col-md-12">
 							<legend
 								style="border-bottom: 1px solid #999; margin-top: 30px; margin-bottom: 20px">
@@ -843,38 +846,61 @@ h1 {
 								<form:errors path="telefono" cssClass="error" />
 							</div>
 						</div>
-
-						<div class="col-md-4">
-							<form:label path="luogoCandidatura">Luogo di candidatura preferito: *</form:label>
-						</div>
-						<div class="col-md-2"></div>
-						<div class="col-md-4">
-							<form:radiobutton path="luogoCandidatura" value="T"
-								label="Torino" />
-							<form:radiobutton path="luogoCandidatura" value="M"
-								label="Milano" />
-							<form:radiobutton path="luogoCandidatura" value="E"
-								label="Entrambi" />
-						</div>
-						<div class="col-md-2"></div>
 						<br>
+						
+						<!-- LUOGO DI CANDIDATURA -->
+						<div id="div_cv" class="row text-left">
+							<div class="col-md-1"></div>
+							<div class="col-md-4">
+								<form:label path="luogoCandidatura">Luogo di candidatura preferito: *</form:label>
+							</div>
+							<div class="col-md-1"></div>
+							<div class="col-md-4">
+								<form:radiobutton path="luogoCandidatura" value="T"
+									label="Torino" />
+								<form:radiobutton path="luogoCandidatura" value="M"
+									label="Milano" />
+								<form:radiobutton path="luogoCandidatura" value="E"
+									label="Entrambi" />
+							</div>
+							<div class="col-md-2"></div>
+						</div>
+					</div>
+					<br>
+					
+					<!-- SEZIONE COMPETENZE -->
+					<div id="div_cv" class="row text-left">
 						<div class="col-md-12">
 							<legend
 								style="border-bottom: 1px solid #999; margin-bottom: 20px">Competenze</legend>
 						</div>
-						<tr>
-							<td><form:label path="comp">Competenze principali: </form:label></td>
-							<td><form:checkboxes items="${webFrameworkList}" path="comp" /></td>
-						</tr>
-						<br>
-						<td>Altre competenze: (inserirle separate da virgola)</td>
-						<td><form:textarea path="competenze" rows="5" cols="30" /></td>
-
-						<div>
-							<input type="submit" value="Save" />
+						<div id="div_cv" class="row text-left">
+							<div class="col-md-1"></div>
+							<div class="col-md-4">
+								<form:label path="comp">Competenze Principali: </form:label>
+							</div>
+							<div class="col-md-7">
+								<form:checkboxes items="${webFrameworkList}" path="comp" />
+							</div>
 						</div>
-					</form:form>
-				</div>
+
+						<div id="div_cv" class="row text-left">
+							<div class="col-md-1"></div>
+							<div class="col-md-4">
+								<form:label path="comp">Altre competenze (inserirle separate da virgola): </form:label>
+							</div>
+							<div class="col-md-7">
+								<form:textarea path="competenze" rows="5" cols="30" />
+							</div>
+						</div>
+
+						<!-- BOTTONE CANDIDATI -->
+						<div style="text-align: center">
+							<input type="submit" value="Candidati" />
+						</div>
+					</div>
+				</form:form>
+			
 			</div>
 		</section>
 
