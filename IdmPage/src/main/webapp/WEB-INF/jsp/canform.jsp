@@ -618,6 +618,22 @@ h1 {
    transition: transform .5s ease-in-out;
 }
 </style>
+<!-- STILE CAROSELLO -->
+<style>
+/* Make the image fully responsive */
+.carousel-inner img {
+	width: 100%;
+	height: 100%;
+	border-radius: 8px;
+}
+
+.carousel-inner>.item{
+   /*disables white flash*/
+   -webkit-transition: -webkit-transform .5s ease-in-out;
+   -o-transition: -o-transform .5s ease-in-out;
+   transition: transform .5s ease-in-out;
+}
+</style>
 
 </head>
 
@@ -817,8 +833,8 @@ h1 {
 						<div class="col-md-4">
 							<div class="form-group">
 								<label class="form-label">Nome *</label>
-								<form:input path="nome" class="form-control form-control-sm"
-									required="" placeholder="Inserisci il tuo nome" />
+								<form:input path="nome"  type="text" class="form-control form-control-sm"
+									required="required" placeholder="Inserisci il tuo nome" />
 								<form:errors path="nome" cssClass="error" />
 							</div>
 						</div>
@@ -826,8 +842,8 @@ h1 {
 						<div class="col-md-4">
 							<div class="form-group">
 								<label class="form-label">Cognome *</label>
-								<form:input path="cognome" class="form-control form-control-sm"
-									required="" placeholder="Inserisci il tuo cognome" />
+								<form:input path="cognome" type="text" class="form-control form-control-sm"
+									required="required" placeholder="Inserisci il tuo cognome" />
 								<form:errors path="cognome" cssClass="error" />
 							</div>
 						</div>
@@ -836,8 +852,8 @@ h1 {
 						<div class="col-md-4">
 							<div class="form-group">
 								<label class="form-label">Email *</label>
-								<form:input path="email" class="form-control form-control-sm"
-									required="" placeholder="Inserisci la tua email" />
+								<form:input path="email" type="email" class="form-control form-control-sm"
+									required="required" placeholder="nome@email.it" />
 								<form:errors path="email" cssClass="error" />
 							</div>
 						</div>
@@ -845,8 +861,8 @@ h1 {
 						<div class="col-md-4">
 							<div class="form-group">
 								<label class="form-label">Telefono *</label>
-								<form:input path="telefono" class="form-control form-control-sm"
-									required="" placeholder="Inserisci il tuo numero di telefono" />
+								<form:input path="telefono" type="tel" class="form-control form-control-sm"
+									required="required" placeholder="Inserisci il tuo numero di telefono"  pattern="[0-9]{10}|[0-9]{9}|[0-9]{8}"/>
 								<form:errors path="telefono" cssClass="error" />
 							</div>
 						</div>
@@ -860,10 +876,11 @@ h1 {
 							</div>
 							<div class="col-md-1"></div>
 							<div class="col-md-4">
+
 								<form:radiobutton path="luogoCandidatura" value="T"
-									label="Torino" />
+									label="Torino"/>
 								<form:radiobutton path="luogoCandidatura" value="M"
-									label="Milano" />
+									label="Milano"  style="padding-left:785px;"/>
 								<form:radiobutton path="luogoCandidatura" value="E"
 									label="Entrambi" />
 							</div>
