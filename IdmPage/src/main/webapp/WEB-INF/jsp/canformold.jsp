@@ -618,18 +618,20 @@ h1 {
    transition: transform .5s ease-in-out;
 }
 </style>
-
-<!-- ALLINEAMENTO VERTICALE PER LE COMPETENZE AGGIUNTIVE -->
+<!-- STILE CAROSELLO -->
 <style>
-divx {
-  display: table;
-  height: 130px;
-  width: 100%;
-  text-align: center;
+/* Make the image fully responsive */
+.carousel-inner img {
+	width: 100%;
+	height: 100%;
+	border-radius: 8px;
 }
-span {
-  display: table-cell;
-  vertical-align: middle;
+
+.carousel-inner>.item{
+   /*disables white flash*/
+   -webkit-transition: -webkit-transform .5s ease-in-out;
+   -o-transition: -o-transform .5s ease-in-out;
+   transition: transform .5s ease-in-out;
 }
 </style>
 
@@ -905,20 +907,18 @@ span {
 						<div class="col-md-1"></div>
 						<div class="col-md-4">
 								<form:label path="luogoCandidatura">Luogo di candidatura preferito: *</form:label>
-						</div>
-						<div class="col-md-1"></div>
-						<div class="col-md-4">
-							<div class="radiobut">
+							</div>
+							<div class="col-md-1"></div>
+							<div class="col-md-4">
 								<form:radiobutton path="luogoCandidatura" value="T"
-									label="Torino" />
+									label="Torino"/>
 								<form:radiobutton path="luogoCandidatura" value="M"
-									label="Milano" />
+									label="Milano"  style="padding-left:785px;"/>
 								<form:radiobutton path="luogoCandidatura" value="E"
 									label="Entrambi" />
 							</div>
+							<div class="col-md-2"></div>
 						</div>
-						<div class="col-md-2"></div>
-					</div>
 
 					<br><br><br>
 
@@ -934,9 +934,11 @@ span {
 							<div class="col-md-4">
 									<form:label path="comp">Competenze Principali: </form:label>
 							</div>
+							<div class="col-md-1"></div>
+							<div class="col-md-4">
 							<div class="col-md-7">
 								<div class="checkboxes">
-								<form:checkboxes items="${webFrameworkList}" path="comp" />
+								<form:checkboxes items="${webFrameworkList}" path="comp" placeholder="esempio1, esempio2" />
 								</div>
 							</div>
 						</div>
