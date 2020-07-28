@@ -743,15 +743,18 @@ h1 {
 							</div>
 							<br><br><br>
 						</div>
-						
+
 						<div class="col-sm-4">
 							<div style="text-align: center">
 								<h4>
 									<b>Sede Scelta: </b>
 								</h4>
-								<br> <img
+								<div>
+									<br>
+									<img
 									src="https://dpv87w1mllzh1.cloudfront.net/alitalia_discover/attachments/data/000/000/476/original/torino-royal-torino-1920x1080.jpg?1519196650"
-									alt="Torino"border-radius: 8px;>
+									alt="Torino">
+								</div>
 							</div>
 						</div>
 						<div class="col-sm-1"></div>
