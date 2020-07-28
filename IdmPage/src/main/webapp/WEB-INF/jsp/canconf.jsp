@@ -2,6 +2,7 @@
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
 <meta charset="utf-8" />
 <meta name="viewport"
@@ -517,6 +518,7 @@ h1 {
 </head>
 
 <body
+
 	class="home page-template page-template-homepage-template page-template-homepage-template-php page page-id-1339 wpb-js-composer js-comp-ver-5.5.4 vc_responsive animsition"
 	data-spy="scroll" data-target="#header" data-offset="62">
 
@@ -692,22 +694,76 @@ h1 {
 		<!-- Sezione Centrale della Pagina -->
 		<section class="main-wrapper pagecustom-1339">
 			<div class="container" style="margin-top: 30px">
-				<br> <br> <br> <br> <br> <br>
+				<br> 
+
 				<!-- RIEPILOGO DEI DATI -->
-				<p>La tua registrazione si è conclusa con successo. Controlla i
-					tuoi dati:</p>
-				Nome : ${can.nome} <br>
-				Cognome : ${can.cognome} <br>
-				Email : ${can.email} <br>
-				Telefono : ${can.telefono} <br>
-				Competenze : ${can.competenze} <br>
-			</div>
-			<!-- BOTTONE PER TORNARE ALLA HOME -->
-				<div>
-					<div style="text-align: center">
-						<a href="presentazione" class="button button2"> Home </a>
+				<div style="text-align: left">
+					<h1>Complimenti!</h1>
+					<h3>La tua registrazione si è conclusa con successo. Controlla
+						i tuoi dati:</h3>
+					<br>
+					<div class="row">
+						<div class="col-sm-1"></div>
+						<div class="col-sm-6" style="text-align: center">
+							<div class="row">
+								<div class="col-sm-2" style="text-align: left">
+									<h4>
+										<b>Nome: </b>
+									</h4>${can.nome}
+									<br>
+								</div>
+								<div class="col-sm-4"></div>
+								<div class="col-sm-2" style="text-align: left">
+									<h4>
+										<b>Cognome: </b>
+									</h4>${can.cognome}
+									<br>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-2" style="text-align: left">
+									<h4>
+										<b>Email: </b>
+									</h4>${can.email}
+									<br>
+								</div>
+								<div class="col-sm-4"></div>
+								<div class="col-sm-2" style="text-align: left">
+									<h4>
+										<b>Telefono: </b>
+									</h4>${can.telefono}
+									<br>
+								</div>
+							</div>
+							<br>
+							<div style="text-align: left">
+							<h4>
+								<b>Competenze Inserite: </b>
+							</h4>${can.competenze}
+							</div>
+							<br><br><br>
+						</div>
+						
+						<div class="col-sm-4">
+							<div style="text-align: center">
+								<h4>
+									<b>Sede Scelta: </b>
+								</h4>
+								<br> <img
+									src="https://dpv87w1mllzh1.cloudfront.net/alitalia_discover/attachments/data/000/000/476/original/torino-royal-torino-1920x1080.jpg?1519196650"
+									alt="Torino"border-radius: 8px;>
+							</div>
+						</div>
+						<div class="col-sm-1"></div>
 					</div>
 				</div>
+			</div>
+			<!-- BOTTONE PER TORNARE ALLA HOME -->
+			<div>
+				<div style="text-align: center">
+					<a href="presentazione" class="button button2"> Home </a>
+				</div>
+			</div>
 		</section>
 
 		<!-- Sezione Footer della Pagina -->
