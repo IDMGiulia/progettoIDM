@@ -833,11 +833,7 @@ h1 {
 						<div class="col-md-4">
 							<div class="form-group">
 								<label class="form-label">Nome *</label>
-<<<<<<< HEAD
 								<form:input path="nome"  type="text" class="form-control form-control-sm"
-=======
-								<form:input path="nome" class="form-control form-control-sm"
->>>>>>> f6b5b55b8d7d5a26429a78b7c707655c9be22286
 									required="required" placeholder="Inserisci il tuo nome" />
 								<form:errors path="nome" cssClass="error" />
 							</div>
@@ -846,11 +842,7 @@ h1 {
 						<div class="col-md-4">
 							<div class="form-group">
 								<label class="form-label">Cognome *</label>
-<<<<<<< HEAD
 								<form:input path="cognome" type="text" class="form-control form-control-sm"
-=======
-								<form:input path="cognome" class="form-control form-control-sm"
->>>>>>> f6b5b55b8d7d5a26429a78b7c707655c9be22286
 									required="required" placeholder="Inserisci il tuo cognome" />
 								<form:errors path="cognome" cssClass="error" />
 							</div>
@@ -862,11 +854,7 @@ h1 {
 							<div class="form-group">
 								<label class="form-label">Email *</label>
 								<form:input path="email" type="email" class="form-control form-control-sm"
-<<<<<<< HEAD
 									required="required" placeholder="nome@email.it" />
-=======
-									required="required" placeholder="Inserisci la tua email" />
->>>>>>> f6b5b55b8d7d5a26429a78b7c707655c9be22286
 								<form:errors path="email" cssClass="error" />
 							</div>
 						</div>
@@ -874,13 +862,8 @@ h1 {
 						<div class="col-md-4">
 							<div class="form-group">
 								<label class="form-label">Telefono *</label>
-<<<<<<< HEAD
 								<form:input path="telefono" type="tel" class="form-control form-control-sm"
 									required="required" placeholder="Inserisci il tuo numero di telefono"  pattern="[0-9]{10}|[0-9]{9}|[0-9]{8}"/>
-=======
-								<form:input path="telefono" class="form-control form-control-sm"
-									required="required" placeholder="Inserisci il tuo numero di telefono" />
->>>>>>> f6b5b55b8d7d5a26429a78b7c707655c9be22286
 								<form:errors path="telefono" cssClass="error" />
 							</div>
 						</div>
@@ -896,11 +879,9 @@ h1 {
 						<div class="col-md-1"></div>
 						<div class="col-md-4">
 								<form:label path="luogoCandidatura">Luogo di candidatura preferito: *</form:label>
-<<<<<<< HEAD
 							</div>
 							<div class="col-md-1"></div>
 							<div class="col-md-4">
-
 								<form:radiobutton path="luogoCandidatura" value="T"
 									label="Torino"/>
 								<form:radiobutton path="luogoCandidatura" value="M"
@@ -909,20 +890,6 @@ h1 {
 									label="Entrambi" />
 							</div>
 							<div class="col-md-2"></div>
-=======
->>>>>>> f6b5b55b8d7d5a26429a78b7c707655c9be22286
-						</div>
-						<div class="col-md-1"></div>
-						<div class="col-md-4">
-							<form:radiobutton path="luogoCandidatura" value="T"
-								label="Torino" />
-							<form:radiobutton path="luogoCandidatura" value="M"
-								label="Milano" />
-							<form:radiobutton path="luogoCandidatura" value="E"
-								label="Entrambi" />
-						</div>
-						<div class="col-md-2"></div>
-					</div>
 
 					<br><br><br>
 
@@ -939,7 +906,7 @@ h1 {
 									<form:label path="comp">Competenze Principali: </form:label>
 							</div>
 							<div class="col-md-1"></div>
-							<div class="col-md-6">
+							<div class="col-md-4">
 								<form:checkboxes items="${webFrameworkList}" path="comp" />
 							</div>
 						</div>
