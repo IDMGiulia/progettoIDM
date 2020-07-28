@@ -17,6 +17,11 @@ import idm.beans.Competenze;
 
 
 public class CanDao {
+	StandardServiceRegistry ssr = new StandardServiceRegistryBuilder().configure("hibernate.cfg.xml").build();  
+    
+	Metadata meta = new MetadataSources(ssr).getMetadataBuilder().build();  
+	  
+	SessionFactory factory = meta.getSessionFactoryBuilder().build();
 	JdbcTemplate template;   
 
 	public void setTemplate(JdbcTemplate template) {    
@@ -24,16 +29,41 @@ public class CanDao {
 	}
 
 	public void salva(Candidato candidato) {
-		StandardServiceRegistry ssr = new StandardServiceRegistryBuilder().configure("hibernate.cfg.xml").build();  
-	    
-		Metadata meta = new MetadataSources(ssr).getMetadataBuilder().build();  
-		  
-		SessionFactory factory = meta.getSessionFactoryBuilder().build();  
 		int num = candidato.getComp().length;
+		String descrizione=candidato.getCompetenze();
+		String [] compBox=descrizione.split(",");
+		List<Competenze> webFrameworkList = new ArrayList<Competenze>();
+		for (String el: compBox) {
+			if(el.isEmpty()) {
+				System.out.println("VJ");
+				break;
+			}
+			
+			Session session2 = factory.openSession();  
+			Transaction t2 = session2.beginTransaction();
+			Competenze competenze= new Competenze();
+			competenze.setCompetenza(el);
+			competenze.setTipo("personale");
+			webFrameworkList.add(competenze);
+			session2.saveOrUpdate(competenze);
+			t2.commit();
+			session2.close();
+		}
+		descrizione=concatenaCompetenze(candidato, webFrameworkList, num);
+		candidato.setCompetenze(descrizione);
+		candidato.setFavoriteFrameworks(webFrameworkList);
+		Session session = factory.openSession();  
+		Transaction t = session.beginTransaction();
+		session.saveOrUpdate(candidato);
+		t.commit();
+		session.close();
+
+	}
+	
+	public String concatenaCompetenze(Candidato candidato,List<Competenze> webFrameworkList, int lunghezza) {
 		String[] comp = candidato.getComp();
 		String descrizione=candidato.getCompetenze();
-		List<Competenze> webFrameworkList = new ArrayList<Competenze>();
-		for (int i=0; i<num;i++) {
+		for (int i=0; i<lunghezza;i++) {
 			Session session1 = factory.openSession();  
 			Transaction t1 = session1.beginTransaction();
 			descrizione=descrizione.concat(", "+comp[i]);
@@ -45,15 +75,9 @@ public class CanDao {
 			t1.commit();
 			session1.close();
 		}
-		candidato.setCompetenze(descrizione);
-		candidato.setFavoriteFrameworks(webFrameworkList);
-		Session session = factory.openSession();  
-		Transaction t = session.beginTransaction();
-		session.saveOrUpdate(candidato);
-		t.commit();
-		session.close();
-
+		return descrizione;
 	}
+	
 
 	
 	
