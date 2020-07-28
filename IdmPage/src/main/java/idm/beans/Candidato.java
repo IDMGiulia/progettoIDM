@@ -11,20 +11,21 @@ import javax.validation.constraints.Size;
 public class Candidato {
 	private int id;
 	
-	@NotEmpty()
-	@Size(max=50)
+	@NotEmpty(message = "nome non valido")
 	private String nome;
-	@NotEmpty(message="il nome non può essere nullo")
+	@NotEmpty(message = "cognome non valido")
 	@Size(max=50)
 	private String cognome;
-	@NotEmpty
+	@NotEmpty(message="email non valida")
 	@Email(message="email non valida")
 	@Size(max=100)
 	private String email;
+	@NotEmpty(message="telefono non valido")
 	private String telefono;
 	private String competenze;
 	private List<Competenze> favoriteFrameworks;
 	private String [] comp; 
+	@NotEmpty (message="è obbligatorio inserire il luogo di candidatura")
 	private String luogoCandidatura;
 	
 	

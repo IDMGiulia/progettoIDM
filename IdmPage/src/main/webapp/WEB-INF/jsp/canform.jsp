@@ -1,8 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%> 
- 
+<!DOCTYPE html> 
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>  
 <html lang="it">
 <head>
 <meta charset="utf-8" />
@@ -554,6 +553,11 @@ h1 {
 	border: none !important;
 }
 </style>
+<style>
+    .error {
+        color: red; font-weight: bold;
+    }
+</style>
 <style type="text/css" data-type="vc_shortcodes-custom-css">
 .vc_custom_1473350305655 {
 	margin-top: 44px !important;
@@ -800,8 +804,8 @@ h1 {
 						prossima Academy di IDM</h4>
 				</div>
 
-				<form:form method="POST" action="save">
-				
+				<form:form method="POST" action="save" modelAttribute="can">
+
 					<!-- SEZIONE DATI PERSONALI -->
 					<div id="div_cv" class="row text-left">
 						<div class="col-md-12">
@@ -847,7 +851,7 @@ h1 {
 							</div>
 						</div>
 						<br>
-						
+
 						<!-- LUOGO DI CANDIDATURA -->
 						<div id="div_cv" class="row text-left">
 							<div class="col-md-1"></div>
@@ -867,7 +871,7 @@ h1 {
 						</div>
 					</div>
 					<br>
-					
+
 					<!-- SEZIONE COMPETENZE -->
 					<div id="div_cv" class="row text-left">
 						<div class="col-md-12">
@@ -900,7 +904,7 @@ h1 {
 						</div>
 					</div>
 				</form:form>
-			
+
 			</div>
 		</section>
 
@@ -940,7 +944,7 @@ h1 {
 											P.I. 07808140011<br> Numero REA 922825<br> Capitale
 											sociale interamente versato: &#8364 70.000,00<br> IDM
 											Consulting Srl &#232 una azienda certificata<br> UNI EN
-											ISO 9001:2015<br> Copyright &copy 2018-2019-2020 All
+											ISO 9001:2015<br> Copyright &copy; 2018-2019-2020 All
 											rights reserved .
 										</p>
 									</div>

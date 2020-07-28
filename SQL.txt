@@ -12,10 +12,9 @@ CREATE TABLE `springmvc`.`candidati` (
 
 
 CREATE TABLE `springmvc`.`competenze` (
-  `compenza` VARCHAR(45) NOT NULL,
-  `canId` INT NOT NULL,
+  `competenza` VARCHAR(45) NOT NULL,
   `tipo` VARCHAR(45) NULL,
-  PRIMARY KEY (`compenza`));
+  PRIMARY KEY (`competenza`));
   
   
 CREATE TABLE `springmvc`.`can_comp` (

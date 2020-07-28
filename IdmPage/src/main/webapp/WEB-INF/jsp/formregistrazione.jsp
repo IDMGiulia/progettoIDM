@@ -752,24 +752,12 @@ h3 {
 						<div class="col-md-4"></div>
 
 						<div class="col-md-4"></div>
-						<div class="col-md-4">
-							<div class="form-group">
-								<label class="form-label">Fecha de nacimiento *</label>
-								<input type="date" name="nacimiento" class="form-control form-control-sm" required placeholder="Ingresa tu fecha de nacimiento">
-							</div>
-						</div>
 						<div class="col-md-4"></div>
-
 						<div class="col-md-4"></div>
-						<div class="col-md-8">
-							<div class="form-group">
-								<label class="form-label">Domicilio / Localidad / Provincia *</label>
-								<input type="text" name="domicilio" class="form-control form-control-sm" required placeholder="Ingresa tu dirección, localidad y provincia">
-							</div>
-						</div>
+						<div class="col-md-4"></div>
 
 						<div class="col-md-12">
-							<legend style="border-bottom: 1px solid #999; margin-top:30px; margin-bottom: 20px">Trabajo y educación</legend>
+							<legend style="border-bottom: 1px solid #999; margin-top:10px">Competenze</legend>
 						</div>
 
 						<div class="row div_educacion" style="padding: 15px">
@@ -778,37 +766,13 @@ h3 {
 							<div class="col-md-8">
 								<div class="form-group">
 									<label class="form-label">Educación</label>
-									<input type="text" name="educacion_titulo" class="form-control form-control-sm"  placeholder="Título">
+									<input type="checkboxes" name="educacion_titulo" class="form-control form-control-sm"  placeholder="Título">
 								</div>
 							</div>
 
-							<div class="col-md-4"></div>
-							<div class="col-md-3">
-								<div class="form-group">
-									<select name="educacion_tipo" class="form-control form-control-sm"  placeholder="Area de estudio">
-										<option>-- Area de estudio --</option>
-										<option value="Primario">Primario</option>
-										<option value="Secundario">Secundario</option>
-										<option value="Terciario">Terciario</option>
-										<option value="Universitario">Universitario</option>
-										<option value="Tecnicatura">Tecnicatura</option>
-										<option value="Posgrado">Posgrado</option>
-										<option value="Master">Master</option>
-										<option value="Doctorado">Doctorado</option>
-									</select>
-								</div>
-							</div>
+							
 
-							<div class="col-md-3">
-								<div class="form-group">
-									<select name="educacion_estado" class="form-control form-control-sm"  placeholder="Area de estudio">
-										<option>-- Estado --</option>
-										<option value="Graduado">Graduado</option>
-										<option value="En curso">En curso</option>
-										<option value="Abandonado">Abandonado</option>
-									</select>
-								</div>
-							</div>
+							
 
 							<div class="col-md-2">
 								<div class="form-group">
