@@ -9,6 +9,7 @@ import javax.validation.constraints.Size;
 
 
 public class Candidato {
+	//definito come autoIncrement dentro il mapping di hibernate
 	private int id;
 	
 	@NotEmpty(message = "nome non valido")
@@ -22,9 +23,18 @@ public class Candidato {
 	private String email;
 	@NotEmpty(message="telefono non valido")
 	private String telefono;
+	
+	// stringa che contiene l'elenco delle competenze ed è l'ultima colonna della tabella candidato
 	private String competenze;
+	
+	// lista di competenze utilizzata per creare la tabella che lega l'ID candidato con la competenza
 	private List<Competenze> favoriteFrameworks;
+	
+	//array di competenze, dentro di esso vengono salvate in automatico le competenze selezione nel check box
+	// non compaiono in tabella perché sono incorporate in favoriteFrameworks e in competenze
 	private String [] comp; 
+	
+	//sede per la quale ci si candidata
 	@NotEmpty (message="è obbligatorio inserire il luogo di candidatura")
 	private String luogoCandidatura;
 	

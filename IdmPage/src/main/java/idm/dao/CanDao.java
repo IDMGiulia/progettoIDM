@@ -17,6 +17,11 @@ import idm.beans.Competenze;
 
 
 public class CanDao {
+	StandardServiceRegistry ssr = new StandardServiceRegistryBuilder().configure("hibernate.cfg.xml").build();  
+    
+	Metadata meta = new MetadataSources(ssr).getMetadataBuilder().build();  
+	  
+	SessionFactory factory = meta.getSessionFactoryBuilder().build();
 	JdbcTemplate template;   
 
 	public void setTemplate(JdbcTemplate template) {    
@@ -24,16 +29,16 @@ public class CanDao {
 	}
 
 	public void salva(Candidato candidato) {
-		StandardServiceRegistry ssr = new StandardServiceRegistryBuilder().configure("hibernate.cfg.xml").build();  
-	    
-		Metadata meta = new MetadataSources(ssr).getMetadataBuilder().build();  
-		  
-		SessionFactory factory = meta.getSessionFactoryBuilder().build();  
 		int num = candidato.getComp().length;
 		String descrizione=candidato.getCompetenze();
 		String [] compBox=descrizione.split(",");
 		List<Competenze> webFrameworkList = new ArrayList<Competenze>();
 		for (String el: compBox) {
+			if(el.isEmpty()) {
+				System.out.println("VJ");
+				break;
+			}
+			
 			Session session2 = factory.openSession();  
 			Transaction t2 = session2.beginTransaction();
 			Competenze competenze= new Competenze();
@@ -56,10 +61,6 @@ public class CanDao {
 	}
 	
 	public String concatenaCompetenze(Candidato candidato,List<Competenze> webFrameworkList, int lunghezza) {
-		// apro il collegamento con hibernate
-		StandardServiceRegistry ssr = new StandardServiceRegistryBuilder().configure("hibernate.cfg.xml").build();  
-		Metadata meta = new MetadataSources(ssr).getMetadataBuilder().build();  
-		SessionFactory factory = meta.getSessionFactoryBuilder().build();  
 		String[] comp = candidato.getComp();
 		String descrizione=candidato.getCompetenze();
 		for (int i=0; i<lunghezza;i++) {
