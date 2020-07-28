@@ -633,6 +633,34 @@ span {
 }
 </style>
 
+<style>
+.checkboxes {
+      text-align:center;
+     }
+
+    .checkboxes input{
+      margin: 0px 0px 0px 0px;
+     }
+
+     .checkboxes label{
+       margin: 0px 20px 0px 3px;
+     }
+</style>
+
+<style>
+.radiobut {
+	text-align: center;
+}
+
+.radiobut input {
+	margin: 0px 0px 0px 0px;
+}
+
+.radiobut label {
+	margin: 0px 20px 0px 3px;
+}
+</style>
+
 </head>
 
 <body
@@ -863,7 +891,7 @@ span {
 								<form:input path="telefono" class="form-control form-control-sm"
 									required="required" placeholder="Inserisci il tuo numero di telefono" />
 								<form:errors path="telefono" cssClass="error" />
-							</div>
+							</div> 
 						</div>
 							<ul class="nav nav-pills flex-column">
 							</ul>
@@ -880,12 +908,14 @@ span {
 						</div>
 						<div class="col-md-1"></div>
 						<div class="col-md-4">
-							<form:radiobutton path="luogoCandidatura" value="T"
-								label="Torino" />
-							<form:radiobutton path="luogoCandidatura" value="M"
-								label="Milano" />
-							<form:radiobutton path="luogoCandidatura" value="E"
-								label="Entrambi" />
+							<div class="radiobut">
+								<form:radiobutton path="luogoCandidatura" value="T"
+									label="Torino" />
+								<form:radiobutton path="luogoCandidatura" value="M"
+									label="Milano" />
+								<form:radiobutton path="luogoCandidatura" value="E"
+									label="Entrambi" />
+							</div>
 						</div>
 						<div class="col-md-2"></div>
 					</div>
@@ -904,9 +934,10 @@ span {
 							<div class="col-md-4">
 									<form:label path="comp">Competenze Principali: </form:label>
 							</div>
-							<div class="col-md-1"></div>
-							<div class="col-md-6">
+							<div class="col-md-7">
+								<div class="checkboxes">
 								<form:checkboxes items="${webFrameworkList}" path="comp" />
+								</div>
 							</div>
 						</div>
 
