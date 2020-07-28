@@ -12,7 +12,7 @@
         http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 	<context:component-scan
 		base-package="idm.control"></context:component-scan>
-
+	<mvc:annotation-driven />
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/jsp/"></property>
@@ -32,7 +32,7 @@
 	<bean id="jt" class="org.springframework.jdbc.core.JdbcTemplate">
 		<property name="dataSource" ref="ds"></property>
 	</bean>
-
+	
 	<bean id="dao" class="idm.dao.CanDao">
 		<property name="template" ref="jt"></property>
 	</bean>  
@@ -40,5 +40,6 @@
 	<bean class="org.springframework.context.support.ResourceBundleMessageSource"
 		id="messageSource">
 		<property name="basename" value="messages" />
+		<property name="defaultEncoding" value="UTF-8" />
 	</bean>
 </beans>  

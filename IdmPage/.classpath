@@ -30,6 +30,7 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+<<<<<<< HEAD
 	<classpathentry kind="lib" path="C:/Users/Fabio Ranno/Desktop/lib/antlr-2.7.7.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Fabio Ranno/Desktop/lib/byte-buddy-1.6.14.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Fabio Ranno/Desktop/lib/c3p0-0.9.5.2.jar"/>
@@ -68,5 +69,8 @@
 	<classpathentry kind="lib" path="C:/Users/Fabio Ranno/Desktop/lib/proxool-0.8.3.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Fabio Ranno/Desktop/lib/slf4j-api-1.6.1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Fabio Ranno/Desktop/lib/slf4j-api-1.7.7.jar"/>
+=======
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/libprogetto"/>
+>>>>>>> dcc4ead634f1e97ab4749b7cff557e47b38caf69
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

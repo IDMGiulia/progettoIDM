@@ -3,6 +3,6 @@
 <!DOCTYPE html>
 <html>  
 <body>  
-<a href="hello">ci sono degli errori</a>  
+<a href="candidatura">ci sono degli errori, vai alla candidatura</a>  
 </body>  
 </html>  

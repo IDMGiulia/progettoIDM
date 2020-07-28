@@ -13,21 +13,25 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.support.SessionStatus;
 
 import idm.beans.Candidato;
-import idm.beans.Competenze;
 import idm.dao.CanDao;
+import idm.validator.canValid;
 
 @Controller    
 public class CanController {
 	@Autowired    
 	CanDao dao;
 
+	
+	
 	@RequestMapping("/presentazione")  
 	public String display()  
 	{  
 		return "home";  
 	}
+	
 	@RequestMapping("/formregistrazione")  
 	public String form()  
 	{  
@@ -49,7 +53,7 @@ public class CanController {
 	@RequestMapping("/candidatura")    
 	public String showform(Model m){   
 		Candidato candidato= new Candidato();
-		m.addAttribute("command", candidato);  
+		m.addAttribute("can", candidato);  
 		return "canform";   
 	} 
 
@@ -57,13 +61,13 @@ public class CanController {
 	 *  into model object. You need to mention RequestMethod.POST method   
 	 *  because default request is GET*/    
 	@RequestMapping(value="/save",method = RequestMethod.POST)    
-	public String save(@Valid @ModelAttribute("can") Candidato can, BindingResult br){ 
-		System.out.println(br.hasErrors());
-		if(br.hasErrors())  
-        {  
-            return "canform";  
-        }
-		dao.salva(can);    
+	public String save(@Valid @ModelAttribute("can") Candidato can, BindingResult result, SessionStatus status,Model m){ 
+	     
+	    //Check validation errors
+	    if (result.hasErrors()) {   
+	        return "canform";
+	    }
+	    dao.salva(can); 
 		return "canconf";//will derict to canconf   
 	}  
 	

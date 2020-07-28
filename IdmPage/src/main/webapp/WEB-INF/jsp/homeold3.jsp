@@ -44,6 +44,8 @@
 	title=" &raquo; Homepage Feed dei commenti"
 	href="https://www.idmconsulting.it/homepage/feed/" />
 <!-- This site uses the Google Analytics by MonsterInsights plugin v7.10.0 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+<!-- Note: MonsterInsights is not currently configured on this site. The site owner needs to authenticate with Google Analytics in the MonsterInsights settings panel. -->
+<!-- No UA code set -->
 <!-- / Google Analytics by MonsterInsights -->
 <script type="text/javascript">
 			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.idmconsulting.it\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.15"}};
@@ -141,9 +143,6 @@ img.wp-smiley, img.emoji {
 <link rel='stylesheet' id='page-transition-animsition-css'
 	href='https://www.idmconsulting.it/wp-content/plugins/page-transition/css/animsition.min.css?ver=1.3'
 	type='text/css' media='all' />
-	
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <script type='text/javascript'
 	src='https://www.idmconsulting.it/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
 <script type='text/javascript'
@@ -286,9 +285,91 @@ a.navbar-brand, ul.navbar-nav li a:hover, ul.navbar-nav li a:focus, ul.navbar-na
 }
 /*.flex-control-paging li a.flex-active, .scrollup:hover*/
 {
-background:#1d70b7;
-background:rgba
-(29,112,183,0.9)
+background
+
+
+
+
+
+:
+
+
+
+
+
+#1d70b7
+
+
+
+
+
+;
+background
+
+
+
+
+
+:
+
+
+
+
+
+rgba
+
+
+
+
+
+(
+
+
+
+
+
+
+29
+,
+112
+,
+183
+,
+0
+
+
+
+
+
+
+
+
+
+
+.9
+
+
+
+
+
+
+
+
+
+
+)
+
+
+
+
+
+
+		
+
+
+
+
+
 }
 .star-rating span, .woocommerce .star-rating:before, .woocommerce-page .star-rating:before
 	{
@@ -503,19 +584,25 @@ h1 {
 	background-color: #DCF0FF;
 	color: black;
 	border: 2px solid #428BCA;
-	border-radius: 8px;
 }
 
 .button2:hover {
 	background-color: #428BCA;
 	color: white;
 	border: 2px solid #DCF0FF;
-	border-radius: 8px;
 }
 </style>
 
-</head>
+<!-- STILE CAROSELLO -->
+<style>
+  /* Make the image fully responsive */
+  .carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
+</style>
 
+</head>
 <body
 	class="home page-template page-template-homepage-template page-template-homepage-template-php page page-id-1339 wpb-js-composer js-comp-ver-5.5.4 vc_responsive animsition"
 	data-spy="scroll" data-target="#header" data-offset="62">
@@ -692,22 +779,158 @@ h1 {
 		<!-- Sezione Centrale della Pagina -->
 		<section class="main-wrapper pagecustom-1339">
 			<div class="container" style="margin-top: 30px">
-				<br> <br> <br> <br> <br> <br>
-				<!-- RIEPILOGO DEI DATI -->
-				<p>La tua registrazione si è conclusa con successo. Controlla i
-					tuoi dati:</p>
-				Nome : ${can.nome} <br>
-				Cognome : ${can.cognome} <br>
-				Email : ${can.email} <br>
-				Telefono : ${can.telefono} <br>
-				Competenze : ${can.competenze} <br>
-			</div>
-			<!-- BOTTONE PER TORNARE ALLA HOME -->
-				<div>
+				<h1 style="text-align: center">
+					<img src="https://ecoautoparts.com.ar/assets/img/cv.jpg" alt="">
+				</h1>
+
+				<!-- TESTO PRESENTAZIONE IDM ACADEMY -->
+				<div style="text-align: center">
+					<h1>Academy IDM</h1>
+					<h5 style="text-align: left">Ideata con l&#39 obiettivo di introdurre metodologie
+						qualificate e riconosciute dal mercato in un sistema di formazione
+						e training adeguato alla flessibilit&#224 del mondo ICT.<br>
+						Con i nostri corsi avrai modo di formarti per divenire un &quot;JUNIOR
+						JAVA FULL STACK&quot; ovvero consulente in ambito Java.<br>
+						Oltre alle conoscenze teoriche legate all&#39; argomento Java, imparerai il
+						comportamento da tenere presso la societ&#224 cliente,
+						principalmente realt&#224 di System Integrator, la gestione ed
+						organizzazione di progetti, le metodologie di sviluppo e
+						organizzazione delle attivit&#224, la valutazione dei tempi di una
+						attivit&#224, le figure coinvolte in un progetto IT e la gestione
+						delle relazioni all&#39 interno del gruppo di lavoro.<br>
+						I nostri corsi, della durata di 40h / 60h teoriche vengono realizzati di
+						presenza in aula, ed alternano momenti di formazione didattica
+						frontale a momenti di formazione esperienziale.<br>
+						In questo modo potrai mettere in pratica quanto appreso durante la lezione
+						attraverso esercizi pratici e il confronto con il docente ed i
+						tuoi colleghi.<br> 
+						Se sei una persona curiosa, dinamica e l&#39
+						universo Java &#232; la tua passione, l&#39 Academy di IDM
+						Consulting &#232 quello che fa per te!</h5>
+					<br>
+				</div>
+
+				<!-- PARTE CON LE 3 DIVERSIFICAZIONI DI STRUTTURA E DESCRIZIONE -->
+				<div class="row">
+				
+					<!-- COLONNA PROGRAMMA DEI CORSI -->
+					<div class="col-sm-4">
+						<div style="text-align: center">
+
+							<h2>
+								<b>Programma dei Corsi Formativi</b>
+							</h2>
+
+							<p> &#10004; Java Enterprise Edition<br>
+								&#10004; Corso Sviluppo Microsoft<br>
+								&#10004; Sviluppo Javascript e AngularJS<br>
+								&#10004; J2EE back-end end Developer
+							</p>
+							
+							<p> Per ulteriori informazioni candidati<br>
+								premendo il pulsante qui sotto.<br>
+								Ti aspettiamo!
+							</p>
+							
+						</div>
+						<ul class="nav nav-pills flex-column">
+						</ul>
+						<hr class="d-sm-none">
+					</div>
+					
+					<!-- COLONNA EDIZIONI -->
+					<div class="col-sm-4">
+						<div style="text-align: center">
+
+							<h2>
+								<b>Edizioni</b>
+							</h2>
+							<h3>Prossima Edizione:</h3>
+							<a href="candidatura"> 
+								<font color="428BCA"> 
+									<b>&#10148; Novembre 2020</b>
+								</font>
+							</a>
+
+							<h3>Edizioni Precedenti</h3>
+							<p> Gennaio 2018 - Novembre 2018<br>
+								Marzo 2019 - Settembre 2019<br>
+								Giugno 2020 - in corso</p>
+						</div>
+						<ul class="nav nav-pills flex-column">
+						</ul>
+						<hr class="d-sm-none">
+					</div>
+					
+					<!-- COLONNA SEDI FORMATIVE -->
+					<div class="col-sm-4">
+						<div style="text-align: center">
+
+							<h2>
+								<b>Sedi Formative</b>
+							</h2>
+							<img
+								src="https://www.trenitalia.com/content/dam/tcom/immagini/trenitalia-img/trasporto-regionale/416x359/416x359_OD--Reg-Piemonte_Milano-Torino.jpg"
+								alt="">
+						</div>
+						<p>Le sedi possibili sono Torino o Milano</p>
+						<ul class="nav nav-pills flex-column">
+						</ul>
+						<hr class="d-sm-none">
+					</div>
+
+				</div>
+				
+				<!-- SEZIONE RECENSIONI -->
+				<div class="row">
 					<div style="text-align: center">
-						<a href="presentazione" class="button button2"> Home </a>
+					<h2>
+						<b>Cosa ne pensano gli ex-alunni</b>
+					</h2>
+					</div>
+					<!-- RECENSIONE 1 -->
+					<div class="col-sm-4">
+						<div style="text-align: center">
+
+							<h4>Francesco Carlino</h4>
+
+							<p> Esperienza fantastica, corso completo<br> 
+								e ho iniziato subito a lavorare.</p>
+						</div>
+					</div>
+					
+					<!-- RECENSIONE 2 -->
+					<div class="col-sm-4">
+						<div style="text-align: center">
+
+							<h4>Giacomo Francardo</h4>
+
+							<p> Il corso ha una struttura molto completa e con 
+								possibilit&#224 di modificare l&#39 ordine dei vari argomenti.</p>
+						</div>
+					</div>
+					
+					<!-- RECENSIONE 3 -->
+					<div class="col-sm-4">
+						<div style="text-align: center">
+
+							<h4>Angela Ternico</h4>
+
+							<p> Avevo appena finito l'universit&#224 e questa esperienza mi<br>
+								ha permesso di far crescere e migliorare le mie abilit&#224.<br>
+								La consiglio vivamente.</p>
+						</div>
 					</div>
 				</div>
+
+				<!-- BOTTONE CANDIDATURA -->
+				<div>
+					<div style="text-align: center">
+						<a href="candidatura" class="button button2">Candidati per il nuovo Corso</a>
+					</div>
+				</div>
+			
+			</div>
 		</section>
 
 		<!-- Sezione Footer della Pagina -->
@@ -723,7 +946,7 @@ h1 {
 											src="https://www.idmconsulting.it/wp-content/uploads/2015/04/IDM-consulting-footer.png"
 											alt="about">
 										<p class="desc">
-											Via Accademia Albertina, 37 - 10123 - Torino (TO)<br> T.
+											Via Accademia Albertina, 37 - 10123 Torino (TO)<br> T.
 											+39 011 777 0435<br> Via Copernico, 38 - 20125 - Milano
 											(MI)<br> T: +39 02 8725 9096<br> e-mail:
 											info@idmconsulting.it<br> PEC:
@@ -871,7 +1094,6 @@ var wpcf7_redirect_forms = {"2541":{"page_id":"2558","external_url":"","use_exte
 		src='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/lib/waypoints/waypoints.min.js?ver=5.5.4'></script>
 	<script type='text/javascript'
 		src='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/js/dist/vc_grid.min.js?ver=5.5.4'></script>
-	
-</body>
 
+</body>
 </html>
