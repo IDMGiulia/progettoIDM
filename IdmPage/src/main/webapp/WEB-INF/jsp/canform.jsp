@@ -635,6 +635,34 @@ h1 {
 }
 </style>
 
+<style>
+.checkboxes {
+      text-align:center;
+     }
+
+    .checkboxes input{
+      margin: 0px 0px 0px 0px;
+     }
+
+     .checkboxes label{
+       margin: 0px 20px 0px 3px;
+     }
+</style>
+
+<style>
+.radiobut {
+	text-align: center;
+}
+
+.radiobut input {
+	margin: 0px 0px 0px 0px;
+}
+
+.radiobut label {
+	margin: 0px 20px 0px 3px;
+}
+</style>
+
 </head>
 
 <body
@@ -865,7 +893,7 @@ h1 {
 								<form:input path="telefono" type="tel" class="form-control form-control-sm"
 									required="required" placeholder="Inserisci il tuo numero di telefono"  pattern="[0-9]{10}|[0-9]{9}|[0-9]{8}"/>
 								<form:errors path="telefono" cssClass="error" />
-							</div>
+							</div> 
 						</div>
 							<ul class="nav nav-pills flex-column">
 							</ul>
@@ -879,6 +907,7 @@ h1 {
 						<div class="col-md-1"></div>
 						<div class="col-md-4">
 								<form:label path="luogoCandidatura">Luogo di candidatura preferito: *</form:label>
+<<<<<<< .merge_file_a15132
 							</div>
 							<div class="col-md-1"></div>
 							<div class="col-md-4">
@@ -890,6 +919,22 @@ h1 {
 									label="Entrambi" />
 							</div>
 							<div class="col-md-2"></div>
+=======
+						</div>
+						<div class="col-md-1"></div>
+						<div class="col-md-4">
+							<div class="radiobut">
+								<form:radiobutton path="luogoCandidatura" value="T"
+									label="Torino" />
+								<form:radiobutton path="luogoCandidatura" value="M"
+									label="Milano" />
+								<form:radiobutton path="luogoCandidatura" value="E"
+									label="Entrambi" />
+							</div>
+						</div>
+						<div class="col-md-2"></div>
+					</div>
+>>>>>>> .merge_file_a17840
 
 					<br><br><br>
 
@@ -901,13 +946,19 @@ h1 {
 						</div>
 						
 						<div id="div_cv" class="row text-left" style="text-align: center">
-							<div class="col-md-2"></div>
-							<div class="col-md-3">
-									<form:label path="comp">Competenze Principali: </form:label>
-							</div>
 							<div class="col-md-1"></div>
 							<div class="col-md-4">
+									<form:label path="comp">Competenze Principali: </form:label>
+							</div>
+<<<<<<< .merge_file_a15132
+							<div class="col-md-1"></div>
+							<div class="col-md-4">
+=======
+							<div class="col-md-7">
+								<div class="checkboxes">
+>>>>>>> .merge_file_a17840
 								<form:checkboxes items="${webFrameworkList}" path="comp" />
+								</div>
 							</div>
 						</div>
 
