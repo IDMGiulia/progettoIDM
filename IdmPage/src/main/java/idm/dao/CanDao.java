@@ -1,5 +1,7 @@
 package idm.dao;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,6 +13,7 @@ import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.springframework.jdbc.core.JdbcTemplate;  
+import org.springframework.jdbc.core.RowMapper;   
 
 import idm.beans.Candidato;
 import idm.beans.Competenze;    
@@ -76,6 +79,20 @@ public class CanDao {
 		return descrizione;
 	}
 	
+	public List<Candidato> getCandidatos(){    
+		return template.query("select * from candidati",new RowMapper<Candidato>(){    
+			public Candidato mapRow(ResultSet rs, int row) throws SQLException {    
+				Candidato e=new Candidato();    
+				e.setId(rs.getInt(1));    
+				e.setNome(rs.getString(2));  
+				e.setCognome(rs.getString(3));
+				e.setEmail(rs.getString(4));
+				e.setTelefono(rs.getString(5));
+				e.setCompetenze(rs.getString(6));        
+				return e;    
+			}    
+		});    
+	}
 
 	
 	
@@ -108,20 +125,7 @@ public int update(Candidato p){
     String sql="select * from candidati where id=?";    
     return template.queryForObject(sql, new Object[]{id},new BeanPropertyRowMapper<Emp>(Emp.class));    
 }   
-	public List<Candidato> getEmployees(){    
-		return template.query("select * from candidati",new RowMapper<Candidato>(){    
-			public Candidato mapRow(ResultSet rs, int row) throws SQLException {    
-				Candidato e=new Candidato();    
-				e.setId(rs.getInt(1));    
-				e.setNome(rs.getString(2));  
-				e.setCognome(rs.getString(3));
-				e.setEmail(rs.getString(4));
-				e.setTelefono(rs.getString(5));
-				e.setCompetenze(rs.getString(6));        
-				return e;    
-			}    
-		});    
-	}
+	
 	public static void main(String[] args) {
 		//idm.dao.CanDao;
 	} */   

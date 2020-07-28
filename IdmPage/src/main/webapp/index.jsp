@@ -5,6 +5,6 @@
 <!DOCTYPE html>
 <a href="presentazione">presentazione Accademy</a>
 <br>
-<!-- <a href="formregistrazione">registrazione</a>  
- -->
+<a href="amministrazione">amministrazione</a>  
+
 

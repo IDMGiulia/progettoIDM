@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.support.SessionStatus;
 
+
+
 import idm.beans.Candidato;
 import idm.dao.CanDao;
 
@@ -31,11 +33,12 @@ public class CanController {
 		return "home";  
 	}
 	
-	@RequestMapping("/formregistrazione")  
-	public String form()  
-	{  
-		return "formregistrazione";  
-	}
+	@RequestMapping("/amministrazione")    
+    public String viewemp(Model m){    
+        List<Candidato> list=dao.getCandidatos();    
+        m.addAttribute("list",list);  
+        return "amministrazione";    
+    }
 	
 	 @ModelAttribute("webFrameworkList")
 	   public List<String> getWebFrameworkList() {
