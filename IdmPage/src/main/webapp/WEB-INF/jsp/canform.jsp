@@ -900,8 +900,8 @@ span {
 						</div>
 						
 						<div id="div_cv" class="row text-left" style="text-align: center">
-							<div class="col-md-2"></div>
-							<div class="col-md-3">
+							<div class="col-md-1"></div>
+							<div class="col-md-4">
 									<form:label path="comp">Competenze Principali: </form:label>
 							</div>
 							<div class="col-md-1"></div>
