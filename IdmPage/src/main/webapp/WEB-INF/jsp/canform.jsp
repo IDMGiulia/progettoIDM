@@ -619,6 +619,20 @@ h1 {
 }
 </style>
 
+<!-- ALLINEAMENTO VERTICALE PER LE COMPETENZE AGGIUNTIVE -->
+<style>
+divx {
+  display: table;
+  height: 130px;
+  width: 100%;
+  text-align: center;
+}
+span {
+  display: table-cell;
+  vertical-align: middle;
+}
+</style>
+
 </head>
 
 <body
@@ -811,14 +825,14 @@ h1 {
 						<div class="col-md-12">
 							<legend
 								style="border-bottom: 1px solid #999; margin-top: 30px; margin-bottom: 20px">
-								Dati Personali</legend>
+								<b>Dati Personali</b></legend>
 						</div>
 						<div class="col-md-4"></div>
 						<div class="col-md-4">
 							<div class="form-group">
 								<label class="form-label">Nome *</label>
 								<form:input path="nome" class="form-control form-control-sm"
-									required="" placeholder="Inserisci il tuo nome" />
+									required="required" placeholder="Inserisci il tuo nome" />
 								<form:errors path="nome" cssClass="error" />
 							</div>
 						</div>
@@ -827,17 +841,18 @@ h1 {
 							<div class="form-group">
 								<label class="form-label">Cognome *</label>
 								<form:input path="cognome" class="form-control form-control-sm"
-									required="" placeholder="Inserisci il tuo cognome" />
+									required="required" placeholder="Inserisci il tuo cognome" />
 								<form:errors path="cognome" cssClass="error" />
 							</div>
 						</div>
 
 						<div class="col-md-4"></div>
+						
 						<div class="col-md-4">
 							<div class="form-group">
 								<label class="form-label">Email *</label>
-								<form:input path="email" class="form-control form-control-sm"
-									required="" placeholder="Inserisci la tua email" />
+								<form:input path="email" type="email" class="form-control form-control-sm"
+									required="required" placeholder="Inserisci la tua email" />
 								<form:errors path="email" cssClass="error" />
 							</div>
 						</div>
@@ -846,61 +861,73 @@ h1 {
 							<div class="form-group">
 								<label class="form-label">Telefono *</label>
 								<form:input path="telefono" class="form-control form-control-sm"
-									required="" placeholder="Inserisci il tuo numero di telefono" />
+									required="required" placeholder="Inserisci il tuo numero di telefono" />
 								<form:errors path="telefono" cssClass="error" />
 							</div>
 						</div>
-						<br>
-
-						<!-- LUOGO DI CANDIDATURA -->
-						<div id="div_cv" class="row text-left">
-							<div class="col-md-1"></div>
-							<div class="col-md-4">
-								<form:label path="luogoCandidatura">Luogo di candidatura preferito: *</form:label>
-							</div>
-							<div class="col-md-1"></div>
-							<div class="col-md-4">
-								<form:radiobutton path="luogoCandidatura" value="T"
-									label="Torino" />
-								<form:radiobutton path="luogoCandidatura" value="M"
-									label="Milano" />
-								<form:radiobutton path="luogoCandidatura" value="E"
-									label="Entrambi" />
-							</div>
-							<div class="col-md-2"></div>
-						</div>
+							<ul class="nav nav-pills flex-column">
+							</ul>
+							<hr class="d-sm-none">
+							
 					</div>
-					<br>
+					<!--  <br> -->
+
+					<!-- LUOGO DI CANDIDATURA -->
+					<div id="div_cv" class="row text-left" style="text-align: center">
+						<div class="col-md-1"></div>
+						<div class="col-md-4">
+								<form:label path="luogoCandidatura">Luogo di candidatura preferito: *</form:label>
+						</div>
+						<div class="col-md-1"></div>
+						<div class="col-md-4">
+							<form:radiobutton path="luogoCandidatura" value="T"
+								label="Torino" />
+							<form:radiobutton path="luogoCandidatura" value="M"
+								label="Milano" />
+							<form:radiobutton path="luogoCandidatura" value="E"
+								label="Entrambi" />
+						</div>
+						<div class="col-md-2"></div>
+					</div>
+
+					<br><br><br>
 
 					<!-- SEZIONE COMPETENZE -->
 					<div id="div_cv" class="row text-left">
 						<div class="col-md-12">
 							<legend
-								style="border-bottom: 1px solid #999; margin-bottom: 20px">Competenze</legend>
+								style="border-bottom: 1px solid #999; margin-bottom: 20px"><b>Competenze</b></legend>
 						</div>
-						<div id="div_cv" class="row text-left">
-							<div class="col-md-1"></div>
-							<div class="col-md-4">
-								<form:label path="comp">Competenze Principali: </form:label>
+						
+						<div id="div_cv" class="row text-left" style="text-align: center">
+							<div class="col-md-2"></div>
+							<div class="col-md-3">
+									<form:label path="comp">Competenze Principali: </form:label>
 							</div>
-							<div class="col-md-7">
+							<div class="col-md-1"></div>
+							<div class="col-md-6">
 								<form:checkboxes items="${webFrameworkList}" path="comp" />
 							</div>
 						</div>
 
-						<div id="div_cv" class="row text-left">
+						<br><br>
+
+						<div id="div_cv" class="row text-left" style="text-align: center">
 							<div class="col-md-1"></div>
-							<div class="col-md-4">
-								<form:label path="comp">Altre competenze (inserirle separate da virgola): </form:label>
-							</div>
-							<div class="col-md-7">
+							<divx class="col-md-4">
+								<span><form:label path="comp">Altre competenze (inserirle separate da virgola): </form:label></span>
+							</divx>
+							<div class="col-md-6">
 								<form:textarea path="competenze" rows="5" cols="30" />
 							</div>
+							<div class="col-md-1"></div>
 						</div>
+
+						<br><br>
 
 						<!-- BOTTONE CANDIDATI -->
 						<div style="text-align: center">
-							<input type="submit" value="Candidati" />
+							<input type="submit" class="button button2" value="Invia la tua candidatura" />
 						</div>
 					</div>
 				</form:form>

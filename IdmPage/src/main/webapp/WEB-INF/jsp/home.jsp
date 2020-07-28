@@ -855,9 +855,6 @@ h1 {
 							</p>
 
 						</div>
-						<ul class="nav nav-pills flex-column">
-						</ul>
-						<hr class="d-sm-none">
 					</div>
 					
 					<!-- COLONNA EDIZIONI -->
@@ -879,9 +876,6 @@ h1 {
 								Marzo 2019 - Settembre 2019<br>
 								Giugno 2020 - in corso</p>
 						</div>
-						<ul class="nav nav-pills flex-column">
-						</ul>
-						<hr class="d-sm-none">
 					</div>
 					
 					<!-- COLONNA SEDI FORMATIVE -->
@@ -911,11 +905,10 @@ h1 {
 							</div>
 							<p>Le sedi disponibili sono Torino o Milano</p>
 						</div>
-						
+					</div>
 						<ul class="nav nav-pills flex-column">
 						</ul>
 						<hr class="d-sm-none">
-					</div>
 
 				</div>
 				
