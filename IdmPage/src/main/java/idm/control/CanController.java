@@ -17,7 +17,6 @@ import org.springframework.web.bind.support.SessionStatus;
 
 import idm.beans.Candidato;
 import idm.dao.CanDao;
-import idm.validator.canValid;
 
 @Controller    
 public class CanController {

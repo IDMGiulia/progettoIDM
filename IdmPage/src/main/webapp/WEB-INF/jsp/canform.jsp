@@ -1,71 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<<<<<<< HEAD
-<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>    
-<html>  
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<style>
-    .error {
-        color: red; font-weight: bold;
-    }
-</style>
-</head>
-        <h1><b> Candidati! </b></h1>  
-       <form:form method="POST" action="save" modelAttribute="can">  
-       <%-- <form:errors path="*" cssClass="error" />  --%>
-        <table >    
-         <tr>    
-          <td>Nome : </td>   
-          <td><form:input path="nome"  /></td> 
-         	<form:errors path="nome" cssClass="error"/>   
-         </tr>   
-         <tr>    
-          <td>Cognome : </td>   
-          <td><form:input path="cognome"  /></td>  
-    		<form:errors path="cognome" cssClass="error"/>
-         </tr>  
-         <tr>    
-          <td>email : </td>   
-          <td><form:input path="email"  /></td>  
-          <form:errors path="email" cssClass="error"/>
-         </tr>
-         <tr>    
-          <td>telefono : </td>   
-<<<<<<< HEAD
-          <td><form:input path="telefono"  /></td>  
-=======
-          <td><form:input path="telefono" /></td>  
->>>>>>> dcc4ead634f1e97ab4749b7cff557e47b38caf69
-           <form:errors path="telefono" cssClass="error"/> 
-         </tr>
-         <tr>
-          <td><form:label path = "luogoCandidatura">luogo di candidatura</form:label></td>
-               <td>
-                  <form:radiobutton path = "luogoCandidatura" value = "T" label = "Torino" />
-                  <form:radiobutton path = "luogoCandidatura" value = "M" label = "Milano" />
-                  <form:radiobutton path = "luogoCandidatura" value = "E" label = "Entrambi" />
-               </td>
-         </tr>    
-         <tr>
-           <td><form:label path = "comp">Principale Competenze</form:label></td>
-           <td><form:checkboxes items = "${webFrameworkList}" path = "comp" /></td>       
-         </tr> 
-         <tr>    
-          <td>altre competenze: inserirle separate da virgola</td>    
-          <td><form:textarea path="competenze" rows="5" cols="30" /></td>  
-         </tr>   
-         <tr>    
-             
-          <td> </td>    
-          <td><input type="submit" value="Save" /></td>    
-         </tr>    
-        </table>    
-       </form:form> 
-=======
-<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%> 
- 
+<!DOCTYPE html> 
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>  
 <html lang="it">
 <head>
 <meta charset="utf-8" />
@@ -617,6 +553,11 @@ h1 {
 	border: none !important;
 }
 </style>
+<style>
+    .error {
+        color: red; font-weight: bold;
+    }
+</style>
 <style type="text/css" data-type="vc_shortcodes-custom-css">
 .vc_custom_1473350305655 {
 	margin-top: 44px !important;
@@ -863,8 +804,8 @@ h1 {
 						prossima Academy di IDM</h4>
 				</div>
 
-				<form:form method="POST" action="save">
-				
+				<form:form method="POST" action="save" modelAttribute="can">
+
 					<!-- SEZIONE DATI PERSONALI -->
 					<div id="div_cv" class="row text-left">
 						<div class="col-md-12">
@@ -910,7 +851,7 @@ h1 {
 							</div>
 						</div>
 						<br>
-						
+
 						<!-- LUOGO DI CANDIDATURA -->
 						<div id="div_cv" class="row text-left">
 							<div class="col-md-1"></div>
@@ -930,7 +871,7 @@ h1 {
 						</div>
 					</div>
 					<br>
-					
+
 					<!-- SEZIONE COMPETENZE -->
 					<div id="div_cv" class="row text-left">
 						<div class="col-md-12">
@@ -963,7 +904,7 @@ h1 {
 						</div>
 					</div>
 				</form:form>
-			
+
 			</div>
 		</section>
 
@@ -1003,7 +944,7 @@ h1 {
 											P.I. 07808140011<br> Numero REA 922825<br> Capitale
 											sociale interamente versato: &#8364 70.000,00<br> IDM
 											Consulting Srl &#232 una azienda certificata<br> UNI EN
-											ISO 9001:2015<br> Copyright &copy 2018-2019-2020 All
+											ISO 9001:2015<br> Copyright &copy; 2018-2019-2020 All
 											rights reserved .
 										</p>
 									</div>
@@ -1132,4 +1073,3 @@ var wpcf7_redirect_forms = {"2541":{"page_id":"2558","external_url":"","use_exte
 </body>
 
 </html>
->>>>>>> Jacopo
