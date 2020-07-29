@@ -38,7 +38,7 @@ public class Candidato {
 	@NotEmpty (message="è obbligatorio inserire il luogo di candidatura")
 	private String luogoCandidatura;
 	
-	
+
 	
 	public String getLuogoCandidatura() {
 		return luogoCandidatura;

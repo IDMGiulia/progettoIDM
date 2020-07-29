@@ -13,6 +13,8 @@
 	<context:component-scan
 		base-package="idm.control"></context:component-scan>
 	<mvc:annotation-driven />
+	<mvc:resources mapping="/img/**" location="/WEB-INF/img/" />
+	
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/jsp/"></property>
