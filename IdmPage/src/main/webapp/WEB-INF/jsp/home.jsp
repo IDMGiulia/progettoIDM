@@ -12,7 +12,6 @@
 <link rel="alternate" type="application/rss+xml" title="RSS2.0"
 	href="https://www.idmconsulting.it/feed/" />
 <link rel="pingback" href="https://www.idmconsulting.it/xmlrpc.php" />
-
 <link rel="shortcut icon"
 	href="https://www.idmconsulting.it/wp-content/uploads/2016/01/idm-favicon.png" />
 <meta name="description"
