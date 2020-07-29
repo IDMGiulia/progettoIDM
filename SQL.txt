@@ -18,8 +18,8 @@ CREATE TABLE `springmvc`.`competenze` (
   
   
 CREATE TABLE `springmvc`.`can_comp` (
-  `idcan` INT NOT NULL,
-  `competenza` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`idcan`, `competenza`));
+  `can_id` INT NOT NULL,
+  `competenze` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`can_id`, `competenze`));
   
   

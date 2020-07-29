@@ -9,8 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-
+import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.support.SessionStatus;
@@ -64,14 +65,26 @@ public class CanController {
 	 *  because default request is GET*/    
 	@RequestMapping(value="/save",method = RequestMethod.POST)    
 	public String save(@Valid @ModelAttribute("can") Candidato can, BindingResult result, SessionStatus status,Model m){ 
-	     
 	    //Check validation errors
 	    if (result.hasErrors()) {   
 	        return "canform";
 	    }
+	    try {
 	    dao.salva(can); 
+	    }catch (Exception e) {
+	    	ObjectError error = new ObjectError("competenze","hai inserito troppi caratteri nel campo altre competenze");
+	    	result.addError(error);
+	    	return "canform";
+		}
 		return "canconf";//will derict to canconf   
-	}  
+	} 
+	
+	/* It deletes record for the given id in URL and redirects to /viewemp */    
+    @RequestMapping(value="/deleteemp/{id}",method = RequestMethod.GET)    
+    public String delete(@PathVariable int id){    
+        dao.deleteCandidato(id);    
+        return "redirect:/amministrazione";    
+    } 
 	
 	
 }

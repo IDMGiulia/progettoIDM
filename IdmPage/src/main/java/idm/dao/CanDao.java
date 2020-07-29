@@ -93,10 +93,14 @@ public class CanDao {
 			}    
 		});    
 	}
+	
+	public int deleteCandidato(int id){    
+		String sql="delete from candidati where id="+id+""; 
+		String sql1="delete from can_comp where can_id="+id+"";
+		template.update(sql1); 
+		return template.update(sql);    
+	} 
 
-	
-	
-	
 	/*
 	public String gestisciComp (String [] framework) {
 		String elementoString="";

@@ -14,8 +14,9 @@
    <td>${can.email}</td>  
    <td>${can.telefono}</td>  
    <td>${can.competenze}</td>  
-  <%--  <%-- <td><a href="editemp/${emp.id}">Edit</a></td>  
-   <td><a href="deleteemp/${emp.id}">Delete</a></td>  --%>  --%>
+   <td><a href="deleteemp/${can.id}">Delete</a></td> 
+	 <%-- <td><a href="editemp/${emp.id}">Edit</a></td>  
+    --%>
    </tr>  
    </c:forEach>  
    </table>  
