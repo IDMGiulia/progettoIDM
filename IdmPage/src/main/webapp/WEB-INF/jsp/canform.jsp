@@ -685,12 +685,11 @@ span {
 				</div>
 
 				<form:form method="POST" action="save" modelAttribute="can">
-
+				
 					<!-- SEZIONE DATI PERSONALI -->
 					<div id="div_cv" class="row text-left">
 						<div class="col-md-12">
-							<legend
-								style="border-bottom: 1px solid #999; margin-top: 30px; margin-bottom: 20px">
+							<legend style="border-bottom: 1px solid #999; margin-top: 30px; margin-bottom: 20px">
 								<b>Dati Personali</b></legend>
 						</div>
 						<div class="col-md-4"></div>
@@ -718,7 +717,7 @@ span {
 							<div class="form-group">
 								<label class="form-label">Email *</label>
 								<form:input path="email" type="email" class="form-control form-control-sm"
-									required="required" placeholder="nome@email.it" />
+									required="required" placeholder="example@email.it" />
 								<form:errors path="email" cssClass="error" />
 							</div>
 						</div>
@@ -736,7 +735,6 @@ span {
 							<hr class="d-sm-none">
 							
 					</div>
-					<!--  <br> -->
 
 					<!-- LUOGO DI CANDIDATURA -->
 					<div id="div_cv" class="row text-left" style="text-align: center">
@@ -760,34 +758,102 @@ span {
 
 					<br><br><br>
 
-					<!-- SEZIONE COMPETENZE -->
+					<!-- SEZIONE ISTRUZIONE-->
 					<div id="div_cv" class="row text-left">
 						<div class="col-md-12">
 							<legend
-								style="border-bottom: 1px solid #999; margin-bottom: 20px"><b>Competenze</b></legend>
+								style="border-bottom: 1px solid #999; margin-bottom: 20px">
+								<b>Istruzione</b>
+							</legend>
 						</div>
+
+						<!-- LIVELLO DI ISTRUZIONE -->
+						<div id="div_cv" class="row text-left" style="text-align: center">
+							<div class="col-md-1"></div>
+							<div class="col-md-4">
+								<form:label path="livello">Livello di Istruzione:</form:label>
+							</div>
+							<div class="col-md-6">
+								<div class="radiobut">
+									<form:radiobutton path="livello" value="SUP"
+										label="Diploma di Scuola Superiore" />
+									<form:radiobutton path="livello" value="TRI"
+										label="Laurea Triennale" />
+									<form:radiobutton path="livello" value="MAG"
+										label="Laurea Magistrale" />
+								</div>
+							</div>
+							<div class="col-md-1"></div>
+						</div>
+
+						<br>
+
+						<div id="div_cv" class="row text-left" style="text-align: center">
+							<div class="col-md-1"></div>
+							<div class="col-md-4">
+								<form:label path="paeseDiploma">Ottenuto in: </form:label>
+							</div>
+							<div class="col-md-6">
+								<div class="radiobut">
+									<form:radiobutton path="paeseDiploma" value="IT" label="Italia" />
+									<form:radiobutton path="paeseDiploma" value="EE" label="Estero" />
+								</div>
+							</div>
+							<div class="col-md-1"></div>
+						</div>
+
+						<br>
+
+						<div id="div_cv" class="row text-left" style="text-align: center">
+						<div class="col-md-1"></div>
+							<div class="col-md-4">
+								<label class="form-label">Percorso di Studi:</label>
+							</div>
+							<div class="col-md-1"></div>
+							<div class="col-md-5"style="text-align: center">
+								<form:input path="percorso" type="text"
+									class="form-control form-control-sm" required=""
+									placeholder="es. Ingegneria Informatica" />
+								<form:errors path="percorso" cssClass="error" />
+							</div>
+							<div class="col-md-1"></div>
+						</div>
+					</div>
+
+					<br><br>
 						
+						<!-- SEZIONE COMPETENZE-->
+					<div id="div_cv" class="row text-left">
+						<div class="col-md-12">
+							<legend
+								style="border-bottom: 1px solid #999; margin-bottom: 20px">
+								<b>Competenze</b></legend>
+						</div>
+						<!--COMPETENZE BASI-->
 						<div id="div_cv" class="row text-left" style="text-align: center">
 							<div class="col-md-1"></div>
 							<div class="col-md-4">
 									<form:label path="comp">Competenze Principali: </form:label>
 							</div>
-							<div class="col-md-7">
+							<div class="col-md-1"></div>
+							<div class="col-md-5">
 								<div class="checkboxes">
 								<form:checkboxes items="${webFrameworkList}" path="comp" />
 								</div>
 							</div>
+							<div class="col-md-1"></div>
 						</div>
 
 						<br><br>
 
+						<!-- ALTRE COMPETENZE -->
 						<div id="div_cv" class="row text-left" style="text-align: center">
 							<div class="col-md-1"></div>
 							<divx class="col-md-4">
 								<span><form:label path="comp">Altre competenze (inserirle separate da virgola): </form:label></span>
 							</divx>
 							<div class="col-md-6">
-								<form:textarea path="competenze" rows="5" cols="30" />
+								<form:textarea path="competenze" rows="5" cols="30" placeholder="es. Swift, Ruby, Assembly, ..." />
 							</div>
 							<div class="col-md-1"></div>
 						</div>
@@ -800,7 +866,6 @@ span {
 						</div>
 					</div>
 				</form:form>
-
 			</div>
 		</section>
 
