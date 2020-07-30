@@ -15,8 +15,7 @@
     <property name="luogoCandidatura"></property> 
     <property name="competenze"></property>   
     <property name="stato" ></property>      
-    <property name="note" ></property>    
-    <property name="stato" ></property>
+    <property name="note" ></property>  
     <property name="livello" ></property>
     <property name="paeseDiploma" ></property>
     <property name="percorso" ></property>      
