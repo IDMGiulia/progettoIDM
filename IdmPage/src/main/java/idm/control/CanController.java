@@ -39,6 +39,12 @@ public class CanController {
         m.addAttribute("list",list);  
         return "amministrazione";    
     }
+	@RequestMapping("/amministrazione2")    
+    public String viewempSede(Model m){    
+        List<Candidato> list=dao.getCandidatoForSede("T");    
+        m.addAttribute("list",list);  
+        return "amministrazione";    
+    }
 	
 	 @ModelAttribute("webFrameworkList")
 	   public List<String> getWebFrameworkList() {
