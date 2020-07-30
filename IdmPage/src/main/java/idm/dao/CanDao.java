@@ -99,37 +99,6 @@ public class CanDao {
 		});    
 	}
 
-	public List<Candidato> getCandidatoForSede(String sede){    
-		List<Candidato> e = new ArrayList<>();
-		e = this.getCandidatos();
-		List<Candidato> risultato = new ArrayList<>();
-		e.stream()
-			.filter(x->x.getLuogoCandidatura().equals(sede)||x.getLuogoCandidatura().equals("E"))
-			.sorted((x,y)->y.getFavoriteFrameworks().size()-x.getFavoriteFrameworks().size())
-			.forEach(x->risultato.add(x));
-				return risultato;    
-	}
-	
-	public List<Candidato> getCandidatoForCompetenze(List<String> competenze){    
-		List<Candidato> e = new ArrayList<>();
-		e = this.getCandidatos();
-		List<Candidato> risultato = new ArrayList<>();
-		e.stream()
-			.filter(x->x.getFavoriteFrameworks().containsAll(competenze))
-			.forEach(x->risultato.add(x));
-				return risultato;    
-	}
-	public List<Candidato> getCandidatoForCompetenzeAndSede(List<String> competenze,String sede){    
-		List<Candidato> e = new ArrayList<>();
-		e = this.getCandidatos();
-		List<Candidato> risultato = new ArrayList<>();
-		e.stream()
-			.filter(x->x.getFavoriteFrameworks().containsAll(competenze)&&(x.getLuogoCandidatura().equals(sede)||x.getLuogoCandidatura().equals("E")))
-			.forEach(x->risultato.add(x));
-				return risultato;    
-	}
-=======
-	
 	//metodo per eliminare un candidato
 	public int deleteCandidato(int id){    
 		String sql="delete from candidati where id="+id+""; 
@@ -137,20 +106,18 @@ public class CanDao {
 		template.update(sql1); 
 		return template.update(sql);    
 	} 
->>>>>>> 8234cab1c6ed55bf6fb771912d3eceaebe431cfe
 	
-//	//metodo per selezionare i candidati con una certa sede
-//	public List<Candidato> getCandidatoForSede(String sede){    
-//	    List<Candidato> e = new ArrayList<>();
-//	    e = this.getCandidatos();
-//	    List<Candidato> risultato = new ArrayList<>();
-//	    e.stream()
-//	      .filter(x->x.getLuogoCandidatura().equals(sede)||x.getLuogoCandidatura().equals("E"))
-//	      .sorted((x,y)->y.getFavoriteFrameworks().size()-x.getFavoriteFrameworks().size())
-//	      .forEach(x->risultato.add(x));
-//	        return risultato;    
-//	  }
-//	  
+	//metodo per selezionare i candidati con una certa sede
+	public List<Candidato> getCandidatoForSede(String sede){    
+	    List<Candidato> e = new ArrayList<>();
+	    e = this.getCandidatos();
+	    List<Candidato> risultato = new ArrayList<>();
+	    e.stream()
+	      .filter(x->x.getLuogoCandidatura().equals(sede)||x.getLuogoCandidatura().equals("E"))
+	      .forEach(x->risultato.add(x));
+	        return risultato;    
+	  }
+	  
 //		//metodo per selezionare i candidati con una certa competenza 
 //	  public List<Candidato> getCandidatoForCompetenze(List<String> competenze){    
 //	    List<Candidato> e = new ArrayList<>();
@@ -180,6 +147,11 @@ public class CanDao {
 		t.commit();
 		session.close();
 		
+	}
+
+	public Candidato getCanById(int id) {
+		String sql="select * from candidati where id=?";    
+	    return template.queryForObject(sql, new Object[]{id},new BeanPropertyRowMapper<Candidato>(Candidato.class));
 	}
 
 	/*
