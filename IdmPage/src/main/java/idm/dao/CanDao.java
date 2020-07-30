@@ -94,6 +94,9 @@ public class CanDao {
 				e.setCompetenze(rs.getString(6));  
 				e.setLuogoCandidatura(rs.getString(7));
 				e.setStato(rs.getString(8));
+				e.setLivello(rs.getString(9));
+				e.setPaeseDiploma(rs.getString(10));
+				e.setPercorso(rs.getString(11));
 				return e;    
 			}    
 		});    

@@ -14,7 +14,10 @@
     <property name="telefono"></property>   
     <property name="luogoCandidatura"></property> 
     <property name="competenze"></property>   
-    <property name="stato" ></property>      
+    <property name="stato" ></property>
+    <property name="livello" ></property>
+    <property name="paeseDiploma" ></property>
+    <property name="percorso" ></property>      
     <list name="favoriteFrameworks" table="can_comp" fetch="select" cascade="all">  
             <key column="can_id" />  
                <index column="type"></index>   
