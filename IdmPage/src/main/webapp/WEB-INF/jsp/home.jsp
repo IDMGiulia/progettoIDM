@@ -17,12 +17,6 @@
 <meta name="description"
 	content="IDM Consulting ottimizza la gestione dei processi aziendali riducendone i costi. Propone soluzioni strategiche di archivio garantendo sicurezza, affidabilità e innovazione." />
 <link rel="canonical" href="https://www.idmconsulting.it/" />
-<meta property="og:locale" content="it_IT" />
-<meta property="og:type" content="website" />
-<meta property="og:title" content="IDM - We simplify your work" />
-<meta property="og:description"
-	content="IDM Consulting ottimizza la gestione dei processi aziendali riducendone i costi. Propone soluzioni strategiche di archivio garantendo sicurezza, affidabilità e innovazione." />
-<meta property="og:url" content="https://www.idmconsulting.it/" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:description"
 	content="IDM Consulting ottimizza la gestione dei processi aziendali riducendone i costi. Propone soluzioni strategiche di archivio garantendo sicurezza, affidabilità e innovazione." />
@@ -69,9 +63,6 @@ img.wp-smiley, img.emoji {
 	type='text/css' media='all' />
 <link rel='stylesheet' id='wpsm_ac_bootstrap-front-css'
 	href='https://www.idmconsulting.it/wp-content/plugins/responsive-accordion-and-collapse/css/bootstrap-front.css?ver=4.9.15'
-	type='text/css' media='all' />
-<link rel='stylesheet' id='rs-plugin-settings-css'
-	href='https://www.idmconsulting.it/wp-content/plugins/revslider/public/assets/css/settings.css?ver=5.4.8'
 	type='text/css' media='all' />
 <style id='rs-plugin-settings-inline-css' type='text/css'>
 .tp-caption a {
@@ -149,10 +140,6 @@ img.wp-smiley, img.emoji {
 	src='https://www.idmconsulting.it/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
 <script type='text/javascript'
 	src='https://www.idmconsulting.it/wp-content/plugins/add-to-any/addtoany.min.js?ver=1.1'></script>
-<script type='text/javascript'
-	src='https://www.idmconsulting.it/wp-content/plugins/revslider/public/assets/js/jquery.themepunch.tools.min.js?ver=5.4.8'></script>
-<script type='text/javascript'
-	src='https://www.idmconsulting.it/wp-content/plugins/revslider/public/assets/js/jquery.themepunch.revolution.min.js?ver=5.4.8'></script>
 <script type='text/javascript'
 	src='https://www.idmconsulting.it/wp-content/plugins/page-transition/js/jquery.animsition.min.js?ver=1.3'></script>
 <script type='text/javascript'
@@ -539,13 +526,6 @@ h1 {
 </style>
 <meta name="generator"
 	content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress." />
-<meta name="generator"
-	content="Powered by Slider Revolution 5.4.8 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
-<script type="text/javascript">function setREVStartSize(e){									
-						try{ e.c=jQuery(e.c);var i=jQuery(window).width(),t=9999,r=0,n=0,l=0,f=0,s=0,h=0;
-							if(e.responsiveLevels&&(jQuery.each(e.responsiveLevels,function(e,f){f>i&&(t=r=f,l=e),i>f&&f>r&&(r=f,n=e)}),t>r&&(l=n)),f=e.gridheight[l]||e.gridheight[0]||e.gridheight,s=e.gridwidth[l]||e.gridwidth[0]||e.gridwidth,h=i/s,h=h>1?1:h,f=Math.round(h*f),"fullscreen"==e.sliderLayout){var u=(e.c.width(),jQuery(window).height());if(void 0!=e.fullScreenOffsetContainer){var c=e.fullScreenOffsetContainer.split(",");if (c) jQuery.each(c,function(e,i){u=jQuery(i).length>0?u-jQuery(i).outerHeight(!0):u}),e.fullScreenOffset.split("%").length>1&&void 0!=e.fullScreenOffset&&e.fullScreenOffset.length>0?u-=jQuery(window).height()*parseInt(e.fullScreenOffset,0)/100:void 0!=e.fullScreenOffset&&e.fullScreenOffset.length>0&&(u-=parseInt(e.fullScreenOffset,0))}f=u}else void 0!=e.minHeight&&f<e.minHeight&&(f=e.minHeight);e.c.closest(".rev_slider_wrapper").css({height:f})					
-						}catch(d){console.log("Failure at Presize of Slider:"+d)}						
-					};</script>
 <style type="text/css" data-type="vc_custom-css">
 .vc_gitem-zone .vc-zone-link {
 	border: none !important;
@@ -597,18 +577,65 @@ h1 {
 
 <!-- STILE CAROSELLO -->
 <style>
-/* Make the image fully responsive */
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  transition-property: opacity;
+  transition: opacity ease-out .7s;
+}
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+
+@media all and (transform-3d), (-webkit-transform-3d) {
+    .carousel-fade .carousel-inner > .item.next,
+    .carousel-fade .carousel-inner > .item.active.right {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.prev,
+    .carousel-fade .carousel-inner > .item.active.left {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.next.left,
+    .carousel-fade .carousel-inner > .item.prev.right,
+    .carousel-fade .carousel-inner > .item.active {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+}
+
 .carousel-inner img {
 	width: 100%;
 	height: 100%;
 	border-radius: 8px;
 }
-
-.carousel-inner>.item{
-   /*disables white flash*/
-   -webkit-transition: -webkit-transform .5s ease-in-out;
-   -o-transition: -o-transform .5s ease-in-out;
-   transition: transform .5s ease-in-out;
+.carousel-1 {
+  height: 100%;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+.carousel-2 {
+  height: 100%;
+  -webkit-background-size: cover;
+  background-size: cover;
 }
 </style>
 
@@ -669,7 +696,6 @@ h1 {
 							<h2>
 								<b>Programma dei Nostri Corsi Formativi</b>
 							</h2>
-
 							<div class="row">
 								<div class="col-sm-2"></div>
 								
@@ -724,23 +750,24 @@ h1 {
 							</h2>
 							
 							<!-- CAROSELLO -->
-							<div class="container">
-
-								<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
-
-									<!-- IMMAGINI DEL CAROSELLO -->
-									<div class="carousel-inner">
-										<div class="item active">
+							<div id="myCarousel" class="carousel slide slide carousel-fade" 
+												 data-ride="carousel" 
+												 data-interval="5000">
+								<div class="carousel-inner">
+									<div class="item active carousel-1">
+										<div class="container">
 											<img src="<%=request.getContextPath()%>/img/torino2.jpg" alt="Torino">
 										</div>
-										<div class="item">
-											<img src="<%=request.getContextPath()%>/img/milano.jpg" alt="Milano">	
+									</div>
+									<div class="item carousel-2">
+										<div class="container">
+											<img src="<%=request.getContextPath()%>/img/milano.jpg" alt="Milano">
 										</div>
 									</div>
-
 								</div>
 							</div>
-							<p>Le sedi disponibili sono Torino o Milano</p>
+							<br>
+							<p>Le sedi disponibili sono Torino e Milano</p>
 						</div>
 					</div>
 						<ul class="nav nav-pills flex-column">
@@ -790,7 +817,8 @@ h1 {
 						</div>
 					</div>
 				</div>
-
+				<hr class="d-sm-none">
+				
 				<!-- BOTTONE CANDIDATURA -->
 				<div>
 					<div style="text-align: center">
@@ -811,17 +839,7 @@ h1 {
 	<script type="text/javascript">
 		jQuery( 'body' ).wrapInner( '<div class="animsition"></div>' ).removeClass( 'animsition' );
 		</script>
-	<script type="text/javascript">
-				function revslider_showDoubleJqueryError(sliderID) {
-					var errorMessage = "Revolution Slider Error: You have some jquery.js library include that comes after the revolution files js include.";
-					errorMessage += "<br> This includes make eliminates the revolution slider libraries, and make it not work.";
-					errorMessage += "<br><br> To fix it you can:<br>&nbsp;&nbsp;&nbsp; 1. In the Slider Settings -> Troubleshooting set option:  <strong><b>Put JS Includes To Body</b></strong> option to true.";
-					errorMessage += "<br>&nbsp;&nbsp;&nbsp; 2. Find the double jquery.js include and remove it.";
-					errorMessage = "<span style='font-size:16px;color:#BC0C06;'>" + errorMessage + "</span>";
-						jQuery(sliderID).show().html(errorMessage);
-				}
-			
-</script>
+
 	<script type='text/javascript'>
 /* <![CDATA[ */
 var wpcf7 = {"apiSettings":{"root":"https:\/\/www.idmconsulting.it\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
