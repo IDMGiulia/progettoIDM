@@ -35,10 +35,10 @@ public class Candidato {
 	private String [] comp; 
 	
 	//sede per la quale ci si candidata
-	@NotEmpty (message="è obbligatorio inserire il luogo di candidatura")
+	@NotEmpty (message="\u00E9 obbligatorio inserire una scelta per la sede di candidatura")
 	private String luogoCandidatura;
 	
-	//livello della candidatura
+	//stato della candidatura
 	private String stato;
 	
 	//campo in cui Sara può inserire delle note sui candidati
@@ -52,6 +52,15 @@ public class Candidato {
 	public void setNote(String note) {
 		this.note = note;
 	}
+	//Livello di istruzione del candidato
+	private String livello;
+	
+	//Paese in cui è stato ottenuto il diploma
+	private String paeseDiploma;
+	
+	//percorso di studi del candidato
+	private String percorso;
+	
 	public String getStato() {
 		return stato;
 	}
@@ -106,15 +115,29 @@ public class Candidato {
 	public void setCompetenze(String competenze) {
 		this.competenze = competenze;
 	}
-	
 	public List<Competenze> getFavoriteFrameworks() {
 		return favoriteFrameworks;
 	}
 	public void setFavoriteFrameworks(List<Competenze> favoriteFrameworks) {
 		this.favoriteFrameworks = favoriteFrameworks;
 	}
+	public void setLivello(String livello) {
+		this.livello = livello;
+	}  
+	public String getLivello( ) {
+		return livello;
+	}
+	public String getPaeseDiploma() {
+		return paeseDiploma;
+	}
+	public void setPaeseDiploma(String paeseDiploma) {
+		this.paeseDiploma = paeseDiploma;
+	}
+	public String getPercorso() {
+		return percorso;
+	}
+	public void setPercorso(String percorso) {
+		this.percorso = percorso;
+	}
 	
-	
-
-
 }

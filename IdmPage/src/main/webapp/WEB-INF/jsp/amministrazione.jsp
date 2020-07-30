@@ -18,6 +18,10 @@
    <td>${can.luogoCandidatura}</td> 
    <td>${can.stato}</td> 
    <td>${can.note}</td>  
+   <td>${can.stato}</td>
+   <td>${can.livello}</td>
+   <td>${can.paeseDiploma}</td> 
+   <td>${can.percorso}</td>  
    <td><a href="deleteemp/${can.id}">Cancella</a></td> 
 	<td><a href="editemp/${can.id}">Modifica</a></td>  
    </tr>  
