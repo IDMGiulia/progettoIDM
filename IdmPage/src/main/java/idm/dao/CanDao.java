@@ -92,16 +92,12 @@ public class CanDao {
 				e.setEmail(rs.getString(4));
 				e.setTelefono(rs.getString(5));
 				e.setCompetenze(rs.getString(6));  
-<<<<<<< HEAD
-				e.setLuogoCandidatura(rs.getString(7));     
-=======
 				e.setLuogoCandidatura(rs.getString(7));
->>>>>>> 8234cab1c6ed55bf6fb771912d3eceaebe431cfe
+				e.setLuogoCandidatura(rs.getString(7));
 				return e;    
 			}    
 		});    
 	}
-<<<<<<< HEAD
 
 	public List<Candidato> getCandidatoForSede(String sede){    
 		List<Candidato> e = new ArrayList<>();
