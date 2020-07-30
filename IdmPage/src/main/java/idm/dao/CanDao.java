@@ -32,6 +32,7 @@ public class CanDao {
 	}
 
 	public void salva(Candidato candidato) {
+		
 		int num = candidato.getComp().length;
 		String descrizione=candidato.getCompetenze();
 		String [] compBox=descrizione.split(",");
@@ -103,39 +104,39 @@ public class CanDao {
 		return template.update(sql);    
 	} 
 	
-	//metodo per selezionare i candidati con una certa sede
-	public List<Candidato> getCandidatoForSede(String sede){    
-	    List<Candidato> e = new ArrayList<>();
-	    e = this.getCandidatos();
-	    List<Candidato> risultato = new ArrayList<>();
-	    e.stream()
-	      .filter(x->x.getLuogoCandidatura().equals(sede)||x.getLuogoCandidatura().equals("E"))
-	      .sorted((x,y)->y.getFavoriteFrameworks().size()-x.getFavoriteFrameworks().size())
-	      .forEach(x->risultato.add(x));
-	        return risultato;    
-	  }
-	  
-		//metodo per selezionare i candidati con una certa competenza 
-	  public List<Candidato> getCandidatoForCompetenze(List<String> competenze){    
-	    List<Candidato> e = new ArrayList<>();
-	    e = this.getCandidatos();
-	    List<Candidato> risultato = new ArrayList<>();
-	    e.stream()
-	      .filter(x->x.getFavoriteFrameworks().containsAll(competenze))
-	      .forEach(x->risultato.add(x));
-	        return risultato;    
-	  }
-	  
-	  //metodo per selezionare i candidati con una certa competenza e sede
-	  public List<Candidato> getCandidatoForCompetenzeAndSede(List<String> competenze,String sede){    
-	    List<Candidato> e = new ArrayList<>();
-	    e = this.getCandidatos();
-	    List<Candidato> risultato = new ArrayList<>();
-	    e.stream()
-	      .filter(x->x.getFavoriteFrameworks().containsAll(competenze)&&(x.getLuogoCandidatura().equals(sede)||x.getLuogoCandidatura().equals("E")))
-	      .forEach(x->risultato.add(x));
-	        return risultato;    
-	  }
+//	//metodo per selezionare i candidati con una certa sede
+//	public List<Candidato> getCandidatoForSede(String sede){    
+//	    List<Candidato> e = new ArrayList<>();
+//	    e = this.getCandidatos();
+//	    List<Candidato> risultato = new ArrayList<>();
+//	    e.stream()
+//	      .filter(x->x.getLuogoCandidatura().equals(sede)||x.getLuogoCandidatura().equals("E"))
+//	      .sorted((x,y)->y.getFavoriteFrameworks().size()-x.getFavoriteFrameworks().size())
+//	      .forEach(x->risultato.add(x));
+//	        return risultato;    
+//	  }
+//	  
+//		//metodo per selezionare i candidati con una certa competenza 
+//	  public List<Candidato> getCandidatoForCompetenze(List<String> competenze){    
+//	    List<Candidato> e = new ArrayList<>();
+//	    e = this.getCandidatos();
+//	    List<Candidato> risultato = new ArrayList<>();
+//	    e.stream()
+//	      .filter(x->x.getFavoriteFrameworks().containsAll(competenze))
+//	      .forEach(x->risultato.add(x));
+//	        return risultato;    
+//	  }
+//	  
+//	  //metodo per selezionare i candidati con una certa competenza e sede
+//	  public List<Candidato> getCandidatoForCompetenzeAndSede(List<String> competenze,String sede){    
+//	    List<Candidato> e = new ArrayList<>();
+//	    e = this.getCandidatos();
+//	    List<Candidato> risultato = new ArrayList<>();
+//	    e.stream()
+//	      .filter(x->x.getFavoriteFrameworks().containsAll(competenze)&&(x.getLuogoCandidatura().equals(sede)||x.getLuogoCandidatura().equals("E")))
+//	      .forEach(x->risultato.add(x));
+//	        return risultato;    
+//	  }
 
 	/*
 	public String gestisciComp (String [] framework) {
