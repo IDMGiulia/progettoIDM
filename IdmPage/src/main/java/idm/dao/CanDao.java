@@ -55,7 +55,7 @@ public class CanDao {
 		descrizione=concatenaCompetenze(candidato, webFrameworkList, num);
 		candidato.setCompetenze(descrizione);
 		candidato.setFavoriteFrameworks(webFrameworkList);
-		candidato.setStato("NUOVO");
+		candidato.setStato("Nuova");
 		Session session = factory.openSession();  
 		Transaction t = session.beginTransaction();
 		session.saveOrUpdate(candidato);
@@ -94,6 +94,7 @@ public class CanDao {
 				e.setCompetenze(rs.getString(6));  
 				e.setLuogoCandidatura(rs.getString(7));
 				e.setStato(rs.getString(8));
+				e.setNote(rs.getString(9));
 				return e;    
 			}    
 		});    

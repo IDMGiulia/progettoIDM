@@ -1,11 +1,14 @@
 package idm.control;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.validation.Valid;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -14,9 +17,9 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.bind.support.SessionStatus;
-
-
+import org.springframework.web.multipart.MultipartFile;
 
 import idm.beans.Candidato;
 import idm.dao.CanDao;
@@ -79,7 +82,8 @@ public class CanController {
 	 *  into model object. You need to mention RequestMethod.POST method   
 	 *  because default request is GET*/    
 	@RequestMapping(value="/save",method = RequestMethod.POST)    
-	public String save(@Valid @ModelAttribute("can") Candidato can, BindingResult result, SessionStatus status,Model m){ 
+	public String save(@Valid @ModelAttribute("can") Candidato can, BindingResult result, 
+			SessionStatus status,Model m){ 
 	    //Check validation errors
 	    if (result.hasErrors()) {   
 	        return "canform";
@@ -116,5 +120,7 @@ public class CanController {
         dao.update(can);    
         return "redirect:/amministrazione";    
     } 
+    
+ 
 	
 }

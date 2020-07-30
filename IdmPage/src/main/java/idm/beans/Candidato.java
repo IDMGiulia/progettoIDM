@@ -41,6 +41,17 @@ public class Candidato {
 	//livello della candidatura
 	private String stato;
 	
+	//campo in cui Sara può inserire delle note sui candidati
+	private String note;
+	
+	
+	
+	public String getNote() {
+		return note;
+	}
+	public void setNote(String note) {
+		this.note = note;
+	}
 	public String getStato() {
 		return stato;
 	}
