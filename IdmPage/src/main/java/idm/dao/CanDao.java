@@ -12,6 +12,7 @@ import org.hibernate.boot.Metadata;
 import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;  
 import org.springframework.jdbc.core.RowMapper;   
 
@@ -53,6 +54,7 @@ public class CanDao {
 		descrizione=concatenaCompetenze(candidato, webFrameworkList, num);
 		candidato.setCompetenze(descrizione);
 		candidato.setFavoriteFrameworks(webFrameworkList);
+		candidato.setStato("NUOVO");
 		Session session = factory.openSession();  
 		Transaction t = session.beginTransaction();
 		session.saveOrUpdate(candidato);
@@ -90,6 +92,7 @@ public class CanDao {
 				e.setTelefono(rs.getString(5));
 				e.setCompetenze(rs.getString(6));  
 				e.setLuogoCandidatura(rs.getString(7));
+				e.setStato(rs.getString(8));
 				return e;    
 			}    
 		});    
@@ -101,7 +104,12 @@ public class CanDao {
 		String sql1="delete from can_comp where can_id="+id+"";
 		template.update(sql1); 
 		return template.update(sql);    
-	} 
+	}
+	
+	public Candidato getCanById(int id){    
+    String sql="select * from candidati where id=?";    
+    return template.queryForObject(sql, new Object[]{id},new BeanPropertyRowMapper<Candidato>(Candidato.class));    
+	}
 	
 	//metodo per selezionare i candidati con una certa sede
 	public List<Candidato> getCandidatoForSede(String sede){    
@@ -110,7 +118,6 @@ public class CanDao {
 	    List<Candidato> risultato = new ArrayList<>();
 	    e.stream()
 	      .filter(x->x.getLuogoCandidatura().equals(sede)||x.getLuogoCandidatura().equals("E"))
-	      .sorted((x,y)->y.getFavoriteFrameworks().size()-x.getFavoriteFrameworks().size())
 	      .forEach(x->risultato.add(x));
 	        return risultato;    
 	  }
@@ -136,6 +143,15 @@ public class CanDao {
 	      .forEach(x->risultato.add(x));
 	        return risultato;    
 	  }
+
+	public void update(Candidato can) {
+		Session session = factory.openSession();  
+		Transaction t = session.beginTransaction();
+		session.update(can);
+		t.commit();
+		session.close();
+		
+	}
 
 	/*
 	public String gestisciComp (String [] framework) {

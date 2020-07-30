@@ -38,8 +38,15 @@ public class Candidato {
 	@NotEmpty (message="è obbligatorio inserire il luogo di candidatura")
 	private String luogoCandidatura;
 	
-
+	//livello della candidatura
+	private String stato;
 	
+	public String getStato() {
+		return stato;
+	}
+	public void setStato(String stato) {
+		this.stato = stato;
+	}
 	public String getLuogoCandidatura() {
 		return luogoCandidatura;
 	}
