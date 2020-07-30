@@ -12,6 +12,7 @@ import org.hibernate.boot.Metadata;
 import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;  
 import org.springframework.jdbc.core.RowMapper;   
 
@@ -53,6 +54,7 @@ public class CanDao {
 		descrizione=concatenaCompetenze(candidato, webFrameworkList, num);
 		candidato.setCompetenze(descrizione);
 		candidato.setFavoriteFrameworks(webFrameworkList);
+		candidato.setStato("NUOVO");
 		Session session = factory.openSession();  
 		Transaction t = session.beginTransaction();
 		session.saveOrUpdate(candidato);
@@ -173,6 +175,15 @@ public class CanDao {
 	      .forEach(x->risultato.add(x));
 	        return risultato;    
 	  }
+
+	public void update(Candidato can) {
+		Session session = factory.openSession();  
+		Transaction t = session.beginTransaction();
+		session.update(can);
+		t.commit();
+		session.close();
+		
+	}
 
 	/*
 	public String gestisciComp (String [] framework) {

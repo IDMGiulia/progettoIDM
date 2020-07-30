@@ -101,5 +101,20 @@ public class CanController {
         return "redirect:/amministrazione";    
     } 
 	
+    /* It displays object data into form for the given id.   
+     * The @PathVariable puts URL data into variable.*/    
+    @RequestMapping(value="/editemp/{id}")    
+    public String edit(@PathVariable int id, Model m){    
+        Candidato emp=dao.getCanById(id);    
+        m.addAttribute("command",emp);  
+        return "canEditForm";    
+    } 
+    
+    /* It updates model object. */    
+    @RequestMapping(value="/editsave",method = RequestMethod.POST)    
+    public String editsave(@ModelAttribute("can") Candidato can){    
+        dao.update(can);    
+        return "redirect:/amministrazione";    
+    } 
 	
 }
