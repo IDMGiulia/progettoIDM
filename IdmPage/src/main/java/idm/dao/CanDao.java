@@ -93,7 +93,7 @@ public class CanDao {
 				e.setTelefono(rs.getString(5));
 				e.setCompetenze(rs.getString(6));  
 				e.setLuogoCandidatura(rs.getString(7));
-				e.setLuogoCandidatura(rs.getString(7));
+				e.setStato(rs.getString(8));
 				return e;    
 			}    
 		});    
