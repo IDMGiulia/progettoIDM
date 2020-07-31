@@ -4,7 +4,7 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>    
   
 <h1>Lista di candidati</h1>  
-<a href="selezione">selezione dei candidati</a>
+<a href="/IdmPage/amministrazione">torna alla tabella di partenza</a>
 <br>
 <br>
 <br>
@@ -25,8 +25,6 @@
    <td>${can.livello}</td>
    <td>${can.paeseDiploma}</td> 
    <td>${can.percorso}</td>  
-   <td><a href="deleteemp/${can.id}">Cancella</a></td> 
-	<td><a href="editemp/${can.id}">Modifica</a></td>  
    </tr>  
    </c:forEach>  
    </table>  

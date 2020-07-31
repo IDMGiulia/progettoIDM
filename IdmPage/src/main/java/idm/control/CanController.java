@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.multipart.MultipartFile;
@@ -44,23 +45,33 @@ public class CanController {
 	}
 	
 	
-	@RequestMapping("/visual")    
-		public String viewCandidati(Model m){    
-			String sede=(String) m.getAttribute("sede");
-			List<Candidato> list=dao.getCandidatoForSede(sede);    
-	        m.addAttribute("list",list);  
+	//per selezione multi competenze
+	@RequestMapping(value="/visuall")    
+	public String candidati(@RequestParam("sede") String sede, @RequestParam("competenza") String compe,
+			@RequestParam("stato") String stato,Model m){   
+		List<String> competenze= new ArrayList<String>();
+		competenze.add(compe);
+		List<Candidato> list=dao.getCandidatoForParameter(sede, competenze, stato);
+		m.addAttribute("list",list); 
+        System.out.println(sede+" "+compe+" "+stato);
+       return "amministrazione2";    
+		}
+	
+	//selezione competenza singola
+	@RequestMapping(value="/visual")    
+		public String viewCandidati(@RequestParam("sede") String sede, @RequestParam("competenza") String compe,
+				@RequestParam("stato") String stato,Model m){    
+			List<Candidato> list=dao.getCandidatoForSede(sede);
+			list=dao.getCandidatoForStato(stato, list);
+			list=dao.getCandidatoComp(compe, list);
+			m.addAttribute("list",list); 
+	        System.out.println(sede+compe+stato);
 	       return "amministrazione2";    
-   }
+	}
 	
 	@RequestMapping("/amministrazione")    
     public String viewemp(Model m){    
         List<Candidato> list=dao.getCandidatos();    
-        m.addAttribute("list",list);  
-        return "amministrazione";    
-    }
-	@RequestMapping("/amministrazione2")    
-    public String viewempSede(Model m){    
-        List<Candidato> list=dao.getCandidatoForSede("T");    
         m.addAttribute("list",list);  
         return "amministrazione";    
     }
@@ -83,7 +94,7 @@ public class CanController {
 		m.addAttribute("can", candidato);  
 		return "canform";   
 	} 
-
+	
 	/*It saves object into database. The @ModelAttribute puts request data  
 	 *  into model object. You need to mention RequestMethod.POST method   
 	 *  because default request is GET*/    
