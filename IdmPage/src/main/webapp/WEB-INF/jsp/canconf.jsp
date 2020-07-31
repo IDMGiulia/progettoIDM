@@ -536,6 +536,7 @@ h1 {
 
 				<!-- RIEPILOGO DEI DATI -->
 				<div style="text-align: left">
+				<br>
 					<h1>Complimenti!</h1>
 					<h3>La tua registrazione si è conclusa con successo. Controlla
 						i tuoi dati:</h3>
@@ -575,27 +576,33 @@ h1 {
 							</div>
 							<br>
 							<div class="row">
-							<div class="col-sm-2" style="text-align: left">
-								<h4>
-									<b>Titolo di studio: </b>
-								</h4>${can.livello} in ${can.paeseDiploma}
-								<br>
-							</div>
-							<div class="col-sm-4"></div>
-							<div class="col-sm-2" style="text-align: left">
-								<h4>
-									<b>Percorso: </b>
-								</h4>${can.percorso}
-								<br>
-							</div>
+								<div class="col-sm-4" style="text-align: left">
+									<h4>
+										<b>Titolo di studio: </b>
+									</h4>${can.livello}
+									<br>
+								</div>
+								<div class="col-sm-4" style="text-align: left">
+									<h4>
+										<b>Conseguito in: </b>
+									</h4>
+										&ensp; ${can.paeseDiploma}
+								</div>
+								<div class="col-sm-4" style="text-align: left">
+									<h4>
+										<b>Percorso: </b>
+									</h4>${can.percorso}
+									<br>
+								</div>
 							</div>
 							<br>
 							<div style="text-align: left">
-							<h4>
-								<b>Competenze Inserite: </b>
-							</h4>${can.competenze}
+								<h4>
+									<b>Competenze Inserite: </b>
+								</h4>${can.competenze}
 							</div>
-							<br><br><br>
+							<br>
+							<br>
 						</div>
 
 						<div class="col-sm-4">
@@ -604,8 +611,10 @@ h1 {
 									<b>Sede Scelta: </b>
 								</h4>
 								<div>
-									<br>
-									<img src="<%=request.getContextPath()%>/img/entrambi.jpg" alt="Torino">
+								<br>
+									<img
+										src="<%=request.getContextPath()%>/img/${can.luogoCandidatura}.jpg"
+										alt="">
 								</div>
 							</div>
 						</div>

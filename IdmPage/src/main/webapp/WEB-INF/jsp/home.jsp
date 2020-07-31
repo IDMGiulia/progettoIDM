@@ -756,12 +756,12 @@ h1 {
 								<div class="carousel-inner">
 									<div class="item active carousel-1">
 										<div class="container">
-											<img src="<%=request.getContextPath()%>/img/torino2.jpg" alt="Torino">
+											<img src="<%=request.getContextPath()%>/img/T.jpg" alt="Torino">
 										</div>
 									</div>
 									<div class="item carousel-2">
 										<div class="container">
-											<img src="<%=request.getContextPath()%>/img/milano.jpg" alt="Milano">
+											<img src="<%=request.getContextPath()%>/img/M.jpg" alt="Milano">
 										</div>
 									</div>
 								</div>

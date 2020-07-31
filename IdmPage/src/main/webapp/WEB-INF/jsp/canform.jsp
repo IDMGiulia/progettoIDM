@@ -775,11 +775,11 @@ span {
 							</div>
 							<div class="col-md-6">
 								<div class="radiobut">
-									<form:radiobutton path="livello" value="SUP"
+									<form:radiobutton path="livello" value="Scuola Media Superiore"
 										label="Diploma di Scuola Superiore" />
-									<form:radiobutton path="livello" value="TRI"
+									<form:radiobutton path="livello" value="Laurea Triennale"
 										label="Laurea Triennale" />
-									<form:radiobutton path="livello" value="MAG"
+									<form:radiobutton path="livello" value="Laurea Magistrale"
 										label="Laurea Magistrale" />
 								</div>
 							</div>
@@ -795,8 +795,8 @@ span {
 							</div>
 							<div class="col-md-6">
 								<div class="radiobut">
-									<form:radiobutton path="paeseDiploma" value="IT" label="Italia" />
-									<form:radiobutton path="paeseDiploma" value="EE" label="Estero" />
+									<form:radiobutton path="paeseDiploma" value="Italia" label="Italia" />
+									<form:radiobutton path="paeseDiploma" value="Paese Estero" label="Paese Estero" />
 								</div>
 							</div>
 							<div class="col-md-1"></div>
