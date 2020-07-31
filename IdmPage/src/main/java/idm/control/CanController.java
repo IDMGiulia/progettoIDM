@@ -30,21 +30,27 @@ public class CanController {
 	CanDao dao;
 
 	
-	
+	//link iniziale che manda alla home
 	@RequestMapping("/presentazione")  
 	public String display()  
 	{  
 		return "home";  
 	}
 	
-//	@RequestMapping("/amministrazione2")    
-//    public String viewCandidati(Model m){    
-//		List<String> competenze = new ArrayList<String>();
-//		competenze.add("Java");
-//        List<Candidato> list=dao.getCandidatoForCompetenze(competenze);    
-//        m.addAttribute("list",list);  
-//        return "amministrazione2";    
-//    }
+	@RequestMapping("/selezione")  
+	public String selezione()  
+	{  
+		return "viewpage";  
+	}
+	
+	
+	@RequestMapping("/visual")    
+		public String viewCandidati(Model m){    
+			String sede=(String) m.getAttribute("sede");
+			List<Candidato> list=dao.getCandidatoForSede(sede);    
+	        m.addAttribute("list",list);  
+	       return "amministrazione2";    
+   }
 	
 	@RequestMapping("/amministrazione")    
     public String viewemp(Model m){    

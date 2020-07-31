@@ -1,12 +1,18 @@
 // Sprint 1
 
 CREATE TABLE `springmvc`.`candidati` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `nome` varchar(45) DEFAULT NULL,
-  `cognome` varchar(45) DEFAULT NULL,
-  `email` varchar(45) DEFAULT NULL,
-  `telefono` varchar(45) DEFAULT NULL,
+  `id` int NOT NULL,
+  `nome` varchar(255) DEFAULT NULL,
+  `cognome` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `telefono` varchar(255) DEFAULT NULL,
   `competenze` varchar(4000) DEFAULT NULL,
+  `luogoCandidatura` varchar(255) DEFAULT NULL,
+  `stato` varchar(255) DEFAULT 'NUOVO',
+  `note` varchar(255) DEFAULT NULL,
+  `livello` varchar(255) DEFAULT NULL,
+  `paeseDiploma` varchar(255) DEFAULT NULL,
+  `percorso` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) 
 

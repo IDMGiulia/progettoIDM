@@ -4,12 +4,13 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>    
   
 <h1>Lista di candidati</h1>  
+<a href="selezione">selezione dei candidati</a>
+<br>
+<br>
+<br>
 <table border="2" width="70%" cellpadding="2">  
-<<<<<<< HEAD
-<tr><th>Id</th><th>nome</th><th>Cognome</th><th>Email</th><th>Telefono</th><th>Competenze</th></tr>  
-=======
-<tr><th>Id</th><th>nome</th><th>Cognome</th><th>Email</th><th>Telefono</th><th>Competenze</th><th>sede</th></tr>  
->>>>>>> 8234cab1c6ed55bf6fb771912d3eceaebe431cfe
+<tr><th>Id</th><th>nome</th><th>Cognome</th><th>Email</th><th>Telefono</th><th>Competenze</th><th>sede</th>
+<th>stato candidatura</th><th>Note</th><th>Livello istruzione</th><th>luogo</th><th>percorso</th></tr>  
    <c:forEach var="can" items="${list}">   
    <tr>  
    <td>${can.id}</td>  
@@ -18,20 +19,16 @@
    <td>${can.email}</td>  
    <td>${can.telefono}</td>  
    <td>${can.competenze}</td>  
-<<<<<<< HEAD
-  <%--  <%-- <td><a href="editemp/${emp.id}">Edit</a></td>  
-   <td><a href="deleteemp/${emp.id}">Delete</a></td>  --%>  --%>
-=======
-   <td>${can.luogoCandidatura}</td>  
-   <td><a href="deleteemp/${can.id}">Delete</a></td> 
-	 <%-- <td><a href="editemp/${emp.id}">Edit</a></td>  
-    --%>
->>>>>>> 8234cab1c6ed55bf6fb771912d3eceaebe431cfe
+   <td>${can.luogoCandidatura}</td> 
+   <td>${can.stato}</td> 
+   <td>${can.note}</td>  
+   <td>${can.livello}</td>
+   <td>${can.paeseDiploma}</td> 
+   <td>${can.percorso}</td>  
+   <td><a href="deleteemp/${can.id}">Cancella</a></td> 
+	<td><a href="editemp/${can.id}">Modifica</a></td>  
    </tr>  
    </c:forEach>  
    </table>  
+     
    <br/>  
-<<<<<<< HEAD
-<!--    <a href="empform">Add New Employee</a>  -->
-=======
->>>>>>> 8234cab1c6ed55bf6fb771912d3eceaebe431cfe
