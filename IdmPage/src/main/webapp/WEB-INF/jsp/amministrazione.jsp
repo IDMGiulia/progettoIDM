@@ -4,6 +4,10 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>    
   
 <h1>Lista di candidati</h1>  
+<a href="selezione">selezione dei candidati</a>
+<br>
+<br>
+<br>
 <table border="2" width="70%" cellpadding="2">  
 <tr><th>Id</th><th>nome</th><th>Cognome</th><th>Email</th><th>Telefono</th><th>Competenze</th><th>sede</th>
 <th>stato candidatura</th><th>Note</th><th>Livello istruzione</th><th>luogo</th><th>percorso</th></tr>  
@@ -26,4 +30,5 @@
    </tr>  
    </c:forEach>  
    </table>  
+     
    <br/>  
