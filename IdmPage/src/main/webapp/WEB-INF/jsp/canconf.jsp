@@ -574,6 +574,22 @@ h1 {
 								</div>
 							</div>
 							<br>
+							<div class="row">
+							<div class="col-sm-2" style="text-align: left">
+								<h4>
+									<b>Titolo di studio: </b>
+								</h4>${can.livello} in ${can.paeseDiploma}
+								<br>
+							</div>
+							<div class="col-sm-4"></div>
+							<div class="col-sm-2" style="text-align: left">
+								<h4>
+									<b>Percorso: </b>
+								</h4>${can.percorso}
+								<br>
+							</div>
+							</div>
+							<br>
 							<div style="text-align: left">
 							<h4>
 								<b>Competenze Inserite: </b>
