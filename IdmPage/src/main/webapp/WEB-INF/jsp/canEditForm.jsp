@@ -15,7 +15,10 @@
         <table >    
         <tr>  
         <td></td>    
-         <td><form:hidden  path="id" /></td>  
+         <td><form:hidden  path="id" /></td> 
+         <td><form:hidden  path="livello" /></td> 
+         <td><form:hidden  path="paeseDiploma" /></td> 
+         <td><form:hidden  path="percorso" /></td>  
          </tr> 
          <tr>    
           <td>Nome : </td>   
@@ -61,7 +64,6 @@
           <td>Note sul candidato :</td>    
           <td>	<form:textarea path="note" rows="5" cols="30" /></td>  
          </tr> 
-           
          <tr>    
           <td> </td>    
           <td><input type="submit" value="Aggiorna" /></td>    

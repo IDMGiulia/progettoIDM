@@ -43,9 +43,7 @@ public class Candidato {
 	
 	//campo in cui Sara può inserire delle note sui candidati
 	private String note;
-	
-	
-	
+
 	public String getNote() {
 		return note;
 	}

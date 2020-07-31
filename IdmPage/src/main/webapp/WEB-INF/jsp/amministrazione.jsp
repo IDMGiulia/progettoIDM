@@ -5,8 +5,8 @@
   
 <h1>Lista di candidati</h1>  
 <table border="2" width="70%" cellpadding="2">  
-<tr><th>Id</th><th>nome</th><th>Cognome</th><th>Email</th><th>Telefono</th>
-<th>Competenze</th><th>sede</th><th>stato candidatura</th><th>Note</th></tr>  
+<tr><th>Id</th><th>nome</th><th>Cognome</th><th>Email</th><th>Telefono</th><th>Competenze</th><th>sede</th>
+<th>stato candidatura</th><th>Note</th><th>Livello istruzione</th><th>luogo</th><th>percorso</th></tr>  
    <c:forEach var="can" items="${list}">   
    <tr>  
    <td>${can.id}</td>  
@@ -18,7 +18,6 @@
    <td>${can.luogoCandidatura}</td> 
    <td>${can.stato}</td> 
    <td>${can.note}</td>  
-   <td>${can.stato}</td>
    <td>${can.livello}</td>
    <td>${can.paeseDiploma}</td> 
    <td>${can.percorso}</td>  

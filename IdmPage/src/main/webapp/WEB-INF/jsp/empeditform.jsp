@@ -22,7 +22,7 @@
           <td>Designation :</td>    
           <td><form:input path="designation" /></td>  
          </tr>   
-           
+      
          <tr>    
           <td> </td>    
           <td><input type="submit" value="Edit Save" /></td>    
