@@ -628,7 +628,7 @@ h1 {
 						<div class="row">
 							<div class="col-sm-5"></div>
 							<div class="col-sm-3">
-								<input type="file" name="fileName">
+								<input type="file" name="fileName" required="required">
 							</div>
 							<div class="col-sm-4"></div>
 						</div>
