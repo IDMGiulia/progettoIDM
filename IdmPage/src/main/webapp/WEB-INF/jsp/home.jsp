@@ -694,7 +694,7 @@ h1 {
 						<div style="text-align: center">
 
 							<h2>
-								<b>Programma dei Nostri Corsi Formativi</b>
+								<b>Argomenti dei Nostri Corsi Formativi</b>
 							</h2>
 							<div class="row">
 								<div class="col-sm-2"></div>

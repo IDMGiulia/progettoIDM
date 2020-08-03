@@ -139,17 +139,17 @@ public class CanController {
     } 
     
     
-    
+  
 	//selezione competenza singola
-//	@RequestMapping(value="/visuall")    
-//		public String viewCandidati(@RequestParam("sede") String sede, @RequestParam("competenza") String compe,
-//				@RequestParam("stato") String stato,Model m){    
-//			List<Candidato> list=dao.getCandidatoForSede(sede);
-//			list=dao.getCandidatoForStato(stato, list);
-//			list=dao.getCandidatoComp(compe, list);
-//			m.addAttribute("list",list); 
-//	        System.out.println(sede+compe+stato);
-//	       return "amministrazione2";    
-//	}
+	@RequestMapping(value="/visuall")    
+		public String viewCandidati(@RequestParam("sede") String sede, @RequestParam("competenza") String compe,
+				@RequestParam("stato") String stato,Model m){    
+			List<Candidato> list=dao.getCandidatoForSede(sede);
+			list=dao.getCandidatoForStato(stato, list);
+			list=dao.getCandidatoComp(compe, list);
+			m.addAttribute("list",list); 
+	        System.out.println(sede+compe+stato);
+	       return "amministrazione2";    
+	}
 	
 }
