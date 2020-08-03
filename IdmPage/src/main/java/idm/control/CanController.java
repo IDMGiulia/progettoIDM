@@ -16,8 +16,11 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.bind.support.SessionStatus;
 
+import idm.beans.CanComp;
 import idm.beans.Candidato;
 import idm.dao.CanDao;
 
@@ -47,13 +50,21 @@ public class CanController {
 		return "response";  
 	}
 	
-	@RequestMapping("/visual")    
-		public String viewCandidati(Model m){    
-			String sede=(String) m.getAttribute("sede");
-			List<Candidato> list=dao.getCandidatoForSede(sede);    
-	        m.addAttribute("list",list);  
-	       return "amministrazione2";    
-   }
+	//per selezione multi competenze
+	@RequestMapping(value="/visual")    
+	public String candidati(@RequestParam("sede") String sede, @RequestParam("competenza") String compe,
+			@RequestParam("stato") String stato,Model m){   
+		List<String> competenze= new ArrayList<String>();
+		competenze.add(compe);
+		System.out.println(competenze.size());
+		System.out.println(competenze.get(0));
+		List<Candidato> list=dao.getCandidatoForParameter(sede, competenze, stato);
+		m.addAttribute("list",list); 
+        System.out.println(sede+" "+compe+" "+stato);
+       return "amministrazione2";    
+		}
+	
+
 	
 	@RequestMapping("/amministrazione")    
     public String viewemp(Model m){    
@@ -61,11 +72,12 @@ public class CanController {
         m.addAttribute("list",list);  
         return "amministrazione";    
     }
-	@RequestMapping("/amministrazione2")    
-    public String viewempSede(Model m){    
-        List<Candidato> list=dao.getCandidatoForSede("T");    
+	
+	@RequestMapping("/amministrazione1")    
+    public String viewcomp(Model m){    
+        List<CanComp> list=dao.getComp();    
         m.addAttribute("list",list);  
-        return "amministrazione";    
+        return "amministrazione1";    
     }
 	
 	 @ModelAttribute("webFrameworkList")
@@ -86,7 +98,7 @@ public class CanController {
 		m.addAttribute("can", candidato);  
 		return "canform";   
 	} 
-
+	
 	/*It saves object into database. The @ModelAttribute puts request data  
 	 *  into model object. You need to mention RequestMethod.POST method   
 	 *  because default request is GET*/    
@@ -130,6 +142,18 @@ public class CanController {
         return "redirect:/amministrazione";    
     } 
     
- 
+    
+  
+	//selezione competenza singola
+	@RequestMapping(value="/visuall")    
+		public String viewCandidati(@RequestParam("sede") String sede, @RequestParam("competenza") String compe,
+				@RequestParam("stato") String stato,Model m){    
+			List<Candidato> list=dao.getCandidatoForSede(sede);
+			list=dao.getCandidatoForStato(stato, list);
+			list=dao.getCandidatoComp(compe, list);
+			m.addAttribute("list",list); 
+	        System.out.println(sede+compe+stato);
+	       return "amministrazione2";    
+	}
 	
 }

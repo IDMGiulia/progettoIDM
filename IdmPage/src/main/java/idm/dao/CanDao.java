@@ -4,6 +4,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -14,8 +15,9 @@ import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;  
-import org.springframework.jdbc.core.RowMapper;   
+import org.springframework.jdbc.core.RowMapper;
 
+import idm.beans.CanComp;
 import idm.beans.Candidato;
 import idm.beans.Competenze;    
 
@@ -102,7 +104,18 @@ public class CanDao {
 			}    
 		});    
 	}
-
+	//metodo per visualizzare tutte le competenze
+	public List<CanComp> getComp(){    
+		return template.query("select * from can_comp",new RowMapper<CanComp>(){    
+			public CanComp mapRow(ResultSet rs, int row) throws SQLException {    
+				CanComp c=new CanComp();    
+				c.setCanId(rs.getInt(1));    
+				c.setCompetenza(rs.getString(3)); 
+				return c;    
+			}    
+		});    
+	}
+	
 	//metodo per eliminare un candidato
 	public int deleteCandidato(int id){    
 		String sql="delete from candidati where id="+id+""; 
@@ -119,6 +132,50 @@ public class CanDao {
 	    e.stream()
 	      .filter(x->x.getLuogoCandidatura().equals(sede)||x.getLuogoCandidatura().equals("E"))
 	      .forEach(x->risultato.add(x));
+	        return risultato;    
+	  }
+	
+	//metodo per selezionare i candidati con una certa stato
+	public List<Candidato> getCandidatoForStato(String stato, List<Candidato> e){ 
+		if(stato.compareTo("*")==0) {
+			return e;
+		}
+	    List<Candidato> risultato = new ArrayList<>();
+	    e.stream()
+	      .filter(x->x.getStato().equals(stato))
+	      .forEach(x->risultato.add(x));
+	        return risultato;    
+	  }
+	
+	public List<Candidato> getCandidatoComp(String comp, List<Candidato> e){ 
+		if(comp.compareTo("*")==0) {
+			return e;
+		}
+	    List<Candidato> risultato = new ArrayList<>();
+	    e.stream()
+	      .filter(x->x.getCompetenze().contains(comp))
+	      .forEach(x->risultato.add(x));
+	        return risultato;    
+	  }
+	
+	public List<Candidato> getCandidatoForParameter(String sede,List<String> competenze, String stato){   
+	    List<Candidato> candidato= new ArrayList <Candidato>();
+	    List<Candidato> risultato = new ArrayList<>();
+	    candidato = this.getCandidatos();
+	    List<CanComp> e = new ArrayList<>();
+	    e= this.getComp();
+	    for(Candidato c:candidato) {
+	      List<String> comp = new ArrayList<>();
+	      e.stream().filter(x->x.getCanId()==c.getId()).forEach(x-> comp.add(x.getCompetenza()));
+	      c.setConoscenze(comp);
+	      }
+	    risultato= candidato.stream()
+	        .filter(x->x.getConoscenze().containsAll(competenze)
+	            &&(x.getLuogoCandidatura().equals(sede)||x.getLuogoCandidatura().equals("E"))
+	            &&(x.getStato().equals(stato)||stato.isEmpty()))
+	        .collect(Collectors.toList());
+	    
+	    
 	        return risultato;    
 	  }
 	  

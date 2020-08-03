@@ -1,5 +1,6 @@
 package idm.beans;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.validation.constraints.Email;
@@ -43,7 +44,16 @@ public class Candidato {
 	
 	//campo in cui Sara può inserire delle note sui candidati
 	private String note;
-
+	
+	private List<String>conoscenze=new ArrayList<>();
+	
+	
+	public List<String> getConoscenze() {
+		return conoscenze;
+	}
+	public void setConoscenze(List<String> conoscenze) {
+		this.conoscenze = conoscenze;
+	}
 	public String getNote() {
 		return note;
 	}
@@ -137,5 +147,6 @@ public class Candidato {
 	public void setPercorso(String percorso) {
 		this.percorso = percorso;
 	}
+	
 	
 }
