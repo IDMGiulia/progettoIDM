@@ -52,7 +52,7 @@ public class CanController {
 	}
 
 	//selezione competenza singola
-	@RequestMapping(value="/visuall")    
+	@RequestMapping(value="/visual")    
 		public String viewCandidati(@RequestParam("sede") String sede, @RequestParam("competenza") String compe,
 				@RequestParam("stato") String stato,Model m){    
 			List<Candidato> list=dao.getCandidatoForSede(sede);
