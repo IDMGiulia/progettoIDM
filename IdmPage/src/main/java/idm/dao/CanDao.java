@@ -137,7 +137,7 @@ public class CanDao {
 	
 	//metodo per selezionare i candidati con una certa stato
 	public List<Candidato> getCandidatoForStato(String stato, List<Candidato> e){ 
-		if(stato.compareTo("*")==0) {
+		if(stato.compareTo("")==0) {
 			return e;
 		}
 	    List<Candidato> risultato = new ArrayList<>();

@@ -141,11 +141,6 @@ public class CanController {
 				@RequestParam("stato") String stato,Model m){   
 			List<String> competenze= new ArrayList<String>();
 			competenze.add(compe);
-			List<Candidato> candi=dao.getCandidatos();
-			for (Candidato el:candi) {
-				System.out.println(el.getStato());
-			}
-			List<CanComp> e=dao.getComp();
 			List<Candidato> list=dao.getCandidatoForParameter(sede, competenze, stato);
 			m.addAttribute("list",list); 
 	        System.out.println(sede+" "+compe+" "+stato);
