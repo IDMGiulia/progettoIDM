@@ -15,7 +15,7 @@
   <br><br>
     Scegli una competenza:
   <select name="competenza" id="competenza">
-   <option value="*"> </option>
+   <option value=""> </option>
   <c:forEach var="val" items="${webFrameworkList}">
       <option value="${val}">${val}</option>
   </c:forEach>
@@ -27,7 +27,7 @@
       <option value="Selezione in corso">Selezione in corso</option>
       <option value="Disponibile">Disponibile</option>
       <option value="Non disponibile">Non disponibile</option>
-      <option value="*">Tutti gli stati</option>
+      <option value="">Tutti gli stati</option>
   </select>  
    
   <br><br>

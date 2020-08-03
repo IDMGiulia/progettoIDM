@@ -22,6 +22,7 @@ import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.multipart.MultipartFile;
 
+import idm.beans.CanComp;
 import idm.beans.Candidato;
 import idm.dao.CanDao;
 
@@ -46,34 +47,33 @@ public class CanController {
 	
 	
 	//per selezione multi competenze
-	@RequestMapping(value="/visuall")    
+	@RequestMapping(value="/visual")    
 	public String candidati(@RequestParam("sede") String sede, @RequestParam("competenza") String compe,
 			@RequestParam("stato") String stato,Model m){   
 		List<String> competenze= new ArrayList<String>();
 		competenze.add(compe);
+		System.out.println(competenze.size());
+		System.out.println(competenze.get(0));
 		List<Candidato> list=dao.getCandidatoForParameter(sede, competenze, stato);
 		m.addAttribute("list",list); 
         System.out.println(sede+" "+compe+" "+stato);
        return "amministrazione2";    
 		}
 	
-	//selezione competenza singola
-	@RequestMapping(value="/visual")    
-		public String viewCandidati(@RequestParam("sede") String sede, @RequestParam("competenza") String compe,
-				@RequestParam("stato") String stato,Model m){    
-			List<Candidato> list=dao.getCandidatoForSede(sede);
-			list=dao.getCandidatoForStato(stato, list);
-			list=dao.getCandidatoComp(compe, list);
-			m.addAttribute("list",list); 
-	        System.out.println(sede+compe+stato);
-	       return "amministrazione2";    
-	}
+
 	
 	@RequestMapping("/amministrazione")    
     public String viewemp(Model m){    
         List<Candidato> list=dao.getCandidatos();    
         m.addAttribute("list",list);  
         return "amministrazione";    
+    }
+	
+	@RequestMapping("/amministrazione1")    
+    public String viewcomp(Model m){    
+        List<CanComp> list=dao.getComp();    
+        m.addAttribute("list",list);  
+        return "amministrazione1";    
     }
 	
 	 @ModelAttribute("webFrameworkList")
@@ -138,6 +138,18 @@ public class CanController {
         return "redirect:/amministrazione";    
     } 
     
- 
+    
+    
+	//selezione competenza singola
+//	@RequestMapping(value="/visuall")    
+//		public String viewCandidati(@RequestParam("sede") String sede, @RequestParam("competenza") String compe,
+//				@RequestParam("stato") String stato,Model m){    
+//			List<Candidato> list=dao.getCandidatoForSede(sede);
+//			list=dao.getCandidatoForStato(stato, list);
+//			list=dao.getCandidatoComp(compe, list);
+//			m.addAttribute("list",list); 
+//	        System.out.println(sede+compe+stato);
+//	       return "amministrazione2";    
+//	}
 	
 }
