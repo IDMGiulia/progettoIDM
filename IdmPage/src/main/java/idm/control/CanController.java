@@ -8,7 +8,6 @@ import javax.validation.Valid;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -17,9 +16,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.bind.support.SessionStatus;
-import org.springframework.web.multipart.MultipartFile;
 
 import idm.beans.Candidato;
 import idm.dao.CanDao;
@@ -43,6 +40,12 @@ public class CanController {
 		return "viewpage";  
 	}
 	
+	// Link che porta dal canconf.jsp alla pagina di conferma finale (response)
+	@RequestMapping("/risposta")  
+	public String risposta()  
+	{  
+		return "response";  
+	}
 	
 	@RequestMapping("/visual")    
 		public String viewCandidati(Model m){    

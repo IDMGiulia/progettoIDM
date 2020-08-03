@@ -536,10 +536,9 @@ h1 {
 
 				<!-- RIEPILOGO DEI DATI -->
 				<div style="text-align: left">
-				<br>
+				
 					<h1>Complimenti!</h1>
-					<h3>La tua registrazione si è conclusa con successo. Controlla
-						i tuoi dati:</h3>
+					<h3>Controlla i tuoi dati, se sono corretti carica il tuo curriculum in fondo alla pagina:</h3>
 					<br>
 					<div class="row">
 						<div class="col-sm-1"></div>
@@ -602,7 +601,6 @@ h1 {
 								</h4>${can.competenze}
 							</div>
 							<br>
-							<br>
 						</div>
 
 						<div class="col-sm-4">
@@ -622,12 +620,22 @@ h1 {
 					</div>
 				</div>
 			</div>
-			<!-- BOTTONE PER TORNARE ALLA HOME -->
-			<div>
+			<!-- BOTTONE PER CONFERMARE -->
 				<div style="text-align: center">
-					<a href="presentazione" class="button button2"> Home </a>
+					<form action="FileUploadServlet" method="POST"
+						enctype="multipart/form-data">
+						<h4>Inserisci qui il tuo Curriculum</h4>
+						<div class="row">
+							<div class="col-sm-5"></div>
+							<div class="col-sm-3">
+								<input type="file" name="fileName">
+							</div>
+							<div class="col-sm-4"></div>
+						</div>
+						<br><br>
+						<input type="submit" class="button button2" value="Completa la candidatura">
+					</form>
 				</div>
-			</div>
 		</section>
 
 		<!-- Sezione Footer della Pagina -->

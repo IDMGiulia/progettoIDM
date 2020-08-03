@@ -2,21 +2,29 @@
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
 <meta charset="utf-8" />
 <meta name="viewport"
 	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-<title>Academy | IDM - We simplify your work</title>
+<title>Candidatura Effettuata | IDM - We simplify your work</title>
 
 <link rel="alternate" type="application/rss+xml" title="RSS2.0"
 	href="https://www.idmconsulting.it/feed/" />
 <link rel="pingback" href="https://www.idmconsulting.it/xmlrpc.php" />
+
 <link rel="shortcut icon"
 	href="https://www.idmconsulting.it/wp-content/uploads/2016/01/idm-favicon.png" />
 <meta name="description"
 	content="IDM Consulting ottimizza la gestione dei processi aziendali riducendone i costi. Propone soluzioni strategiche di archivio garantendo sicurezza, affidabilità e innovazione." />
 <link rel="canonical" href="https://www.idmconsulting.it/" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="IDM - We simplify your work" />
+<meta property="og:description"
+	content="IDM Consulting ottimizza la gestione dei processi aziendali riducendone i costi. Propone soluzioni strategiche di archivio garantendo sicurezza, affidabilità e innovazione." />
+<meta property="og:url" content="https://www.idmconsulting.it/" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:description"
 	content="IDM Consulting ottimizza la gestione dei processi aziendali riducendone i costi. Propone soluzioni strategiche di archivio garantendo sicurezza, affidabilità e innovazione." />
@@ -63,6 +71,9 @@ img.wp-smiley, img.emoji {
 	type='text/css' media='all' />
 <link rel='stylesheet' id='wpsm_ac_bootstrap-front-css'
 	href='https://www.idmconsulting.it/wp-content/plugins/responsive-accordion-and-collapse/css/bootstrap-front.css?ver=4.9.15'
+	type='text/css' media='all' />
+<link rel='stylesheet' id='rs-plugin-settings-css'
+	href='https://www.idmconsulting.it/wp-content/plugins/revslider/public/assets/css/settings.css?ver=5.4.8'
 	type='text/css' media='all' />
 <style id='rs-plugin-settings-inline-css' type='text/css'>
 .tp-caption a {
@@ -140,6 +151,10 @@ img.wp-smiley, img.emoji {
 	src='https://www.idmconsulting.it/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
 <script type='text/javascript'
 	src='https://www.idmconsulting.it/wp-content/plugins/add-to-any/addtoany.min.js?ver=1.1'></script>
+<script type='text/javascript'
+	src='https://www.idmconsulting.it/wp-content/plugins/revslider/public/assets/js/jquery.themepunch.tools.min.js?ver=5.4.8'></script>
+<script type='text/javascript'
+	src='https://www.idmconsulting.it/wp-content/plugins/revslider/public/assets/js/jquery.themepunch.revolution.min.js?ver=5.4.8'></script>
 <script type='text/javascript'
 	src='https://www.idmconsulting.it/wp-content/plugins/page-transition/js/jquery.animsition.min.js?ver=1.3'></script>
 <script type='text/javascript'
@@ -272,91 +287,9 @@ a.navbar-brand, ul.navbar-nav li a:hover, ul.navbar-nav li a:focus, ul.navbar-na
 }
 /*.flex-control-paging li a.flex-active, .scrollup:hover*/
 {
-background
-
-
-
-
-
-:
-
-
-
-
-
-#1d70b7
-
-
-
-
-
-;
-background
-
-
-
-
-
-:
-
-
-
-
-
-rgba
-
-
-
-
-
-(
-
-
-
-
-
-
-29
-,
-112
-,
-183
-,
-0
-
-
-
-
-
-
-
-
-
-
-.9
-
-
-
-
-
-
-
-
-
-
-)
-
-
-
-
-
-
-		
-
-
-
-
-
+background:#1d70b7;
+background:rgba
+(29,112,183,0.9)
 }
 .star-rating span, .woocommerce .star-rating:before, .woocommerce-page .star-rating:before
 	{
@@ -526,6 +459,13 @@ h1 {
 </style>
 <meta name="generator"
 	content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress." />
+<meta name="generator"
+	content="Powered by Slider Revolution 5.4.8 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
+<script type="text/javascript">function setREVStartSize(e){									
+						try{ e.c=jQuery(e.c);var i=jQuery(window).width(),t=9999,r=0,n=0,l=0,f=0,s=0,h=0;
+							if(e.responsiveLevels&&(jQuery.each(e.responsiveLevels,function(e,f){f>i&&(t=r=f,l=e),i>f&&f>r&&(r=f,n=e)}),t>r&&(l=n)),f=e.gridheight[l]||e.gridheight[0]||e.gridheight,s=e.gridwidth[l]||e.gridwidth[0]||e.gridwidth,h=i/s,h=h>1?1:h,f=Math.round(h*f),"fullscreen"==e.sliderLayout){var u=(e.c.width(),jQuery(window).height());if(void 0!=e.fullScreenOffsetContainer){var c=e.fullScreenOffsetContainer.split(",");if (c) jQuery.each(c,function(e,i){u=jQuery(i).length>0?u-jQuery(i).outerHeight(!0):u}),e.fullScreenOffset.split("%").length>1&&void 0!=e.fullScreenOffset&&e.fullScreenOffset.length>0?u-=jQuery(window).height()*parseInt(e.fullScreenOffset,0)/100:void 0!=e.fullScreenOffset&&e.fullScreenOffset.length>0&&(u-=parseInt(e.fullScreenOffset,0))}f=u}else void 0!=e.minHeight&&f<e.minHeight&&(f=e.minHeight);e.c.closest(".rev_slider_wrapper").css({height:f})					
+						}catch(d){console.log("Failure at Presize of Slider:"+d)}						
+					};</script>
 <style type="text/css" data-type="vc_custom-css">
 .vc_gitem-zone .vc-zone-link {
 	border: none !important;
@@ -575,73 +515,10 @@ h1 {
 }
 </style>
 
-<!-- STILE CAROSELLO -->
-<style>
-.carousel-fade .carousel-inner .item {
-  opacity: 0;
-  transition-property: opacity;
-  transition: opacity ease-out .7s;
-}
-.carousel-fade .carousel-inner .active {
-  opacity: 1;
-}
-.carousel-fade .carousel-inner .active.left,
-.carousel-fade .carousel-inner .active.right {
-  left: 0;
-  opacity: 0;
-  z-index: 1;
-}
-.carousel-fade .carousel-inner .next.left,
-.carousel-fade .carousel-inner .prev.right {
-  opacity: 1;
-}
-
-.carousel-fade .carousel-control {
-  z-index: 2;
-}
-
-@media all and (transform-3d), (-webkit-transform-3d) {
-    .carousel-fade .carousel-inner > .item.next,
-    .carousel-fade .carousel-inner > .item.active.right {
-      opacity: 0;
-      -webkit-transform: translate3d(0, 0, 0);
-              transform: translate3d(0, 0, 0);
-    }
-    .carousel-fade .carousel-inner > .item.prev,
-    .carousel-fade .carousel-inner > .item.active.left {
-      opacity: 0;
-      -webkit-transform: translate3d(0, 0, 0);
-              transform: translate3d(0, 0, 0);
-    }
-    .carousel-fade .carousel-inner > .item.next.left,
-    .carousel-fade .carousel-inner > .item.prev.right,
-    .carousel-fade .carousel-inner > .item.active {
-      opacity: 1;
-      -webkit-transform: translate3d(0, 0, 0);
-              transform: translate3d(0, 0, 0);
-    }
-}
-
-.carousel-inner img {
-	width: 100%;
-	height: 100%;
-	border-radius: 8px;
-}
-.carousel-1 {
-  height: 100%;
-  -webkit-background-size: cover;
-  background-size: cover;
-}
-.carousel-2 {
-  height: 100%;
-  -webkit-background-size: cover;
-  background-size: cover;
-}
-</style>
-
 </head>
 
 <body
+
 	class="home page-template page-template-homepage-template page-template-homepage-template-php page page-id-1339 wpb-js-composer js-comp-ver-5.5.4 vc_responsive animsition"
 	data-spy="scroll" data-target="#header" data-offset="62">
 
@@ -655,177 +532,9 @@ h1 {
 		<!-- Sezione Centrale della Pagina -->
 		<section class="main-wrapper pagecustom-1339">
 			<div class="container" style="margin-top: 30px">
-				<h1 style="text-align: center">
-					<img src="https://ecoautoparts.com.ar/assets/img/cv.jpg" alt="">
-				</h1>
-
-				<!-- TESTO PRESENTAZIONE IDM ACADEMY -->
-				<div style="text-align: center">
-					<h1>Academy IDM</h1>
-					<h5 style="text-align: left">Ideata con l&#39 obiettivo di introdurre metodologie
-						qualificate e riconosciute dal mercato in un sistema di formazione
-						e training adeguato alla flessibilit&#224 del mondo ICT.<br>
-						Con i nostri corsi avrai modo di formarti per divenire un &quot;JUNIOR
-						JAVA FULL STACK&quot; ovvero consulente in ambito Java.<br>
-						Oltre alle conoscenze teoriche legate all&#39; argomento Java, imparerai il
-						comportamento da tenere presso la societ&#224 cliente,
-						principalmente realt&#224 di System Integrator, la gestione ed
-						organizzazione di progetti, le metodologie di sviluppo e
-						organizzazione delle attivit&#224, la valutazione dei tempi di una
-						attivit&#224, le figure coinvolte in un progetto IT e la gestione
-						delle relazioni all&#39 interno del gruppo di lavoro.<br>
-						I nostri corsi, della durata di 40h / 60h teoriche vengono realizzati di
-						presenza in aula, ed alternano momenti di formazione didattica
-						frontale a momenti di formazione esperienziale.<br>
-						In questo modo potrai mettere in pratica quanto appreso durante la lezione
-						attraverso esercizi pratici e il confronto con il docente ed i
-						tuoi colleghi.<br> 
-						Se sei una persona curiosa, dinamica e l&#39
-						universo Java &#232; la tua passione, l&#39 Academy di IDM
-						Consulting &#232 quello che fa per te!</h5>
-					<br>
-				</div>
-
-				<!-- PARTE CON LE 3 DIVERSIFICAZIONI DI STRUTTURA E DESCRIZIONE -->
-				<div class="row">
 				
-					<!-- COLONNA PROGRAMMA DEI CORSI -->
-					<div class="col-sm-4">
-						<div style="text-align: center">
-
-							<h2>
-								<b>Argomenti dei Nostri Corsi Formativi</b>
-							</h2>
-							<div class="row">
-								<div class="col-sm-2"></div>
-								
-								<div class="col-sm-8">
-									<div style="text-align: left">
-										<p>
-											&#10004; Java Enterprise Edition<br> &#10004; Corso
-											Sviluppo Microsoft<br> &#10004; Sviluppo Javascript e
-											AngularJS<br> &#10004; J2EE back-end end Developer
-										</p>
-									</div>
-								</div>
-							
-								<div class="col-sm-2"></div>
-							</div>
-
-							<p>
-								Per ulteriori informazioni candidati<br> premendo il
-								pulsante qui sotto.<br> Ti aspettiamo!
-							</p>
-
-						</div>
-					</div>
-					
-					<!-- COLONNA EDIZIONI -->
-					<div class="col-sm-4">
-						<div style="text-align: center">
-
-							<h2>
-								<b>Edizioni</b>
-							</h2>
-							<h3>Prossima Edizione:</h3>
-							<a href="candidatura"> 
-								<font color="428BCA"> 
-									<b>&#10148; Novembre 2020</b>
-								</font>
-							</a>
-
-							<h3>Edizioni Precedenti</h3>
-							<p> Gennaio 2018 - Novembre 2018<br>
-								Marzo 2019 - Settembre 2019<br>
-								Giugno 2020 - in corso</p>
-						</div>
-					</div>
-					
-					<!-- COLONNA SEDI FORMATIVE -->
-					<div class="col-sm-4">
-						<div style="text-align: center">
-
-							<h2>
-								<b>Sedi Formative</b>
-							</h2>
-							
-							<!-- CAROSELLO -->
-							<div id="myCarousel" class="carousel slide slide carousel-fade" 
-												 data-ride="carousel" 
-												 data-interval="5000">
-								<div class="carousel-inner">
-									<div class="item active carousel-1">
-										<div class="container">
-											<img src="<%=request.getContextPath()%>/img/T.jpg" alt="Torino">
-										</div>
-									</div>
-									<div class="item carousel-2">
-										<div class="container">
-											<img src="<%=request.getContextPath()%>/img/M.jpg" alt="Milano">
-										</div>
-									</div>
-								</div>
-							</div>
-							<br>
-							<p>Le sedi disponibili sono Torino e Milano</p>
-						</div>
-					</div>
-						<ul class="nav nav-pills flex-column">
-						</ul>
-						<hr class="d-sm-none">
-
-				</div>
+				<!-- INSERIRE LA PAGINA -->
 				
-				<!-- SEZIONE RECENSIONI -->
-				<div class="row">
-					<div style="text-align: center">
-					<h2>
-						<b>Cosa ne pensano gli ex-alunni</b>
-					</h2>
-					</div>
-					<!-- RECENSIONE 1 -->
-					<div class="col-sm-4">
-						<div style="text-align: center">
-
-							<h4>Francesco Carlino</h4>
-
-							<p> Esperienza fantastica, corso completo<br> 
-								e ho iniziato subito a lavorare.</p>
-						</div>
-					</div>
-					
-					<!-- RECENSIONE 2 -->
-					<div class="col-sm-4">
-						<div style="text-align: center">
-
-							<h4>Giacomo Francardo</h4>
-
-							<p> Il corso ha una struttura molto completa e con 
-								possibilit&#224 di modificare l&#39 ordine dei vari argomenti.</p>
-						</div>
-					</div>
-					
-					<!-- RECENSIONE 3 -->
-					<div class="col-sm-4">
-						<div style="text-align: center">
-
-							<h4>Angela Ternico</h4>
-
-							<p> Avevo appena finito l'universit&#224 e questa esperienza mi<br>
-								ha permesso di far crescere e migliorare le mie abilit&#224.<br>
-								La consiglio vivamente.</p>
-						</div>
-					</div>
-				</div>
-				<hr class="d-sm-none">
-				
-				<!-- BOTTONE CANDIDATURA -->
-				<div>
-					<div style="text-align: center">
-						<a href="candidatura" class="button button2">Candidati per il nuovo Corso</a>
-					</div>
-				</div>
-			
 			</div>
 		</section>
 
@@ -839,7 +548,17 @@ h1 {
 	<script type="text/javascript">
 		jQuery( 'body' ).wrapInner( '<div class="animsition"></div>' ).removeClass( 'animsition' );
 		</script>
-
+	<script type="text/javascript">
+				function revslider_showDoubleJqueryError(sliderID) {
+					var errorMessage = "Revolution Slider Error: You have some jquery.js library include that comes after the revolution files js include.";
+					errorMessage += "<br> This includes make eliminates the revolution slider libraries, and make it not work.";
+					errorMessage += "<br><br> To fix it you can:<br>&nbsp;&nbsp;&nbsp; 1. In the Slider Settings -> Troubleshooting set option:  <strong><b>Put JS Includes To Body</b></strong> option to true.";
+					errorMessage += "<br>&nbsp;&nbsp;&nbsp; 2. Find the double jquery.js include and remove it.";
+					errorMessage = "<span style='font-size:16px;color:#BC0C06;'>" + errorMessage + "</span>";
+						jQuery(sliderID).show().html(errorMessage);
+				}
+			
+</script>
 	<script type='text/javascript'>
 /* <![CDATA[ */
 var wpcf7 = {"apiSettings":{"root":"https:\/\/www.idmconsulting.it\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};

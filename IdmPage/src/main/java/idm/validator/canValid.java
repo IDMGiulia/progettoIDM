@@ -15,9 +15,9 @@ public class canValid implements Validator {
 	@Override
 	public void validate(Object target, Errors errors) {
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "nome", "error.nome", "Il nome è richiesto");
-        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "cognome", "error.cognome", "il cognome è richiesto");
+        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "cognome", "error.cognome", "Il cognome è richiesto");
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "email", "error.email", "Email è richiesta");
-        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "telefono", "error.telefono", "il telefono è richiesto");
+        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "telefono", "error.telefono", "Il telefono è richiesto");
 		
 	}
 

@@ -543,20 +543,17 @@ h1 {
 	content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress." />
 <meta name="generator"
 	content="Powered by Slider Revolution 5.4.8 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
-<script type="text/javascript">function setREVStartSize(e){									
-						try{ e.c=jQuery(e.c);var i=jQuery(window).width(),t=9999,r=0,n=0,l=0,f=0,s=0,h=0;
-							if(e.responsiveLevels&&(jQuery.each(e.responsiveLevels,function(e,f){f>i&&(t=r=f,l=e),i>f&&f>r&&(r=f,n=e)}),t>r&&(l=n)),f=e.gridheight[l]||e.gridheight[0]||e.gridheight,s=e.gridwidth[l]||e.gridwidth[0]||e.gridwidth,h=i/s,h=h>1?1:h,f=Math.round(h*f),"fullscreen"==e.sliderLayout){var u=(e.c.width(),jQuery(window).height());if(void 0!=e.fullScreenOffsetContainer){var c=e.fullScreenOffsetContainer.split(",");if (c) jQuery.each(c,function(e,i){u=jQuery(i).length>0?u-jQuery(i).outerHeight(!0):u}),e.fullScreenOffset.split("%").length>1&&void 0!=e.fullScreenOffset&&e.fullScreenOffset.length>0?u-=jQuery(window).height()*parseInt(e.fullScreenOffset,0)/100:void 0!=e.fullScreenOffset&&e.fullScreenOffset.length>0&&(u-=parseInt(e.fullScreenOffset,0))}f=u}else void 0!=e.minHeight&&f<e.minHeight&&(f=e.minHeight);e.c.closest(".rev_slider_wrapper").css({height:f})					
-						}catch(d){console.log("Failure at Presize of Slider:"+d)}						
-					};</script>
+
 <style type="text/css" data-type="vc_custom-css">
 .vc_gitem-zone .vc-zone-link {
 	border: none !important;
 }
 </style>
 <style>
-    .error {
-        color: red; font-weight: bold;
-    }
+.error {
+	color: red;
+	font-weight: bold;
+}
 </style>
 <style type="text/css" data-type="vc_shortcodes-custom-css">
 .vc_custom_1473350305655 {
@@ -685,19 +682,22 @@ span {
 				</div>
 
 				<form:form method="POST" action="save" modelAttribute="can">
-				
+
 					<!-- SEZIONE DATI PERSONALI -->
 					<div id="div_cv" class="row text-left">
 						<div class="col-md-12">
-							<legend style="border-bottom: 1px solid #999; margin-top: 30px; margin-bottom: 20px">
-								<b>Dati Personali</b></legend>
+							<legend
+								style="border-bottom: 1px solid #999; margin-top: 30px; margin-bottom: 20px">
+								<b>Dati Personali</b>
+							</legend>
 						</div>
 						<div class="col-md-4"></div>
 						<div class="col-md-4">
 							<div class="form-group">
 								<label class="form-label">Nome *</label>
-								<form:input path="nome"  type="text" class="form-control form-control-sm"
-									required="required" placeholder="Inserisci il tuo nome" />
+								<form:input path="nome" type="text"
+									class="form-control form-control-sm" required="required"
+									placeholder="Inserisci il tuo nome" />
 								<form:errors path="nome" cssClass="error" />
 							</div>
 						</div>
@@ -705,19 +705,21 @@ span {
 						<div class="col-md-4">
 							<div class="form-group">
 								<label class="form-label">Cognome *</label>
-								<form:input path="cognome" type="text" class="form-control form-control-sm"
-									required="required" placeholder="Inserisci il tuo cognome" />
+								<form:input path="cognome" type="text"
+									class="form-control form-control-sm" required="required"
+									placeholder="Inserisci il tuo cognome" />
 								<form:errors path="cognome" cssClass="error" />
 							</div>
 						</div>
 
 						<div class="col-md-4"></div>
-						
+
 						<div class="col-md-4">
 							<div class="form-group">
 								<label class="form-label">Email *</label>
-								<form:input path="email" type="email" class="form-control form-control-sm"
-									required="required" placeholder="example@email.it" />
+								<form:input path="email" type="email"
+									class="form-control form-control-sm" required="required"
+									placeholder="example@email.it" />
 								<form:errors path="email" cssClass="error" />
 							</div>
 						</div>
@@ -725,22 +727,24 @@ span {
 						<div class="col-md-4">
 							<div class="form-group">
 								<label class="form-label">Telefono *</label>
-								<form:input path="telefono" type="tel" class="form-control form-control-sm"
-									required="required" placeholder="Inserisci il tuo numero di telefono"  pattern="[0-9]{10}|[0-9]{9}|[0-9]{8}"/>
+								<form:input path="telefono" type="tel"
+									class="form-control form-control-sm" required="required"
+									placeholder="Inserisci il tuo numero di telefono"
+									pattern="[0-9]{10}|[0-9]{9}|[0-9]{8}" />
 								<form:errors path="telefono" cssClass="error" />
-							</div> 
+							</div>
 						</div>
-							<ul class="nav nav-pills flex-column">
-							</ul>
-							<hr class="d-sm-none">
-							
+						<ul class="nav nav-pills flex-column">
+						</ul>
+						<hr class="d-sm-none">
+
 					</div>
 
 					<!-- LUOGO DI CANDIDATURA -->
 					<div id="div_cv" class="row text-left" style="text-align: center">
 						<div class="col-md-1"></div>
 						<div class="col-md-4">
-								<form:label path="luogoCandidatura">Luogo di candidatura preferito: *</form:label>
+							<form:label path="luogoCandidatura">Luogo di candidatura preferito: *</form:label>
 						</div>
 						<div class="col-md-1"></div>
 						<div class="col-md-4">
@@ -795,8 +799,10 @@ span {
 							</div>
 							<div class="col-md-6">
 								<div class="radiobut">
-									<form:radiobutton path="paeseDiploma" value="Italia" label="Italia" />
-									<form:radiobutton path="paeseDiploma" value="Paese Estero" label="Paese Estero" />
+									<form:radiobutton path="paeseDiploma" value="Italia"
+										label="Italia" />
+									<form:radiobutton path="paeseDiploma" value="Paese Estero"
+										label="Paese Estero" />
 								</div>
 							</div>
 							<div class="col-md-1"></div>
@@ -805,12 +811,12 @@ span {
 						<br>
 
 						<div id="div_cv" class="row text-left" style="text-align: center">
-						<div class="col-md-1"></div>
+							<div class="col-md-1"></div>
 							<div class="col-md-4">
 								<label class="form-label">Percorso di Studi:</label>
 							</div>
 							<div class="col-md-1"></div>
-							<div class="col-md-5"style="text-align: center">
+							<div class="col-md-5" style="text-align: center">
 								<form:input path="percorso" type="text"
 									class="form-control form-control-sm" required=""
 									placeholder="es. Ingegneria Informatica" />
@@ -820,58 +826,67 @@ span {
 						</div>
 					</div>
 
-					<br><br>
-						
-						<!-- SEZIONE COMPETENZE-->
+					<br>
+					<br>
+
+					<!-- SEZIONE COMPETENZE-->
 					<div id="div_cv" class="row text-left">
 						<div class="col-md-12">
 							<legend
 								style="border-bottom: 1px solid #999; margin-bottom: 20px">
-								<b>Competenze</b></legend>
+								<b>Competenze</b>
+							</legend>
 						</div>
 						<!--COMPETENZE BASI-->
 						<div id="div_cv" class="row text-left" style="text-align: center">
 							<div class="col-md-1"></div>
 							<div class="col-md-4">
-									<form:label path="comp">Competenze Principali: </form:label>
+								<form:label path="comp">Competenze Principali: </form:label>
 							</div>
 							<div class="col-md-1"></div>
 							<div class="col-md-5">
 								<div class="checkboxes">
-								<form:checkboxes items="${webFrameworkList}" path="comp" />
+									<form:checkboxes items="${webFrameworkList}" path="comp" />
 								</div>
 							</div>
 							<div class="col-md-1"></div>
 						</div>
 
-						<br><br>
+						<br> <br>
 
 						<!-- ALTRE COMPETENZE -->
 						<div id="div_cv" class="row text-left" style="text-align: center">
 							<div class="col-md-1"></div>
-							<divx class="col-md-4">
-								<span><form:label path="comp">Altre competenze (inserirle separate da virgola): </form:label></span>
+							<divx class="col-md-4"> <span><form:label
+									path="comp">Altre competenze (inserirle separate da virgola): </form:label></span>
 							</divx>
 							<div class="col-md-6">
-								<form:textarea path="competenze" rows="5" cols="30" placeholder="es. Swift, Ruby, Assembly, ..." />
+								<form:textarea path="competenze" rows="5" cols="30"
+									placeholder="es. Swift, Ruby, Assembly, ..." />
 							</div>
 							<div class="col-md-1"></div>
 						</div>
 
-						<br><br>
+					</div>
 
-						<!-- BOTTONE CANDIDATI -->
+					<br>
+					<br>
+
+					<!-- BOTTONE CANDIDATI -->
+					<div>
 						<div style="text-align: center">
-							<input type="submit" class="button button2" value="Invia la tua candidatura" />
+							<input type="submit" class="button button2"
+								value="Invia la tua candidatura" />
 						</div>
 					</div>
 				</form:form>
+
 			</div>
 		</section>
 
 		<!-- Sezione Footer della Pagina -->
 		<jsp:include page="footer.jsp"></jsp:include>
-		
+
 	</div>
 
 	<!--body inner-->
@@ -950,7 +965,7 @@ var wpcf7_redirect_forms = {"2541":{"page_id":"2558","external_url":"","use_exte
 		src='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/lib/waypoints/waypoints.min.js?ver=5.5.4'></script>
 	<script type='text/javascript'
 		src='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/js/dist/vc_grid.min.js?ver=5.5.4'></script>
-	
+
 </body>
 
 </html>
