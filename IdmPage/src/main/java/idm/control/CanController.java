@@ -39,29 +39,26 @@ public class CanController {
 		return "home";  
 	}
 	
+	//invia alla pagina per selezionare alcuni candidati
 	@RequestMapping("/selezione")  
 	public String selezione()  
 	{  
 		return "viewpage";  
 	}
 	
+	//selezione competenza singola
+	@RequestMapping(value="/visuall")    
+		public String viewCandidati(@RequestParam("sede") String sede, @RequestParam("competenza") String compe,
+				@RequestParam("stato") String stato,Model m){    
+			List<Candidato> list=dao.getCandidatoForSede(sede);
+			list=dao.getCandidatoForStato(stato, list);
+			list=dao.getCandidatoComp(compe, list);
+			m.addAttribute("list",list); 
+	        System.out.println(sede+compe+stato);
+	       return "amministrazione2";    
+	}
 	
-	//per selezione multi competenze
-	@RequestMapping(value="/visual")    
-	public String candidati(@RequestParam("sede") String sede, @RequestParam("competenza") String compe,
-			@RequestParam("stato") String stato,Model m){   
-		List<String> competenze= new ArrayList<String>();
-		competenze.add(compe);
-		System.out.println(competenze.size());
-		System.out.println(competenze.get(0));
-		List<Candidato> list=dao.getCandidatoForParameter(sede, competenze, stato);
-		m.addAttribute("list",list); 
-        System.out.println(sede+" "+compe+" "+stato);
-       return "amministrazione2";    
-		}
-	
-
-	
+	//restituisce la tabella con tutti i candidati
 	@RequestMapping("/amministrazione")    
     public String viewemp(Model m){    
         List<Candidato> list=dao.getCandidatos();    
@@ -69,13 +66,7 @@ public class CanController {
         return "amministrazione";    
     }
 	
-	@RequestMapping("/amministrazione1")    
-    public String viewcomp(Model m){    
-        List<CanComp> list=dao.getComp();    
-        m.addAttribute("list",list);  
-        return "amministrazione1";    
-    }
-	
+	// elenco di tutte le competenze "base"
 	 @ModelAttribute("webFrameworkList")
 	   public List<String> getWebFrameworkList() {
 	      List<String> webFrameworkList = new ArrayList<String>();
@@ -87,7 +78,8 @@ public class CanController {
 	      webFrameworkList.add("SQL");
 	      return webFrameworkList;
 	   }
-
+	 
+	 //link al form di candidatura 
 	@RequestMapping("/candidatura")    
 	public String showform(Model m){   
 		Candidato candidato= new Candidato();
@@ -137,19 +129,30 @@ public class CanController {
         dao.update(can);    
         return "redirect:/amministrazione";    
     } 
-    
-    
-  
-	//selezione competenza singola
-	@RequestMapping(value="/visuall")    
-		public String viewCandidati(@RequestParam("sede") String sede, @RequestParam("competenza") String compe,
-				@RequestParam("stato") String stato,Model m){    
-			List<Candidato> list=dao.getCandidatoForSede(sede);
-			list=dao.getCandidatoForStato(stato, list);
-			list=dao.getCandidatoComp(compe, list);
+	
+	//per selezione multi competenze
+		@RequestMapping(value="/visuall")    
+		public String candidati(@RequestParam("sede") String sede, @RequestParam("competenza") String compe,
+				@RequestParam("stato") String stato,Model m){   
+			List<String> competenze= new ArrayList<String>();
+			competenze.add(compe);
+			List<Candidato> candi=dao.getCandidatos();
+			for (Candidato el:candi) {
+				System.out.println(el.getStato());
+			}
+			List<CanComp> e=dao.getComp();
+			List<Candidato> list=dao.getCandidatoForParameter(sede, competenze, stato,candi,e);
 			m.addAttribute("list",list); 
-	        System.out.println(sede+compe+stato);
+	        System.out.println(sede+" "+compe+" "+stato);
 	       return "amministrazione2";    
-	}
+			}
+		
+		// metodo per vedere tutte le competenze, per ora non visibile lato client
+		@RequestMapping("/amministrazione1")    
+	    public String viewcomp(Model m){    
+	        List<CanComp> list=dao.getComp();    
+	        m.addAttribute("list",list);  
+	        return "amministrazione1";    
+	    }
 	
 }
