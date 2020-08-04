@@ -569,7 +569,7 @@ h1 {
 
 		<!-- Sezione Centrale della Pagina -->
 		<section class="main-wrapper pagecustom-1339">
-			<div class="container" style="margin-top: 30px; margin-bottom: 480px; text-align: center">
+			<div class="container" style="margin-top: 30px; margin-bottom: 20%; text-align: center">
 
 				<form action="/IdmPage/visual/">
 				<br><br><br><br>
