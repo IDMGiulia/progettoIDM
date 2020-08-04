@@ -610,7 +610,7 @@ h1 {
 						</tr>
 						<tr style="height:20px;">
 							<td>Competenze :</td>
-							<td><form:textarea style="width: 80%; height: 100%; border: none" path="competenze" /></td>
+							<td><form:textarea style="width: 80%; height: 100%; border: none" maxlength="180" path="competenze" /></td>
 						</tr>
 
 						<tr>
@@ -635,7 +635,7 @@ h1 {
 
 						<tr>
 							<td>Note sul candidato :</td>
-							<td><form:textarea path="note" style="width: 80%; height: 100%; border: none" /></td>
+							<td><form:textarea path="note" maxlength="140" style="width: 80%; height: 100%; border: none" /></td>
 						</tr>
 					</table>
 				</form:form>

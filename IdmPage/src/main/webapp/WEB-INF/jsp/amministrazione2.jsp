@@ -530,9 +530,9 @@ tr td {
 			<div class="container" style="margin-left: 30px">
 
 				<h1>Lista di candidati</h1>
-				<a href="/IdmPage/amministrazione">torna alla tabella di
-					partenza</a> <br> <br> <br>
-				<table border="2" width="70%" cellpadding="2">
+				<a href="/IdmPage/amministrazione">torna alla tabella di tutte le candidature</a> 
+				<br> <br> <br>
+				<table>
 					<tr>
 						<th>Id</th>
 						<th>nome</th>

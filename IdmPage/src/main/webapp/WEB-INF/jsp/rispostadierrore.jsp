@@ -362,39 +362,6 @@ a:hover, a:focus, a:active, .footer-custom-menu li a:hover {
 		url('https://www.idmconsulting.it/wp-content/uploads/2015/07/Background-esagoni-piccoli.png');
 	background-position: 0 0;
 }
-/*************************Header*****************/
-#header, #inner-header {
-	background-color: #ffffff;
-	background-position: 0 0;
-}
-
-/********************footer*******************/
-#footer {
-	background-color: #d8d8d8;
-	background-position: 0 0;
-}
-
-.footer-bottom {
-	background-image:
-		url('https://www.idmconsulting.it/wp-content/uploads/2015/04/Footer-background.png');
-	background-position: 0 0;
-}
-
-.footer-widget>h3.footer-title {
-	color: #1d70b7;
-}
-
-.footer-widget>h3.footer-title span {
-	background: transparent;
-}
-
-#footer .footer-widget a, #footer .footer-widget li a {
-	color: #1d70b7;
-}
-
-#footer .footer-widget a:hover, #footer .footer-widget li a:hover {
-	color: #000000;
-}
 /****************** MAIN NAVIGATION *******************/
 nav ul.nav.navbar-nav {
 	background: #ffffff;

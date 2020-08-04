@@ -24,20 +24,6 @@
 <meta name="twitter:image"
 	content="https://www.idmconsulting.it/wp-content/uploads/2015/10/Case-history.png" />
 <script type='application/ld+json'>{"@context":"https:\/\/schema.org","@type":"WebSite","@id":"#website","url":"https:\/\/www.idmconsulting.it\/","name":"","potentialAction":{"@type":"SearchAction","target":"https:\/\/www.idmconsulting.it\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
-<!-- / Yoast SEO plugin. -->
-
-<link rel='dns-prefetch' href='//fonts.googleapis.com' />
-<link rel='dns-prefetch' href='//s.w.org' />
-<link rel="alternate" type="application/rss+xml" title=" &raquo; Feed"
-	href="https://www.idmconsulting.it/feed/" />
-<link rel="alternate" type="application/rss+xml"
-	title=" &raquo; Feed dei commenti"
-	href="https://www.idmconsulting.it/comments/feed/" />
-<link rel="alternate" type="application/rss+xml"
-	title=" &raquo; Homepage Feed dei commenti"
-	href="https://www.idmconsulting.it/homepage/feed/" />
-<!-- This site uses the Google Analytics by MonsterInsights plugin v7.10.0 - Using Analytics tracking - https://www.monsterinsights.com/ -->
-<!-- / Google Analytics by MonsterInsights -->
 <script type="text/javascript">
 			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.idmconsulting.it\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.15"}};
 			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
@@ -208,7 +194,7 @@ window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overl
 				linkElement: '.animsition-link, a[href]:not([target="_blank"]):not([href^="https://www.idmconsulting.it/#"]):not([href^="#"]):not([href*="javascript"]):not([href*=".jpg"]):not([href*=".jpeg"]):not([href*=".gif"]):not([href*=".png"]):not([href*=".mov"]):not([href*=".swf"]):not([href*=".mp4"]):not([href*=".flv"]):not([href*=".avi"]):not([href*=".mp3"]):not([href^="mailto:"]):not([class="no-animation"])'
 			});
 		});
-		</script>
+</script>
 <style type="text/css"> /******************global color****************************/
 a.navbar-brand, ul.navbar-nav li a:hover, ul.navbar-nav li a:focus, ul.navbar-nav li.active>a,
 	ul.navbar-nav>li.current-menu-parent>a, .portfolio-overlay,
@@ -435,39 +421,7 @@ a:hover, a:focus, a:active, .footer-custom-menu li a:hover {
 		url('https://www.idmconsulting.it/wp-content/uploads/2015/07/Background-esagoni-piccoli.png');
 	background-position: 0 0;
 }
-/*************************Header*****************/
-#header, #inner-header {
-	background-color: #ffffff;
-	background-position: 0 0;
-}
 
-/********************footer*******************/
-#footer {
-	background-color: #d8d8d8;
-	background-position: 0 0;
-}
-
-.footer-bottom {
-	background-image:
-		url('https://www.idmconsulting.it/wp-content/uploads/2015/04/Footer-background.png');
-	background-position: 0 0;
-}
-
-.footer-widget>h3.footer-title {
-	color: #1d70b7;
-}
-
-.footer-widget>h3.footer-title span {
-	background: transparent;
-}
-
-#footer .footer-widget a, #footer .footer-widget li a {
-	color: #1d70b7;
-}
-
-#footer .footer-widget a:hover, #footer .footer-widget li a:hover {
-	color: #000000;
-}
 /****************** MAIN NAVIGATION *******************/
 nav ul.nav.navbar-nav {
 	background: #ffffff;
@@ -787,10 +741,13 @@ h1 {
 					<div class="col-sm-4">
 						<div style="text-align: center">
 
-							<h4>Francesco Carlino</h4>
+							<h3>Giulia Gemesio</h3>
 
-							<p> Esperienza fantastica, corso completo<br> 
-								e ho iniziato subito a lavorare.</p>
+							<p> Se tornassi indietro lo sceglierei nuovamente come ingresso nel mondo della 
+								consulenza informatica.<br>Il taglio molto pratico del corso, che prevede poche 
+								ore di lezione frontale e molte ore di esercizio individuale e di gruppo, unito al 
+								confronto costante con i gli altri studenti e con il docente mi hanno permesso 
+								di crescere molto come programmatrice.</p>
 						</div>
 					</div>
 					
@@ -798,10 +755,10 @@ h1 {
 					<div class="col-sm-4">
 						<div style="text-align: center">
 
-							<h4>Giacomo Francardo</h4>
+							<h3>Giacomo Francardo</h3>
 
 							<p> Il corso ha una struttura molto completa e con 
-								possibilit&#224 di modificare l&#39 ordine dei vari argomenti.</p>
+								possibilit&#224; di modificare l&#39;ordine dei vari argomenti.</p>
 						</div>
 					</div>
 					
@@ -809,10 +766,10 @@ h1 {
 					<div class="col-sm-4">
 						<div style="text-align: center">
 
-							<h4>Angela Ternico</h4>
+							<h3>Angela Ternico</h3>
 
-							<p> Avevo appena finito l'universit&#224 e questa esperienza mi<br>
-								ha permesso di far crescere e migliorare le mie abilit&#224.<br>
+							<p> Avevo appena finito l'universit&#224; e questa esperienza mi<br>
+								ha permesso di far crescere e migliorare le mie abilit&#224;.<br>
 								La consiglio vivamente.</p>
 						</div>
 					</div>
