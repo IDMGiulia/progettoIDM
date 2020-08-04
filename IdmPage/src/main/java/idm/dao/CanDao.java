@@ -128,6 +128,8 @@ public class CanDao {
 	public List<Candidato> getCandidatoForSede(String sede){    
 	    List<Candidato> e = new ArrayList<>();
 	    e = this.getCandidatos();
+	    if(sede.contains("E"))
+	    	return e;
 	    List<Candidato> risultato = new ArrayList<>();
 	    e.stream()
 	      .filter(x->x.getLuogoCandidatura().equals(sede)||x.getLuogoCandidatura().equals("E"))

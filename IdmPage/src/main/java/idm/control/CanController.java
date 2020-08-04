@@ -50,14 +50,21 @@ public class CanController {
 	{  
 		return "response";  
 	}
+	
+	// Link che riporta alla canconf.jsp se il file ha estenzione sbagliata
+	@RequestMapping("/errore")  
+	public String errore()  
+	{  
+		return "rispostadierrore";  
+	}
 
 	//selezione competenza singola
 	@RequestMapping(value="/visual")    
 		public String viewCandidati(@RequestParam("sede") String sede, @RequestParam("competenza") String compe,
-				@RequestParam("stato") String stato,Model m){    
+				@RequestParam("stato") String stato,Model m){   
 			List<Candidato> list=dao.getCandidatoForSede(sede);
 			list=dao.getCandidatoForStato(stato, list);
-			list=dao.getCandidatoComp(compe, list);
+			list=dao.getCandidatoComp((compe+","), list);
 			m.addAttribute("list",list); 
 	        System.out.println(sede+compe+stato);
 	       return "amministrazione2";    
