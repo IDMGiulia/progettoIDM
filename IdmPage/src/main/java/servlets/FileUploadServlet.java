@@ -12,23 +12,22 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
  
 @WebServlet("/FileUploadServlet")
-@MultipartConfig(fileSizeThreshold=1024*1024*10, 	// 10 MB 
-                 maxFileSize=1024*1024*50,      	// 50 MB
-                 maxRequestSize=1024*1024*100)   	// 100 MB
+@MultipartConfig(fileSizeThreshold=1024*1024*10,   // 10 MB 
+                 maxFileSize=1024*1024*50,        // 50 MB
+                 maxRequestSize=1024*1024*100)     // 100 MB
 public class FileUploadServlet extends HttpServlet {
  
     private static final long serialVersionUID = 205242440643911308L;
-	
-    /**
-     * Directory where uploaded files will be saved, its relative to
+  
+    /* Directory where uploaded files will be saved, its relative to
      * the web application directory.
      */
-    private static final String UPLOAD_DIR = "C:\\cv";
+    private static final String UPLOAD_DIR = "C:\\candidature_cv";
      
     protected void doPost(HttpServletRequest request,
             HttpServletResponse response) throws ServletException, IOException {
         // gets absolute path of the web application
-        // String applicationPath = request.getServletContext().getRealPath("");
+        //String applicationPath = request.getServletContext().getRealPath("");
         // constructs path of the directory to save uploaded file
         String uploadFilePath = UPLOAD_DIR;
          
@@ -51,8 +50,7 @@ public class FileUploadServlet extends HttpServlet {
                 request, response);
     }
  
-    /**
-     * Utility method to get file name from HTTP header content-disposition
+    /* Utility method to get file name from HTTP header content-disposition
      */
     private String getFileName(Part part) {
         String contentDisp = part.getHeader("content-disposition");
