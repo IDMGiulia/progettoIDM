@@ -522,7 +522,7 @@ h1 {
 
 				<div style="text-align: center">
 				<br><br>
-					<h1>Congratulazioni!!</h1>
+					<h1>Congratulazioni!</h1>
 					<br>
 					<h2>I tuoi dati sono stati registrati correttamente.</h2>
 					<br><br><br>
