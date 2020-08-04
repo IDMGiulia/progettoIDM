@@ -630,6 +630,10 @@ h1 {
 							<div class="col-sm-3">
 								<input type="file" name="fileName" required="required">
 							</div>
+							<div class="col-sm-3">
+								<input type="hidden" name="nome" value="${can.nome}">
+								<input type="hidden" name="id" value="${can.id}">
+							</div>
 							<div class="col-sm-4"></div>
 						</div>
 						<br><br>
