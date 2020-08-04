@@ -694,7 +694,7 @@ span {
 						<div class="col-md-4">
 							<div class="radiobut">
 								<form:radiobutton path="luogoCandidatura" value="T"
-									label="Torino" />
+									label="Torino" required="required"/>
 								<form:radiobutton path="luogoCandidatura" value="M"
 									label="Milano" />
 								<form:radiobutton path="luogoCandidatura" value="E"
