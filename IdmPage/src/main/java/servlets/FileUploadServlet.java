@@ -23,14 +23,14 @@ public class FileUploadServlet extends HttpServlet {
      * Directory where uploaded files will be saved, its relative to
      * the web application directory.
      */
-    private static final String UPLOAD_DIR = "uploads";
+    private static final String UPLOAD_DIR = "C:\\cv";
      
     protected void doPost(HttpServletRequest request,
             HttpServletResponse response) throws ServletException, IOException {
         // gets absolute path of the web application
-        String applicationPath = request.getServletContext().getRealPath("");
+        // String applicationPath = request.getServletContext().getRealPath("");
         // constructs path of the directory to save uploaded file
-        String uploadFilePath = applicationPath + File.separator + UPLOAD_DIR;
+        String uploadFilePath = UPLOAD_DIR;
          
         // creates the save directory if it does not exists
         File fileSaveDir = new File(uploadFilePath);
