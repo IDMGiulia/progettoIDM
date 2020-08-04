@@ -45,9 +45,11 @@ public class FileUploadServlet extends HttpServlet {
             fileName = getFileName(part);
             part.write(uploadFilePath + File.separator + fileName);
         }
- 
+        if(controlloEstensione(fileName)) {
         request.setAttribute("message", fileName + " File uploaded successfully!");
         getServletContext().getRequestDispatcher("/risposta").forward(
+                request, response);}
+        else getServletContext().getRequestDispatcher("/errore").forward(
                 request, response);
     }
  
@@ -63,5 +65,21 @@ public class FileUploadServlet extends HttpServlet {
             }
         }
         return "";
+    }
+    
+    private boolean controlloEstensione(String fileName) {
+    	if(fileName.endsWith(".odf"))
+    		return true;
+    	if(fileName.endsWith("odt"))
+    		return true;
+    	if(fileName.endsWith(".txt"))
+    		return true;
+    	if(fileName.endsWith(".pdf"))
+    		return true;
+    	if(fileName.endsWith(".doc"))
+    		return true;
+    	if(fileName.endsWith(".docx"))
+    		return true;
+    	return false;
     }
 }

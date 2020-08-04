@@ -613,7 +613,7 @@ h1 {
 						<div class="row">
 							<div class="col-sm-5"></div>
 							<div class="col-sm-3">
-								<input type="file" name="fileName" required="required">
+								<input type="file" name="fileName" required="required" accept=".odf,.odt,.txt,.pdf,.doc,.docx">
 							</div>
 							<div class="col-sm-4"></div>
 						</div>
