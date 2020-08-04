@@ -148,7 +148,7 @@ public class CanController {
 	    public String viewcomp(Model m){    
 	        List<CanComp> list=dao.getComp();    
 	        m.addAttribute("list",list);  
-	        return "amministrazione1";    
+	        return "viewComp";    
 	    }
 		
 		//selezione competenza singola (non utilizzato)
