@@ -19,12 +19,6 @@
 <meta name="description"
 	content="IDM Consulting ottimizza la gestione dei processi aziendali riducendone i costi. Propone soluzioni strategiche di archivio garantendo sicurezza, affidabilità e innovazione." />
 <link rel="canonical" href="https://www.idmconsulting.it/" />
-<meta property="og:locale" content="it_IT" />
-<meta property="og:type" content="website" />
-<meta property="og:title" content="IDM - We simplify your work" />
-<meta property="og:description"
-	content="IDM Consulting ottimizza la gestione dei processi aziendali riducendone i costi. Propone soluzioni strategiche di archivio garantendo sicurezza, affidabilità e innovazione." />
-<meta property="og:url" content="https://www.idmconsulting.it/" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:description"
 	content="IDM Consulting ottimizza la gestione dei processi aziendali riducendone i costi. Propone soluzioni strategiche di archivio garantendo sicurezza, affidabilità e innovazione." />
@@ -599,28 +593,11 @@ h1 {
 }
 </style>
 
-<!-- STILE CAROSELLO -->
-<style>
-/* Make the image fully responsive */
-.carousel-inner img {
-	width: 100%;
-	height: 100%;
-	border-radius: 8px;
-}
-
-.carousel-inner>.item{
-   /*disables white flash*/
-   -webkit-transition: -webkit-transform .5s ease-in-out;
-   -o-transition: -o-transform .5s ease-in-out;
-   transition: transform .5s ease-in-out;
-}
-</style>
-
 <!-- ALLINEAMENTO VERTICALE PER LE COMPETENZE AGGIUNTIVE -->
 <style>
-divx {
+div.x {
   display: table;
-  height: 130px;
+  height: 80px;
   width: 100%;
   text-align: center;
 }
@@ -792,6 +769,7 @@ span {
 
 						<br>
 
+						<!-- PAESE DIPLOMA -->
 						<div id="div_cv" class="row text-left" style="text-align: center">
 							<div class="col-md-1"></div>
 							<div class="col-md-4">
@@ -810,19 +788,19 @@ span {
 
 						<br>
 
+						<!-- PERCORSO DI STUDI -->
 						<div id="div_cv" class="row text-left" style="text-align: center">
 							<div class="col-md-1"></div>
 							<div class="col-md-4">
 								<label class="form-label">Percorso di Studi:</label>
 							</div>
 							<div class="col-md-1"></div>
-							<div class="col-md-5" style="text-align: center">
+							<div class="col-md-6">
 								<form:input path="percorso" type="text"
 									class="form-control form-control-sm" required=""
 									placeholder="es. Ingegneria Informatica" />
 								<form:errors path="percorso" cssClass="error" />
 							</div>
-							<div class="col-md-1"></div>
 						</div>
 					</div>
 
@@ -857,11 +835,13 @@ span {
 						<!-- ALTRE COMPETENZE -->
 						<div id="div_cv" class="row text-left" style="text-align: center">
 							<div class="col-md-1"></div>
-							<divx class="col-md-4"> <span><form:label
-									path="comp">Altre competenze (inserirle separate da virgola): </form:label></span>
-							</divx>
+							<div class="col-md-4">
+								<div class="x">
+									<span><form:label path="comp">Altre competenze (inserirle separate da virgola): </form:label></span>
+								</div>
+							</div>
 							<div class="col-md-6">
-								<form:textarea path="competenze" rows="5" cols="30"
+								<form:textarea path="competenze" style="width: 80%; height: 80px; border: none"
 									placeholder="es. Swift, Ruby, Assembly, ..." />
 							</div>
 							<div class="col-md-1"></div>

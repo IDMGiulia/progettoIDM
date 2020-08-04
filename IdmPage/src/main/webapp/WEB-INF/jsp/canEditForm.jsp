@@ -526,6 +526,36 @@ h1 {
 }
 </style>
 
+<!-- STILE BOTTONE CANDIDATURA -->
+<style>
+.button {
+	border: none;
+	color: white;
+	padding: 16px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	transition-duration: 0.4s;
+	cursor: pointer;
+}
+
+.button2 {
+	background-color: #DCF0FF;
+	color: black;
+	border: 2px solid #428BCA;
+	border-radius: 8px;
+}
+
+.button2:hover {
+	background-color: #428BCA;
+	color: white;
+	border: 2px solid #DCF0FF;
+	border-radius: 8px;
+}
+</style>
+
 </head>
 
 <body
@@ -541,13 +571,27 @@ h1 {
 		<section class="main-wrapper pagecustom-1339">
 			<div class="container" style="margin-top: 30px">
 
-				<h1>Modifica il candidato</h1>
+
 				<form:form method="POST" action="/IdmPage/editsave">
+					<div class="row">
+					<div class="col-sm-1"></div>
+						<div class="col-sm-4">
+							<h1>Modifica il candidato</h1>
+						</div>
+						<div class="col-sm-2"></div>
+						<div class="col-sm-4">
+							<input type="submit" value="Aggiorna" class="button button2" style="margin-top: 30px" />
+						</div>
+						<div class="col-sm-1"></div>
+					</div>
+
+
 					<table>
-							<form:hidden path="id" />
-							<form:hidden path="livello" />
-							<form:hidden path="paeseDiploma" />
-							<form:hidden path="percorso" />
+
+						<form:hidden path="id" />
+						<form:hidden path="livello" />
+						<form:hidden path="paeseDiploma" />
+						<form:hidden path="percorso" />
 						<tr>
 							<td>Nome :</td>
 							<td><form:input path="nome" /></td>
@@ -564,9 +608,9 @@ h1 {
 							<td>Email :</td>
 							<td><form:input path="email" /></td>
 						</tr>
-						<tr>
+						<tr style="height:20px;">
 							<td>Competenze :</td>
-							<td><form:textarea path="competenze" rows="5" cols="30" /></td>
+							<td><form:textarea style="width: 80%; height: 100%; border: none" path="competenze" /></td>
 						</tr>
 
 						<tr>
@@ -591,11 +635,7 @@ h1 {
 
 						<tr>
 							<td>Note sul candidato :</td>
-							<td><form:textarea path="note" rows="5" cols="30" /></td>
-						</tr>
-						<tr>
-							<td></td>
-							<td><input type="submit" value="Aggiorna" /></td>
+							<td><form:textarea path="note" style="width: 80%; height: 100%; border: none" /></td>
 						</tr>
 					</table>
 				</form:form>
@@ -611,17 +651,6 @@ h1 {
 	<script type="text/javascript">
 		jQuery( 'body' ).wrapInner( '<div class="animsition"></div>' ).removeClass( 'animsition' );
 		</script>
-	<script type="text/javascript">
-				function revslider_showDoubleJqueryError(sliderID) {
-					var errorMessage = "Revolution Slider Error: You have some jquery.js library include that comes after the revolution files js include.";
-					errorMessage += "<br> This includes make eliminates the revolution slider libraries, and make it not work.";
-					errorMessage += "<br><br> To fix it you can:<br>&nbsp;&nbsp;&nbsp; 1. In the Slider Settings -> Troubleshooting set option:  <strong><b>Put JS Includes To Body</b></strong> option to true.";
-					errorMessage += "<br>&nbsp;&nbsp;&nbsp; 2. Find the double jquery.js include and remove it.";
-					errorMessage = "<span style='font-size:16px;color:#BC0C06;'>" + errorMessage + "</span>";
-						jQuery(sliderID).show().html(errorMessage);
-				}
-			
-</script>
 	<script type='text/javascript'>
 /* <![CDATA[ */
 var wpcf7 = {"apiSettings":{"root":"https:\/\/www.idmconsulting.it\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};

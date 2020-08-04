@@ -504,7 +504,6 @@ h1 {
 </head>
 
 <body
-
 	class="home page-template page-template-homepage-template page-template-homepage-template-php page page-id-1339 wpb-js-composer js-comp-ver-5.5.4 vc_responsive animsition"
 	data-spy="scroll" data-target="#header" data-offset="62">
 
