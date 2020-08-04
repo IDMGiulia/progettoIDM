@@ -492,6 +492,12 @@ h1 {
 	margin-top: 44px !important;
 }
 </style>
+<style>
+tr td { 
+  max-width :145px; 
+  word-wrap: break-word;
+}
+</style>
 
 </head>
 

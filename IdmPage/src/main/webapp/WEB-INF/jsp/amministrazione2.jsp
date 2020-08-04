@@ -508,7 +508,12 @@ h1 {
 	margin-top: 44px !important;
 }
 </style>
-
+<style>
+tr td { 
+  max-width :200px; 
+  word-wrap: break-word;
+}
+</style>
 </head>
 
 <body
@@ -522,7 +527,7 @@ h1 {
 
 		<!-- Sezione Centrale della Pagina -->
 		<section class="main-wrapper pagecustom-1339">
-			<div class="container" style="margin-top: 30px">
+			<div class="container" style="margin-left: 30px">
 
 				<h1>Lista di candidati</h1>
 				<a href="/IdmPage/amministrazione">torna alla tabella di
