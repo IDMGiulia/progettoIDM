@@ -50,18 +50,25 @@ public class CanController {
 	{  
 		return "response";  
 	}
-
-	//selezione competenza singola
-	@RequestMapping(value="/visual")    
-		public String viewCandidati(@RequestParam("sede") String sede, @RequestParam("competenza") String compe,
-				@RequestParam("stato") String stato,Model m){    
-			List<Candidato> list=dao.getCandidatoForSede(sede);
-			list=dao.getCandidatoForStato(stato, list);
-			list=dao.getCandidatoComp(compe, list);
-			m.addAttribute("list",list); 
-	        System.out.println(sede+compe+stato);
-	       return "amministrazione2";    
+	
+	// Link che riporta alla canconf.jsp se il file ha estenzione sbagliata
+	@RequestMapping("/errore")  
+	public String errore()  
+	{  
+		return "rispostadierrore";  
 	}
+	
+	@RequestMapping(value="/visual")    
+    public String viewCandidati(@RequestParam("sede") String sede, @RequestParam("competenza") String compe,
+        @RequestParam("stato") String stato,Model m){ 
+    List<Candidato> list= new ArrayList<>();
+    list=dao.getCandidatoForParameter(sede, compe+",", stato);
+      m.addAttribute("list",list); 
+          System.out.println(sede+compe+stato);
+         return "amministrazione2";    
+  }
+
+
 	
 	//restituisce la tabella con tutti i candidati
 	@RequestMapping("/amministrazione")    
@@ -135,17 +142,6 @@ public class CanController {
         return "redirect:/amministrazione";    
     } 
 	
-	//per selezione multi competenze
-		@RequestMapping(value="/visuall")    
-		public String candidati(@RequestParam("sede") String sede, @RequestParam("competenza") String compe,
-				@RequestParam("stato") String stato,Model m){   
-			List<String> competenze= new ArrayList<String>();
-			competenze.add(compe);
-			List<Candidato> list=dao.getCandidatoForParameter(sede, competenze, stato);
-			m.addAttribute("list",list); 
-	        System.out.println(sede+" "+compe+" "+stato);
-	       return "amministrazione2";    
-			}
 		
 		// metodo per vedere tutte le competenze, per ora non visibile lato client
 		@RequestMapping("/amministrazione1")    
@@ -154,5 +150,17 @@ public class CanController {
 	        m.addAttribute("list",list);  
 	        return "amministrazione1";    
 	    }
+		
+		//selezione competenza singola (non utilizzato)
+		@RequestMapping(value="/visualll")    
+			public String viewCandidatii(@RequestParam("sede") String sede, @RequestParam("competenza") String compe,
+					@RequestParam("stato") String stato,Model m){   
+				List<Candidato> list=dao.getCandidatoForSede(sede);
+				list=dao.getCandidatoForStato(stato, list);
+				list=dao.getCandidatoComp((compe+","), list);
+				m.addAttribute("list",list); 
+		        System.out.println(sede+compe+stato);
+		       return "amministrazione2";    
+		}
 	
 }

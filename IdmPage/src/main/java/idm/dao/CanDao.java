@@ -128,6 +128,8 @@ public class CanDao {
 	public List<Candidato> getCandidatoForSede(String sede){    
 	    List<Candidato> e = new ArrayList<>();
 	    e = this.getCandidatos();
+	    if(sede.contains("E"))
+	    	return e;
 	    List<Candidato> risultato = new ArrayList<>();
 	    e.stream()
 	      .filter(x->x.getLuogoCandidatura().equals(sede)||x.getLuogoCandidatura().equals("E"))
@@ -158,26 +160,21 @@ public class CanDao {
 	        return risultato;    
 	  }
 	
-	public List<Candidato> getCandidatoForParameter(String sede,List<String> competenze, String stato){   
-	    List<Candidato> candidato= new ArrayList <Candidato>();
-	    List<Candidato> risultato = new ArrayList<>();
-	    candidato = this.getCandidatos();
-	    List<CanComp> e = new ArrayList<>();
-	    e= this.getComp();
-	    for(Candidato c:candidato) {
-	      List<String> comp = new ArrayList<>();
-	      e.stream().filter(x->x.getCanId()==c.getId()).forEach(x-> comp.add(x.getCompetenza()));
-	      c.setConoscenze(comp);
-	      }
-	    risultato= candidato.stream()
-	        .filter(x->x.getConoscenze().containsAll(competenze)
-	            &&(x.getLuogoCandidatura().equals(sede)||x.getLuogoCandidatura().equals("E"))
-	            &&(x.getStato().equals(stato)||stato.isEmpty()))
-	        .collect(Collectors.toList());
-	    
-	    
-	        return risultato;    
-	  }
+	public List<Candidato> getCandidatoForParameter(String sede,String competenze, String stato){   
+	      List<Candidato> candidato= new ArrayList <Candidato>();
+	      List<Candidato> risultato = new ArrayList<>();
+	      candidato = this.getCandidatos();
+	      List<CanComp> e = new ArrayList<>();
+	      e= this.getComp();
+	      risultato= candidato.stream()
+	          .filter(x->x.getCompetenze().contains(competenze)
+	              &&((x.getLuogoCandidatura().equals(sede)||x.getLuogoCandidatura().contains("E")||sede.contains("E")))
+	              &&((x.getStato().equals(stato)||stato.compareTo("")==0)))
+	          .collect(Collectors.toList());
+	      
+	      
+	          return risultato;    
+	    }
 	  
 //		//metodo per selezionare i candidati con una certa competenza 
 //	  public List<Candidato> getCandidatoForCompetenze(List<String> competenze){    
