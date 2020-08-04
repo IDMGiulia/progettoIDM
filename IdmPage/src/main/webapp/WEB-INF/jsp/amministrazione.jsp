@@ -15,7 +15,6 @@
 <link rel="alternate" type="application/rss+xml" title="RSS2.0"
 	href="https://www.idmconsulting.it/feed/" />
 <link rel="pingback" href="https://www.idmconsulting.it/xmlrpc.php" />
-
 <link rel="shortcut icon"
 	href="https://www.idmconsulting.it/wp-content/uploads/2016/01/idm-favicon.png" />
 <meta name="description"
@@ -511,7 +510,7 @@ h1 {
 				<h1>Lista di candidati</h1>
 				<a href="selezione">selezione dei candidati</a> <br> <br>
 				<br>
-				<table border="2" width="70%" cellpadding="2">
+				<table>
 					<tr>
 						<th>Id</th>
 						<th>nome</th>
