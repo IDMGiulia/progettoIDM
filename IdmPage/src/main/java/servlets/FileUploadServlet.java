@@ -2,7 +2,8 @@ package servlets;
 
 import java.io.File;
 import java.io.IOException;
- 
+import java.time.ZonedDateTime;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
@@ -23,7 +24,7 @@ public class FileUploadServlet extends HttpServlet {
      * Directory where uploaded files will be saved, its relative to
      * the web application directory.
      */
-    private static final String UPLOAD_DIR = "C:\\cv";
+    private static final String UPLOAD_DIR = "C:\\candidature_cv";
      
     protected void doPost(HttpServletRequest request,
             HttpServletResponse response) throws ServletException, IOException {
@@ -60,7 +61,7 @@ public class FileUploadServlet extends HttpServlet {
         String[] tokens = contentDisp.split(";");
         for (String token : tokens) {
             if (token.trim().startsWith("filename")) {
-                return token.substring(token.indexOf("=") + 2, token.length()-1);
+                return (ZonedDateTime.now().toInstant().toEpochMilli()+"_"+token.substring(token.indexOf("=") + 2, token.length()-1));
             }
         }
         return "";
