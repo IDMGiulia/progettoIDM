@@ -8,7 +8,7 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-<title>Candidatura Effettuata | IDM - We simplify your work</title>
+<title>Conferma Candidatura | IDM - We simplify your work</title>
 
 <link rel="alternate" type="application/rss+xml" title="RSS2.0"
 	href="https://www.idmconsulting.it/feed/" />
@@ -597,7 +597,7 @@ h1 {
 								<br>
 									<img
 										src="<%=request.getContextPath()%>/img/${can.luogoCandidatura}.jpg"
-										alt="">
+										style="border-radius: 8px;" alt="">
 								</div>
 							</div>
 						</div>

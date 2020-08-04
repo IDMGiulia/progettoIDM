@@ -8,7 +8,7 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-<title>Form Academy | IDM - We simplify your work</title>
+<title>Candidatura Academy | IDM - We simplify your work</title>
 
 <link rel="alternate" type="application/rss+xml" title="RSS2.0"
 	href="https://www.idmconsulting.it/feed/" />
@@ -842,7 +842,7 @@ span {
 							</div>
 							<div class="col-md-6">
 								<form:textarea path="competenze" style="width: 80%; height: 80px; border: none"
-									placeholder="es. Swift, Ruby, Assembly, ..." />
+									maxlength="140" placeholder="es. Swift, Ruby, Assembly, ..." />
 							</div>
 							<div class="col-md-1"></div>
 						</div>
