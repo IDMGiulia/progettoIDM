@@ -594,19 +594,19 @@ h1 {
 						<form:hidden path="percorso" />
 						<tr>
 							<td>Nome :</td>
-							<td><form:input path="nome" /></td>
+							<td><form:input path="nome" required="required"/></td>
 						</tr>
 						<tr>
 							<td>Cognome :</td>
-							<td><form:input path="cognome" /></td>
+							<td><form:input path="cognome" required="required"/></td>
 						</tr>
 						<tr>
 							<td>Telefono :</td>
-							<td><form:input path="telefono" /></td>
+							<td><form:input path="telefono" type="tel" required="required" pattern="[0-9]{10}|[0-9]{9}|[0-9]{8}"/></td>
 						</tr>
 						<tr>
 							<td>Email :</td>
-							<td><form:input path="email" /></td>
+							<td><form:input path="email" type="email" required="required"/></td>
 						</tr>
 						<tr style="height:20px;">
 							<td>Competenze :</td>
