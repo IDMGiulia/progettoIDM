@@ -2,7 +2,6 @@ package servlets;
 
 import java.io.File;
 import java.io.IOException;
-import java.time.ZonedDateTime;
 
 import javax.security.auth.message.callback.PrivateKeyCallback.Request;
 import javax.servlet.ServletException;
@@ -48,12 +47,16 @@ public class FileUploadServlet extends HttpServlet {
             part.write(uploadFilePath + File.separator + fileName);
         	}
         }
+        
+        String nomeR="/risposta/" + request.getParameter("nome");
+        String nomeE= "/errore/" + request.getParameter("nome");
         if(controlloEstensione(fileName)) {
-        request.setAttribute("message", fileName + " File uploaded successfully!");
-        getServletContext().getRequestDispatcher("/risposta").forward(
-                request, response);}
-        else getServletContext().getRequestDispatcher("/errore").forward(
-                request, response);
+	        request.setAttribute("message", fileName + " File uploaded successfully!");
+	        getServletContext().getRequestDispatcher(nomeR).forward(
+	                request, response);
+        }
+        else 
+        	getServletContext().getRequestDispatcher(nomeE).forward(request, response);
     }
  
     /* Utility method to get file name from HTTP header content-disposition

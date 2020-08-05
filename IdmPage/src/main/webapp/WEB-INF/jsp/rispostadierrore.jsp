@@ -489,7 +489,7 @@ h1 {
 
 				<div style="text-align: center">
 				<br><br>
-					<h1>Congratulazioni!</h1>
+					<h1>Congratulazioni ${nome}!</h1>
 					<br>
 					<h2>Purtroppo il curriculum caricato non rispetta il formato corretto.</h2>
 					<h2>In ogni caso i tuoi dati sono stati registrati correttamente.</h2>
