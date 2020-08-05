@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.time.ZonedDateTime;
 
-import javax.security.auth.message.callback.PrivateKeyCallback.Request;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
@@ -18,6 +18,7 @@ import javax.servlet.http.Part;
                  maxFileSize=1024*1024*50,        // 50 MB
                  maxRequestSize=1024*1024*100)     // 100 MB
 public class FileUploadServlet extends HttpServlet {
+	
  
     private static final long serialVersionUID = 205242440643911308L;
   
@@ -48,15 +49,17 @@ public class FileUploadServlet extends HttpServlet {
             part.write(uploadFilePath + File.separator + fileName);
         	}
         }
+        String nomeR="/risposta/" + request.getParameter("nome");
+        String nomeE= "/errore/" + request.getParameter("nome");
         if(controlloEstensione(fileName)) {
         request.setAttribute("message", fileName + " File uploaded successfully!");
-        getServletContext().getRequestDispatcher("/risposta").forward(
+        getServletContext().getRequestDispatcher(nomeR).forward(
                 request, response);}
-        else getServletContext().getRequestDispatcher("/errore").forward(
+        else getServletContext().getRequestDispatcher(nomeE).forward(
                 request, response);
     }
  
-    /* Utility method to get file name from HTTP header content-disposition
+	/* Utility method to get file name from HTTP header content-disposition
      */
     private String getFileName(Part part) {
         String contentDisp = part.getHeader("content-disposition");
