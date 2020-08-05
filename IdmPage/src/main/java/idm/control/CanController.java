@@ -45,15 +45,15 @@ public class CanController {
 	
 	
 	// Link che porta dal canconf.jsp alla pagina di conferma finale (response)
-	@RequestMapping("/risposta")  
-	public String risposta()  
+	@RequestMapping("/risposta{nome}")  
+	public String risposta(@PathVariable String nome)  
 	{  
 		return "response";  
 	}
 	
 	// Link che riporta alla canconf.jsp se il file ha estenzione sbagliata
-	@RequestMapping("/errore")  
-	public String errore()  
+	@RequestMapping("/errore{nome}")  
+	public String errore(@PathVariable String nome)  
 	{  
 		return "rispostadierrore";  
 	}
