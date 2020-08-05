@@ -42,7 +42,6 @@
 	src='https://www.idmconsulting.it/wp-content/themes/dart/js/bootstrap.js?ver=3.0.1'></script>
 <script type='text/javascript'
 	src='https://www.idmconsulting.it/wp-content/themes/dart/js/smoothscroll.js?ver=4.9.15'></script>
-
 <script type="text/javascript">
 		jQuery( document ).ready( function($) {
 			$('.animsition').animsition({
@@ -55,22 +54,8 @@
 				linkElement: '.animsition-link, a[href]:not([target="_blank"]):not([href^="https://www.idmconsulting.it/#"]):not([href^="#"]):not([href*="javascript"]):not([href*=".jpg"]):not([href*=".jpeg"]):not([href*=".gif"]):not([href*=".png"]):not([href*=".mov"]):not([href*=".swf"]):not([href*=".mp4"]):not([href*=".flv"]):not([href*=".avi"]):not([href*=".mp3"]):not([href^="mailto:"]):not([class="no-animation"])'
 			});
 		});
-		</script>
+</script>
 <style type="text/css"> /******************global color****************************/
-ul li.cat-item span.count,
-	ul.wp-tag-cloud li a:hover, .widget-tab .nav-tabs>li.active>a, .tweet .tweet-time i,
-	.feature-wrapper:after, .featured2.fdivider:after, .featured2.fdivider .feature-box:before,
-	.feature-content-wrapper:before, .feature-wrapper:after,
-	.feature-content-wrapper:after, .pagination>.active>a, .pagination>.active>a:hover,
-	.pagination>li>a:hover, h4.panel-title a:not(.collapsed):after,
-	.featured-tab .nav-tabs>li.active>a, .tab-default .nav-tabs>li.active>a,
-	.contact-list li i, ul.social-icons li, .team-image-wrapper-hover,
-	.team-img-wrapper-hover, .service-content i, .plan-price, .plan.featured .plan-name,
-	.recent-post .blog-date, .recent-post .date:before, .bx-wrapper .bx-pager.bx-default-pager a:hover,
-	.bx-wrapper .bx-pager.bx-default-pager a.active, .heading:after, ul.navbar-nav li.nav-single,
-	.site-search, .recent-post .post-body:after, .service-content.fdivider:after,
-	.featured2.fdivider:after, .featured2.fdivider .feature-box:before,
-	.eemail_button input[type="button"], .product-links ul li a:hover,
 	table th {
 	background-color: #1d70b7;
 }
@@ -80,19 +65,9 @@ ul li.cat-item span.count,
 		url('https://www.idmconsulting.it/wp-content/uploads/2015/07/Background-esagoni-piccoli.png');
 	background-position: 0 0;
 }
-
-/****************** MAIN NAVIGATION *******************/
 h1 {
 	color: #20bcda;
 	font-weight: normal;
-}
-</style>
-
-<!-- ROTTURA TESTO NELLE COLONNE -->
-<style>
-tr td { 
-  max-width :145px; 
-  word-wrap: break-word;
 }
 </style>
 
