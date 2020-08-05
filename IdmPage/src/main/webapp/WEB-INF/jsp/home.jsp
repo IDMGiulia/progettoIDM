@@ -15,11 +15,11 @@
 <link rel="shortcut icon"
 	href="https://www.idmconsulting.it/wp-content/uploads/2016/01/idm-favicon.png" />
 <meta name="description"
-	content="IDM Consulting ottimizza la gestione dei processi aziendali riducendone i costi. Propone soluzioni strategiche di archivio garantendo sicurezza, affidabilità e innovazione." />
+	content="IDM Consulting ottimizza la gestione dei processi aziendali riducendone i costi. Propone soluzioni strategiche di archivio garantendo sicurezza, affidabilitÃ  e innovazione." />
 <link rel="canonical" href="https://www.idmconsulting.it/" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:description"
-	content="IDM Consulting ottimizza la gestione dei processi aziendali riducendone i costi. Propone soluzioni strategiche di archivio garantendo sicurezza, affidabilità e innovazione." />
+	content="IDM Consulting ottimizza la gestione dei processi aziendali riducendone i costi. Propone soluzioni strategiche di archivio garantendo sicurezza, affidabilitÃ  e innovazione." />
 <meta name="twitter:title" content="IDM - We simplify your work" />
 <meta name="twitter:image"
 	content="https://www.idmconsulting.it/wp-content/uploads/2015/10/Case-history.png" />
@@ -117,9 +117,11 @@ img.wp-smiley, img.emoji {
 <link rel='stylesheet' id='page-transition-animsition-css'
 	href='https://www.idmconsulting.it/wp-content/plugins/page-transition/css/animsition.min.css?ver=1.3'
 	type='text/css' media='all' />
-	
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <script type='text/javascript'
 	src='https://www.idmconsulting.it/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
 <script type='text/javascript'
@@ -175,7 +177,7 @@ window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overl
 	AddToYourFavorites: "Aggiungi ai favoriti",
 	SendFromWebOrProgram: "Invia da qualsiasi indirizzo email o programma di posta elettronica",
 	EmailProgram: "Programma di posta elettronica",
-	More: "Di più&#8230;",
+	More: "Di piÃ¹&#8230;",
 	ThanksForSharing: "Thanks for sharing!",
 	ThanksForFollowing: "Thanks for following!"
 };
@@ -264,13 +266,61 @@ background
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #1d70b7
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -283,7 +333,39 @@ background
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -295,7 +377,39 @@ rgba
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 (
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -319,7 +433,39 @@ rgba
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .9
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -337,7 +483,23 @@ rgba
 
 
 
+
+
+
+
+
+
+
+
 		
+
+
+
+
+
+
+
+
 
 
 
@@ -532,48 +694,50 @@ h1 {
 <!-- STILE CAROSELLO -->
 <style>
 .carousel-fade .carousel-inner .item {
-  opacity: 0;
-  transition-property: opacity;
-  transition: opacity ease-out .7s;
+	opacity: 0;
+	transition-property: opacity;
+	transition: opacity ease-out .7s;
 }
+
 .carousel-fade .carousel-inner .active {
-  opacity: 1;
+	opacity: 1;
 }
-.carousel-fade .carousel-inner .active.left,
-.carousel-fade .carousel-inner .active.right {
-  left: 0;
-  opacity: 0;
-  z-index: 1;
+
+.carousel-fade .carousel-inner .active.left, .carousel-fade .carousel-inner .active.right
+	{
+	left: 0;
+	opacity: 0;
+	z-index: 1;
 }
-.carousel-fade .carousel-inner .next.left,
-.carousel-fade .carousel-inner .prev.right {
-  opacity: 1;
+
+.carousel-fade .carousel-inner .next.left, .carousel-fade .carousel-inner .prev.right
+	{
+	opacity: 1;
 }
 
 .carousel-fade .carousel-control {
-  z-index: 2;
+	z-index: 2;
 }
 
-@media all and (transform-3d), (-webkit-transform-3d) {
-    .carousel-fade .carousel-inner > .item.next,
-    .carousel-fade .carousel-inner > .item.active.right {
-      opacity: 0;
-      -webkit-transform: translate3d(0, 0, 0);
-              transform: translate3d(0, 0, 0);
-    }
-    .carousel-fade .carousel-inner > .item.prev,
-    .carousel-fade .carousel-inner > .item.active.left {
-      opacity: 0;
-      -webkit-transform: translate3d(0, 0, 0);
-              transform: translate3d(0, 0, 0);
-    }
-    .carousel-fade .carousel-inner > .item.next.left,
-    .carousel-fade .carousel-inner > .item.prev.right,
-    .carousel-fade .carousel-inner > .item.active {
-      opacity: 1;
-      -webkit-transform: translate3d(0, 0, 0);
-              transform: translate3d(0, 0, 0);
-    }
+@media all and (transform-3d) , ( -webkit-transform-3d ) {
+	.carousel-fade .carousel-inner>.item.next, .carousel-fade .carousel-inner>.item.active.right
+		{
+		opacity: 0;
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+	.carousel-fade .carousel-inner>.item.prev, .carousel-fade .carousel-inner>.item.active.left
+		{
+		opacity: 0;
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+	.carousel-fade .carousel-inner>.item.next.left, .carousel-fade .carousel-inner>.item.prev.right,
+		.carousel-fade .carousel-inner>.item.active {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
 }
 
 .carousel-inner img {
@@ -581,18 +745,88 @@ h1 {
 	height: 100%;
 	border-radius: 8px;
 }
+
 .carousel-1 {
-  height: 100%;
-  -webkit-background-size: cover;
-  background-size: cover;
+	height: 100%;
+	-webkit-background-size: cover;
+	background-size: cover;
 }
+
 .carousel-2 {
-  height: 100%;
-  -webkit-background-size: cover;
-  background-size: cover;
+	height: 100%;
+	-webkit-background-size: cover;
+	background-size: cover;
 }
 </style>
 
+<!-- STILE SLIDESHOW -->
+<style>
+/* Slideshow container */
+.slideshow-container {
+	position: relative;
+	background: #f1f1f1f1;
+}
+
+/* Slides */
+.mySlides {
+	display: none;
+	padding: 80px;
+	text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	margin-top: -30px;
+	padding: 16px;
+	color: #888;
+	font-weight: bold;
+	font-size: 20px;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+}
+/* Position the "next button" to the right */
+.next {
+	position: absolute;
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+	color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+	text-align: center;
+	padding: 20px;
+	background: #ddd;
+}
+/* The dots/bullets/indicators */
+.dot {
+	cursor: pointer;
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+}
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+	background-color: #717171;
+}
+/* Add an italic font style to all quotes */
+q {
+	font-style: italic;
+}
+</style>
 </head>
 
 <body
@@ -616,33 +850,34 @@ h1 {
 				<!-- TESTO PRESENTAZIONE IDM ACADEMY -->
 				<div style="text-align: center">
 					<h1>Academy IDM</h1>
-					<h5 style="text-align: left">Ideata con l&#39; obiettivo di introdurre metodologie
-						qualificate e riconosciute dal mercato in un sistema di formazione
-						e training adeguato alla flessibilit&#224; del mondo ICT.<br>
-						Con i nostri corsi avrai modo di formarti per divenire un &quot;JUNIOR
+					<h5 style="text-align: left">
+						Ideata con l&#39; obiettivo di introdurre metodologie qualificate
+						e riconosciute dal mercato in un sistema di formazione e training
+						adeguato alla flessibilit&#224; del mondo ICT.<br> Con i
+						nostri corsi avrai modo di formarti per divenire un &quot;JUNIOR
 						JAVA FULL STACK&quot; ovvero consulente in ambito Java.<br>
-						Oltre alle conoscenze teoriche legate all&#39; argomento Java, imparerai il
-						comportamento da tenere presso la societ&#224; cliente,
-						principalmente realt&#224; di System Integrator, la gestione ed
-						organizzazione di progetti, le metodologie di sviluppo e
-						organizzazione delle attivit&#224;, la valutazione dei tempi di una
-						attivit&#224;, le figure coinvolte in un progetto IT e la gestione
-						delle relazioni all&#39; interno del gruppo di lavoro.<br>
-						I nostri corsi, della durata di 40h / 60h teoriche vengono realizzati di
-						presenza in aula, ed alternano momenti di formazione didattica
-						frontale a momenti di formazione esperienziale.<br>
-						In questo modo potrai mettere in pratica quanto appreso durante la lezione
-						attraverso esercizi pratici e il confronto con il docente ed i
-						tuoi colleghi.<br> 
-						Se sei una persona curiosa, dinamica e l&#39;
-						universo Java &#232; la tua passione, l&#39; Academy di IDM
-						Consulting &#232; quello che fa per te!</h5>
+						Oltre alle conoscenze teoriche legate all&#39; argomento Java,
+						imparerai il comportamento da tenere presso la societ&#224;
+						cliente, principalmente realt&#224; di System Integrator, la
+						gestione ed organizzazione di progetti, le metodologie di sviluppo
+						e organizzazione delle attivit&#224;, la valutazione dei tempi di
+						una attivit&#224;, le figure coinvolte in un progetto IT e la
+						gestione delle relazioni all&#39; interno del gruppo di lavoro.<br>
+						I nostri corsi, della durata di 40h / 60h teoriche vengono
+						realizzati di presenza in aula, ed alternano momenti di formazione
+						didattica frontale a momenti di formazione esperienziale.<br>
+						In questo modo potrai mettere in pratica quanto appreso durante la
+						lezione attraverso esercizi pratici e il confronto con il docente
+						ed i tuoi colleghi.<br> Se sei una persona curiosa, dinamica
+						e l&#39; universo Java &#232; la tua passione, l&#39; Academy di
+						IDM Consulting &#232; quello che fa per te!
+					</h5>
 					<br>
 				</div>
 
 				<!-- PARTE CON LE 3 DIVERSIFICAZIONI DI STRUTTURA E DESCRIZIONE -->
 				<div class="row">
-				
+
 					<!-- COLONNA PROGRAMMA DEI CORSI -->
 					<div class="col-sm-4">
 						<div style="text-align: center">
@@ -652,7 +887,7 @@ h1 {
 							</h2>
 							<div class="row">
 								<div class="col-sm-2"></div>
-								
+
 								<div class="col-sm-8">
 									<div style="text-align: left">
 										<p>
@@ -662,7 +897,7 @@ h1 {
 										</p>
 									</div>
 								</div>
-							
+
 								<div class="col-sm-2"></div>
 							</div>
 
@@ -673,7 +908,7 @@ h1 {
 
 						</div>
 					</div>
-					
+
 					<!-- COLONNA EDIZIONI -->
 					<div class="col-sm-4">
 						<div style="text-align: center">
@@ -682,19 +917,19 @@ h1 {
 								<b>Edizioni</b>
 							</h2>
 							<h3>Prossima Edizione:</h3>
-							<a href="candidatura"> 
-								<font color="428BCA"> 
-									<b>&#10148; Novembre 2020</b>
-								</font>
+							<a href="candidatura"> <font color="428BCA"> <b>&#10148;
+										Novembre 2020</b>
+							</font>
 							</a>
 
 							<h3>Edizioni Precedenti</h3>
-							<p> Gennaio 2018 - Novembre 2018<br>
-								Marzo 2019 - Settembre 2019<br>
-								Giugno 2020 - in corso</p>
+							<p>
+								Gennaio 2018 - Novembre 2018<br> Marzo 2019 - Settembre
+								2019<br> Giugno 2020 - in corso
+							</p>
 						</div>
 					</div>
-					
+
 					<!-- COLONNA SEDI FORMATIVE -->
 					<div class="col-sm-4">
 						<div style="text-align: center">
@@ -702,20 +937,21 @@ h1 {
 							<h2>
 								<b>Sedi Formative</b>
 							</h2>
-							
+
 							<!-- CAROSELLO -->
-							<div id="myCarousel" class="carousel slide slide carousel-fade" 
-												 data-ride="carousel" 
-												 data-interval="5000">
+							<div id="myCarousel" class="carousel slide slide carousel-fade"
+								data-ride="carousel" data-interval="5000">
 								<div class="carousel-inner">
 									<div class="item active carousel-1">
 										<div class="container">
-											<img src="<%=request.getContextPath()%>/img/T.jpg" alt="Torino">
+											<img src="<%=request.getContextPath()%>/img/T.jpg"
+												alt="Torino">
 										</div>
 									</div>
 									<div class="item carousel-2">
 										<div class="container">
-											<img src="<%=request.getContextPath()%>/img/M.jpg" alt="Milano">
+											<img src="<%=request.getContextPath()%>/img/M.jpg"
+												alt="Milano">
 										</div>
 									</div>
 								</div>
@@ -724,73 +960,228 @@ h1 {
 							<p>Le sedi disponibili sono Torino e Milano</p>
 						</div>
 					</div>
-						<ul class="nav nav-pills flex-column">
-						</ul>
-						<hr class="d-sm-none">
+					<ul class="nav nav-pills flex-column">
+					</ul>
+					<hr class="d-sm-none">
 
 				</div>
 				<br>
-				
+
 				<!-- SEZIONE RECENSIONI -->
-				<div class="row">
-					<div style="text-align: center">
+				<div style="text-align: center">
 					<h2>
 						<b>Cosa ne pensano gli ex-alunni</b>
 					</h2>
-					</div>
-					<!-- RECENSIONE 1 -->
-					<div class="col-sm-4">
-						<div style="text-align: center">
-
-							<h3>Giulia Gemesio</h3>
-
-							<p> Se tornassi indietro lo sceglierei nuovamente come ingresso nel mondo della 
-								consulenza informatica.<br>Il taglio molto pratico del corso, che prevede poche 
-								ore di lezione frontale e molte ore di esercizio individuale e di gruppo, unito al 
-								confronto costante con i gli altri studenti e con il docente mi hanno permesso 
-								di crescere molto come programmatrice.</p>
-						</div>
-					</div>
-					
-					<!-- RECENSIONE 2 -->
-					<div class="col-sm-4">
-						<div style="text-align: center">
-
-							<h3>Giacomo Francardo</h3>
-
-							<p> Il corso ha una struttura molto completa e con 
-								possibilit&#224; di modificare l&#39;ordine dei vari argomenti.</p>
-						</div>
-					</div>
-					
-					<!-- RECENSIONE 3 -->
-					<div class="col-sm-4">
-						<div style="text-align: center">
-
-							<h3>Angela Ternico</h3>
-
-							<p> Avevo appena finito l'universit&#224; e questa esperienza mi<br>
-								ha permesso di far crescere e migliorare le mie abilit&#224;.<br>
-								La consiglio vivamente.</p>
-						</div>
-					</div>
 				</div>
-				<hr class="d-sm-none">
-				
+				<div class="slideshow-container">
+
+					<div class="mySlides">
+						<q>
+							<div class="row">
+
+								<!-- RECENSIONE 1 -->
+								<div class="col-sm-4">
+									<div style="text-align: center">
+
+										<h3>Giulia Gemesio</h3>
+
+										<p>unito al confronto costante con i gli altri studenti e
+											con il docente mi hanno permesso di crescere molto come
+											programmatrice.</p>
+									</div>
+								</div>
+
+								<!-- RECENSIONE 2 -->
+								<div class="col-sm-4">
+									<div style="text-align: center">
+
+										<h3>Giacomo Francardo</h3>
+
+										<p>Il corso ha una struttura molto completa e con
+											possibilit&#224; di modificare l&#39;ordine dei vari
+											argomenti.</p>
+									</div>
+								</div>
+
+								<!-- RECENSIONE 3 -->
+								<div class="col-sm-4">
+									<div style="text-align: center">
+
+										<h3>Angela Ternico</h3>
+
+										<p>
+											Avevo appena finito l'universit&#224; e questa esperienza mi<br>
+											ha permesso di far crescere e migliorare le mie abilit&#224;.<br>
+											La consiglio vivamente.
+										</p>
+									</div>
+								</div>
+								<hr class="d-sm-none">
+							</div>
+						</q>
+					</div>
+					<div class="mySlides">
+						<q>
+							<div class="row">
+								<div style="text-align: center">
+									<h2>
+										<b>Cosa ne pensano gli ex-alunni</b>
+									</h2>
+								</div>
+								<!-- RECENSIONE 1 -->
+								<div class="col-sm-4">
+									<div style="text-align: center">
+
+										<h3>Giulia Gemesio</h3>
+
+										<p>
+											Se tornassi indietro lo sceglierei nuovamente come ingresso
+											nel mondo della consulenza informatica.<br>Il taglio
+											molto pratic
+										</p>
+									</div>
+								</div>
+
+								<!-- RECENSIONE 2 -->
+								<div class="col-sm-4">
+									<div style="text-align: center">
+
+										<h3>Giacomo Francardo</h3>
+
+										<p>Il corso ha una struttura molto completa e con
+											possibilit&#224; di modificare l&#39;ordine dei vari
+											argomenti.</p>
+									</div>
+								</div>
+
+								<!-- RECENSIONE 3 -->
+								<div class="col-sm-4">
+									<div style="text-align: center">
+
+										<h3>Angela Ternico</h3>
+
+										<p>
+											Avevo appena finito l'universit&#224; e questa esperienza mi<br>
+											ha permesso di far crescere e migliorare le mie abilit&#224;.<br>
+											La consiglio vivamente.
+										</p>
+									</div>
+								</div>
+								<hr class="d-sm-none">
+							</div>
+						</q>
+					</div>
+					<div class="mySlides">
+						<q>
+							<div class="row">
+								<div style="text-align: center">
+									<h2>
+										<b>Cosa ne pensano gli ex-alunni</b>
+									</h2>
+								</div>
+								<!-- RECENSIONE 1 -->
+								<div class="col-sm-4">
+									<div style="text-align: center">
+
+										<h3>Giulia Gemesio</h3>
+
+										<p>
+											Se tornassi indietro lo sceglierei nuovamente come ingresso
+											nel mondo della consulenza informatica.<br>Il taglio
+											molto pratico del corso, che prevede poche ore di lezione
+											frontale e molte ore di esercizio individuale e di gruppo,
+											unito al confronto costante con i gli altri studenti e con il
+											docente mi hanno permesso di crescere molto come
+											programmatrice.
+										</p>
+									</div>
+								</div>
+
+								<!-- RECENSIONE 2 -->
+								<div class="col-sm-4">
+									<div style="text-align: center">
+
+										<h3>Giacomo Francardo</h3>
+
+										<p>Il corso ha una struttura molto completa e con
+											possibilit&#224; di modificare l&#39;ordine dei vari
+											argomenti.</p>
+									</div>
+								</div>
+
+								<!-- RECENSIONE 3 -->
+								<div class="col-sm-4">
+									<div style="text-align: center">
+
+										<h3>Angela Ternico</h3>
+
+										<p>
+											Avevo appena finito l'universit&#224; e questa esperienza mi<br>
+											ha permesso di far crescere e migliorare le mie abilit&#224;.<br>
+											La consiglio vivamente.
+										</p>
+									</div>
+								</div>
+								<hr class="d-sm-none">
+							</div>
+
+						</q>
+					</div>
+					<a class="prev" onclick="plusSlides(-1)">❮</a> <a class="next"
+						onclick="plusSlides(1)">❯</a>
+				</div>
+
+				<div class="dot-container">
+					<span class="dot" onclick="currentSlide(1)"></span> <span
+						class="dot" onclick="currentSlide(2)"></span> <span class="dot"
+						onclick="currentSlide(3)"></span>
+				</div>
+
+				<script>
+					var slideIndex = 1;
+					showSlides(slideIndex);
+					
+					function plusSlides(n) {
+					  showSlides(slideIndex += n);
+					}
+					
+					function currentSlide(n) {
+					  showSlides(slideIndex = n);
+					}
+					
+					function showSlides(n) {
+					  var i;
+					  var slides = document.getElementsByClassName("mySlides");
+					  
+					  var dots = document.getElementsByClassName("dot");
+					  if (n > slides.length) {slideIndex = 1}    
+					  if (n < 1) {slideIndex = slides.length}
+					  for (i = 0; i < slides.length; i++) {
+						  slides[i].style.display = "none";  
+					  }
+					  for (i = 0; i < dots.length; i++) {
+					      dots[i].className = dots[i].className.replace(" active", "");
+					  }
+					  slides[slideIndex-1].style.display = "block";  
+					  dots[slideIndex-1].className += " active";
+					}
+				</script>
+
+
 				<!-- BOTTONE CANDIDATURA -->
 				<div>
-				<br>
+					<br>
 					<div style="text-align: center">
-						<a href="candidatura" class="button button2">Candidati per il nuovo Corso</a>
+						<a href="candidatura" class="button button2">Candidati per il
+							nuovo Corso</a>
 					</div>
 				</div>
-			
 			</div>
 		</section>
 
 		<!-- Sezione Footer della Pagina -->
 		<jsp:include page="footer.jsp"></jsp:include>
-		
+
 	</div>
 
 	<!--body inner-->
@@ -859,7 +1250,6 @@ var wpcf7_redirect_forms = {"2541":{"page_id":"2558","external_url":"","use_exte
 		src='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/lib/waypoints/waypoints.min.js?ver=5.5.4'></script>
 	<script type='text/javascript'
 		src='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/js/dist/vc_grid.min.js?ver=5.5.4'></script>
-	
 </body>
 
 </html>
