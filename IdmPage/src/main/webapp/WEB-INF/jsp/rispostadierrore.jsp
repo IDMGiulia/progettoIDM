@@ -494,7 +494,7 @@ h1 {
 					<h2>Purtroppo il curriculum caricato non rispetta il formato corretto.</h2>
 					<h2>In ogni caso i tuoi dati sono stati registrati correttamente.</h2>
 					<br><br><br>
-					<h4>Verrai ricontattato il prima possibile da un nostro responsabile per confermare le tue qualifiche e la tua disponibilit&#224;</h4>
+					<h4>Verrai ricontattato il prima possibile da un nostro responsabile per confermare le tue qualifiche e la tua disponibilit&#224;.</h4>
 					<br><br><br><br>
 					<a href="https://www.idmconsulting.it/" class="button button2">Ritorna a IDM</a>
 				</div>

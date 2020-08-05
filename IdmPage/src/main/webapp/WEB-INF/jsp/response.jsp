@@ -411,31 +411,6 @@ h1 {
 	font-weight: normal;
 }
 </style>
-<style type="text/css">
-.recentcomments a {
-	display: inline !important;
-	padding: 0 !important;
-	margin: 0 !important;
-}
-</style>
-<style type="text/css" data-type="vc_custom-css">
-.vc_gitem-zone .vc-zone-link {
-	border: none !important;
-}
-</style>
-<style type="text/css" data-type="vc_shortcodes-custom-css">
-.vc_custom_1473350305655 {
-	margin-top: 44px !important;
-}
-
-.vc_custom_1473350370393 {
-	margin-top: 44px !important;
-}
-
-.vc_custom_1473350364159 {
-	margin-top: 44px !important;
-}
-</style>
 
 <!-- STILE BOTTONE CANDIDATURA -->
 <style>
@@ -493,7 +468,7 @@ h1 {
 					<br>
 					<h2>I tuoi dati sono stati registrati correttamente.</h2>
 					<br><br><br>
-					<h4>Verrai ricontattato il prima possibile da un nostro responsabile per confermare le tue qualifiche e la tua disponibilit&#224;</h4>
+					<h4>Verrai ricontattato il prima possibile da un nostro responsabile per confermare le tue qualifiche e la tua disponibilit&#224;.</h4>
 					<br><br><br><br>
 					<a href="https://www.idmconsulting.it/" class="button button2">Ritorna a IDM</a>
 				</div>

@@ -83,7 +83,6 @@ public class CanController {
 	   public List<String> getWebFrameworkList() {
 	      List<String> webFrameworkList = new ArrayList<String>();
 	      webFrameworkList.add("Java");
-	      webFrameworkList.add(".Net");
 	      webFrameworkList.add("Javascript");
 	      webFrameworkList.add("Angular JS");
 	      webFrameworkList.add("HTML/CSS");
