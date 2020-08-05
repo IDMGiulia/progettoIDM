@@ -3,6 +3,62 @@
 
 <head>
 
+<style type="text/css">
+.top-info {
+	background-color: #ffffff;
+}
+
+.top-info .topbar-sidebar, .top-info .topbar-sidebar p, .top-info .topbar-sidebar li
+	{
+	color: #333333
+}
+
+.top-info .topbar-sidebar a {
+	color: #666666 !important;
+}
+
+.top-info .topbar-sidebar a:hover {
+	color: #1d70b7 !important
+}
+nav ul.nav.navbar-nav {
+	background: #ffffff;
+	background-attachment: fixed;
+	background-position: right top;
+}
+
+nav ul.nav.navbar-nav>li {
+	background: transparent;
+}
+
+nav ul.navbar-nav>li>a {
+	color: #20b0da;
+}
+
+nav ul.navbar-nav>li>a:hover {
+	color: #ffffff;
+}
+
+nav ul.navbar-nav li.active>a {
+	color: #ffffff !important;
+}
+
+nav ul.navbar-nav>li>a:hover {
+	
+}
+
+nav ul.navbar-nav ul.dropdown-menu>li {
+	background: #20b0da
+}
+
+nav ul.navbar-nav ul.dropdown-menu>li>a:hover {
+	color: #006ba0 !important
+}
+
+nav ul.navbar-nav ul.dropdown-menu>li>a {
+	border-bottom: 1px solid #006ba0;
+}
+</style>
+
 <style>
 /*************************Header*****************/
 #header, #inner-header {
