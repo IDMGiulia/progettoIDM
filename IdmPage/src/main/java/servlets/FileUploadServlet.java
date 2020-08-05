@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.IOException;
 import java.time.ZonedDateTime;
 
-import javax.security.auth.message.callback.PrivateKeyCallback.Request;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
@@ -43,10 +42,8 @@ public class FileUploadServlet extends HttpServlet {
         String fileName = null;
         //Get all the parts from request and write it to the file on server
         for (Part part : request.getParts()) {
-        	if(!part.getName().contentEquals("nome")) {
-            fileName = request.getParameter("nome")+getFileName(part);
+            fileName = getFileName(part);
             part.write(uploadFilePath + File.separator + fileName);
-        	}
         }
         if(controlloEstensione(fileName)) {
         request.setAttribute("message", fileName + " File uploaded successfully!");
@@ -64,7 +61,7 @@ public class FileUploadServlet extends HttpServlet {
         String[] tokens = contentDisp.split(";");
         for (String token : tokens) {
             if (token.trim().startsWith("filename")) {
-                return ("_"+token.substring(token.indexOf("=") + 2, token.length()-1));
+                return (ZonedDateTime.now().toInstant().toEpochMilli()+"_"+token.substring(token.indexOf("=") + 2, token.length()-1));
             }
         }
         return "";
