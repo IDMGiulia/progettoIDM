@@ -304,7 +304,15 @@ background
 
 
 
+
+
+
+
 #1d70b7
+
+
+
+
 
 
 
@@ -349,7 +357,15 @@ background
 
 
 
+
+
+
+
 :
+
+
+
+
 
 
 
@@ -393,7 +409,15 @@ rgba
 
 
 
+
+
+
+
 (
+
+
+
+
 
 
 
@@ -449,7 +473,15 @@ rgba
 
 
 
+
+
+
+
 .9
+
+
+
+
 
 
 
@@ -491,7 +523,11 @@ rgba
 
 
 
+
+
 		
+
+
 
 
 
@@ -527,12 +563,6 @@ rgba
 	color: #1d70b7;
 }
 
-.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus, .dropdown-menu>li.active>a
-	{
-	color: #1d70b7 !important;
-	?>
-}
-
 blockquote, .page-title:after, .eemail_textbox input[type="text"]:focus,
 	.woocommerce-pagination ul li span.current {
 	border-color: #1d70b7 !Important;
@@ -559,24 +589,6 @@ a:hover, a:focus, a:active, .footer-custom-menu li a:hover {
 	background-color: rgb(23, 89, 146);
 }
 
-/*********************   TOP NAVIGATION   **************************/
-.top-info {
-	background-color: #ffffff;
-}
-
-.top-info .topbar-sidebar, .top-info .topbar-sidebar p, .top-info .topbar-sidebar li
-	{
-	color: #333333
-}
-
-.top-info .topbar-sidebar a {
-	color: #666666 !important;
-}
-
-.top-info .topbar-sidebar a:hover {
-	color: #1d70b7 !important
-}
-
 /****************Custom background**************************/
 .body-inner {
 	background-image:
@@ -585,44 +597,6 @@ a:hover, a:focus, a:active, .footer-custom-menu li a:hover {
 }
 
 /****************** MAIN NAVIGATION *******************/
-nav ul.nav.navbar-nav {
-	background: #ffffff;
-	background-attachment: fixed;
-	background-position: right top;
-}
-
-nav ul.nav.navbar-nav>li {
-	background: transparent;
-}
-
-nav ul.navbar-nav>li>a {
-	color: #20b0da;
-}
-
-nav ul.navbar-nav>li>a:hover {
-	color: #ffffff;
-}
-
-nav ul.navbar-nav li.active>a {
-	color: #ffffff !important;
-}
-
-nav ul.navbar-nav>li>a:hover {
-	
-}
-
-nav ul.navbar-nav ul.dropdown-menu>li {
-	background: #20b0da
-}
-
-nav ul.navbar-nav ul.dropdown-menu>li>a:hover {
-	color: #006ba0 !important
-}
-
-nav ul.navbar-nav ul.dropdown-menu>li>a {
-	border-bottom: 1px solid #006ba0;
-}
-
 h1 {
 	color: #20bcda;
 	font-weight: normal;
@@ -744,18 +718,21 @@ h1 {
 	width: 100%;
 	height: 100%;
 	border-radius: 8px;
+	background-color: transparent;
 }
 
 .carousel-1 {
 	height: 100%;
 	-webkit-background-size: cover;
 	background-size: cover;
+	background-color: transparent;
 }
 
 .carousel-2 {
 	height: 100%;
 	-webkit-background-size: cover;
 	background-size: cover;
+	background-color: transparent;
 }
 </style>
 
@@ -764,7 +741,6 @@ h1 {
 /* Slideshow container */
 .slideshow-container {
 	position: relative;
-	background: #f1f1f1f1;
 }
 
 /* Slides */
@@ -805,7 +781,6 @@ h1 {
 .dot-container {
 	text-align: center;
 	padding: 20px;
-	background: #ddd;
 }
 /* The dots/bullets/indicators */
 .dot {
@@ -821,10 +796,6 @@ h1 {
 /* Add a background color to the active dot/circle */
 .active, .dot:hover {
 	background-color: #717171;
-}
-/* Add an italic font style to all quotes */
-q {
-	font-style: italic;
 }
 </style>
 </head>
@@ -976,7 +947,6 @@ q {
 				<div class="slideshow-container">
 
 					<div class="mySlides">
-						<q>
 							<div class="row">
 
 								<!-- RECENSIONE 1 -->
@@ -1018,16 +988,9 @@ q {
 								</div>
 								<hr class="d-sm-none">
 							</div>
-						</q>
 					</div>
 					<div class="mySlides">
-						<q>
 							<div class="row">
-								<div style="text-align: center">
-									<h2>
-										<b>Cosa ne pensano gli ex-alunni</b>
-									</h2>
-								</div>
 								<!-- RECENSIONE 1 -->
 								<div class="col-sm-4">
 									<div style="text-align: center">
@@ -1069,16 +1032,9 @@ q {
 								</div>
 								<hr class="d-sm-none">
 							</div>
-						</q>
 					</div>
 					<div class="mySlides">
-						<q>
 							<div class="row">
-								<div style="text-align: center">
-									<h2>
-										<b>Cosa ne pensano gli ex-alunni</b>
-									</h2>
-								</div>
 								<!-- RECENSIONE 1 -->
 								<div class="col-sm-4">
 									<div style="text-align: center">
@@ -1124,11 +1080,9 @@ q {
 								</div>
 								<hr class="d-sm-none">
 							</div>
-
-						</q>
 					</div>
-					<a class="prev" onclick="plusSlides(-1)">❮</a> <a class="next"
-						onclick="plusSlides(1)">❯</a>
+					<a class="prev" onclick="plusSlides(-1)">&#8249;</a> <a class="next"
+						onclick="plusSlides(1)">&#8250;</a>
 				</div>
 
 				<div class="dot-container">
