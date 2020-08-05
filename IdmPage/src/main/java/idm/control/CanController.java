@@ -43,28 +43,31 @@ public class CanController {
 		return "viewpage";  
 	}
 	
-	
 	// Link che porta dal canconf.jsp alla pagina di conferma finale (response)
-	@RequestMapping("/risposta")  
-	public String risposta()  
-	{  
-		return "response";  
-	}
-	
-	// Link che riporta alla canconf.jsp se il file ha estenzione sbagliata
-	@RequestMapping("/errore")  
-	public String errore()  
-	{  
-		return "rispostadierrore";  
-	}
-	
+	  @RequestMapping("/risposta/{nome}")  
+	  public String risposta(@PathVariable String nome, Model m)  
+	  {  
+		String[] split=nome.split("_");
+		    m.addAttribute("nome",split[2]); 
+	    return "response";  
+	  }
+	  
+	  // Link che riporta alla canconf.jsp se il file ha estenzione sbagliata
+	  @RequestMapping("/errore/{nome}")  
+	  public String errore(@PathVariable String nome, Model m)  
+	  { 
+		  String[] split=nome.split("_");
+		    m.addAttribute("nome",split[2]);  
+	    return "rispostadierrore";  
+	  }
+	  
+	  
 	@RequestMapping(value="/visual")    
     public String viewCandidati(@RequestParam("sede") String sede, @RequestParam("competenza") String compe,
         @RequestParam("stato") String stato,Model m){ 
     List<Candidato> list= new ArrayList<>();
     list=dao.getCandidatoForParameter(sede, compe+",", stato);
       m.addAttribute("list",list); 
-          System.out.println(sede+compe+stato);
          return "amministrazione2";    
   }
 
