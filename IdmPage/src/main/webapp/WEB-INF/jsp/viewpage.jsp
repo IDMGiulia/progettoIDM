@@ -214,7 +214,7 @@ h1 {
 						<option value="E">Entrambe</option>
 					</select> <br> <br> Scegli una competenza: <select
 						name="competenza" id="competenza">
-						<option value=""></option>
+						<option value="">Tutte le competenze</option>
 						<c:forEach var="val" items="${webFrameworkList}">
 							<option value="${val}">${val}</option>
 						</c:forEach>

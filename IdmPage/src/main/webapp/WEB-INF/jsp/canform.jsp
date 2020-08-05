@@ -588,6 +588,7 @@ span {
      }
 </style>
 
+<!-- STILE PER SPAZIARE I RADIOBUTTON -->
 <style>
 .radiobut {
 	text-align: center;
@@ -704,7 +705,7 @@ span {
 						<div class="col-md-2"></div>
 					</div>
 
-					<br><br><br>
+					<br><br>
 
 					<!-- SEZIONE ISTRUZIONE-->
 					<div id="div_cv" class="row text-left">
@@ -716,12 +717,11 @@ span {
 						</div>
 
 						<!-- LIVELLO DI ISTRUZIONE -->
-						<div id="div_cv" class="row text-left" style="text-align: center">
 							<div class="col-md-1"></div>
 							<div class="col-md-4">
 								<form:label path="livello">Livello di Istruzione:</form:label>
 							</div>
-							<div class="col-md-6">
+							<div class="col-md-6" style="text-align: center">
 								<div class="radiobut">
 									<form:radiobutton path="livello" value="Scuola Media Superiore"
 										label="Diploma di Scuola Superiore" />
@@ -732,12 +732,10 @@ span {
 								</div>
 							</div>
 							<div class="col-md-1"></div>
-						</div>
 
-						<br>
+						<br><br>
 
 						<!-- PAESE DIPLOMA -->
-						<div id="div_cv" class="row text-left" style="text-align: center">
 							<div class="col-md-1"></div>
 							<div class="col-md-4">
 								<form:label path="paeseDiploma">Ottenuto in: </form:label>
@@ -751,12 +749,10 @@ span {
 								</div>
 							</div>
 							<div class="col-md-1"></div>
-						</div>
 
-						<br>
+						<br><br>
 
 						<!-- PERCORSO DI STUDI -->
-						<div id="div_cv" class="row text-left" style="text-align: center">
 							<div class="col-md-1"></div>
 							<div class="col-md-4">
 								<label class="form-label">Percorso di Studi:</label>
@@ -768,14 +764,13 @@ span {
 									placeholder="es. Ingegneria Informatica" />
 								<form:errors path="percorso" cssClass="error" />
 							</div>
-						</div>
 					</div>
 
 					<br>
 					<br>
 
 					<!-- SEZIONE COMPETENZE-->
-					<div id="div_cv" class="row text-left">
+					<div id="div_cv" class="row text-left" style="text-align: center">
 						<div class="col-md-12">
 							<legend
 								style="border-bottom: 1px solid #999; margin-bottom: 20px">
@@ -783,7 +778,6 @@ span {
 							</legend>
 						</div>
 						<!--COMPETENZE BASI-->
-						<div id="div_cv" class="row text-left" style="text-align: center">
 							<div class="col-md-1"></div>
 							<div class="col-md-4">
 								<form:label path="comp">Competenze Principali: </form:label>
@@ -795,12 +789,10 @@ span {
 								</div>
 							</div>
 							<div class="col-md-1"></div>
-						</div>
 
 						<br> <br>
 
 						<!-- ALTRE COMPETENZE -->
-						<div id="div_cv" class="row text-left" style="text-align: center">
 							<div class="col-md-1"></div>
 							<div class="col-md-4">
 								<div class="x">
@@ -812,7 +804,6 @@ span {
 									maxlength="140" placeholder="es. Swift, Ruby, Assembly, ..." />
 							</div>
 							<div class="col-md-1"></div>
-						</div>
 
 					</div>
 

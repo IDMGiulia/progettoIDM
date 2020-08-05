@@ -538,7 +538,7 @@ h1 {
 									<h4>
 										<b>Conseguito in: </b>
 									</h4>
-										&ensp; ${can.paeseDiploma}
+										${can.paeseDiploma}
 								</div>
 								<div class="col-sm-4" style="text-align: left">
 									<h4>

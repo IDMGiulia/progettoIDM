@@ -729,6 +729,7 @@ h1 {
 						<hr class="d-sm-none">
 
 				</div>
+				<br>
 				
 				<!-- SEZIONE RECENSIONI -->
 				<div class="row">
@@ -778,6 +779,7 @@ h1 {
 				
 				<!-- BOTTONE CANDIDATURA -->
 				<div>
+				<br>
 					<div style="text-align: center">
 						<a href="candidatura" class="button button2">Candidati per il nuovo Corso</a>
 					</div>
