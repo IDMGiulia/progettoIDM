@@ -41,8 +41,10 @@ public class FileUploadServlet extends HttpServlet {
         String fileName = null;
         //Get all the parts from request and write it to the file on server
         for (Part part : request.getParts()) {
-            fileName = getFileName(part);
-            part.write(uploadFilePath + File.separator + fileName);
+        	if(!part.getName().contentEquals("nome")) {
+	            fileName = getFileName(part);
+	            part.write(uploadFilePath + File.separator + fileName);
+        	}
         }
         
         String nomeR="/risposta/" + request.getParameter("nome");
@@ -64,7 +66,7 @@ public class FileUploadServlet extends HttpServlet {
         String[] tokens = contentDisp.split(";");
         for (String token : tokens) {
             if (token.trim().startsWith("filename")) {
-                return (ZonedDateTime.now().toInstant().toEpochMilli()+"_"+token.substring(token.indexOf("=") + 2, token.length()-1));
+                return ("_"+token.substring(token.indexOf("=") + 2, token.length()-1));
             }
         }
         return "";
