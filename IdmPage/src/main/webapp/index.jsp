@@ -6,7 +6,7 @@
 <a href="presentazione">presentazione Accademy</a>
 <br>
 <a href="amministrazione">amministrazione</a> 
-<!-- <a href="amministrazione1">amministrazione1</a>   -->
+<a href="inviarec">inviarec</a>   
 <br>
 
 

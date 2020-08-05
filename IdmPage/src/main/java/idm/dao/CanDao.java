@@ -19,10 +19,11 @@ import org.springframework.jdbc.core.RowMapper;
 
 import idm.beans.CanComp;
 import idm.beans.Candidato;
-import idm.beans.Competenze;    
+import idm.beans.Competenze;
+import idm.beans.Recensione;    
 
 
-public class CanDao {
+public class CanDao extends Dao {
 	StandardServiceRegistry ssr = new StandardServiceRegistryBuilder().configure("hibernate.cfg.xml").build();  
     
 	Metadata meta = new MetadataSources(ssr).getMetadataBuilder().build();  
@@ -190,6 +191,15 @@ public class CanDao {
 	public Candidato getCanById(int id) {
 		String sql="select * from candidati where id=?";    
 	    return template.queryForObject(sql, new Object[]{id},new BeanPropertyRowMapper<Candidato>(Candidato.class));
+	}
+	
+	public void salva(Recensione recensione) {
+		Session session = factory.openSession();  
+		Transaction t = session.beginTransaction();
+		recensione.setApprovata(false);
+		session.saveOrUpdate(recensione);
+		t.commit();
+		session.close();
 	}
 
 	/*

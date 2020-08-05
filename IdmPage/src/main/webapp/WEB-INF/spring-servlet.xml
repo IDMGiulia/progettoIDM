@@ -38,6 +38,11 @@
 	<bean id="dao" class="idm.dao.CanDao">
 		<property name="template" ref="jt"></property>
 	</bean>  
+	
+		<bean id="d" class="idm.dao.RecensioneDao">
+	</bean>  
+
+	
 	     <!-- bind your messages.properties -->
 	<bean class="org.springframework.context.support.ResourceBundleMessageSource"
 		id="messageSource">

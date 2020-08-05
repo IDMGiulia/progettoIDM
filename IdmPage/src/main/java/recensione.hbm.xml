@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD//EN"  
+ "http://hibernate.org/hibernate-mapping-3.0.dtd">  
+  
+ <hibernate-mapping>  
+  <class name="idm.beans.Recensione" table="recensione">  
+    <id name="recId">  
+     <generator class="increment"></generator>  
+    </id>      
+    <property name="nome"></property>  
+    <property name="cognome"></property>
+    <property name="recensione"></property>
+    <property name="approvata"></property>
+	</class>  
+</hibernate-mapping>    

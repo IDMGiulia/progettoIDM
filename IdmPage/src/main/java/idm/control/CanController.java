@@ -23,8 +23,10 @@ import idm.beans.CanComp;
 import idm.beans.Candidato;
 import idm.dao.CanDao;
 
+
 @Controller    
 public class CanController {
+	
 	@Autowired    
 	CanDao dao;
 
