@@ -4,6 +4,11 @@
 <head>
 
 <style type="text/css">
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus, .dropdown-menu>li.active>a
+	{
+	color: #1d70b7 !important;
+	?>
+}
 .top-info {
 	background-color: #ffffff;
 }

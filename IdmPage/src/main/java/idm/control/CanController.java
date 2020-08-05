@@ -36,6 +36,13 @@ public class CanController {
 		return "home";  
 	}
 	
+	//link alla pagina senior
+	@RequestMapping("/joinus")  
+	public String joinus()  
+	{  
+		return "joinus";  
+	}
+	
 	//invia alla pagina per selezionare alcuni candidati
 	@RequestMapping("/selezione")  
 	public String selezione()  

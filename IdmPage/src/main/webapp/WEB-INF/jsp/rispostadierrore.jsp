@@ -179,32 +179,6 @@ var _EPYT_ = {"ajaxurl":"https:\/\/www.idmconsulting.it\/wp-admin\/admin-ajax.ph
 <link rel="alternate" type="text/xml+oembed"
 	href="https://www.idmconsulting.it/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.idmconsulting.it%2F&#038;format=xml" />
 
-<script data-cfasync="false">
-window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};a2a_localize = {
-	Share: "Share",
-	Save: "Salva",
-	Subscribe: "Abbonati",
-	Email: "Email",
-	Bookmark: "Segnalibro",
-	ShowAll: "espandi",
-	ShowLess: "comprimi",
-	FindServices: "Trova servizi",
-	FindAnyServiceToAddTo: "Trova subito un servizio da aggiungere",
-	PoweredBy: "Powered by",
-	ShareViaEmail: "Condividi via email",
-	SubscribeViaEmail: "Iscriviti via email",
-	BookmarkInYourBrowser: "Aggiungi ai segnalibri",
-	BookmarkInstructions: "Premi Ctrl+D o \u2318+D per mettere questa pagina nei preferiti",
-	AddToYourFavorites: "Aggiungi ai favoriti",
-	SendFromWebOrProgram: "Invia da qualsiasi indirizzo email o programma di posta elettronica",
-	EmailProgram: "Programma di posta elettronica",
-	More: "Di più&#8230;",
-	ThanksForSharing: "Thanks for sharing!",
-	ThanksForFollowing: "Thanks for following!"
-};
-
-(function(d,s,a,b){a=d.createElement(s);b=d.getElementsByTagName(s)[0];a.async=1;a.src="https://static.addtoany.com/menu/page.js";b.parentNode.insertBefore(a,b);})(document,"script");
-</script>
 <script type="text/javascript">
 		jQuery( document ).ready( function($) {
 			$('.animsition').animsition({
@@ -221,9 +195,7 @@ window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overl
 <style type="text/css"> /******************global color****************************/
 a.navbar-brand, ul.navbar-nav li a:hover, ul.navbar-nav li a:focus, ul.navbar-nav li.active>a,
 	ul.navbar-nav>li.current-menu-parent>a, .portfolio-overlay,
-	.footer-bottom, #portfolio-carousel .caption, .owl-controls .owl-prev:hover,
-	.owl-controls .owl-next:hover, .btn.btn-primary, .headcarousel .flex-direction-nav a:hover,
-	.widget_categories ul li span.count, .footer-widget ul li.cat-item span.count,
+	.footer-bottom,	.widget_categories ul li span.count, .footer-widget ul li.cat-item span.count,
 	ul.wp-tag-cloud li a:hover, .widget-tab .nav-tabs>li.active>a, .tweet .tweet-time i,
 	.feature-wrapper:after, .featured2.fdivider:after, .featured2.fdivider .feature-box:before,
 	.feature-content-wrapper:before, .feature-wrapper:after,
@@ -231,8 +203,7 @@ a.navbar-brand, ul.navbar-nav li a:hover, ul.navbar-nav li a:focus, ul.navbar-na
 	.pagination>li>a:hover, h4.panel-title a:not(.collapsed):after,
 	.featured-tab .nav-tabs>li.active>a, .tab-default .nav-tabs>li.active>a,
 	.contact-list li i, ul.social-icons li, .team-image-wrapper-hover,
-	.team-img-wrapper-hover, .service-content i, .dart-carousel-controller .left:hover,
-	.dart-carousel-controller .right:hover, .plan-price, .plan.featured .plan-name,
+	.team-img-wrapper-hover, .service-content i, .plan-price, .plan.featured .plan-name,
 	.recent-post .blog-date, .recent-post .date:before, .bx-wrapper .bx-pager.bx-default-pager a:hover,
 	.bx-wrapper .bx-pager.bx-default-pager a.active, .heading:after, ul.navbar-nav li.nav-single,
 	.site-search, .recent-post .post-body:after, .service-content.fdivider:after,
@@ -338,102 +309,15 @@ a:hover, a:focus, a:active, .footer-custom-menu li a:hover {
 	background-color: rgb(23, 89, 146);
 }
 
-/*********************   TOP NAVIGATION   **************************/
-.top-info {
-	background-color: #ffffff;
-}
-
-.top-info .topbar-sidebar, .top-info .topbar-sidebar p, .top-info .topbar-sidebar li
-	{
-	color: #333333
-}
-
-.top-info .topbar-sidebar a {
-	color: #666666 !important;
-}
-
-.top-info .topbar-sidebar a:hover {
-	color: #1d70b7 !important
-}
-
 /****************Custom background**************************/
 .body-inner {
 	background-image:
 		url('https://www.idmconsulting.it/wp-content/uploads/2015/07/Background-esagoni-piccoli.png');
 	background-position: 0 0;
 }
-/****************** MAIN NAVIGATION *******************/
-nav ul.nav.navbar-nav {
-	background: #ffffff;
-	background-attachment: fixed;
-	background-position: right top;
-}
-
-nav ul.nav.navbar-nav>li {
-	background: transparent;
-}
-
-nav ul.navbar-nav>li>a {
-	color: #20b0da;
-}
-
-nav ul.navbar-nav>li>a:hover {
-	color: #ffffff;
-}
-
-nav ul.navbar-nav li.active>a {
-	color: #ffffff !important;
-}
-
-nav ul.navbar-nav>li>a:hover {
-	
-}
-
-nav ul.navbar-nav ul.dropdown-menu>li {
-	background: #20b0da
-}
-
-nav ul.navbar-nav ul.dropdown-menu>li>a:hover {
-	color: #006ba0 !important
-}
-
-nav ul.navbar-nav ul.dropdown-menu>li>a {
-	border-bottom: 1px solid #006ba0;
-}
-
 h1 {
 	color: #20bcda;
 	font-weight: normal;
-}
-
-.inner-title-content h2 {
-	color: #20bcda;
-	font-weight: normal;
-}
-</style>
-<style type="text/css">
-.recentcomments a {
-	display: inline !important;
-	padding: 0 !important;
-	margin: 0 !important;
-}
-</style>
-<style type="text/css" data-type="vc_custom-css">
-.vc_gitem-zone .vc-zone-link {
-	border: none !important;
-}
-</style>
-<style type="text/css" data-type="vc_shortcodes-custom-css">
-.vc_custom_1473350305655 {
-	margin-top: 44px !important;
-}
-
-.vc_custom_1473350370393 {
-	margin-top: 44px !important;
-}
-
-.vc_custom_1473350364159 {
-	margin-top: 44px !important;
 }
 </style>
 
