@@ -590,7 +590,6 @@ h1 {
 						<input type="submit" class="button button2" value="Completa la candidatura">
 					</form>
 				</div>
-				
 		</section>
 
 		<!-- Sezione Footer della Pagina -->
