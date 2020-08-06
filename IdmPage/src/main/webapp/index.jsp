@@ -3,9 +3,7 @@
 
 
 <!DOCTYPE html>
-<a href="amministrazione">amministrazione</a> 
-<br>
-<a href="amministraRecensioni">amministraRecensioni</a>
+<a href="login">login</a> 
 <br>
 <a href="inviarec">inviarec</a>   
 <br>

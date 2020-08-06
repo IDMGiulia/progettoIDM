@@ -22,8 +22,7 @@ public class SeniorController {
 	
 	@Autowired
 	SeniorDao dao;
-	
-	
+		
 	 //link al form di candidatura Senior 
 	@RequestMapping("/candidaturaSen")    
 	public String showformSen(Model m){   
@@ -61,4 +60,12 @@ public class SeniorController {
 		}
 		return "senior_cv";//will derict to canconf   
 	} 
+	
+	//restituisce la tabella con tutti i senior candidati
+		@RequestMapping("/amministraSenior")    
+	    public String viewemp(Model m){    
+	        List<Senior> list=dao.getSenior();    
+	        m.addAttribute("list",list);  
+	        return "amministraSenior";    
+	    }
 }

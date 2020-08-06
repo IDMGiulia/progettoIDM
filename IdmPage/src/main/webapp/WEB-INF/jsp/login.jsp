@@ -86,26 +86,11 @@ img.wp-smiley, img.emoji {
 <link rel='stylesheet' id='bootstrap-css'
 	href='https://www.idmconsulting.it/wp-content/themes/dart/css/bootstrap.min.css?ver=4.9.15'
 	type='text/css' media='all' />
-<link rel='stylesheet' id='owl-carousel-styles-css'
-	href='https://www.idmconsulting.it/wp-content/themes/dart/js/assets/owl.carousel.css?ver=4.9.15'
-	type='text/css' media='all' />
-<link rel='stylesheet' id='flexslider-css'
-	href='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/lib/bower/flexslider/flexslider.min.css?ver=5.5.4'
-	type='text/css' media='all' />
-<link rel='stylesheet' id='bxslider-css'
-	href='https://www.idmconsulting.it/wp-content/themes/dart/css/jquery.bxslider.css?ver=4.9.15'
-	type='text/css' media='all' />
-<link rel='stylesheet' id='lightbox-styles-css'
-	href='https://www.idmconsulting.it/wp-content/themes/dart/css/prettyPhoto.css?ver=4.9.15'
-	type='text/css' media='all' />
 <link rel='stylesheet' id='font-awesome-css'
 	href='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/lib/bower/font-awesome/css/font-awesome.min.css?ver=5.5.4'
 	type='text/css' media='all' />
 <link rel='stylesheet' id='animate-css'
 	href='https://www.idmconsulting.it/wp-content/themes/dart/css/animate.css?ver=4.9.15'
-	type='text/css' media='all' />
-<link rel='stylesheet' id='YT-styles-css'
-	href='https://www.idmconsulting.it/wp-content/themes/dart/css/YTPlayer.css?ver=4.9.15'
 	type='text/css' media='all' />
 <link rel='stylesheet' id='main-styles-css'
 	href='https://www.idmconsulting.it/wp-content/themes/dart/style.css?ver=4.9.15'
@@ -122,17 +107,6 @@ img.wp-smiley, img.emoji {
 <link rel='stylesheet' id='js_composer_front-css'
 	href='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/css/js_composer.min.css?ver=5.5.4'
 	type='text/css' media='all' />
-<link rel='stylesheet' id='addtoany-css'
-	href='https://www.idmconsulting.it/wp-content/plugins/add-to-any/addtoany.min.css?ver=1.15'
-	type='text/css' media='all' />
-<link rel='stylesheet' id='__EPYT__style-css'
-	href='https://www.idmconsulting.it/wp-content/plugins/youtube-embed-plus/styles/ytprefs.min.css?ver=12.2'
-	type='text/css' media='all' />
-<style id='__EPYT__style-inline-css' type='text/css'>
-.epyt-gallery-thumb {
-	width: 33.333%;
-}
-</style>
 <link rel='stylesheet' id='page-transition-animsition-css'
 	href='https://www.idmconsulting.it/wp-content/plugins/page-transition/css/animsition.min.css?ver=1.3'
 	type='text/css' media='all' />
@@ -154,16 +128,7 @@ img.wp-smiley, img.emoji {
 <script type='text/javascript'
 	src='https://www.idmconsulting.it/wp-content/themes/dart/js/bootstrap.js?ver=3.0.1'></script>
 <script type='text/javascript'
-	src='https://www.idmconsulting.it/wp-content/themes/dart/js/owl.carousel.js?ver=3.0.1'></script>
-<script type='text/javascript'
-	src='https://www.idmconsulting.it/wp-content/themes/dart/js/jquery.bxslider.min.js?ver=3.0.1'></script>
-<script type='text/javascript'
 	src='https://www.idmconsulting.it/wp-content/themes/dart/js/smoothscroll.js?ver=4.9.15'></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var _EPYT_ = {"ajaxurl":"https:\/\/www.idmconsulting.it\/wp-admin\/admin-ajax.php","security":"5f590b1437","gallery_scrolloffset":"20","eppathtoscripts":"https:\/\/www.idmconsulting.it\/wp-content\/plugins\/youtube-embed-plus\/scripts\/","epresponsiveselector":"[\"iframe.__youtube_prefs_widget__\"]","epdovol":"1","version":"12.2","evselector":"iframe.__youtube_prefs__[src], iframe[src*=\"youtube.com\/embed\/\"], iframe[src*=\"youtube-nocookie.com\/embed\/\"]","ajax_compat":"","ytapi_load":"light","stopMobileBuffer":"1","vi_active":"","vi_js_posttypes":[]};
-/* ]]> */
-</script>
 <script type='text/javascript'
 	src='https://www.idmconsulting.it/wp-content/plugins/youtube-embed-plus/scripts/ytprefs.min.js?ver=12.2'></script>
 <link rel='https://api.w.org/'
@@ -243,13 +208,6 @@ a.navbar-brand, ul.navbar-nav li a:hover, ul.navbar-nav li a:focus, ul.navbar-na
 	background-color: #1d70b7;
 }
 
-.woocommerce .widget_price_filter .ui-slider-horizontal .ui-slider-range,
-	.woocommerce-page .widget_price_filter .ui-slider-horizontal .ui-slider-range,
-	.woocommerce .widget_price_filter .ui-slider .ui-slider-handle,
-	.woocommerce-page .widget_price_filter .ui-slider .ui-slider-handle,
-	.woocommerce .button, .woocommerce-pagination ul li span.current {
-	background-color: #1d70b7 !important;
-}
 /*.flex-control-paging li a.flex-active, .scrollup:hover*/
 {
 background:#1d70b7;
@@ -275,12 +233,6 @@ background:rgba
 	blockquote a, .sidebar .widget_nav_menu li a:hover, .sidebar .widget_nav_menu li.current-menu-item a,
 	.social-widget a, .rating i {
 	color: #1d70b7;
-}
-
-.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus, .dropdown-menu>li.active>a
-	{
-	color: #1d70b7 !important;
-	?>
 }
 
 blockquote, .page-title:after, .eemail_textbox input[type="text"]:focus,
@@ -315,6 +267,7 @@ a:hover, a:focus, a:active, .footer-custom-menu li a:hover {
 		url('https://www.idmconsulting.it/wp-content/uploads/2015/07/Background-esagoni-piccoli.png');
 	background-position: 0 0;
 }
+
 h1 {
 	color: #20bcda;
 	font-weight: normal;
@@ -373,14 +326,11 @@ h1 {
 
 				<div style="text-align: center">
 				<br><br>
-					<h1>Congratulazioni ${nome}!</h1>
+					<h1>Qui ci sarà il login</h1>
 					<br>
-					<h2>Purtroppo il curriculum caricato non rispetta il formato corretto.</h2>
-					<h2>In ogni caso i tuoi dati sono stati registrati correttamente.</h2>
-					<br><br><br>
-					<h4>Verrai ricontattato il prima possibile da un nostro responsabile per confermare le tue qualifiche e la tua disponibilit&#224;.</h4>
-					<br><br><br><br>
-					<a href="https://www.idmconsulting.it/" class="button button2">Ritorna a IDM</a>
+					<a href="amministrazione" class="button button2">gestisci Academy</a>
+					<a href="amministraRecensioni" class="button button2">gestisci recensioni</a>
+					<a href="amministraSenior" class="button button2">gestisci candidature senior</a>
 				</div>
 
 

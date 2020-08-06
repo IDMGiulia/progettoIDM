@@ -21,7 +21,7 @@
     <property name="percorso" ></property>      
     <list name="favoriteFrameworks" table="sencomp" fetch="select" cascade="all">  
             <key column="sen_id" />  
-               <index column="type"></index>   
+            <index column="type"></index>   
             <many-to-many class="idm.beans.Competenze" column="competenze" />  
     </list> 
     <property name="posizioneLav" ></property>

@@ -17,25 +17,26 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;  
 import org.springframework.jdbc.core.RowMapper;
 
-import idm.beans.CanComp;
-import idm.beans.Candidato;
 import idm.beans.Competenze;
-import idm.beans.Recensione;
 import idm.beans.Senior;    
 
 
 public class SeniorDao {
+	
 	StandardServiceRegistry ssr = new StandardServiceRegistryBuilder().configure("hibernate.cfg.xml").build();  
     
 	Metadata meta = new MetadataSources(ssr).getMetadataBuilder().build();  
 	  
 	SessionFactory factory = meta.getSessionFactoryBuilder().build();
+	
+	
 	JdbcTemplate template;   
 
 	public void setTemplate(JdbcTemplate template) {    
 		this.template = template;    
 	}
-
+	
+	//metodo per il salvataggio dei senior
 	public void salva(Senior senior) {
 		
 		int num = senior.getComp().length;
@@ -68,6 +69,8 @@ public class SeniorDao {
 
 	}
 	
+	
+	//metodo per la lettura delle competenze dalla check-box
 	public String concatenaCompetenze(Senior senior,List<Competenze> webFrameworkList, int lunghezza) {
 		String[] comp = senior.getComp();
 		String descrizione=senior.getCompetenze();
@@ -89,7 +92,8 @@ public class SeniorDao {
 		}
 		return descrizione;
 	}
-	//metodo per visualizzare tutti i candidati
+	
+	//metodo per visualizzare tutti i senior
 	public List<Senior> getSenior(){    
 		return template.query("select * from senior",new RowMapper<Senior>(){    
 			public Senior mapRow(ResultSet rs, int row) throws SQLException {    
@@ -111,63 +115,17 @@ public class SeniorDao {
 			}    
 		});    
 	}
-	//metodo per visualizzare tutte le competenze
-	public List<CanComp> getComp(){    
-		return template.query("select * from can_comp",new RowMapper<CanComp>(){    
-			public CanComp mapRow(ResultSet rs, int row) throws SQLException {    
-				CanComp c=new CanComp();    
-				c.setCanId(rs.getInt(1));    
-				c.setCompetenza(rs.getString(3)); 
-				return c;    
-			}    
-		});    
-	}
 	
-	//metodo per eliminare un candidato
-	public int deleteCandidato(int id){    
-		String sql="delete from candidati where id="+id+""; 
-		String sql1="delete from can_comp where can_id="+id+"";
+	//metodo per eliminare un senior
+	public int deleteSenior(int id){    
+		String sql="delete from senior where id="+id+""; 
+		String sql1="delete from sencomp where sen_id="+id+"";
 		template.update(sql1); 
 		return template.update(sql);    
 	} 
 	
-	//metodo per selezionare i candidati con una certa sede
-	public List<Senior> getCandidatoForSede(String sede){    
-	    List<Senior> e = new ArrayList<>();
-	    e = this.getSenior();
-	    if(sede.contains("E"))
-	    	return e;
-	    List<Senior> risultato = new ArrayList<>();
-	    e.stream()
-	      .filter(x->x.getLuogoCandidatura().equals(sede)||x.getLuogoCandidatura().equals("E"))
-	      .forEach(x->risultato.add(x));
-	        return risultato;    
-	  }
-	
-	//metodo per selezionare i candidati con una certa stato
-	public List<Senior> getCandidatoForStato(String stato, List<Senior> e){ 
-		if(stato.compareTo("")==0) {
-			return e;
-		}
-	    List<Senior> risultato = new ArrayList<>();
-	    e.stream()
-	      .filter(x->x.getStato().equals(stato))
-	      .forEach(x->risultato.add(x));
-	        return risultato;    
-	  }
-	
-	public List<Candidato> getCandidatoComp(String comp, List<Candidato> e){ 
-		if(comp.compareTo("*")==0) {
-			return e;
-		}
-	    List<Candidato> risultato = new ArrayList<>();
-	    e.stream()
-	      .filter(x->x.getCompetenze().contains(comp))
-	      .forEach(x->risultato.add(x));
-	        return risultato;    
-	  }
-	
-	public List<Senior> getCandidatoForParameter(String sede,String competenze, String stato){   
+	//metodo per la selezione dei senior
+	public List<Senior> getSeniorForParameter(String sede,String competenze, String stato){   
 	      List<Senior> senior= new ArrayList <Senior>();
 	      List<Senior> risultato = new ArrayList<>();
 	      senior = this.getSenior();
@@ -194,38 +152,5 @@ public class SeniorDao {
 		String sql="select * from senior where id=?";    
 	    return template.queryForObject(sql, new Object[]{id},new BeanPropertyRowMapper<Senior>(Senior.class));
 	}
-	
 
-	/*
-	public String gestisciComp (String [] framework) {
-		String elementoString="";
-		for ( String x: framework) {
-			elementoString=elementoString.concat(x);
-		}
-		return elementoString;
-	}
-		
-
-	public int salva(Candidato p){    
-		String competenze= p.getCompetenze().concat(gestisciComp(p.getFavoriteFrameworks()));
-		String sql="insert into candidati(nome,cognome,email,telefono,competenze) values('"+p.getNome()+"','"+p.getCognome()+"','"+p.getEmail()+"','"+p.getTelefono()+"','"+competenze+"')";  
-		return template.update(sql);    
-	}
-	
-public int update(Candidato p){  
-    String sql="update Emp99 set name='"+p.getName()+"', salary="+p.getSalary()+",designation='"+p.getDesignation()+"' where id="+p.getId()+"";    
-    return template.update(sql);    
-}   
-	public int delete(int id){    
-		String sql="delete from Emp99 where id="+id+"";    
-		return template.update(sql);    
-	}    
-	/*public Emp getEmpById(int id){    
-    String sql="select * from candidati where id=?";    
-    return template.queryForObject(sql, new Object[]{id},new BeanPropertyRowMapper<Emp>(Emp.class));    
-}   
-	
-	public static void main(String[] args) {
-		//idm.dao.CanDao;
-	} */   
 }

@@ -52,24 +52,27 @@ public class CanController {
 		return "viewpage";  
 	}
 	
+
+	//invia alla pagina per selezionare alcuni candidati
+	@RequestMapping("/login")  
+	public String login()  
+	{  
+		return "login";  
+	}
 	
 	// Link che porta dal canconf.jsp alla pagina di conferma finale (response)
 	@RequestMapping("/risposta/{nome}")  
 	public String risposta(@PathVariable String nome,Model m)  
 	{  
-		System.out.println(nome);
-		System.out.println("ciao");
-		 m.addAttribute("nome",nome);
+		 m.addAttribute("nome",nome.split("_")[2]);
 		return "response";  
 	}
 	
 	// Link che riporta alla canconf.jsp se il file ha estenzione sbagliata
 	@RequestMapping("/errore/{nome}")  
 	public String errore(@PathVariable String nome,Model m)  
-	{  
-		System.out.println(nome);
-		System.out.println("ciao");
-		 m.addAttribute("nome",nome);
+	{ 
+		 m.addAttribute("nome",nome.split("_")[2]);
 		return "rispostadierrore";  
 	}
 	
