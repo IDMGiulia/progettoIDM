@@ -542,8 +542,9 @@ h1 {
 												class="vc_general vc_tta vc_tta-accordion vc_tta-color-grey vc_tta-style-classic vc_tta-shape-rounded vc_tta-o-shape-group vc_tta-controls-align-left">
 												<div class="vc_tta-panels-container">
 													<div class="vc_tta-panels">
-														<div class="vc_tta-panel"
-															id="1495547727866-0e18e9be-dc78"
+														
+														<!-- S JAVA DEV TORINO -->
+														<div class="vc_tta-panel" id="1495547727866-0e18e9be-dc78"
 															data-vc-content=".vc_tta-panel-body">
 															<div class="vc_tta-panel-heading">
 																<h4
@@ -607,7 +608,7 @@ h1 {
 																		<p>
 																			<em> La forma contrattuale ed il trattamento
 																				economico saranno valutati individualmente, in
-																				relazione all`esperienza e alle effettive competenze
+																				relazione all'esperienza e alle effettive competenze
 																				della persona.</em>
 																		</p>
 																		<p>Il presente annuncio si rivolge a candidati di
@@ -615,16 +616,46 @@ h1 {
 																			D.Lgs n. 98/2006, art 27).</p>
 																		<p>
 																			L&#8217;interessato è invitato a inviare la propria
-																			candidatura rilasciando specifico consenso al
-																			trattamento dei dati personali, ai sensi della L.
-																			196/03 inviando il Curriculum vitae aggiornato
-																			all'indirizzo <a href="mailto:job@idmconsulting.it">job@idmconsulting.it</a>
+																			candidatura tramite <a href="candidaturaSen">questo form</a>.
 																		</p>
 
 																	</div>
 																</div>
 															</div>
 														</div>
+														
+														<!-- J JAVA DEV TORINO -->
+														<div class="vc_tta-panel" id="1519396897075-d521093d-323a"
+															data-vc-content=".vc_tta-panel-body">
+															<div class="vc_tta-panel-heading">
+																<h4
+																	class="vc_tta-panel-title vc_tta-controls-icon-position-left">
+																	<a href="#1519396897075-d521093d-323a"
+																		data-vc-accordion
+																		data-vc-container=".vc_tta-container"><span
+																		class="vc_tta-title-text">JUNIOR J2EE DEVELOPER
+																			CON FORMAZIONE _ Torino</span><i
+																		class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a>
+																</h4>
+															</div>
+															<div class="vc_tta-panel-body">
+																<div
+																	class="wpb_text_column wpb_content_element  vc_custom_1519396982742">
+																	<div class="wpb_wrapper">
+																		<p>
+																			Per conoscere tutte le informazioni riguardo alla
+																			nostra Academy <a href="presentazione">clicca qui</a>
+																		</p>
+																		<p>L' Academy è rivolta a candidati di entrambi i
+																			sessi ai sensi della legge (L.903/77 e D.Lgs n.
+																			98/2006, art 27).</p>
+
+																	</div>
+																</div>
+															</div>
+														</div>
+														
+														<!-- .NET DEV TORINO -->
 														<div class="vc_tta-panel" id="1495547724870-545a2c73-9826"
 															data-vc-content=".vc_tta-panel-body">
 															<div class="vc_tta-panel-heading">
@@ -693,10 +724,7 @@ h1 {
 																			D.Lgs n. 98/2006, art 27).</p>
 																		<p>
 																			L&#8217;interessato è invitato a inviare la propria
-																			candidatura rilasciando specifico consenso al
-																			trattamento dei dati personali, ai sensi della L.
-																			196/03 inviando il Curriculum vitae aggiornato
-																			all'indirizzo <a href="mailto:job@idmconsulting.it">job@idmconsulting.it</a>
+																			candidatura tramite <a href="candidaturaSen">questo form</a>.
 																		</p>
 																		<p>&nbsp;</p>
 																		<p>&nbsp;</p>
@@ -705,32 +733,8 @@ h1 {
 																</div>
 															</div>
 														</div>
-														<div class="vc_tta-panel" id="1519396897075-d521093d-323a"
-															data-vc-content=".vc_tta-panel-body">
-															<div class="vc_tta-panel-heading">
-																<h4
-																	class="vc_tta-panel-title vc_tta-controls-icon-position-left">
-																	<a href="#1519396897075-d521093d-323a"
-																		data-vc-accordion
-																		data-vc-container=".vc_tta-container"><span
-																		class="vc_tta-title-text">JUNIOR J2EE DEVELOPER
-																			CON FORMAZIONE _ Torino</span><i
-																		class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a>
-																</h4>
-															</div>
-															<div class="vc_tta-panel-body">
-																<div
-																	class="wpb_text_column wpb_content_element  vc_custom_1519396982742">
-																	<div class="wpb_wrapper">
-																		<p>
-																		Per conoscere tutte le informazioni riguardo alla nostra Academy 
-																		<a href="presentazione">clicca qui</a>
-																		</p>
-
-																	</div>
-																</div>
-															</div>
-														</div>
+														
+														<!-- .NET DEV MILANO -->
 														<div class="vc_tta-panel" id="1519397071129-d69d726d-83f0"
 															data-vc-content=".vc_tta-panel-body">
 															<div class="vc_tta-panel-heading">
@@ -815,10 +819,7 @@ h1 {
 																			D.Lgs n. 98/2006, art 27).</p>
 																		<p>
 																			L&#8217;interessato è invitato a inviare la propria
-																			candidatura rilasciando specifico consenso al
-																			trattamento dei dati personali, ai sensi della L.
-																			196/03 inviando il Curriculum vitae aggiornato
-																			all'indirizzo <a href="mailto:job@idmconsulting.it">job@idmconsulting.it</a>
+																			candidatura tramite <a href="candidaturaSen">questo form</a>.
 																		</p>
 
 																	</div>

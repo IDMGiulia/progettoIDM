@@ -1,14 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html> 
-<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>  
+<!DOCTYPE html>
 <html lang="it">
+
 <head>
 <meta charset="utf-8" />
 <meta name="viewport"
 	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-<title>Recensione | IDM - We simplify your work</title>
+<title>Conferma Candidatura | IDM - We simplify your work</title>
 
 <link rel="alternate" type="application/rss+xml" title="RSS2.0"
 	href="https://www.idmconsulting.it/feed/" />
@@ -178,6 +178,33 @@ var _EPYT_ = {"ajaxurl":"https:\/\/www.idmconsulting.it\/wp-admin\/admin-ajax.ph
 	href="https://www.idmconsulting.it/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.idmconsulting.it%2F" />
 <link rel="alternate" type="text/xml+oembed"
 	href="https://www.idmconsulting.it/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.idmconsulting.it%2F&#038;format=xml" />
+
+<script data-cfasync="false">
+window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};a2a_localize = {
+	Share: "Share",
+	Save: "Salva",
+	Subscribe: "Abbonati",
+	Email: "Email",
+	Bookmark: "Segnalibro",
+	ShowAll: "espandi",
+	ShowLess: "comprimi",
+	FindServices: "Trova servizi",
+	FindAnyServiceToAddTo: "Trova subito un servizio da aggiungere",
+	PoweredBy: "Powered by",
+	ShareViaEmail: "Condividi via email",
+	SubscribeViaEmail: "Iscriviti via email",
+	BookmarkInYourBrowser: "Aggiungi ai segnalibri",
+	BookmarkInstructions: "Premi Ctrl+D o \u2318+D per mettere questa pagina nei preferiti",
+	AddToYourFavorites: "Aggiungi ai favoriti",
+	SendFromWebOrProgram: "Invia da qualsiasi indirizzo email o programma di posta elettronica",
+	EmailProgram: "Programma di posta elettronica",
+	More: "Di più&#8230;",
+	ThanksForSharing: "Thanks for sharing!",
+	ThanksForFollowing: "Thanks for following!"
+};
+
+(function(d,s,a,b){a=d.createElement(s);b=d.getElementsByTagName(s)[0];a.async=1;a.src="https://static.addtoany.com/menu/page.js";b.parentNode.insertBefore(a,b);})(document,"script");
+</script>
 <script type="text/javascript">
 		jQuery( document ).ready( function($) {
 			$('.animsition').animsition({
@@ -254,91 +281,9 @@ a.navbar-brand, ul.navbar-nav li a:hover, ul.navbar-nav li a:focus, ul.navbar-na
 }
 /*.flex-control-paging li a.flex-active, .scrollup:hover*/
 {
-background
-
-
-
-
-
-:
-
-
-
-
-
-#1d70b7
-
-
-
-
-
-;
-background
-
-
-
-
-
-:
-
-
-
-
-
-rgba
-
-
-
-
-
-(
-
-
-
-
-
-
-29
-,
-112
-,
-183
-,
-0
-
-
-
-
-
-
-
-
-
-
-.9
-
-
-
-
-
-
-
-
-
-
-)
-
-
-
-
-
-
-		
-
-
-
-
-
+background:#1d70b7;
+background:rgba
+(29,112,183,0.9)
 }
 .star-rating span, .woocommerce .star-rating:before, .woocommerce-page .star-rating:before
 	{
@@ -361,6 +306,12 @@ rgba
 	color: #1d70b7;
 }
 
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus, .dropdown-menu>li.active>a
+	{
+	color: #1d70b7 !important;
+	?>
+}
+
 blockquote, .page-title:after, .eemail_textbox input[type="text"]:focus,
 	.woocommerce-pagination ul li span.current {
 	border-color: #1d70b7 !Important;
@@ -381,14 +332,20 @@ form .form-control:focus {
 a:hover, a:focus, a:active, .footer-custom-menu li a:hover {
 	color: rgb(23, 89, 146)
 }
+
 /****************Custom background**************************/
 .body-inner {
 	background-image:
 		url('https://www.idmconsulting.it/wp-content/uploads/2015/07/Background-esagoni-piccoli.png');
 	background-position: 0 0;
 }
-/****************** MAIN NAVIGATION *******************/
+
 h1 {
+	color: #20bcda;
+	font-weight: normal;
+}
+
+.inner-title-content h2 {
 	color: #20bcda;
 	font-weight: normal;
 }
@@ -400,20 +357,10 @@ h1 {
 	margin: 0 !important;
 }
 </style>
-<meta name="generator"
-	content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress." />
-<meta name="generator"
-	content="Powered by Slider Revolution 5.4.8 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
 
 <style type="text/css" data-type="vc_custom-css">
 .vc_gitem-zone .vc-zone-link {
 	border: none !important;
-}
-</style>
-<style>
-.error {
-	color: red;
-	font-weight: bold;
 }
 </style>
 <style type="text/css" data-type="vc_shortcodes-custom-css">
@@ -475,75 +422,117 @@ h1 {
 
 		<!-- Sezione Centrale della Pagina -->
 		<section class="main-wrapper pagecustom-1339">
-			<div class="container" style="margin-top: 50px">
+			<div class="container" style="margin-top: 30px">
+				<br> 
 
-				<div style="text-align: center">
-					<h1>Invia la tua recensione!</h1>
-					<h4>Completa il form con i tuoi dati per inviare la
-						tua recensione sull'academy</h4>
-				</div>
-
-				<form:form method="POST" action="salva" modelAttribute="rec">
-
-					<!-- SEZIONE DATI PERSONALI -->
-					<div id="div_cv" class="row text-left">
-						<div class="col-md-1"></div>
-						<div class="col-md-4">
-							<div class="form-group">
-								<label class="form-label">Nome *</label>
-								<form:input path="nome" type="text"
-									class="form-control form-control-sm" required="required"
-									placeholder="Inserisci il tuo nome" />
-								<form:errors path="nome" cssClass="error" />
-							</div>
-						</div>
-						<div class="col-md-2"></div>
-						<div class="col-md-4">
-							<div class="form-group">
-								<label class="form-label">Cognome *</label>
-								<form:input path="cognome" type="text"
-									class="form-control form-control-sm" required="required"
-									placeholder="Inserisci il tuo cognome" />
-								<form:errors path="cognome" cssClass="error" />
-							</div>
-						</div>
-						<div class="col-md-1"></div>
-
+				<!-- RIEPILOGO DEI DATI -->
+				<div style="text-align: left">
+				
+					<h1>Complimenti!</h1>
+					<h3>Controlla i tuoi dati, se sono corretti carica il tuo curriculum in fondo alla pagina:</h3>
 					<br>
-					<br>
-
-						<!-- RECENSIONE -->
-						<div id="div_cv" class="row text-left" style="text-align: center" >
-							<div class="col-md-2"></div>
-							<div class="col-md-8">
-								<div class="x">
-									<span><form:label path="recensione">Recensione: </form:label></span>
+					<div class="row">
+						<div class="col-sm-1"></div>
+						<div class="col-sm-6" style="text-align: center">
+							<div class="row">
+								<div class="col-sm-2" style="text-align: left">
+									<h4>
+										<b>Nome: </b>
+									</h4>${can.nome}
+									<br>
 								</div>
-								<form:textarea path="recensione" style="width: 80%; height: 300px; border: none"
-									maxlength="400" placeholder="" />
+								<div class="col-sm-4"></div>
+								<div class="col-sm-2" style="text-align: left">
+									<h4>
+										<b>Cognome: </b>
+									</h4>${can.cognome}
+									<br>
+								</div>
 							</div>
-							<div class="col-md-2"></div>
-					</div>
-					</div>
-
-					<br>
-					<br>
-
-					<!-- BOTTONE SUBMIT -->
-					<div>
-						<div style="text-align: center">
-							<input type="submit" class="button button2"
-								value="Invia la tua recensione" />
+							<div class="row">
+								<div class="col-sm-2" style="text-align: left">
+									<h4>
+										<b>Email: </b>
+									</h4>${can.email}
+									<br>
+								</div>
+								<div class="col-sm-4"></div>
+								<div class="col-sm-2" style="text-align: left">
+									<h4>
+										<b>Telefono: </b>
+									</h4>${can.telefono}
+									<br>
+								</div>
+							</div>
+							<br>
+							<div class="row">
+								<div class="col-sm-4" style="text-align: left">
+									<h4>
+										<b>Titolo di studio: </b>
+									</h4>${can.livello}
+									<br>
+								</div>
+								<div class="col-sm-4" style="text-align: left">
+									<h4>
+										<b>Conseguito in: </b>
+									</h4>
+										${can.paeseDiploma}
+								</div>
+								<div class="col-sm-4" style="text-align: left">
+									<h4>
+										<b>Percorso: </b>
+									</h4>${can.percorso}
+									<br>
+								</div>
+							</div>
+							<br>
+							<div style="text-align: left">
+								<h4>
+									<b>Competenze Inserite: </b>
+								</h4>${can.competenze}
+							</div>
+							<br>
 						</div>
-					</div>
-				</form:form>
 
+						<div class="col-sm-4">
+							<div style="text-align: center">
+								<h4>
+									<b>Sede Scelta: </b>
+								</h4>
+								<div>
+								<br>
+									<img
+										src="<%=request.getContextPath()%>/img/${can.luogoCandidatura}.jpg"
+										style="border-radius: 8px;" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-1"></div>
+					</div>
+				</div>
 			</div>
+			<!-- BOTTONE PER CONFERMARE -->
+				<div style="text-align: center">
+					<form action="FileUploadServlet" method="POST"
+						enctype="multipart/form-data">
+						<h4>Inserisci qui il tuo Curriculum</h4>
+						<div class="row">
+							<div class="col-sm-5"></div>
+							<div class="col-sm-3">
+								<input type="text" hidden="hidden" name="nome" value="${can.id}_${can.cognome}_${can.nome}"> 
+								<input type="file" name="fileName" required="required" accept=".odf,.odt,.txt,.pdf,.doc,.docx">
+							</div>
+							<div class="col-sm-4"></div>
+						</div>
+						<br><br>
+						<input type="submit" class="button button2" value="Completa la candidatura">
+					</form>
+				</div>
 		</section>
 
 		<!-- Sezione Footer della Pagina -->
 		<jsp:include page="footer.jsp"></jsp:include>
-
+		
 	</div>
 
 	<!--body inner-->
@@ -622,7 +611,7 @@ var wpcf7_redirect_forms = {"2541":{"page_id":"2558","external_url":"","use_exte
 		src='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/lib/waypoints/waypoints.min.js?ver=5.5.4'></script>
 	<script type='text/javascript'
 		src='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/js/dist/vc_grid.min.js?ver=5.5.4'></script>
-
+	
 </body>
 
 </html>

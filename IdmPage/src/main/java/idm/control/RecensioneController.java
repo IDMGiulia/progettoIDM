@@ -45,7 +45,7 @@ public class RecensioneController {
 	    }catch (Exception e) {
 	    	return "recensione";
 		}
-		return "home"; 
+		return "risprecensione"; 
 	} 
 	
 	//link di amministrazione che permette di vedere tutte le recensioni

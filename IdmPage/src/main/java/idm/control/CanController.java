@@ -35,7 +35,7 @@ public class CanController {
 	@RequestMapping("/presentazione")  
 	public String display()  
 	{  
-		return "home";  
+		return "ac_home";  
 	}
 	
 	//link alla pagina senior
@@ -57,7 +57,6 @@ public class CanController {
 	@RequestMapping("/risposta/{nome}")  
 	public String risposta(@PathVariable String nome,Model m)  
 	{  
-		
 		System.out.println(nome);
 		System.out.println("ciao");
 		 m.addAttribute("nome",nome);
@@ -111,7 +110,7 @@ public class CanController {
 	public String showform(Model m){   
 		Candidato candidato= new Candidato();
 		m.addAttribute("can", candidato);  
-		return "canform";   
+		return "ac_form";   
 	} 
 	
 	/*It saves object into database. The @ModelAttribute puts request data  
@@ -122,16 +121,16 @@ public class CanController {
 			SessionStatus status,Model m){ 
 	    //Check validation errors
 	    if (result.hasErrors()) {   
-	        return "canform";
+	        return "ac_form";
 	    }
 	    try {
 	    dao.salva(can); 
 	    }catch (Exception e) {
 	    	ObjectError error = new ObjectError("competenze","hai inserito troppi caratteri nel campo altre competenze");
 	    	result.addError(error);
-	    	return "canform";
+	    	return "ac_form";
 		}
-		return "canconf";//will derict to canconf   
+		return "ac_cv";//will derict to canconf   
 	} 
 	
 	/* It deletes record for the given id in URL and redirects to /viewemp */    
