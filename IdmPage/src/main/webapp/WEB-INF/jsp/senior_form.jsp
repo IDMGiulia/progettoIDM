@@ -555,14 +555,15 @@ span {
 						<div class="col-md-2"></div>
 					</div>
 					
+					<br>
+					
 					<!-- POSIZIONE SCELTA -->
-					<div id="div_cv" class="row text-left" style="text-align: center">
+					<div id="div_cv" class="row text-left" style="text-align: left">
 						<div class="col-md-1"></div>
 						<div class="col-md-4">
 							<form:label path="posizioneLav">Posizione per la quale ci si intende candidare: *</form:label>
 						</div>
-						<div class="col-md-1"></div>
-						<div class="col-md-4">
+						<div class="col-md-7">
 							<div class="radiobut">
 								<form:radiobutton path="posizioneLav" value="SJ"
 									label="Senior Java Developer" required="required"/>
@@ -572,7 +573,6 @@ span {
 									label="Entrambe le posizioni" />
 							</div>
 						</div>
-						<div class="col-md-2"></div>
 					</div>
 
 					<br><br>
@@ -643,7 +643,7 @@ span {
 					<div id="div_cv" class="row text-left" style="text-align: center">
 						<div class="col-md-12">
 							<legend
-								style="border-bottom: 1px solid #999; margin-bottom: 20px">
+								style="border-bottom: 1px solid #999; margin-bottom: 20px; text-align:left">
 								<b>Competenze</b>
 							</legend>
 						</div>
@@ -671,7 +671,7 @@ span {
 							</div>
 							<div class="col-md-6">
 								<form:textarea path="competenze" style="width: 80%; height: 80px; border: none"
-									maxlength="140" placeholder="es. Swift, Ruby, Assembly, ..." />
+									maxlength="140" placeholder="es: Swift, Ruby, Assembly, ..." />
 							</div>
 							<div class="col-md-1"></div>
 

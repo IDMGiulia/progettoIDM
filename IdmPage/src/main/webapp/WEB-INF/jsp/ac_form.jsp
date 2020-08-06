@@ -623,7 +623,7 @@ span {
 					<div id="div_cv" class="row text-left" style="text-align: center">
 						<div class="col-md-12">
 							<legend
-								style="border-bottom: 1px solid #999; margin-bottom: 20px">
+								style="border-bottom: 1px solid #999; margin-bottom: 20px; text-align: left">
 								<b>Competenze</b>
 							</legend>
 						</div>
