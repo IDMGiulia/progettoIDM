@@ -746,7 +746,7 @@ h1 {
 /* Slides */
 .mySlides {
 	display: none;
-	padding: 80px;
+	padding: 40px;
 	text-align: center;
 }
 
