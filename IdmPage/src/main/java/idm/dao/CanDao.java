@@ -19,8 +19,7 @@ import org.springframework.jdbc.core.RowMapper;
 
 import idm.beans.CanComp;
 import idm.beans.Candidato;
-import idm.beans.Competenze;
-import idm.beans.Recensione;    
+import idm.beans.Competenze; 
 
 
 public class CanDao {

@@ -667,51 +667,27 @@ h1 {
 
 <!-- STILE CAROSELLO -->
 <style>
+/*EVITA IL SALTO TRA UNA FOTO E L'ALTRA*/
 .carousel-fade .carousel-inner .item {
 	opacity: 0;
 	transition-property: opacity;
 	transition: opacity ease-out .7s;
 }
-
+/*FA VEDERE IL CAROSELLO*/
 .carousel-fade .carousel-inner .active {
 	opacity: 1;
 }
-
+/*EVITA IL SALTO TRA UNA FOTO E L'ALTRA*/
 .carousel-fade .carousel-inner .active.left, .carousel-fade .carousel-inner .active.right
 	{
 	left: 0;
 	opacity: 0;
 	z-index: 1;
 }
-
+/*EVITA IL BIANCO TRA UNA FOTO E L'ALTRA*/
 .carousel-fade .carousel-inner .next.left, .carousel-fade .carousel-inner .prev.right
 	{
 	opacity: 1;
-}
-
-.carousel-fade .carousel-control {
-	z-index: 2;
-}
-
-@media all and (transform-3d) , ( -webkit-transform-3d ) {
-	.carousel-fade .carousel-inner>.item.next, .carousel-fade .carousel-inner>.item.active.right
-		{
-		opacity: 0;
-		-webkit-transform: translate3d(0, 0, 0);
-		transform: translate3d(0, 0, 0);
-	}
-	.carousel-fade .carousel-inner>.item.prev, .carousel-fade .carousel-inner>.item.active.left
-		{
-		opacity: 0;
-		-webkit-transform: translate3d(0, 0, 0);
-		transform: translate3d(0, 0, 0);
-	}
-	.carousel-fade .carousel-inner>.item.next.left, .carousel-fade .carousel-inner>.item.prev.right,
-		.carousel-fade .carousel-inner>.item.active {
-		opacity: 1;
-		-webkit-transform: translate3d(0, 0, 0);
-		transform: translate3d(0, 0, 0);
-	}
 }
 
 .carousel-inner img {
@@ -799,6 +775,10 @@ h1 {
 	background-color: #bbb;
 	border-radius: 50%;
 	display: inline-block;
+}
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+	background: transparent;
 }
 
 </style>
@@ -1095,8 +1075,8 @@ h1 {
 					</div>
 
 					<!-- PULSANTI LATERALI  -->
-					<a class="prev" onclick="plusSlides(-1)">&#8249;</a> <a
-						class="next" onclick="plusSlides(1)">&#8250;</a>
+					<a class="prev" style="display:block;padding:16px" onclick="plusSlides(-1)">&#8249;</a> <a
+						class="next" style="display:block;padding:16px" onclick="plusSlides(1)">&#8250;</a>
 
 					<div class="dot-container">
 						<span class="dot" onclick="currentSlide(1)"></span> <span
