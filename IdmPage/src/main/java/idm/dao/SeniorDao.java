@@ -103,8 +103,8 @@ public class SeniorDao {
 				e.setCognome(rs.getString(3));
 				e.setEmail(rs.getString(4));
 				e.setTelefono(rs.getString(5));
-				e.setCompetenze(rs.getString(6));  
-				e.setLuogoCandidatura(rs.getString(7));
+				e.setLuogoCandidatura(rs.getString(6));
+				e.setCompetenze(rs.getString(7));  
 				e.setStato(rs.getString(8));
 				e.setNote(rs.getString(9));
 				e.setLivello(rs.getString(10));

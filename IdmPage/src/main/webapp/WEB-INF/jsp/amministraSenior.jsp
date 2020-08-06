@@ -87,7 +87,7 @@ h1 {
 			<div class="container" style="margin-left: 30px">
 
 				<h1>Lista di candidati</h1>
-				<a href="selezioneSenior">selezione dei candidati</a> <br> <br>
+				<a href="seniorSelection">selezione dei candidati</a> <br> <br>
 				<br>
 				<table>
 					<tr>
@@ -122,8 +122,8 @@ h1 {
 							<td>${can.paeseDiploma}</td>
 							<td>${can.percorso}</td>
 							<td>${can.posizioneLav}</td>
-							<td><a href="deleteemp/${can.id}">Cancella</a></td>
-							<td><a href="editemp/${can.id}">Modifica</a></td>
+							<td><a href="deletesen/${can.id}">Cancella</a></td>
+							<td><a href="editsen/${can.id}">Modifica</a></td>
 						</tr>
 					</c:forEach>
 				</table>
