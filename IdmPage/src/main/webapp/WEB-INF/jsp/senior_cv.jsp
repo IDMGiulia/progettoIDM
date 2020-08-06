@@ -438,14 +438,14 @@ h1 {
 								<div class="col-sm-2" style="text-align: left">
 									<h4>
 										<b>Nome: </b>
-									</h4>${can.nome}
+									</h4>${sen.nome}
 									<br>
 								</div>
 								<div class="col-sm-4"></div>
 								<div class="col-sm-2" style="text-align: left">
 									<h4>
 										<b>Cognome: </b>
-									</h4>${can.cognome}
+									</h4>${sen.cognome}
 									<br>
 								</div>
 							</div>
@@ -453,14 +453,14 @@ h1 {
 								<div class="col-sm-2" style="text-align: left">
 									<h4>
 										<b>Email: </b>
-									</h4>${can.email}
+									</h4>${sen.email}
 									<br>
 								</div>
 								<div class="col-sm-4"></div>
 								<div class="col-sm-2" style="text-align: left">
 									<h4>
 										<b>Telefono: </b>
-									</h4>${can.telefono}
+									</h4>${sen.telefono}
 									<br>
 								</div>
 							</div>
@@ -469,19 +469,19 @@ h1 {
 								<div class="col-sm-4" style="text-align: left">
 									<h4>
 										<b>Titolo di studio: </b>
-									</h4>${can.livello}
+									</h4>${sen.livello}
 									<br>
 								</div>
 								<div class="col-sm-4" style="text-align: left">
 									<h4>
 										<b>Conseguito in: </b>
 									</h4>
-										${can.paeseDiploma}
+										${sen.paeseDiploma}
 								</div>
 								<div class="col-sm-4" style="text-align: left">
 									<h4>
 										<b>Percorso: </b>
-									</h4>${can.percorso}
+									</h4>${sen.percorso}
 									<br>
 								</div>
 							</div>
@@ -489,7 +489,7 @@ h1 {
 							<div style="text-align: left">
 								<h4>
 									<b>Competenze Inserite: </b>
-								</h4>${can.competenze}
+								</h4>${sen.competenze}
 							</div>
 							<br>
 						</div>
@@ -502,7 +502,7 @@ h1 {
 								<div>
 								<br>
 									<img
-										src="<%=request.getContextPath()%>/img/${can.luogoCandidatura}.jpg"
+										src="<%=request.getContextPath()%>/img/${sen.luogoCandidatura}.jpg"
 										style="border-radius: 8px;" alt="">
 								</div>
 							</div>
@@ -519,7 +519,7 @@ h1 {
 						<div class="row">
 							<div class="col-sm-5"></div>
 							<div class="col-sm-3">
-								<input type="text" hidden="hidden" name="nome" value="${can.id}_${can.cognome}_${can.nome}"> 
+								<input type="text" hidden="hidden" name="nome" value="${sen.id}_${sen.cognome}_${sen.nome}"> 
 								<input type="file" name="fileName" required="required" accept=".odf,.odt,.txt,.pdf,.doc,.docx">
 							</div>
 							<div class="col-sm-4"></div>

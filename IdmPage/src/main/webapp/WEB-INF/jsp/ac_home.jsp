@@ -887,7 +887,7 @@ h1 {
 								<b>Edizioni</b>
 							</h2>
 							<h3>Prossima Edizione:</h3>
-							<a href="candidatura"> <font color="428BCA"> <b>&#10148;
+							<a href="candidaturaAc"> <font color="428BCA"> <b>&#10148;
 										Novembre 2020</b>
 							</font>
 							</a>

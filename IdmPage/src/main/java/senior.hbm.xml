@@ -19,8 +19,8 @@
     <property name="livello" ></property>
     <property name="paeseDiploma" ></property>
     <property name="percorso" ></property>      
-    <list name="favoriteFrameworks" table="can_comp" fetch="select" cascade="all">  
-            <key column="can_id" />  
+    <list name="favoriteFrameworks" table="sencomp" fetch="select" cascade="all">  
+            <key column="sen_id" />  
                <index column="type"></index>   
             <many-to-many class="idm.beans.Competenze" column="competenze" />  
     </list> 

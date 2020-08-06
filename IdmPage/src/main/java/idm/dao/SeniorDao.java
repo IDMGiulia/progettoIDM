@@ -132,12 +132,12 @@ public class SeniorDao {
 	} 
 	
 	//metodo per selezionare i candidati con una certa sede
-	public List<Candidato> getCandidatoForSede(String sede){    
-	    List<Candidato> e = new ArrayList<>();
-	    e = this.getCandidatos();
+	public List<Senior> getCandidatoForSede(String sede){    
+	    List<Senior> e = new ArrayList<>();
+	    e = this.getSenior();
 	    if(sede.contains("E"))
 	    	return e;
-	    List<Candidato> risultato = new ArrayList<>();
+	    List<Senior> risultato = new ArrayList<>();
 	    e.stream()
 	      .filter(x->x.getLuogoCandidatura().equals(sede)||x.getLuogoCandidatura().equals("E"))
 	      .forEach(x->risultato.add(x));
@@ -145,11 +145,11 @@ public class SeniorDao {
 	  }
 	
 	//metodo per selezionare i candidati con una certa stato
-	public List<Candidato> getCandidatoForStato(String stato, List<Candidato> e){ 
+	public List<Senior> getCandidatoForStato(String stato, List<Senior> e){ 
 		if(stato.compareTo("")==0) {
 			return e;
 		}
-	    List<Candidato> risultato = new ArrayList<>();
+	    List<Senior> risultato = new ArrayList<>();
 	    e.stream()
 	      .filter(x->x.getStato().equals(stato))
 	      .forEach(x->risultato.add(x));
@@ -167,11 +167,11 @@ public class SeniorDao {
 	        return risultato;    
 	  }
 	
-	public List<Candidato> getCandidatoForParameter(String sede,String competenze, String stato){   
-	      List<Candidato> candidato= new ArrayList <Candidato>();
-	      List<Candidato> risultato = new ArrayList<>();
-	      candidato = this.getCandidatos();
-	      risultato= candidato.stream()
+	public List<Senior> getCandidatoForParameter(String sede,String competenze, String stato){   
+	      List<Senior> senior= new ArrayList <Senior>();
+	      List<Senior> risultato = new ArrayList<>();
+	      senior = this.getSenior();
+	      risultato= senior.stream()
 	          .filter(x->x.getCompetenze().contains(competenze)
 	              &&((x.getLuogoCandidatura().equals(sede)||x.getLuogoCandidatura().contains("E")||sede.contains("E")))
 	              &&((x.getStato().equals(stato)||stato.compareTo("")==0)))
@@ -181,18 +181,18 @@ public class SeniorDao {
 	          return risultato;    
 	    }
 	  
-	public void update(Candidato can) {
+	public void update(Senior sen) {
 		Session session = factory.openSession();  
 		Transaction t = session.beginTransaction();
-		session.update(can);
+		session.update(sen);
 		t.commit();
 		session.close();
 		
 	}
 
-	public Candidato getCanById(int id) {
-		String sql="select * from candidati where id=?";    
-	    return template.queryForObject(sql, new Object[]{id},new BeanPropertyRowMapper<Candidato>(Candidato.class));
+	public Senior getSenById(int id) {
+		String sql="select * from senior where id=?";    
+	    return template.queryForObject(sql, new Object[]{id},new BeanPropertyRowMapper<Senior>(Senior.class));
 	}
 	
 

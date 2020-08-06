@@ -476,7 +476,7 @@ span {
 						prossima Academy di IDM</h4>
 				</div>
 
-				<form:form method="POST" action="saveSenior" modelAttribute="can">
+				<form:form method="POST" action="saveSenior" modelAttribute="sen">
 
 					<!-- SEZIONE DATI PERSONALI -->
 					<div id="div_cv" class="row text-left">
@@ -655,7 +655,7 @@ span {
 							<div class="col-md-1"></div>
 							<div class="col-md-5">
 								<div class="checkboxes">
-									<form:checkboxes items="${webFrameworkList}" path="comp" />
+									<form:checkboxes items="${webFrameworkList1}" path="comp" />
 								</div>
 							</div>
 							<div class="col-md-1"></div>

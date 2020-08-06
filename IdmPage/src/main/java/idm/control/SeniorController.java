@@ -1,5 +1,8 @@
 package idm.control;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +31,18 @@ public class SeniorController {
 		m.addAttribute("sen", senior);  
 		return "senior_form";   
 	} 
+	
+	// elenco di tutte le competenze "base"
+		 @ModelAttribute("webFrameworkList1")
+		   public List<String> getWebFrameworkList() {
+		      List<String> webFrameworkList = new ArrayList<String>();
+		      webFrameworkList.add("Java1");
+		      webFrameworkList.add("Javascript1");
+		      webFrameworkList.add("Angular JS1");
+		      webFrameworkList.add("HTML/CSS1");
+		      webFrameworkList.add("SQL");
+		      return webFrameworkList;
+		   }
 	
 	/*It saves object into database. The @ModelAttribute puts request data  
 	 *  into model object. You need to mention RequestMethod.POST method   
