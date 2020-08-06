@@ -35,7 +35,7 @@ public class CanController {
 	@RequestMapping("/presentazione")  
 	public String display()  
 	{  
-		return "home";  
+		return "ac_home";  
 	}
 	
 	//link alla pagina senior
@@ -52,25 +52,27 @@ public class CanController {
 		return "viewpage";  
 	}
 	
+
+	//invia alla pagina per selezionare alcuni candidati
+	@RequestMapping("/login")  
+	public String login()  
+	{  
+		return "login";  
+	}
 	
 	// Link che porta dal canconf.jsp alla pagina di conferma finale (response)
 	@RequestMapping("/risposta/{nome}")  
 	public String risposta(@PathVariable String nome,Model m)  
 	{  
-		
-		System.out.println(nome);
-		System.out.println("ciao");
-		 m.addAttribute("nome",nome);
+		 m.addAttribute("nome",nome.split("_")[2]);
 		return "response";  
 	}
 	
 	// Link che riporta alla canconf.jsp se il file ha estenzione sbagliata
 	@RequestMapping("/errore/{nome}")  
 	public String errore(@PathVariable String nome,Model m)  
-	{  
-		System.out.println(nome);
-		System.out.println("ciao");
-		 m.addAttribute("nome",nome);
+	{ 
+		 m.addAttribute("nome",nome.split("_")[2]);
 		return "rispostadierrore";  
 	}
 	
@@ -85,7 +87,6 @@ public class CanController {
   }
 
 
-	
 	//restituisce la tabella con tutti i candidati
 	@RequestMapping("/amministrazione")    
     public String viewemp(Model m){    
@@ -106,12 +107,12 @@ public class CanController {
 	      return webFrameworkList;
 	   }
 	 
-	 //link al form di candidatura 
-	@RequestMapping("/candidatura")    
+	 //link al form di candidatura Academy
+	@RequestMapping("/candidaturaAc")    
 	public String showform(Model m){   
 		Candidato candidato= new Candidato();
 		m.addAttribute("can", candidato);  
-		return "canform";   
+		return "ac_form";   
 	} 
 	
 	/*It saves object into database. The @ModelAttribute puts request data  
@@ -122,16 +123,16 @@ public class CanController {
 			SessionStatus status,Model m){ 
 	    //Check validation errors
 	    if (result.hasErrors()) {   
-	        return "canform";
+	        return "ac_form";
 	    }
 	    try {
 	    dao.salva(can); 
 	    }catch (Exception e) {
 	    	ObjectError error = new ObjectError("competenze","hai inserito troppi caratteri nel campo altre competenze");
 	    	result.addError(error);
-	    	return "canform";
+	    	return "ac_form";
 		}
-		return "canconf";//will derict to canconf   
+		return "ac_cv";//will derict to canconf   
 	} 
 	
 	/* It deletes record for the given id in URL and redirects to /viewemp */    

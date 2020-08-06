@@ -1,45 +1,29 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html> 
-<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>  
+<!DOCTYPE html>
 <html lang="it">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport"
 	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-<title>Recensione | IDM - We simplify your work</title>
+<title>Academy IDM | IDM - We simplify your work</title>
 
 <link rel="alternate" type="application/rss+xml" title="RSS2.0"
 	href="https://www.idmconsulting.it/feed/" />
 <link rel="pingback" href="https://www.idmconsulting.it/xmlrpc.php" />
-
 <link rel="shortcut icon"
 	href="https://www.idmconsulting.it/wp-content/uploads/2016/01/idm-favicon.png" />
 <meta name="description"
-	content="IDM Consulting ottimizza la gestione dei processi aziendali riducendone i costi. Propone soluzioni strategiche di archivio garantendo sicurezza, affidabilità e innovazione." />
+	content="IDM Consulting ottimizza la gestione dei processi aziendali riducendone i costi. Propone soluzioni strategiche di archivio garantendo sicurezza, affidabilitÃ  e innovazione." />
 <link rel="canonical" href="https://www.idmconsulting.it/" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:description"
-	content="IDM Consulting ottimizza la gestione dei processi aziendali riducendone i costi. Propone soluzioni strategiche di archivio garantendo sicurezza, affidabilità e innovazione." />
+	content="IDM Consulting ottimizza la gestione dei processi aziendali riducendone i costi. Propone soluzioni strategiche di archivio garantendo sicurezza, affidabilitÃ  e innovazione." />
 <meta name="twitter:title" content="IDM - We simplify your work" />
 <meta name="twitter:image"
 	content="https://www.idmconsulting.it/wp-content/uploads/2015/10/Case-history.png" />
 <script type='application/ld+json'>{"@context":"https:\/\/schema.org","@type":"WebSite","@id":"#website","url":"https:\/\/www.idmconsulting.it\/","name":"","potentialAction":{"@type":"SearchAction","target":"https:\/\/www.idmconsulting.it\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
-<!-- / Yoast SEO plugin. -->
-
-<link rel='dns-prefetch' href='//fonts.googleapis.com' />
-<link rel='dns-prefetch' href='//s.w.org' />
-<link rel="alternate" type="application/rss+xml" title=" &raquo; Feed"
-	href="https://www.idmconsulting.it/feed/" />
-<link rel="alternate" type="application/rss+xml"
-	title=" &raquo; Feed dei commenti"
-	href="https://www.idmconsulting.it/comments/feed/" />
-<link rel="alternate" type="application/rss+xml"
-	title=" &raquo; Homepage Feed dei commenti"
-	href="https://www.idmconsulting.it/homepage/feed/" />
-<!-- This site uses the Google Analytics by MonsterInsights plugin v7.10.0 - Using Analytics tracking - https://www.monsterinsights.com/ -->
-<!-- / Google Analytics by MonsterInsights -->
 <script type="text/javascript">
 			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.idmconsulting.it\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.15"}};
 			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
@@ -65,9 +49,6 @@ img.wp-smiley, img.emoji {
 	type='text/css' media='all' />
 <link rel='stylesheet' id='wpsm_ac_bootstrap-front-css'
 	href='https://www.idmconsulting.it/wp-content/plugins/responsive-accordion-and-collapse/css/bootstrap-front.css?ver=4.9.15'
-	type='text/css' media='all' />
-<link rel='stylesheet' id='rs-plugin-settings-css'
-	href='https://www.idmconsulting.it/wp-content/plugins/revslider/public/assets/css/settings.css?ver=5.4.8'
 	type='text/css' media='all' />
 <style id='rs-plugin-settings-inline-css' type='text/css'>
 .tp-caption a {
@@ -136,19 +117,17 @@ img.wp-smiley, img.emoji {
 <link rel='stylesheet' id='page-transition-animsition-css'
 	href='https://www.idmconsulting.it/wp-content/plugins/page-transition/css/animsition.min.css?ver=1.3'
 	type='text/css' media='all' />
-	
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <script type='text/javascript'
 	src='https://www.idmconsulting.it/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
 <script type='text/javascript'
 	src='https://www.idmconsulting.it/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
 <script type='text/javascript'
 	src='https://www.idmconsulting.it/wp-content/plugins/add-to-any/addtoany.min.js?ver=1.1'></script>
-<script type='text/javascript'
-	src='https://www.idmconsulting.it/wp-content/plugins/revslider/public/assets/js/jquery.themepunch.tools.min.js?ver=5.4.8'></script>
-<script type='text/javascript'
-	src='https://www.idmconsulting.it/wp-content/plugins/revslider/public/assets/js/jquery.themepunch.revolution.min.js?ver=5.4.8'></script>
 <script type='text/javascript'
 	src='https://www.idmconsulting.it/wp-content/plugins/page-transition/js/jquery.animsition.min.js?ver=1.3'></script>
 <script type='text/javascript'
@@ -178,6 +157,33 @@ var _EPYT_ = {"ajaxurl":"https:\/\/www.idmconsulting.it\/wp-admin\/admin-ajax.ph
 	href="https://www.idmconsulting.it/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.idmconsulting.it%2F" />
 <link rel="alternate" type="text/xml+oembed"
 	href="https://www.idmconsulting.it/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.idmconsulting.it%2F&#038;format=xml" />
+
+<script data-cfasync="false">
+window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};a2a_localize = {
+	Share: "Share",
+	Save: "Salva",
+	Subscribe: "Abbonati",
+	Email: "Email",
+	Bookmark: "Segnalibro",
+	ShowAll: "espandi",
+	ShowLess: "comprimi",
+	FindServices: "Trova servizi",
+	FindAnyServiceToAddTo: "Trova subito un servizio da aggiungere",
+	PoweredBy: "Powered by",
+	ShareViaEmail: "Condividi via email",
+	SubscribeViaEmail: "Iscriviti via email",
+	BookmarkInYourBrowser: "Aggiungi ai segnalibri",
+	BookmarkInstructions: "Premi Ctrl+D o \u2318+D per mettere questa pagina nei preferiti",
+	AddToYourFavorites: "Aggiungi ai favoriti",
+	SendFromWebOrProgram: "Invia da qualsiasi indirizzo email o programma di posta elettronica",
+	EmailProgram: "Programma di posta elettronica",
+	More: "Di piÃ¹&#8230;",
+	ThanksForSharing: "Thanks for sharing!",
+	ThanksForFollowing: "Thanks for following!"
+};
+
+(function(d,s,a,b){a=d.createElement(s);b=d.getElementsByTagName(s)[0];a.async=1;a.src="https://static.addtoany.com/menu/page.js";b.parentNode.insertBefore(a,b);})(document,"script");
+</script>
 <script type="text/javascript">
 		jQuery( document ).ready( function($) {
 			$('.animsition').animsition({
@@ -190,7 +196,7 @@ var _EPYT_ = {"ajaxurl":"https:\/\/www.idmconsulting.it\/wp-admin\/admin-ajax.ph
 				linkElement: '.animsition-link, a[href]:not([target="_blank"]):not([href^="https://www.idmconsulting.it/#"]):not([href^="#"]):not([href*="javascript"]):not([href*=".jpg"]):not([href*=".jpeg"]):not([href*=".gif"]):not([href*=".png"]):not([href*=".mov"]):not([href*=".swf"]):not([href*=".mp4"]):not([href*=".flv"]):not([href*=".avi"]):not([href*=".mp3"]):not([href^="mailto:"]):not([class="no-animation"])'
 			});
 		});
-		</script>
+</script>
 <style type="text/css"> /******************global color****************************/
 a.navbar-brand, ul.navbar-nav li a:hover, ul.navbar-nav li a:focus, ul.navbar-nav li.active>a,
 	ul.navbar-nav>li.current-menu-parent>a, .portfolio-overlay,
@@ -260,13 +266,69 @@ background
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #1d70b7
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -279,7 +341,47 @@ background
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -291,7 +393,47 @@ rgba
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 (
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -315,7 +457,47 @@ rgba
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .9
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -333,7 +515,27 @@ rgba
 
 
 
+
+
+
+
+
+
+
+
+
+
 		
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -381,14 +583,26 @@ form .form-control:focus {
 a:hover, a:focus, a:active, .footer-custom-menu li a:hover {
 	color: rgb(23, 89, 146)
 }
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active,
+	.btn-primary.active, .open .dropdown-toggle.btn-primary {
+	background-color: rgb(23, 89, 146);
+}
+
 /****************Custom background**************************/
 .body-inner {
 	background-image:
 		url('https://www.idmconsulting.it/wp-content/uploads/2015/07/Background-esagoni-piccoli.png');
 	background-position: 0 0;
 }
+
 /****************** MAIN NAVIGATION *******************/
 h1 {
+	color: #20bcda;
+	font-weight: normal;
+}
+
+.inner-title-content h2 {
 	color: #20bcda;
 	font-weight: normal;
 }
@@ -402,18 +616,9 @@ h1 {
 </style>
 <meta name="generator"
 	content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress." />
-<meta name="generator"
-	content="Powered by Slider Revolution 5.4.8 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
-
 <style type="text/css" data-type="vc_custom-css">
 .vc_gitem-zone .vc-zone-link {
 	border: none !important;
-}
-</style>
-<style>
-.error {
-	color: red;
-	font-weight: bold;
 }
 </style>
 <style type="text/css" data-type="vc_shortcodes-custom-css">
@@ -460,6 +665,144 @@ h1 {
 }
 </style>
 
+<!-- STILE CAROSELLO -->
+<style>
+.carousel-fade .carousel-inner .item {
+	opacity: 0;
+	transition-property: opacity;
+	transition: opacity ease-out .7s;
+}
+
+.carousel-fade .carousel-inner .active {
+	opacity: 1;
+}
+
+.carousel-fade .carousel-inner .active.left, .carousel-fade .carousel-inner .active.right
+	{
+	left: 0;
+	opacity: 0;
+	z-index: 1;
+}
+
+.carousel-fade .carousel-inner .next.left, .carousel-fade .carousel-inner .prev.right
+	{
+	opacity: 1;
+}
+
+.carousel-fade .carousel-control {
+	z-index: 2;
+}
+
+@media all and (transform-3d) , ( -webkit-transform-3d ) {
+	.carousel-fade .carousel-inner>.item.next, .carousel-fade .carousel-inner>.item.active.right
+		{
+		opacity: 0;
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+	.carousel-fade .carousel-inner>.item.prev, .carousel-fade .carousel-inner>.item.active.left
+		{
+		opacity: 0;
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+	.carousel-fade .carousel-inner>.item.next.left, .carousel-fade .carousel-inner>.item.prev.right,
+		.carousel-fade .carousel-inner>.item.active {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+.carousel-inner img {
+	width: 100%;
+	height: 100%;
+	border-radius: 8px;
+}
+
+.carousel-1 {
+	height: 100%;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+.carousel-2 {
+	height: 100%;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+</style>
+
+<!-- STILE SLIDESHOW -->
+<style>
+
+/* Slideshow container */
+.slideshow-container {
+	position: relative;
+}
+
+/* Slides */
+.mySlides {
+	display: none;
+<<<<<<< HEAD:IdmPage/src/main/webapp/WEB-INF/jsp/home.jsp
+	padding: 40px;
+=======
+	padding: 30px;
+>>>>>>> b6ef0ddcb46bffe75e3ec3be5cff722b33240cee:IdmPage/src/main/webapp/WEB-INF/jsp/ac_home.jsp
+	text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+	cursor: pointer;
+	position: relative;
+	top: 50%;
+	width: auto;
+	color: #888;
+	font-weight: bold;
+	font-size: 20px;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+	position: absolute;
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+/* Position the "prev button" to the left */
+.prev {
+	position: absolute;
+	left: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+	color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+	text-align: center;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+	cursor: pointer;
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+}
+
+</style>
+
 </head>
 
 <body
@@ -475,69 +818,331 @@ h1 {
 
 		<!-- Sezione Centrale della Pagina -->
 		<section class="main-wrapper pagecustom-1339">
-			<div class="container" style="margin-top: 50px">
+			<div class="container" style="margin-top: 30px">
+				<h1 style="text-align: center">
+					<img src="https://ecoautoparts.com.ar/assets/img/cv.jpg" alt="">
+				</h1>
 
+				<!-- TESTO PRESENTAZIONE IDM ACADEMY -->
 				<div style="text-align: center">
-					<h1>Invia la tua recensione!</h1>
-					<h4>Completa il form con i tuoi dati per inviare la
-						tua recensione sull'academy</h4>
+					<h1>Academy IDM</h1>
+					<h5 style="text-align: left">
+						Ideata con l&#39; obiettivo di introdurre metodologie qualificate
+						e riconosciute dal mercato in un sistema di formazione e training
+						adeguato alla flessibilit&#224; del mondo ICT.<br> Con i
+						nostri corsi avrai modo di formarti per divenire un &quot;JUNIOR
+						JAVA FULL STACK&quot; ovvero consulente in ambito Java.<br>
+						Oltre alle conoscenze teoriche legate all&#39; argomento Java,
+						imparerai il comportamento da tenere presso la societ&#224;
+						cliente, principalmente realt&#224; di System Integrator, la
+						gestione ed organizzazione di progetti, le metodologie di sviluppo
+						e organizzazione delle attivit&#224;, la valutazione dei tempi di
+						una attivit&#224;, le figure coinvolte in un progetto IT e la
+						gestione delle relazioni all&#39; interno del gruppo di lavoro.<br>
+						I nostri corsi, della durata di 40h / 60h teoriche vengono
+						realizzati di presenza in aula, ed alternano momenti di formazione
+						didattica frontale a momenti di formazione esperienziale.<br>
+						In questo modo potrai mettere in pratica quanto appreso durante la
+						lezione attraverso esercizi pratici e il confronto con il docente
+						ed i tuoi colleghi.<br> Se sei una persona curiosa, dinamica
+						e l&#39; universo Java &#232; la tua passione, l&#39; Academy di
+						IDM Consulting &#232; quello che fa per te!
+					</h5>
+					<br>
 				</div>
 
-				<form:form method="POST" action="salva" modelAttribute="rec">
+				<!-- PARTE CON LE 3 DIVERSIFICAZIONI DI STRUTTURA E DESCRIZIONE -->
+				<div class="row">
 
-					<!-- SEZIONE DATI PERSONALI -->
-					<div id="div_cv" class="row text-left">
-						<div class="col-md-1"></div>
-						<div class="col-md-4">
-							<div class="form-group">
-								<label class="form-label">Nome *</label>
-								<form:input path="nome" type="text"
-									class="form-control form-control-sm" required="required"
-									placeholder="Inserisci il tuo nome" />
-								<form:errors path="nome" cssClass="error" />
-							</div>
-						</div>
-						<div class="col-md-2"></div>
-						<div class="col-md-4">
-							<div class="form-group">
-								<label class="form-label">Cognome *</label>
-								<form:input path="cognome" type="text"
-									class="form-control form-control-sm" required="required"
-									placeholder="Inserisci il tuo cognome" />
-								<form:errors path="cognome" cssClass="error" />
-							</div>
-						</div>
-						<div class="col-md-1"></div>
-
-					<br>
-					<br>
-
-						<!-- RECENSIONE -->
-						<div id="div_cv" class="row text-left" style="text-align: center" >
-							<div class="col-md-2"></div>
-							<div class="col-md-8">
-								<div class="x">
-									<span><form:label path="recensione">Recensione: </form:label></span>
-								</div>
-								<form:textarea path="recensione" style="width: 80%; height: 300px; border: none"
-									maxlength="400" placeholder="" />
-							</div>
-							<div class="col-md-2"></div>
-					</div>
-					</div>
-
-					<br>
-					<br>
-
-					<!-- BOTTONE SUBMIT -->
-					<div>
+					<!-- COLONNA PROGRAMMA DEI CORSI -->
+					<div class="col-sm-4">
 						<div style="text-align: center">
-							<input type="submit" class="button button2"
-								value="Invia la tua recensione" />
+
+							<h2>
+								<b>Argomenti dei Nostri Corsi Formativi</b>
+							</h2>
+							<div class="row">
+								<div class="col-sm-2"></div>
+
+								<div class="col-sm-8">
+									<div style="text-align: left">
+										<p>
+											&#10004; Java Enterprise Edition<br> &#10004; Corso
+											Sviluppo Microsoft<br> &#10004; Sviluppo Javascript e
+											AngularJS<br> &#10004; J2EE back-end end Developer
+										</p>
+									</div>
+								</div>
+
+								<div class="col-sm-2"></div>
+							</div>
+
+							<p>
+								Per ulteriori informazioni candidati<br> premendo il
+								pulsante qui sotto.<br> Ti aspettiamo!
+							</p>
+
 						</div>
 					</div>
-				</form:form>
 
+					<!-- COLONNA EDIZIONI -->
+					<div class="col-sm-4">
+						<div style="text-align: center">
+
+							<h2>
+								<b>Edizioni</b>
+							</h2>
+							<h3>Prossima Edizione:</h3>
+							<a href="candidaturaAc"> <font color="428BCA"> <b>&#10148;
+										Novembre 2020</b>
+							</font>
+							</a>
+
+							<h3>Edizioni Precedenti</h3>
+							<p>
+								Gennaio 2018 - Novembre 2018<br> Marzo 2019 - Settembre
+								2019<br> Giugno 2020 - in corso
+							</p>
+						</div>
+					</div>
+
+					<!-- COLONNA SEDI FORMATIVE -->
+					<div class="col-sm-4">
+						<div style="text-align: center">
+
+							<h2>
+								<b>Sedi Formative</b>
+							</h2>
+
+							<!-- CAROSELLO -->
+							<div id="myCarousel" class="carousel slide slide carousel-fade"
+								data-ride="carousel" data-interval="5000">
+								<div class="carousel-inner">
+									<div class="item active carousel-1">
+										<div class="container">
+											<img src="<%=request.getContextPath()%>/img/T.jpg"
+												alt="Torino">
+										</div>
+									</div>
+									<div class="item carousel-2">
+										<div class="container">
+											<img src="<%=request.getContextPath()%>/img/M.jpg"
+												alt="Milano">
+										</div>
+									</div>
+								</div>
+							</div>
+							<br>
+							<p>Le sedi disponibili sono Torino e Milano</p>
+						</div>
+					</div>
+					<ul class="nav nav-pills flex-column">
+					</ul>
+					<hr class="d-sm-none">
+
+				</div>
+				<br>
+
+				<!-- SEZIONE RECENSIONI -->
+				<div style="text-align: center">
+					<h2>
+						<b>Cosa ne pensano gli ex-alunni</b>
+					</h2>
+				</div>
+				
+				<!-- SLIDESHOW RECENSIONI -->
+				<div class="slideshow-container">
+
+					<!-- PRIMA SLIDE  -->
+					<div class="mySlides">
+						<div class="row">
+
+							<!-- RECENSIONE 1 -->
+							<div class="col-sm-4">
+								<div style="text-align: center">
+
+									<h3>Giulia Gemesio</h3>
+
+									<p>unito al confronto costante con i gli altri studenti e
+										con il docente mi hanno permesso di crescere molto come
+										programmatrice.</p>
+								</div>
+							</div>
+
+							<!-- RECENSIONE 2 -->
+							<div class="col-sm-4">
+								<div style="text-align: center">
+
+									<h3>Giacomo Francardo</h3>
+
+									<p>Il corso ha una struttura molto completa e con
+										possibilit&#224; di modificare l&#39;ordine dei vari
+										argomenti.</p>
+								</div>
+							</div>
+
+							<!-- RECENSIONE 3 -->
+							<div class="col-sm-4">
+								<div style="text-align: center">
+
+									<h3>Angela Ternico</h3>
+
+									<p>
+										Avevo appena finito l'universit&#224; e questa esperienza mi<br>
+										ha permesso di far crescere e migliorare le mie abilit&#224;.<br>
+										La consiglio vivamente.
+									</p>
+								</div>
+							</div>
+							<hr class="d-sm-none">
+						</div>
+					</div>
+
+					<!-- SECONDA SLIDE  -->
+					<div class="mySlides">
+						<div class="row">
+							<!-- RECENSIONE 1 -->
+							<div class="col-sm-4">
+								<div style="text-align: center">
+
+									<h3>Giulia Gemesio</h3>
+
+									<p>
+										Se tornassi indietro lo sceglierei nuovamente come ingresso
+										nel mondo della consulenza informatica.<br>Il taglio
+										molto pratic
+									</p>
+								</div>
+							</div>
+
+							<!-- RECENSIONE 2 -->
+							<div class="col-sm-4">
+								<div style="text-align: center">
+
+									<h3>Giacomo Francardo</h3>
+
+									<p>Il corso ha una struttura molto completa e con
+										possibilit&#224; di modificare l&#39;ordine dei vari
+										argomenti.</p>
+								</div>
+							</div>
+
+							<!-- RECENSIONE 3 -->
+							<div class="col-sm-4">
+								<div style="text-align: center">
+
+									<h3>Angela Ternico</h3>
+
+									<p>
+										Avevo appena finito l'universit&#224; e questa esperienza mi<br>
+										ha permesso di far crescere e migliorare le mie abilit&#224;.<br>
+										La consiglio vivamente.
+									</p>
+								</div>
+							</div>
+							<hr class="d-sm-none">
+						</div>
+					</div>
+
+					<!-- TERZA SLIDE  -->
+					<div class="mySlides">
+						<div class="row">
+							<!-- RECENSIONE 1 -->
+							<div class="col-sm-4">
+								<div style="text-align: center">
+
+									<h3>Giulia Gemesio</h3>
+
+									<p>
+										Se tornassi indietro lo sceglierei nuovamente come ingresso
+										nel mondo della consulenza informatica.<br>Il taglio
+										molto pratico del corso, che prevede poche ore di lezione
+										frontale e molte ore di esercizio individuale e di gruppo,
+										unito al confronto costante con i gli altri studenti e con il
+										docente mi hanno permesso di crescere molto come
+										programmatrice.
+									</p>
+								</div>
+							</div>
+
+							<!-- RECENSIONE 2 -->
+							<div class="col-sm-4">
+								<div style="text-align: center">
+
+									<h3>Giacomo Francardo</h3>
+
+									<p>Il corso ha una struttura molto completa e con
+										possibilit&#224; di modificare l&#39;ordine dei vari
+										argomenti.</p>
+								</div>
+							</div>
+
+							<!-- RECENSIONE 3 -->
+							<div class="col-sm-4">
+								<div style="text-align: center">
+
+									<h3>Angela Ternico</h3>
+
+									<p>
+										Avevo appena finito l'universit&#224; e questa esperienza mi<br>
+										ha permesso di far crescere e migliorare le mie abilit&#224;.<br>
+										La consiglio vivamente.
+									</p>
+								</div>
+							</div>
+							<hr class="d-sm-none">
+						</div>
+					</div>
+
+					<!-- PULSANTI LATERALI  -->
+					<a class="prev" onclick="plusSlides(-1)">&#8249;</a> <a
+						class="next" onclick="plusSlides(1)">&#8250;</a>
+
+					<div class="dot-container">
+						<span class="dot" onclick="currentSlide(1)"></span> <span
+							class="dot" onclick="currentSlide(2)"></span> <span class="dot"
+							onclick="currentSlide(3)"></span>
+					</div>
+
+					<script>
+					var slideIndex = 1;
+					showSlides(slideIndex);
+					
+					function plusSlides(n) {
+					  showSlides(slideIndex += n);
+					}
+					
+					function currentSlide(n) {
+					  showSlides(slideIndex = n);
+					}
+					
+					function showSlides(n) {
+					  var i;
+					  var slides = document.getElementsByClassName("mySlides");
+					  
+					  var dots = document.getElementsByClassName("dot");
+					  if (n > slides.length) {slideIndex = 1}    
+					  if (n < 1) {slideIndex = slides.length}
+					  for (i = 0; i < slides.length; i++) {
+						  slides[i].style.display = "none";  
+					  }
+					  for (i = 0; i < dots.length; i++) {
+					      dots[i].className = dots[i].className.replace(" active", "");
+					  }
+					  slides[slideIndex-1].style.display = "block";  
+					  dots[slideIndex-1].className += " active";
+					}
+				</script>
+				</div>
+
+				<!-- BOTTONE CANDIDATURA -->
+				<div>
+					<br>
+					<div style="text-align: center">
+						<a href="candidaturaAc" class="button button2">Candidati per il
+							nuovo Corso</a>
+					</div>
+				</div>
 			</div>
 		</section>
 
@@ -551,17 +1156,7 @@ h1 {
 	<script type="text/javascript">
 		jQuery( 'body' ).wrapInner( '<div class="animsition"></div>' ).removeClass( 'animsition' );
 		</script>
-	<script type="text/javascript">
-				function revslider_showDoubleJqueryError(sliderID) {
-					var errorMessage = "Revolution Slider Error: You have some jquery.js library include that comes after the revolution files js include.";
-					errorMessage += "<br> This includes make eliminates the revolution slider libraries, and make it not work.";
-					errorMessage += "<br><br> To fix it you can:<br>&nbsp;&nbsp;&nbsp; 1. In the Slider Settings -> Troubleshooting set option:  <strong><b>Put JS Includes To Body</b></strong> option to true.";
-					errorMessage += "<br>&nbsp;&nbsp;&nbsp; 2. Find the double jquery.js include and remove it.";
-					errorMessage = "<span style='font-size:16px;color:#BC0C06;'>" + errorMessage + "</span>";
-						jQuery(sliderID).show().html(errorMessage);
-				}
-			
-</script>
+
 	<script type='text/javascript'>
 /* <![CDATA[ */
 var wpcf7 = {"apiSettings":{"root":"https:\/\/www.idmconsulting.it\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
@@ -622,7 +1217,6 @@ var wpcf7_redirect_forms = {"2541":{"page_id":"2558","external_url":"","use_exte
 		src='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/lib/waypoints/waypoints.min.js?ver=5.5.4'></script>
 	<script type='text/javascript'
 		src='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/js/dist/vc_grid.min.js?ver=5.5.4'></script>
-
 </body>
 
 </html>

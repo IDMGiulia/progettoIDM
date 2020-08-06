@@ -3,9 +3,8 @@
 
 
 <!DOCTYPE html>
-<a href="presentazione">presentazione Accademy</a>
+<a href="login">login</a> 
 <br>
-<a href="amministrazione">amministrazione</a> 
 <a href="inviarec">inviarec</a>   
 <br>
 <a href="joinus">joinus</a> 

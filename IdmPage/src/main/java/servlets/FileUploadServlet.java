@@ -37,7 +37,7 @@ public class FileUploadServlet extends HttpServlet {
         if (!fileSaveDir.exists()) {
             fileSaveDir.mkdirs();
         }
-        System.out.println("Upload File Directory="+fileSaveDir.getAbsolutePath());
+        //System.out.println("Upload File Directory="+fileSaveDir.getAbsolutePath());
         
         String fileName = null;
         //Get all the parts from request and write it to the file on server
@@ -61,7 +61,7 @@ public class FileUploadServlet extends HttpServlet {
      */
     private String getFileName(Part part) {
         String contentDisp = part.getHeader("content-disposition");
-        System.out.println("content-disposition header= "+contentDisp);
+        //System.out.println("content-disposition header= "+contentDisp);
         String[] tokens = contentDisp.split(";");
         for (String token : tokens) {
             if (token.trim().startsWith("filename")) {

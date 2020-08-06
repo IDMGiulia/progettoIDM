@@ -8,7 +8,7 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-<title>Recensione | IDM - We simplify your work</title>
+<title>Candidatura Academy | IDM - We simplify your work</title>
 
 <link rel="alternate" type="application/rss+xml" title="RSS2.0"
 	href="https://www.idmconsulting.it/feed/" />
@@ -256,45 +256,20 @@ a.navbar-brand, ul.navbar-nav li a:hover, ul.navbar-nav li a:focus, ul.navbar-na
 {
 background
 
-
-
-
-
 :
 
-
-
-
-
 #1d70b7
-
-
-
 
 
 ;
 background
 
-
-
-
-
 :
-
-
-
-
 
 rgba
 
 
-
-
-
 (
-
-
-
 
 
 
@@ -305,38 +280,9 @@ rgba
 183
 ,
 0
-
-
-
-
-
-
-
-
-
-
 .9
 
-
-
-
-
-
-
-
-
-
 )
-
-
-
-
-
-
-		
-
-
-
 
 
 }
@@ -387,8 +333,12 @@ a:hover, a:focus, a:active, .footer-custom-menu li a:hover {
 		url('https://www.idmconsulting.it/wp-content/uploads/2015/07/Background-esagoni-piccoli.png');
 	background-position: 0 0;
 }
-/****************** MAIN NAVIGATION *******************/
 h1 {
+	color: #20bcda;
+	font-weight: normal;
+}
+
+.inner-title-content h2 {
 	color: #20bcda;
 	font-weight: normal;
 }
@@ -460,6 +410,49 @@ h1 {
 }
 </style>
 
+<!-- ALLINEAMENTO VERTICALE PER LE COMPETENZE AGGIUNTIVE -->
+<style>
+div.x {
+  display: table;
+  height: 80px;
+  width: 100%;
+  text-align: center;
+}
+span {
+  display: table-cell;
+  vertical-align: middle;
+}
+</style>
+
+<style>
+.checkboxes {
+      text-align:center;
+     }
+
+    .checkboxes input{
+      margin: 0px 0px 0px 0px;
+     }
+
+     .checkboxes label{
+       margin: 0px 20px 0px 3px;
+     }
+</style>
+
+<!-- STILE PER SPAZIARE I RADIOBUTTON -->
+<style>
+.radiobut {
+	text-align: center;
+}
+
+.radiobut input {
+	margin: 0px 0px 0px 0px;
+}
+
+.radiobut label {
+	margin: 0px 20px 0px 3px;
+}
+</style>
+
 </head>
 
 <body
@@ -478,16 +471,22 @@ h1 {
 			<div class="container" style="margin-top: 50px">
 
 				<div style="text-align: center">
-					<h1>Invia la tua recensione!</h1>
-					<h4>Completa il form con i tuoi dati per inviare la
-						tua recensione sull'academy</h4>
+					<h1>Candidati!</h1>
+					<h4>Completa il form con i tuoi dati per candidarti alla
+						prossima Academy di IDM</h4>
 				</div>
 
-				<form:form method="POST" action="salva" modelAttribute="rec">
+				<form:form method="POST" action="save" modelAttribute="can">
 
 					<!-- SEZIONE DATI PERSONALI -->
 					<div id="div_cv" class="row text-left">
-						<div class="col-md-1"></div>
+						<div class="col-md-12">
+							<legend
+								style="border-bottom: 1px solid #999; margin-top: 30px; margin-bottom: 20px">
+								<b>Dati Personali</b>
+							</legend>
+						</div>
+						<div class="col-md-4"></div>
 						<div class="col-md-4">
 							<div class="form-group">
 								<label class="form-label">Nome *</label>
@@ -497,7 +496,7 @@ h1 {
 								<form:errors path="nome" cssClass="error" />
 							</div>
 						</div>
-						<div class="col-md-2"></div>
+
 						<div class="col-md-4">
 							<div class="form-group">
 								<label class="form-label">Cognome *</label>
@@ -507,33 +506,165 @@ h1 {
 								<form:errors path="cognome" cssClass="error" />
 							</div>
 						</div>
-						<div class="col-md-1"></div>
 
-					<br>
-					<br>
+						<div class="col-md-4"></div>
 
-						<!-- RECENSIONE -->
-						<div id="div_cv" class="row text-left" style="text-align: center" >
-							<div class="col-md-2"></div>
-							<div class="col-md-8">
-								<div class="x">
-									<span><form:label path="recensione">Recensione: </form:label></span>
-								</div>
-								<form:textarea path="recensione" style="width: 80%; height: 300px; border: none"
-									maxlength="400" placeholder="" />
+						<div class="col-md-4">
+							<div class="form-group">
+								<label class="form-label">Email *</label>
+								<form:input path="email" type="email"
+									class="form-control form-control-sm" required="required"
+									placeholder="example@email.it" />
+								<form:errors path="email" cssClass="error" />
 							</div>
-							<div class="col-md-2"></div>
+						</div>
+
+						<div class="col-md-4">
+							<div class="form-group">
+								<label class="form-label">Telefono *</label>
+								<form:input path="telefono" type="tel"
+									class="form-control form-control-sm" required="required"
+									placeholder="Inserisci il tuo numero di telefono"
+									pattern="[0-9]{10}|[0-9]{9}|[0-9]{8}" />
+								<form:errors path="telefono" cssClass="error" />
+							</div>
+						</div>
+						<ul class="nav nav-pills flex-column">
+						</ul>
+						<hr class="d-sm-none">
+
 					</div>
+
+					<!-- LUOGO DI CANDIDATURA -->
+					<div id="div_cv" class="row text-left" style="text-align: center">
+						<div class="col-md-1"></div>
+						<div class="col-md-4">
+							<form:label path="luogoCandidatura">Luogo di candidatura preferito: *</form:label>
+						</div>
+						<div class="col-md-1"></div>
+						<div class="col-md-4">
+							<div class="radiobut">
+								<form:radiobutton path="luogoCandidatura" value="T"
+									label="Torino" required="required"/>
+								<form:radiobutton path="luogoCandidatura" value="M"
+									label="Milano" />
+								<form:radiobutton path="luogoCandidatura" value="E"
+									label="Entrambi" />
+							</div>
+						</div>
+						<div class="col-md-2"></div>
+					</div>
+
+					<br><br>
+
+					<!-- SEZIONE ISTRUZIONE-->
+					<div id="div_cv" class="row text-left">
+						<div class="col-md-12">
+							<legend
+								style="border-bottom: 1px solid #999; margin-bottom: 20px">
+								<b>Istruzione</b>
+							</legend>
+						</div>
+
+						<!-- LIVELLO DI ISTRUZIONE -->
+							<div class="col-md-1"></div>
+							<div class="col-md-4">
+								<form:label path="livello">Livello di Istruzione:</form:label>
+							</div>
+							<div class="col-md-6" style="text-align: center">
+								<div class="radiobut">
+									<form:radiobutton path="livello" value="Scuola Media Superiore"
+										label="Diploma di Scuola Superiore" />
+									<form:radiobutton path="livello" value="Laurea Triennale"
+										label="Laurea Triennale" />
+									<form:radiobutton path="livello" value="Laurea Magistrale"
+										label="Laurea Magistrale" />
+								</div>
+							</div>
+							<div class="col-md-1"></div>
+
+						<br><br>
+
+						<!-- PAESE DIPLOMA -->
+							<div class="col-md-1"></div>
+							<div class="col-md-4">
+								<form:label path="paeseDiploma">Ottenuto in: </form:label>
+							</div>
+							<div class="col-md-6">
+								<div class="radiobut">
+									<form:radiobutton path="paeseDiploma" value="Italia"
+										label="Italia" />
+									<form:radiobutton path="paeseDiploma" value="Paese Estero"
+										label="Paese Estero" />
+								</div>
+							</div>
+							<div class="col-md-1"></div>
+
+						<br><br>
+
+						<!-- PERCORSO DI STUDI -->
+							<div class="col-md-1"></div>
+							<div class="col-md-4">
+								<label class="form-label">Percorso di Studi:</label>
+							</div>
+							<div class="col-md-1"></div>
+							<div class="col-md-6">
+								<form:input path="percorso" type="text"
+									class="form-control form-control-sm" required=""
+									placeholder="es. Ingegneria Informatica" />
+								<form:errors path="percorso" cssClass="error" />
+							</div>
 					</div>
 
 					<br>
 					<br>
 
-					<!-- BOTTONE SUBMIT -->
+					<!-- SEZIONE COMPETENZE-->
+					<div id="div_cv" class="row text-left" style="text-align: center">
+						<div class="col-md-12">
+							<legend
+								style="border-bottom: 1px solid #999; margin-bottom: 20px">
+								<b>Competenze</b>
+							</legend>
+						</div>
+						<!--COMPETENZE BASI-->
+							<div class="col-md-1"></div>
+							<div class="col-md-4">
+								<form:label path="comp">Competenze Principali: </form:label>
+							</div>
+							<div class="col-md-1"></div>
+							<div class="col-md-5">
+								<div class="checkboxes">
+									<form:checkboxes items="${webFrameworkList}" path="comp" />
+								</div>
+							</div>
+							<div class="col-md-1"></div>
+
+						<br> <br>
+
+						<!-- ALTRE COMPETENZE -->
+							<div class="col-md-1"></div>
+							<div class="col-md-4">
+								<div class="x">
+									<span><form:label path="comp">Altre competenze (inserirle separate da virgola): </form:label></span>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<form:textarea path="competenze" style="width: 80%; height: 80px; border: none"
+									maxlength="140" placeholder="es. Swift, Ruby, Assembly, ..." />
+							</div>
+							<div class="col-md-1"></div>
+
+					</div>
+
+					<br>
+					<br>
+
+					<!-- BOTTONE CANDIDATI -->
 					<div>
 						<div style="text-align: center">
 							<input type="submit" class="button button2"
-								value="Invia la tua recensione" />
+								value="Invia la tua candidatura" />
 						</div>
 					</div>
 				</form:form>

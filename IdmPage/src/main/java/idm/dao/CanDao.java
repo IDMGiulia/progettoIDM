@@ -23,7 +23,7 @@ import idm.beans.Competenze;
 import idm.beans.Recensione;    
 
 
-public class CanDao extends Dao {
+public class CanDao {
 	StandardServiceRegistry ssr = new StandardServiceRegistryBuilder().configure("hibernate.cfg.xml").build();  
     
 	Metadata meta = new MetadataSources(ssr).getMetadataBuilder().build();  
@@ -193,14 +193,6 @@ public class CanDao extends Dao {
 	    return template.queryForObject(sql, new Object[]{id},new BeanPropertyRowMapper<Candidato>(Candidato.class));
 	}
 	
-	public void salva(Recensione recensione) {
-		Session session = factory.openSession();  
-		Transaction t = session.beginTransaction();
-		recensione.setApprovata(false);
-		session.saveOrUpdate(recensione);
-		t.commit();
-		session.close();
-	}
 
 	/*
 	public String gestisciComp (String [] framework) {

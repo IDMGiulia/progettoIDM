@@ -178,33 +178,6 @@ var _EPYT_ = {"ajaxurl":"https:\/\/www.idmconsulting.it\/wp-admin\/admin-ajax.ph
 	href="https://www.idmconsulting.it/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.idmconsulting.it%2F" />
 <link rel="alternate" type="text/xml+oembed"
 	href="https://www.idmconsulting.it/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.idmconsulting.it%2F&#038;format=xml" />
-
-<script data-cfasync="false">
-window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};a2a_localize = {
-	Share: "Share",
-	Save: "Salva",
-	Subscribe: "Abbonati",
-	Email: "Email",
-	Bookmark: "Segnalibro",
-	ShowAll: "espandi",
-	ShowLess: "comprimi",
-	FindServices: "Trova servizi",
-	FindAnyServiceToAddTo: "Trova subito un servizio da aggiungere",
-	PoweredBy: "Powered by",
-	ShareViaEmail: "Condividi via email",
-	SubscribeViaEmail: "Iscriviti via email",
-	BookmarkInYourBrowser: "Aggiungi ai segnalibri",
-	BookmarkInstructions: "Premi Ctrl+D o \u2318+D per mettere questa pagina nei preferiti",
-	AddToYourFavorites: "Aggiungi ai favoriti",
-	SendFromWebOrProgram: "Invia da qualsiasi indirizzo email o programma di posta elettronica",
-	EmailProgram: "Programma di posta elettronica",
-	More: "Di più&#8230;",
-	ThanksForSharing: "Thanks for sharing!",
-	ThanksForFollowing: "Thanks for following!"
-};
-
-(function(d,s,a,b){a=d.createElement(s);b=d.getElementsByTagName(s)[0];a.async=1;a.src="https://static.addtoany.com/menu/page.js";b.parentNode.insertBefore(a,b);})(document,"script");
-</script>
 <script type="text/javascript">
 		jQuery( document ).ready( function($) {
 			$('.animsition').animsition({
@@ -283,45 +256,20 @@ a.navbar-brand, ul.navbar-nav li a:hover, ul.navbar-nav li a:focus, ul.navbar-na
 {
 background
 
-
-
-
-
 :
 
-
-
-
-
 #1d70b7
-
-
-
 
 
 ;
 background
 
-
-
-
-
 :
-
-
-
-
 
 rgba
 
 
-
-
-
 (
-
-
-
 
 
 
@@ -332,38 +280,9 @@ rgba
 183
 ,
 0
-
-
-
-
-
-
-
-
-
-
 .9
 
-
-
-
-
-
-
-
-
-
 )
-
-
-
-
-
-
-		
-
-
-
 
 
 }
@@ -388,12 +307,6 @@ rgba
 	color: #1d70b7;
 }
 
-.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus, .dropdown-menu>li.active>a
-	{
-	color: #1d70b7 !important;
-	?>
-}
-
 blockquote, .page-title:after, .eemail_textbox input[type="text"]:focus,
 	.woocommerce-pagination ul li span.current {
 	border-color: #1d70b7 !Important;
@@ -414,75 +327,12 @@ form .form-control:focus {
 a:hover, a:focus, a:active, .footer-custom-menu li a:hover {
 	color: rgb(23, 89, 146)
 }
-
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active,
-	.btn-primary.active, .open .dropdown-toggle.btn-primary {
-	background-color: rgb(23, 89, 146);
-}
-
-/*********************   TOP NAVIGATION   **************************/
-.top-info {
-	background-color: #ffffff;
-}
-
-.top-info .topbar-sidebar, .top-info .topbar-sidebar p, .top-info .topbar-sidebar li
-	{
-	color: #333333
-}
-
-.top-info .topbar-sidebar a {
-	color: #666666 !important;
-}
-
-.top-info .topbar-sidebar a:hover {
-	color: #1d70b7 !important
-}
-
 /****************Custom background**************************/
 .body-inner {
 	background-image:
 		url('https://www.idmconsulting.it/wp-content/uploads/2015/07/Background-esagoni-piccoli.png');
 	background-position: 0 0;
 }
-/****************** MAIN NAVIGATION *******************/
-nav ul.nav.navbar-nav {
-	background: #ffffff;
-	background-attachment: fixed;
-	background-position: right top;
-}
-
-nav ul.nav.navbar-nav>li {
-	background: transparent;
-}
-
-nav ul.navbar-nav>li>a {
-	color: #20b0da;
-}
-
-nav ul.navbar-nav>li>a:hover {
-	color: #ffffff;
-}
-
-nav ul.navbar-nav li.active>a {
-	color: #ffffff !important;
-}
-
-nav ul.navbar-nav>li>a:hover {
-	
-}
-
-nav ul.navbar-nav ul.dropdown-menu>li {
-	background: #20b0da
-}
-
-nav ul.navbar-nav ul.dropdown-menu>li>a:hover {
-	color: #006ba0 !important
-}
-
-nav ul.navbar-nav ul.dropdown-menu>li>a {
-	border-bottom: 1px solid #006ba0;
-}
-
 h1 {
 	color: #20bcda;
 	font-weight: normal;
@@ -626,7 +476,7 @@ span {
 						prossima Academy di IDM</h4>
 				</div>
 
-				<form:form method="POST" action="save" modelAttribute="can">
+				<form:form method="POST" action="saveSenior" modelAttribute="sen">
 
 					<!-- SEZIONE DATI PERSONALI -->
 					<div id="div_cv" class="row text-left">
@@ -700,6 +550,26 @@ span {
 									label="Milano" />
 								<form:radiobutton path="luogoCandidatura" value="E"
 									label="Entrambi" />
+							</div>
+						</div>
+						<div class="col-md-2"></div>
+					</div>
+					
+					<!-- POSIZIONE SCELTA -->
+					<div id="div_cv" class="row text-left" style="text-align: center">
+						<div class="col-md-1"></div>
+						<div class="col-md-4">
+							<form:label path="posizioneLav">Posizione per la quale ci si intende candidare: *</form:label>
+						</div>
+						<div class="col-md-1"></div>
+						<div class="col-md-4">
+							<div class="radiobut">
+								<form:radiobutton path="posizioneLav" value="SJ"
+									label="Senior Java Developer" required="required"/>
+								<form:radiobutton path="posizioneLav" value="SDN"
+									label="Senior .NET Developer" />
+								<form:radiobutton path="posizioneLav" value="E"
+									label="Entrambe le posizioni" />
 							</div>
 						</div>
 						<div class="col-md-2"></div>
@@ -785,7 +655,7 @@ span {
 							<div class="col-md-1"></div>
 							<div class="col-md-5">
 								<div class="checkboxes">
-									<form:checkboxes items="${webFrameworkList}" path="comp" />
+									<form:checkboxes items="${webFrameworkList1}" path="comp" />
 								</div>
 							</div>
 							<div class="col-md-1"></div>
@@ -832,17 +702,6 @@ span {
 	<script type="text/javascript">
 		jQuery( 'body' ).wrapInner( '<div class="animsition"></div>' ).removeClass( 'animsition' );
 		</script>
-	<script type="text/javascript">
-				function revslider_showDoubleJqueryError(sliderID) {
-					var errorMessage = "Revolution Slider Error: You have some jquery.js library include that comes after the revolution files js include.";
-					errorMessage += "<br> This includes make eliminates the revolution slider libraries, and make it not work.";
-					errorMessage += "<br><br> To fix it you can:<br>&nbsp;&nbsp;&nbsp; 1. In the Slider Settings -> Troubleshooting set option:  <strong><b>Put JS Includes To Body</b></strong> option to true.";
-					errorMessage += "<br>&nbsp;&nbsp;&nbsp; 2. Find the double jquery.js include and remove it.";
-					errorMessage = "<span style='font-size:16px;color:#BC0C06;'>" + errorMessage + "</span>";
-						jQuery(sliderID).show().html(errorMessage);
-				}
-			
-</script>
 	<script type='text/javascript'>
 /* <![CDATA[ */
 var wpcf7 = {"apiSettings":{"root":"https:\/\/www.idmconsulting.it\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
