@@ -3,6 +3,7 @@ package idm.control;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import javax.validation.Valid;
 
@@ -19,8 +20,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.support.SessionStatus;
 
+import idm.beans.Amministrazione;
 import idm.beans.CanComp;
 import idm.beans.Candidato;
+import idm.dao.AmministrazioneDao;
 import idm.dao.CanDao;
 
 
@@ -29,6 +32,8 @@ public class CanController {
 	
 	@Autowired    
 	CanDao dao;
+	@Autowired    
+	AmministrazioneDao Adao;
 
 	
 	//link iniziale che manda alla home
@@ -55,9 +60,13 @@ public class CanController {
 
 	//invia alla pagina per selezionare alcuni candidati
 	@RequestMapping("/login")  
-	public String login()  
+	public String login(String username, String password)  
 	{  
-		return "login";  
+		Optional<Amministrazione> sara=Adao.login(username, password);
+		if(sara.isPresent())
+			return "login";  
+	
+		return "login";
 	}
 	
 	// Link che porta dal canconf.jsp alla pagina di conferma finale (response)
