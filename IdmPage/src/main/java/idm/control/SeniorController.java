@@ -10,10 +10,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.support.SessionStatus;
 
+import idm.beans.Candidato;
 import idm.beans.Senior;
 import idm.dao.SeniorDao;
 
@@ -22,7 +25,13 @@ public class SeniorController {
 	
 	@Autowired
 	SeniorDao dao;
-		
+	
+	@RequestMapping("/seniorSelection")  
+	public String display()  
+	{  
+		return "seniorSelection";  
+	}
+	
 	 //link al form di candidatura Senior 
 	@RequestMapping("/candidaturaSen")    
 	public String showformSen(Model m){   
@@ -68,4 +77,36 @@ public class SeniorController {
 	        m.addAttribute("list",list);  
 	        return "amministraSenior";    
 	    }
+		
+		/* It deletes record for the given id in URL and redirects to /amministraSenior */    
+	    @RequestMapping(value="/deletesen/{id}",method = RequestMethod.GET)    
+	    public String delete(@PathVariable int id){    
+	        dao.deleteSenior(id);    
+	        return "redirect:/amministraSenior";    
+	    } 
+	    
+	    /* It displays object data into form for the given id.   
+	     * The @PathVariable puts URL data into variable.*/    
+	    @RequestMapping(value="/editsen/{id}")    
+	    public String edit(@PathVariable int id, Model m){    
+	        Senior senior =dao.getSenById(id);
+	        m.addAttribute("command",senior );  
+	        return "senEditForm";    
+	    } 
+	    
+	    /* It updates model object. */    
+	    @RequestMapping(value="/editsaveSenior",method = RequestMethod.POST)    
+	    public String editsave(@ModelAttribute("sen") Senior sen){    
+	        dao.update(sen);    
+	        return "redirect:/amministraSenior";    
+	    } 
+	    
+		@RequestMapping(value="/select")    
+	    public String viewSenior(@RequestParam("sede") String sede, @RequestParam("competenza") String compe,
+	        @RequestParam("stato") String stato,Model m){ 
+	    List<Senior> list= new ArrayList<>();
+	    list=dao.getSeniorForParameter(sede, compe+",", stato);
+	      m.addAttribute("list",list); 
+	         return "redirect:/amministraSenior";    
+	  }
 }
