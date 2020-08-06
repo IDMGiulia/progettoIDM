@@ -39,7 +39,11 @@
 		<property name="template" ref="jt"></property>
 	</bean>  
 	
-		<bean id="d" class="idm.dao.RecensioneDao">
+	<bean id="d" class="idm.dao.RecensioneDao">
+		<property name="template" ref="jt"></property>
+	</bean>  
+	
+	<bean id="da" class="idm.dao.SeniorDao">
 		<property name="template" ref="jt"></property>
 	</bean>  
 

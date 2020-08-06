@@ -7,9 +7,7 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
-
-
-public class Candidato {
+public class Senior {
 	//definito come autoIncrement dentro il mapping di hibernate
 	private int id;
 	
@@ -45,6 +43,8 @@ public class Candidato {
 	//campo in cui Sara può inserire delle note sui candidati
 	private String note;
 	
+	private List<String>conoscenze=new ArrayList<>();
+	
 	//Livello di istruzione del candidato
 	private String livello;
 	
@@ -54,100 +54,138 @@ public class Candidato {
 	//percorso di studi del candidato
 	private String percorso;
 	
-	private List<String>conoscenze=new ArrayList<>();
+	private String posizioneLav;
 	
 	
-	public List<String> getConoscenze() {
-		return conoscenze;
+
+	public String getLivello() {
+		return livello;
 	}
-	public void setConoscenze(List<String> conoscenze) {
-		this.conoscenze = conoscenze;
+
+	public void setLivello(String livello) {
+		this.livello = livello;
 	}
-	public String getNote() {
-		return note;
+
+	public String getPaeseDiploma() {
+		return paeseDiploma;
 	}
-	public void setNote(String note) {
-		this.note = note;
+
+	public void setPaeseDiploma(String paeseDiploma) {
+		this.paeseDiploma = paeseDiploma;
+	}
+
+	public String getPercorso() {
+		return percorso;
+	}
+
+	public void setPercorso(String percorso) {
+		this.percorso = percorso;
+	}
+
+	public String getPosizioneLav() {
+		return posizioneLav;
+	}
+
+	public void setPosizioneLav(String posizioneLav) {
+		this.posizioneLav = posizioneLav;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getCognome() {
+		return cognome;
+	}
+
+	public void setCognome(String cognome) {
+		this.cognome = cognome;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getTelefono() {
+		return telefono;
+	}
+
+	public void setTelefono(String telefono) {
+		this.telefono = telefono;
+	}
+
+	public String getCompetenze() {
+		return competenze;
+	}
+
+	public void setCompetenze(String competenze) {
+		this.competenze = competenze;
+	}
+
+	public List<Competenze> getFavoriteFrameworks() {
+		return favoriteFrameworks;
+	}
+
+	public void setFavoriteFrameworks(List<Competenze> favoriteFrameworks) {
+		this.favoriteFrameworks = favoriteFrameworks;
+	}
+
+	public String[] getComp() {
+		return comp;
+	}
+
+	public void setComp(String[] comp) {
+		this.comp = comp;
+	}
+
+	public String getLuogoCandidatura() {
+		return luogoCandidatura;
+	}
+
+	public void setLuogoCandidatura(String luogoCandidatura) {
+		this.luogoCandidatura = luogoCandidatura;
 	}
 
 	public String getStato() {
 		return stato;
 	}
+
 	public void setStato(String stato) {
 		this.stato = stato;
 	}
-	public String getLuogoCandidatura() {
-		return luogoCandidatura;
+
+	public String getNote() {
+		return note;
 	}
-	public void setLuogoCandidatura(String luogoCandidatura) {
-		this.luogoCandidatura = luogoCandidatura;
+
+	public void setNote(String note) {
+		this.note = note;
 	}
-	public String[] getComp() {
-		return comp;
+
+	public List<String> getConoscenze() {
+		return conoscenze;
 	}
-	public void setComp(String[] comp) {
-		this.comp = comp;
+
+	public void setConoscenze(List<String> conoscenze) {
+		this.conoscenze = conoscenze;
 	}
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
-	public String getNome() {
-		return nome;
-	}
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-	public String getCognome() {
-		return cognome;
-	}
-	public void setCognome(String cognome) {
-		this.cognome = cognome;
-	}
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	public String getTelefono() {
-		return telefono;
-	}
-	public void setTelefono(String telefono) {
-		this.telefono = telefono;
-	}
-	public String getCompetenze() {
-		return competenze;
-	}
-	public void setCompetenze(String competenze) {
-		this.competenze = competenze;
-	}
-	public List<Competenze> getFavoriteFrameworks() {
-		return favoriteFrameworks;
-	}
-	public void setFavoriteFrameworks(List<Competenze> favoriteFrameworks) {
-		this.favoriteFrameworks = favoriteFrameworks;
-	}
-	public void setLivello(String livello) {
-		this.livello = livello;
-	}  
-	public String getLivello( ) {
-		return livello;
-	}
-	public String getPaeseDiploma() {
-		return paeseDiploma;
-	}
-	public void setPaeseDiploma(String paeseDiploma) {
-		this.paeseDiploma = paeseDiploma;
-	}
-	public String getPercorso() {
-		return percorso;
-	}
-	public void setPercorso(String percorso) {
-		this.percorso = percorso;
-	}
+	
 	
 	
 }

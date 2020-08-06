@@ -18,6 +18,7 @@
     	<mapping resource="candidato.hbm.xml"/> 
     	<mapping resource="competenze.hbm.xml"/> 
     	<mapping resource="recensione.hbm.xml"/> 
+    	<mapping resource="senior.hbm.xml"/>
   
     </session-factory>  
   
