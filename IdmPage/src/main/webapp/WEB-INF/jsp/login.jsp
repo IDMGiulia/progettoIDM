@@ -324,14 +324,7 @@ h1 {
 
 				<br>
 
-				<div style="text-align: center">
-				<br><br>
-					<h1>Qui ci sarà il login</h1>
-					<br>
-					<a href="amministrazione" class="button button2">gestisci Academy</a>
-					<a href="amministraRecensioni" class="button button2">gestisci recensioni</a>
-					<a href="amministraSenior" class="button button2">gestisci candidature senior</a>
-				</div>
+				<a href="logindopo">link ai bottoni</a> 
 
 
 			</div>
