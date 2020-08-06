@@ -1126,7 +1126,7 @@ h1 {
 				<div>
 					<br>
 					<div style="text-align: center">
-						<a href="candidatura" class="button button2">Candidati per il
+						<a href="candidaturaAc" class="button button2">Candidati per il
 							nuovo Corso</a>
 					</div>
 				</div>

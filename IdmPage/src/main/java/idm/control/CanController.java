@@ -105,8 +105,8 @@ public class CanController {
 	      return webFrameworkList;
 	   }
 	 
-	 //link al form di candidatura 
-	@RequestMapping("/candidatura")    
+	 //link al form di candidatura Academy
+	@RequestMapping("/candidaturaAc")    
 	public String showform(Model m){   
 		Candidato candidato= new Candidato();
 		m.addAttribute("can", candidato);  
@@ -132,6 +132,34 @@ public class CanController {
 		}
 		return "ac_cv";//will derict to canconf   
 	} 
+	
+//	 //link al form di candidatura Senior 
+//	@RequestMapping("/candidaturaSen")    
+//	public String showformSen(Model m){   
+//		Candidato candidato= new Candidato();
+//		m.addAttribute("can", candidato);  
+//		return "senior_form";   
+//	} 
+//	
+//	/*It saves object into database. The @ModelAttribute puts request data  
+//	 *  into model object. You need to mention RequestMethod.POST method   
+//	 *  because default request is GET*/    
+//	@RequestMapping(value="/save",method = RequestMethod.POST)    
+//	public String saveSen(@Valid @ModelAttribute("can") Candidato can, BindingResult result, 
+//			SessionStatus status,Model m){ 
+//	    //Check validation errors
+//	    if (result.hasErrors()) {   
+//	        return "senior_form";
+//	    }
+//	    try {
+//	    dao.salva(can); 
+//	    }catch (Exception e) {
+//	    	ObjectError error = new ObjectError("competenze","hai inserito troppi caratteri nel campo altre competenze");
+//	    	result.addError(error);
+//	    	return "senior_form";
+//		}
+//		return "senior_cv";//will derict to canconf   
+//	} 
 	
 	/* It deletes record for the given id in URL and redirects to /viewemp */    
     @RequestMapping(value="/deleteemp/{id}",method = RequestMethod.GET)    
