@@ -718,26 +718,24 @@ h1 {
 	width: 100%;
 	height: 100%;
 	border-radius: 8px;
-	background-color: transparent;
 }
 
 .carousel-1 {
 	height: 100%;
 	-webkit-background-size: cover;
 	background-size: cover;
-	background-color: transparent;
 }
 
 .carousel-2 {
 	height: 100%;
 	-webkit-background-size: cover;
 	background-size: cover;
-	background-color: transparent;
 }
 </style>
 
 <!-- STILE SLIDESHOW -->
 <style>
+
 /* Slideshow container */
 .slideshow-container {
 	position: relative;
@@ -753,21 +751,27 @@ h1 {
 /* Next & previous buttons */
 .prev, .next {
 	cursor: pointer;
-	position: absolute;
+	position: relative;
 	top: 50%;
 	width: auto;
-	margin-top: -30px;
-	padding: 16px;
 	color: #888;
 	font-weight: bold;
 	font-size: 20px;
 	border-radius: 0 3px 3px 0;
 	user-select: none;
 }
+
 /* Position the "next button" to the right */
 .next {
 	position: absolute;
 	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+/* Position the "prev button" to the left */
+.prev {
+	position: absolute;
+	left: 0;
 	border-radius: 3px 0 0 3px;
 }
 
@@ -781,6 +785,7 @@ h1 {
 .dot-container {
 	text-align: center;
 }
+
 /* The dots/bullets/indicators */
 .dot {
 	cursor: pointer;
@@ -790,13 +795,10 @@ h1 {
 	background-color: #bbb;
 	border-radius: 50%;
 	display: inline-block;
-	transition: background-color 0.6s ease;
 }
-/* Add a background color to the active dot/circle */
-.active, .dot:hover {
-	background-color: #717171;
-}
+
 </style>
+
 </head>
 
 <body
@@ -946,151 +948,151 @@ h1 {
 				
 				<!-- SLIDESHOW RECENSIONI -->
 				<div class="slideshow-container">
-					
+
 					<!-- PRIMA SLIDE  -->
 					<div class="mySlides">
-							<div class="row">
+						<div class="row">
 
-								<!-- RECENSIONE 1 -->
-								<div class="col-sm-4">
-									<div style="text-align: center">
+							<!-- RECENSIONE 1 -->
+							<div class="col-sm-4">
+								<div style="text-align: center">
 
-										<h3>Giulia Gemesio</h3>
+									<h3>Giulia Gemesio</h3>
 
-										<p>unito al confronto costante con i gli altri studenti e
-											con il docente mi hanno permesso di crescere molto come
-											programmatrice.</p>
-									</div>
+									<p>unito al confronto costante con i gli altri studenti e
+										con il docente mi hanno permesso di crescere molto come
+										programmatrice.</p>
 								</div>
-
-								<!-- RECENSIONE 2 -->
-								<div class="col-sm-4">
-									<div style="text-align: center">
-
-										<h3>Giacomo Francardo</h3>
-
-										<p>Il corso ha una struttura molto completa e con
-											possibilit&#224; di modificare l&#39;ordine dei vari
-											argomenti.</p>
-									</div>
-								</div>
-
-								<!-- RECENSIONE 3 -->
-								<div class="col-sm-4">
-									<div style="text-align: center">
-
-										<h3>Angela Ternico</h3>
-
-										<p>
-											Avevo appena finito l'universit&#224; e questa esperienza mi<br>
-											ha permesso di far crescere e migliorare le mie abilit&#224;.<br>
-											La consiglio vivamente.
-										</p>
-									</div>
-								</div>
-								<hr class="d-sm-none">
 							</div>
+
+							<!-- RECENSIONE 2 -->
+							<div class="col-sm-4">
+								<div style="text-align: center">
+
+									<h3>Giacomo Francardo</h3>
+
+									<p>Il corso ha una struttura molto completa e con
+										possibilit&#224; di modificare l&#39;ordine dei vari
+										argomenti.</p>
+								</div>
+							</div>
+
+							<!-- RECENSIONE 3 -->
+							<div class="col-sm-4">
+								<div style="text-align: center">
+
+									<h3>Angela Ternico</h3>
+
+									<p>
+										Avevo appena finito l'universit&#224; e questa esperienza mi<br>
+										ha permesso di far crescere e migliorare le mie abilit&#224;.<br>
+										La consiglio vivamente.
+									</p>
+								</div>
+							</div>
+							<hr class="d-sm-none">
+						</div>
 					</div>
-					
+
 					<!-- SECONDA SLIDE  -->
 					<div class="mySlides">
-							<div class="row">
-								<!-- RECENSIONE 1 -->
-								<div class="col-sm-4">
-									<div style="text-align: center">
+						<div class="row">
+							<!-- RECENSIONE 1 -->
+							<div class="col-sm-4">
+								<div style="text-align: center">
 
-										<h3>Giulia Gemesio</h3>
+									<h3>Giulia Gemesio</h3>
 
-										<p>
-											Se tornassi indietro lo sceglierei nuovamente come ingresso
-											nel mondo della consulenza informatica.<br>Il taglio
-											molto pratic
-										</p>
-									</div>
+									<p>
+										Se tornassi indietro lo sceglierei nuovamente come ingresso
+										nel mondo della consulenza informatica.<br>Il taglio
+										molto pratic
+									</p>
 								</div>
-
-								<!-- RECENSIONE 2 -->
-								<div class="col-sm-4">
-									<div style="text-align: center">
-
-										<h3>Giacomo Francardo</h3>
-
-										<p>Il corso ha una struttura molto completa e con
-											possibilit&#224; di modificare l&#39;ordine dei vari
-											argomenti.</p>
-									</div>
-								</div>
-
-								<!-- RECENSIONE 3 -->
-								<div class="col-sm-4">
-									<div style="text-align: center">
-
-										<h3>Angela Ternico</h3>
-
-										<p>
-											Avevo appena finito l'universit&#224; e questa esperienza mi<br>
-											ha permesso di far crescere e migliorare le mie abilit&#224;.<br>
-											La consiglio vivamente.
-										</p>
-									</div>
-								</div>
-								<hr class="d-sm-none">
 							</div>
+
+							<!-- RECENSIONE 2 -->
+							<div class="col-sm-4">
+								<div style="text-align: center">
+
+									<h3>Giacomo Francardo</h3>
+
+									<p>Il corso ha una struttura molto completa e con
+										possibilit&#224; di modificare l&#39;ordine dei vari
+										argomenti.</p>
+								</div>
+							</div>
+
+							<!-- RECENSIONE 3 -->
+							<div class="col-sm-4">
+								<div style="text-align: center">
+
+									<h3>Angela Ternico</h3>
+
+									<p>
+										Avevo appena finito l'universit&#224; e questa esperienza mi<br>
+										ha permesso di far crescere e migliorare le mie abilit&#224;.<br>
+										La consiglio vivamente.
+									</p>
+								</div>
+							</div>
+							<hr class="d-sm-none">
+						</div>
 					</div>
-					
+
 					<!-- TERZA SLIDE  -->
 					<div class="mySlides">
-							<div class="row">
-								<!-- RECENSIONE 1 -->
-								<div class="col-sm-4">
-									<div style="text-align: center">
+						<div class="row">
+							<!-- RECENSIONE 1 -->
+							<div class="col-sm-4">
+								<div style="text-align: center">
 
-										<h3>Giulia Gemesio</h3>
+									<h3>Giulia Gemesio</h3>
 
-										<p>
-											Se tornassi indietro lo sceglierei nuovamente come ingresso
-											nel mondo della consulenza informatica.<br>Il taglio
-											molto pratico del corso, che prevede poche ore di lezione
-											frontale e molte ore di esercizio individuale e di gruppo,
-											unito al confronto costante con i gli altri studenti e con il
-											docente mi hanno permesso di crescere molto come
-											programmatrice.
-										</p>
-									</div>
+									<p>
+										Se tornassi indietro lo sceglierei nuovamente come ingresso
+										nel mondo della consulenza informatica.<br>Il taglio
+										molto pratico del corso, che prevede poche ore di lezione
+										frontale e molte ore di esercizio individuale e di gruppo,
+										unito al confronto costante con i gli altri studenti e con il
+										docente mi hanno permesso di crescere molto come
+										programmatrice.
+									</p>
 								</div>
-
-								<!-- RECENSIONE 2 -->
-								<div class="col-sm-4">
-									<div style="text-align: center">
-
-										<h3>Giacomo Francardo</h3>
-
-										<p>Il corso ha una struttura molto completa e con
-											possibilit&#224; di modificare l&#39;ordine dei vari
-											argomenti.</p>
-									</div>
-								</div>
-
-								<!-- RECENSIONE 3 -->
-								<div class="col-sm-4">
-									<div style="text-align: center">
-
-										<h3>Angela Ternico</h3>
-
-										<p>
-											Avevo appena finito l'universit&#224; e questa esperienza mi<br>
-											ha permesso di far crescere e migliorare le mie abilit&#224;.<br>
-											La consiglio vivamente.
-										</p>
-									</div>
-								</div>
-								<hr class="d-sm-none">
 							</div>
+
+							<!-- RECENSIONE 2 -->
+							<div class="col-sm-4">
+								<div style="text-align: center">
+
+									<h3>Giacomo Francardo</h3>
+
+									<p>Il corso ha una struttura molto completa e con
+										possibilit&#224; di modificare l&#39;ordine dei vari
+										argomenti.</p>
+								</div>
+							</div>
+
+							<!-- RECENSIONE 3 -->
+							<div class="col-sm-4">
+								<div style="text-align: center">
+
+									<h3>Angela Ternico</h3>
+
+									<p>
+										Avevo appena finito l'universit&#224; e questa esperienza mi<br>
+										ha permesso di far crescere e migliorare le mie abilit&#224;.<br>
+										La consiglio vivamente.
+									</p>
+								</div>
+							</div>
+							<hr class="d-sm-none">
+						</div>
 					</div>
-					
+
 					<!-- PULSANTI LATERALI  -->
-					<a class="prev" onclick="plusSlides(-1)">&#8249;</a> <a class="next"
-						onclick="plusSlides(1)">&#8250;</a>
+					<a class="prev" onclick="plusSlides(-1)">&#8249;</a> <a
+						class="next" onclick="plusSlides(1)">&#8250;</a>
 
 					<div class="dot-container">
 						<span class="dot" onclick="currentSlide(1)"></span> <span
@@ -1098,9 +1100,7 @@ h1 {
 							onclick="currentSlide(3)"></span>
 					</div>
 
-				</div>
-				
-				<script>
+					<script>
 					var slideIndex = 1;
 					showSlides(slideIndex);
 					
@@ -1129,7 +1129,7 @@ h1 {
 					  dots[slideIndex-1].className += " active";
 					}
 				</script>
-
+				</div>
 
 				<!-- BOTTONE CANDIDATURA -->
 				<div>
