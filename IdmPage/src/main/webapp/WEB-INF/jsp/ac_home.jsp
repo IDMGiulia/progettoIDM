@@ -746,7 +746,7 @@ h1 {
 /* Slides */
 .mySlides {
 	display: none;
-	padding: 80px;
+	padding: 30px;
 	text-align: center;
 }
 
@@ -780,7 +780,6 @@ h1 {
 /* The dot/bullet/indicator container */
 .dot-container {
 	text-align: center;
-	padding: 20px;
 }
 /* The dots/bullets/indicators */
 .dot {
@@ -944,8 +943,11 @@ h1 {
 						<b>Cosa ne pensano gli ex-alunni</b>
 					</h2>
 				</div>
+				
+				<!-- SLIDESHOW RECENSIONI -->
 				<div class="slideshow-container">
-
+					
+					<!-- PRIMA SLIDE  -->
 					<div class="mySlides">
 							<div class="row">
 
@@ -989,6 +991,8 @@ h1 {
 								<hr class="d-sm-none">
 							</div>
 					</div>
+					
+					<!-- SECONDA SLIDE  -->
 					<div class="mySlides">
 							<div class="row">
 								<!-- RECENSIONE 1 -->
@@ -1033,6 +1037,8 @@ h1 {
 								<hr class="d-sm-none">
 							</div>
 					</div>
+					
+					<!-- TERZA SLIDE  -->
 					<div class="mySlides">
 							<div class="row">
 								<!-- RECENSIONE 1 -->
@@ -1081,16 +1087,19 @@ h1 {
 								<hr class="d-sm-none">
 							</div>
 					</div>
+					
+					<!-- PULSANTI LATERALI  -->
 					<a class="prev" onclick="plusSlides(-1)">&#8249;</a> <a class="next"
 						onclick="plusSlides(1)">&#8250;</a>
-				</div>
 
-				<div class="dot-container">
-					<span class="dot" onclick="currentSlide(1)"></span> <span
-						class="dot" onclick="currentSlide(2)"></span> <span class="dot"
-						onclick="currentSlide(3)"></span>
-				</div>
+					<div class="dot-container">
+						<span class="dot" onclick="currentSlide(1)"></span> <span
+							class="dot" onclick="currentSlide(2)"></span> <span class="dot"
+							onclick="currentSlide(3)"></span>
+					</div>
 
+				</div>
+				
 				<script>
 					var slideIndex = 1;
 					showSlides(slideIndex);

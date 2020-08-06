@@ -655,7 +655,7 @@ h1 {
 															</div>
 														</div>
 														
-														<!-- .NET DEV TORINO -->
+														<!-- S .NET DEV TORINO -->
 														<div class="vc_tta-panel" id="1495547724870-545a2c73-9826"
 															data-vc-content=".vc_tta-panel-body">
 															<div class="vc_tta-panel-heading">
@@ -734,7 +734,7 @@ h1 {
 															</div>
 														</div>
 														
-														<!-- .NET DEV MILANO -->
+														<!-- S .NET DEV MILANO -->
 														<div class="vc_tta-panel" id="1519397071129-d69d726d-83f0"
 															data-vc-content=".vc_tta-panel-body">
 															<div class="vc_tta-panel-heading">
@@ -743,7 +743,7 @@ h1 {
 																	<a href="#1519397071129-d69d726d-83f0"
 																		data-vc-accordion
 																		data-vc-container=".vc_tta-container"><span
-																		class="vc_tta-title-text">.NET DEVELOPER _
+																		class="vc_tta-title-text">SENIOR .NET DEVELOPER _
 																			Milano</span><i
 																		class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a>
 																</h4>
@@ -826,6 +826,7 @@ h1 {
 																</div>
 															</div>
 														</div>
+													
 													</div>
 												</div>
 											</div>
