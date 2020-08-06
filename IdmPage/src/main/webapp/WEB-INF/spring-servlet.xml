@@ -45,7 +45,11 @@
 	
 	<bean id="da" class="idm.dao.SeniorDao">
 		<property name="template" ref="jt"></property>
-	</bean>  
+	</bean> 
+	
+	<bean id="daoo" class="idm.dao.AmministrazioneDao">
+		<property name="template" ref="jt"></property>
+	</bean>   
 
 	
 	     <!-- bind your messages.properties -->

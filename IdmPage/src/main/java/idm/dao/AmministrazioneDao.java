@@ -32,7 +32,7 @@ public class AmministrazioneDao {
 				Amministrazione a= new Amministrazione();
 				a.setUsername(rs.getString(1));
 				a.setPassword(rs.getString(2));
-				a.setPermessi(rs.getBoolean(3));
+				a.setPermessi(rs.getInt(3));
 				return a;
 			}
 		});
