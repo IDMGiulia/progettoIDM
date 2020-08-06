@@ -26,6 +26,7 @@ public class AmministrazioneDao {
 	public void setTemplate(JdbcTemplate template) {    
 		this.template = template;    
 	}
+	
 	public List<Amministrazione> getAmministrazione(){
 		return template.query("select * from amministrazione", new RowMapper<Amministrazione>() {
 			public Amministrazione mapRow(ResultSet rs, int row)throws SQLException{
