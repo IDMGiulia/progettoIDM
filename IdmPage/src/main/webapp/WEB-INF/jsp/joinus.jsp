@@ -519,6 +519,10 @@ h1 {
 		<div class="pageHead"></div>
 		<section class="main-wrapper pagecustom-528">
 			<div class="container">
+				<p>
+					<img src="<%=request.getContextPath()%>/img/banner.jpg"
+						alt="banner2"/>
+				</p>
 				<div class="row">
 					<div class="col-md-12 main-content">
 						<div class="vc_row wpb_row vc_row-fluid">
@@ -527,12 +531,7 @@ h1 {
 									<div class="wpb_wrapper">
 										<div class="wpb_text_column wpb_content_element ">
 											<div class="wpb_wrapper">
-												<p>
-													<img
-														src="https://www.idmconsulting.it/wp-content/uploads/2014/11/banner2.jpg"
-														alt="banner2" class="aligncenter wp-image-179 size-full"
-														width="1600" height="360"/>
-												</p>
+
 												<h1 style="text-align: center;">Lavora con noi</h1>
 
 											</div>
@@ -542,7 +541,7 @@ h1 {
 												class="vc_general vc_tta vc_tta-accordion vc_tta-color-grey vc_tta-style-classic vc_tta-shape-rounded vc_tta-o-shape-group vc_tta-controls-align-left">
 												<div class="vc_tta-panels-container">
 													<div class="vc_tta-panels">
-														
+
 														<!-- S JAVA DEV TORINO -->
 														<div class="vc_tta-panel" id="1495547727866-0e18e9be-dc78"
 															data-vc-content=".vc_tta-panel-body">
@@ -616,14 +615,15 @@ h1 {
 																			D.Lgs n. 98/2006, art 27).</p>
 																		<p>
 																			L&#8217;interessato è invitato a inviare la propria
-																			candidatura tramite <a href="candidaturaSen">questo form</a>.
+																			candidatura tramite <a href="candidaturaSen">questo
+																				form</a>.
 																		</p>
 
 																	</div>
 																</div>
 															</div>
 														</div>
-														
+
 														<!-- J JAVA DEV TORINO -->
 														<div class="vc_tta-panel" id="1519396897075-d521093d-323a"
 															data-vc-content=".vc_tta-panel-body">
@@ -654,7 +654,7 @@ h1 {
 																</div>
 															</div>
 														</div>
-														
+
 														<!-- S .NET DEV TORINO -->
 														<div class="vc_tta-panel" id="1495547724870-545a2c73-9826"
 															data-vc-content=".vc_tta-panel-body">
@@ -724,7 +724,8 @@ h1 {
 																			D.Lgs n. 98/2006, art 27).</p>
 																		<p>
 																			L&#8217;interessato è invitato a inviare la propria
-																			candidatura tramite <a href="candidaturaSen">questo form</a>.
+																			candidatura tramite <a href="candidaturaSen">questo
+																				form</a>.
 																		</p>
 																		<p>&nbsp;</p>
 																		<p>&nbsp;</p>
@@ -733,7 +734,7 @@ h1 {
 																</div>
 															</div>
 														</div>
-														
+
 														<!-- S .NET DEV MILANO -->
 														<div class="vc_tta-panel" id="1519397071129-d69d726d-83f0"
 															data-vc-content=".vc_tta-panel-body">
@@ -743,8 +744,8 @@ h1 {
 																	<a href="#1519397071129-d69d726d-83f0"
 																		data-vc-accordion
 																		data-vc-container=".vc_tta-container"><span
-																		class="vc_tta-title-text">SENIOR .NET DEVELOPER _
-																			Milano</span><i
+																		class="vc_tta-title-text">SENIOR .NET DEVELOPER
+																			_ Milano</span><i
 																		class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a>
 																</h4>
 															</div>
@@ -819,14 +820,15 @@ h1 {
 																			D.Lgs n. 98/2006, art 27).</p>
 																		<p>
 																			L&#8217;interessato è invitato a inviare la propria
-																			candidatura tramite <a href="candidaturaSen">questo form</a>.
+																			candidatura tramite <a href="candidaturaSen">questo
+																				form</a>.
 																		</p>
 
 																	</div>
 																</div>
 															</div>
 														</div>
-													
+
 													</div>
 												</div>
 											</div>

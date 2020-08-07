@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.support.SessionStatus;
 
-import idm.beans.Candidato;
 import idm.beans.Senior;
 import idm.dao.SeniorDao;
 
@@ -44,10 +43,10 @@ public class SeniorController {
 		 @ModelAttribute("webFrameworkList1")
 		   public List<String> getWebFrameworkList() {
 		      List<String> webFrameworkList = new ArrayList<String>();
-		      webFrameworkList.add("Java1");
-		      webFrameworkList.add("Javascript1");
-		      webFrameworkList.add("Angular JS1");
-		      webFrameworkList.add("HTML/CSS1");
+		      webFrameworkList.add("Java");
+		      webFrameworkList.add("Javascript");
+		      webFrameworkList.add("Angular JS");
+		      webFrameworkList.add("HTML/CSS");
 		      webFrameworkList.add("SQL");
 		      return webFrameworkList;
 		   }

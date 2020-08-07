@@ -699,25 +699,10 @@ span {
 
 	<!--body inner-->
 
-	<script type="text/javascript">
-		jQuery( 'body' ).wrapInner( '<div class="animsition"></div>' ).removeClass( 'animsition' );
-		</script>
-	<script type='text/javascript'>
-/* <![CDATA[ */
-var wpcf7 = {"apiSettings":{"root":"https:\/\/www.idmconsulting.it\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
-/* ]]> */
-</script>
 	<script type='text/javascript'
 		src='https://www.idmconsulting.it/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.1'></script>
 	<script type='text/javascript'
 		src='https://www.idmconsulting.it/wp-content/plugins/responsive-accordion-and-collapse/js/bootstrap.js?ver=4.9.15'></script>
-	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-content/plugins/responsive-accordion-and-collapse/js/accordion.js?ver=4.9.15'></script>
-	<script type='text/javascript'>
-/* <![CDATA[ */
-var wpcf7_redirect_forms = {"2541":{"page_id":"2558","external_url":"","use_external_url":"","open_in_new_tab":"","http_build_query":"","http_build_query_selectively":"","http_build_query_selectively_fields":"","delay_redirect":"0","after_sent_script":"","thankyou_page_url":"https:\/\/www.idmconsulting.it\/landing-page-webinar-download\/"},"1356":{"page_id":"","external_url":"","use_external_url":"","open_in_new_tab":"","http_build_query":"","http_build_query_selectively":"","http_build_query_selectively_fields":"","delay_redirect":"","after_sent_script":"","thankyou_page_url":""}};
-/* ]]> */
-</script>
 	<script type='text/javascript'
 		src='https://www.idmconsulting.it/wp-content/plugins/wpcf7-redirect/js/wpcf7-redirect-script.js'></script>
 	<script type='text/javascript'
@@ -727,33 +712,23 @@ var wpcf7_redirect_forms = {"2541":{"page_id":"2558","external_url":"","use_exte
 	<script type='text/javascript'
 		src='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/lib/bower/isotope/dist/isotope.pkgd.min.js?ver=5.5.4'></script>
 	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/lib/bower/flexslider/jquery.flexslider-min.js?ver=5.5.4'></script>
-	<script type='text/javascript'
 		src='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/lib/prettyphoto/js/jquery.prettyPhoto.min.js?ver=5.5.4'></script>
 	<script type='text/javascript'
 		src='https://www.idmconsulting.it/wp-content/themes/dart/js/jquery.waypoints.min.js?ver=3.2'></script>
 	<script type='text/javascript'
 		src='https://www.idmconsulting.it/wp-content/themes/dart/js/jquery.easy-pie-chart.js?ver=3.2'></script>
 	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-content/themes/dart/js/jflickrfeed.min.js?ver=3.2'></script>
-	<script type='text/javascript'
 		src='https://www.idmconsulting.it/wp-content/themes/dart/js/jquery.validate.min.js?ver=3.2'></script>
 	<script type='text/javascript'
 		src='https://www.idmconsulting.it/wp-content/themes/dart/js/jquery.stellar.min.js?ver=3.2'></script>
 	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-content/themes/dart/js/jquery.mb.YTPlayer.js?ver=3.2'></script>
-	<script type='text/javascript'
 		src='https://www.idmconsulting.it/wp-content/themes/dart/js/custom.js?ver=3.2'></script>
-	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-content/plugins/youtube-embed-plus/scripts/fitvids.min.js?ver=12.2'></script>
 	<script type='text/javascript'
 		src='https://www.idmconsulting.it/wp-includes/js/wp-embed.min.js?ver=4.9.15'></script>
 	<script type='text/javascript'
 		src='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=5.5.4'></script>
 	<script type='text/javascript'
 		src='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/lib/bower/twbs-pagination/jquery.twbsPagination.min.js?ver=5.5.4'></script>
-	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/lib/owl-carousel2-dist/owl.carousel.min.js?ver=5.5.4'></script>
 	<script type='text/javascript'
 		src='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/lib/bower/imagesloaded/imagesloaded.pkgd.min.js?ver=4.9.15'></script>
 	<script type='text/javascript'
@@ -762,7 +737,7 @@ var wpcf7_redirect_forms = {"2541":{"page_id":"2558","external_url":"","use_exte
 		src='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/lib/waypoints/waypoints.min.js?ver=5.5.4'></script>
 	<script type='text/javascript'
 		src='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/js/dist/vc_grid.min.js?ver=5.5.4'></script>
-
+	
 </body>
 
 </html>
