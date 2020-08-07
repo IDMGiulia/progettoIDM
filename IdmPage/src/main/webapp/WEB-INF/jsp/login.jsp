@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>  
 <html lang="it">
 
 <head>
@@ -324,7 +325,38 @@ h1 {
 
 				<br>
 
-				<a href="logindopo">link ai bottoni</a> 
+				<div style="text-align: center">
+				<br><br>
+					<h1>Login per la parte amministrativa</h1>
+					<br>
+					<form:form method="POST" action="log" modelAttribute="log">
+						<div class="col-md-4"></div>
+						<div class="col-md-4">
+							<div class="form-group">
+								<label class="form-label">username *</label>
+								<form:input path="username" type="text"
+									class="form-control form-control-sm" required="required"
+									placeholder="Inserisci il tuo username" />
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="form-group">
+								<label class="form-label">Password *</label>
+								<form:input path="password" type="text"
+									class="form-control form-control-sm" required="required"
+									placeholder="Inserisci la password" />
+							</div>
+						</div>
+					
+					<!-- BOTTONE CANDIDATI -->
+					<div>
+						<div style="text-align: center">
+							<input type="submit" class="button button2"
+								value="Accedi" />
+						</div>
+					</div>
+					</form:form>
+				</div>
 
 
 			</div>

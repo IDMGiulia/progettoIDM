@@ -12,7 +12,7 @@ public class Amministrazione {
 	@NotEmpty
 	@Size(max=50)
 	private String password;
-	@NotEmpty
+
 	private int permessi;
 	
 //	public Amministrazione(@NotEmpty String username, @NotEmpty @Size(max = 50) String password,

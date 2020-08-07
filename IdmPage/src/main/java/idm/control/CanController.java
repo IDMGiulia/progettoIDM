@@ -56,18 +56,7 @@ public class CanController {
 	{  
 		return "viewpage";  
 	}
-	
 
-	//invia alla pagina per selezionare alcuni candidati
-	@RequestMapping("/login")  
-	public String login(String username, String password)  
-	{  
-		Optional<Amministrazione> sara=Adao.login(username, password);
-		if(sara.isPresent())
-			return "login";  
-	
-		return "login";
-	}
 	
 	// Link che porta dal canconf.jsp alla pagina di conferma finale (response)
 	@RequestMapping("/risposta/{nome}")  
