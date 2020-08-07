@@ -23,8 +23,10 @@ import org.springframework.web.bind.support.SessionStatus;
 import idm.beans.Amministrazione;
 import idm.beans.CanComp;
 import idm.beans.Candidato;
+import idm.beans.Recensione;
 import idm.dao.AmministrazioneDao;
 import idm.dao.CanDao;
+import idm.dao.RecensioneDao;
 
 
 @Controller    
@@ -33,13 +35,18 @@ public class CanController {
 	@Autowired    
 	CanDao dao;
 	@Autowired    
-	AmministrazioneDao Adao;
+	RecensioneDao Rdao;
 
 	
 	//link iniziale che manda alla home
 	@RequestMapping("/presentazione")  
-	public String display()  
+	public String display(Model m)  
 	{  
+		List<Recensione> list= new ArrayList<>();
+		list=Rdao.getApprovate();
+		int i=0;
+		m.addAttribute("rec",list); 
+		m.addAttribute("cost", i);
 		return "ac_home";  
 	}
 	

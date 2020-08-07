@@ -2,6 +2,7 @@ package idm.dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.hibernate.Session;
@@ -15,7 +16,7 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 
-
+import idm.beans.Candidato;
 import idm.beans.Recensione;
 
 public class RecensioneDao {
@@ -76,6 +77,18 @@ public class RecensioneDao {
 			String sql="select * from recensione where recId=?";    
 		    return template.queryForObject(sql, new Object[]{id},new BeanPropertyRowMapper<Recensione>(Recensione.class));
 		}
+		
+		
+		//metodo per selezionare le recensioni approvate
+		public List<Recensione> getApprovate(){    
+		    List<Recensione> e = new ArrayList<>();
+		    e = this.getRecensioni();
+		    List<Recensione> risultato = new ArrayList<>();
+		    e.stream()
+		      .filter(x->x.isApprovata())
+		      .forEach(x->risultato.add(x));
+		        return risultato;    
+		  }
 		
 	
 	
