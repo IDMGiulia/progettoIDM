@@ -482,6 +482,7 @@ h1 {
 					<h4>Completa il form con i tuoi dati per inviare la
 						tua recensione sull'academy</h4>
 				</div>
+				<br>
 
 				<form:form method="POST" action="salva" modelAttribute="rec">
 
@@ -517,10 +518,10 @@ h1 {
 							<div class="col-md-2"></div>
 							<div class="col-md-8">
 								<div class="x">
-									<span><form:label path="recensione">Recensione: </form:label></span>
+									<span><form:label path="recensione"><h3><b>Recensione:</b></h3></form:label></span>
 								</div>
-								<form:textarea path="recensione" style="width: 80%; height: 300px; border: none"
-									maxlength="400" placeholder="" />
+								<form:textarea path="recensione" style="width: 80%; height: 200px; border: none"
+									maxlength="400" placeholder="Scrivi qui la tua recensione da pubblicare..." />
 							</div>
 							<div class="col-md-2"></div>
 					</div>
