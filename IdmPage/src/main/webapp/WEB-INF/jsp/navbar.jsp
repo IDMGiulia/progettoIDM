@@ -3,6 +3,14 @@
 
 <head>
 
+<style type="text/css"> /******************global color****************************/
+
+.featured-tab .nav-tabs>li.active>a:after {
+	border-left-color: #1d70b7;
+}
+
+</style>
+
 <style type="text/css">
 .dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus, .dropdown-menu>li.active>a
 	{
@@ -87,7 +95,7 @@ nav ul.navbar-nav ul.dropdown-menu>li>a {
 							class="icon-bar"></span>
 					</button>
 					<a class="navbar-brand" href="https://www.idmconsulting.it"> <img
-						src="https://www.idmconsulting.it/wp-content/uploads/2016/09/idm-consulting-logo-1.png"
+						src="<%=request.getContextPath()%>/img/logo.png"
 						alt="" class="img-responsive" />
 
 					</a>

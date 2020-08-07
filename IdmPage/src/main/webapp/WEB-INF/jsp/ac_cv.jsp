@@ -13,50 +13,15 @@
 <link rel="alternate" type="application/rss+xml" title="RSS2.0"
 	href="https://www.idmconsulting.it/feed/" />
 <link rel="pingback" href="https://www.idmconsulting.it/xmlrpc.php" />
-
 <link rel="shortcut icon"
 	href="https://www.idmconsulting.it/wp-content/uploads/2016/01/idm-favicon.png" />
-<meta name="description"
-	content="IDM Consulting ottimizza la gestione dei processi aziendali riducendone i costi. Propone soluzioni strategiche di archivio garantendo sicurezza, affidabilità e innovazione." />
 <link rel="canonical" href="https://www.idmconsulting.it/" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:description"
 	content="IDM Consulting ottimizza la gestione dei processi aziendali riducendone i costi. Propone soluzioni strategiche di archivio garantendo sicurezza, affidabilità e innovazione." />
 <meta name="twitter:title" content="IDM - We simplify your work" />
-<meta name="twitter:image"
-	content="https://www.idmconsulting.it/wp-content/uploads/2015/10/Case-history.png" />
 <script type='application/ld+json'>{"@context":"https:\/\/schema.org","@type":"WebSite","@id":"#website","url":"https:\/\/www.idmconsulting.it\/","name":"","potentialAction":{"@type":"SearchAction","target":"https:\/\/www.idmconsulting.it\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
-<!-- / Yoast SEO plugin. -->
 
-<link rel='dns-prefetch' href='//fonts.googleapis.com' />
-<link rel='dns-prefetch' href='//s.w.org' />
-<link rel="alternate" type="application/rss+xml" title=" &raquo; Feed"
-	href="https://www.idmconsulting.it/feed/" />
-<link rel="alternate" type="application/rss+xml"
-	title=" &raquo; Feed dei commenti"
-	href="https://www.idmconsulting.it/comments/feed/" />
-<link rel="alternate" type="application/rss+xml"
-	title=" &raquo; Homepage Feed dei commenti"
-	href="https://www.idmconsulting.it/homepage/feed/" />
-<!-- This site uses the Google Analytics by MonsterInsights plugin v7.10.0 - Using Analytics tracking - https://www.monsterinsights.com/ -->
-<!-- / Google Analytics by MonsterInsights -->
-<script type="text/javascript">
-			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.idmconsulting.it\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.15"}};
-			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
-		</script>
-<style type="text/css">
-img.wp-smiley, img.emoji {
-	display: inline !important;
-	border: none !important;
-	box-shadow: none !important;
-	height: 1em !important;
-	width: 1em !important;
-	margin: 0 .07em !important;
-	vertical-align: -0.1em !important;
-	background: none !important;
-	padding: 0 !important;
-}
-</style>
 <link rel='stylesheet' id='contact-form-7-css'
 	href='https://www.idmconsulting.it/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.1'
 	type='text/css' media='all' />
@@ -86,26 +51,11 @@ img.wp-smiley, img.emoji {
 <link rel='stylesheet' id='bootstrap-css'
 	href='https://www.idmconsulting.it/wp-content/themes/dart/css/bootstrap.min.css?ver=4.9.15'
 	type='text/css' media='all' />
-<link rel='stylesheet' id='owl-carousel-styles-css'
-	href='https://www.idmconsulting.it/wp-content/themes/dart/js/assets/owl.carousel.css?ver=4.9.15'
-	type='text/css' media='all' />
-<link rel='stylesheet' id='flexslider-css'
-	href='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/lib/bower/flexslider/flexslider.min.css?ver=5.5.4'
-	type='text/css' media='all' />
-<link rel='stylesheet' id='bxslider-css'
-	href='https://www.idmconsulting.it/wp-content/themes/dart/css/jquery.bxslider.css?ver=4.9.15'
-	type='text/css' media='all' />
-<link rel='stylesheet' id='lightbox-styles-css'
-	href='https://www.idmconsulting.it/wp-content/themes/dart/css/prettyPhoto.css?ver=4.9.15'
-	type='text/css' media='all' />
 <link rel='stylesheet' id='font-awesome-css'
 	href='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/lib/bower/font-awesome/css/font-awesome.min.css?ver=5.5.4'
 	type='text/css' media='all' />
 <link rel='stylesheet' id='animate-css'
 	href='https://www.idmconsulting.it/wp-content/themes/dart/css/animate.css?ver=4.9.15'
-	type='text/css' media='all' />
-<link rel='stylesheet' id='YT-styles-css'
-	href='https://www.idmconsulting.it/wp-content/themes/dart/css/YTPlayer.css?ver=4.9.15'
 	type='text/css' media='all' />
 <link rel='stylesheet' id='main-styles-css'
 	href='https://www.idmconsulting.it/wp-content/themes/dart/style.css?ver=4.9.15'
@@ -122,17 +72,6 @@ img.wp-smiley, img.emoji {
 <link rel='stylesheet' id='js_composer_front-css'
 	href='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/css/js_composer.min.css?ver=5.5.4'
 	type='text/css' media='all' />
-<link rel='stylesheet' id='addtoany-css'
-	href='https://www.idmconsulting.it/wp-content/plugins/add-to-any/addtoany.min.css?ver=1.15'
-	type='text/css' media='all' />
-<link rel='stylesheet' id='__EPYT__style-css'
-	href='https://www.idmconsulting.it/wp-content/plugins/youtube-embed-plus/styles/ytprefs.min.css?ver=12.2'
-	type='text/css' media='all' />
-<style id='__EPYT__style-inline-css' type='text/css'>
-.epyt-gallery-thumb {
-	width: 33.333%;
-}
-</style>
 <link rel='stylesheet' id='page-transition-animsition-css'
 	href='https://www.idmconsulting.it/wp-content/plugins/page-transition/css/animsition.min.css?ver=1.3'
 	type='text/css' media='all' />
@@ -144,12 +83,6 @@ img.wp-smiley, img.emoji {
 <script type='text/javascript'
 	src='https://www.idmconsulting.it/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
 <script type='text/javascript'
-	src='https://www.idmconsulting.it/wp-content/plugins/add-to-any/addtoany.min.js?ver=1.1'></script>
-<script type='text/javascript'
-	src='https://www.idmconsulting.it/wp-content/plugins/revslider/public/assets/js/jquery.themepunch.tools.min.js?ver=5.4.8'></script>
-<script type='text/javascript'
-	src='https://www.idmconsulting.it/wp-content/plugins/revslider/public/assets/js/jquery.themepunch.revolution.min.js?ver=5.4.8'></script>
-<script type='text/javascript'
 	src='https://www.idmconsulting.it/wp-content/plugins/page-transition/js/jquery.animsition.min.js?ver=1.3'></script>
 <script type='text/javascript'
 	src='https://www.idmconsulting.it/wp-content/themes/dart/js/bootstrap.js?ver=3.0.1'></script>
@@ -159,13 +92,6 @@ img.wp-smiley, img.emoji {
 	src='https://www.idmconsulting.it/wp-content/themes/dart/js/jquery.bxslider.min.js?ver=3.0.1'></script>
 <script type='text/javascript'
 	src='https://www.idmconsulting.it/wp-content/themes/dart/js/smoothscroll.js?ver=4.9.15'></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var _EPYT_ = {"ajaxurl":"https:\/\/www.idmconsulting.it\/wp-admin\/admin-ajax.php","security":"5f590b1437","gallery_scrolloffset":"20","eppathtoscripts":"https:\/\/www.idmconsulting.it\/wp-content\/plugins\/youtube-embed-plus\/scripts\/","epresponsiveselector":"[\"iframe.__youtube_prefs_widget__\"]","epdovol":"1","version":"12.2","evselector":"iframe.__youtube_prefs__[src], iframe[src*=\"youtube.com\/embed\/\"], iframe[src*=\"youtube-nocookie.com\/embed\/\"]","ajax_compat":"","ytapi_load":"light","stopMobileBuffer":"1","vi_active":"","vi_js_posttypes":[]};
-/* ]]> */
-</script>
-<script type='text/javascript'
-	src='https://www.idmconsulting.it/wp-content/plugins/youtube-embed-plus/scripts/ytprefs.min.js?ver=12.2'></script>
 <link rel='https://api.w.org/'
 	href='https://www.idmconsulting.it/wp-json/' />
 <link rel="EditURI" type="application/rsd+xml" title="RSD"
@@ -179,32 +105,6 @@ var _EPYT_ = {"ajaxurl":"https:\/\/www.idmconsulting.it\/wp-admin\/admin-ajax.ph
 <link rel="alternate" type="text/xml+oembed"
 	href="https://www.idmconsulting.it/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.idmconsulting.it%2F&#038;format=xml" />
 
-<script data-cfasync="false">
-window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};a2a_localize = {
-	Share: "Share",
-	Save: "Salva",
-	Subscribe: "Abbonati",
-	Email: "Email",
-	Bookmark: "Segnalibro",
-	ShowAll: "espandi",
-	ShowLess: "comprimi",
-	FindServices: "Trova servizi",
-	FindAnyServiceToAddTo: "Trova subito un servizio da aggiungere",
-	PoweredBy: "Powered by",
-	ShareViaEmail: "Condividi via email",
-	SubscribeViaEmail: "Iscriviti via email",
-	BookmarkInYourBrowser: "Aggiungi ai segnalibri",
-	BookmarkInstructions: "Premi Ctrl+D o \u2318+D per mettere questa pagina nei preferiti",
-	AddToYourFavorites: "Aggiungi ai favoriti",
-	SendFromWebOrProgram: "Invia da qualsiasi indirizzo email o programma di posta elettronica",
-	EmailProgram: "Programma di posta elettronica",
-	More: "Di più&#8230;",
-	ThanksForSharing: "Thanks for sharing!",
-	ThanksForFollowing: "Thanks for following!"
-};
-
-(function(d,s,a,b){a=d.createElement(s);b=d.getElementsByTagName(s)[0];a.async=1;a.src="https://static.addtoany.com/menu/page.js";b.parentNode.insertBefore(a,b);})(document,"script");
-</script>
 <script type="text/javascript">
 		jQuery( document ).ready( function($) {
 			$('.animsition').animsition({
@@ -245,18 +145,6 @@ a.navbar-brand, ul.navbar-nav li a:hover, ul.navbar-nav li a:focus, ul.navbar-na
 
 .plan.featured .plan-name:after {
 	border-top-color: #1d70b7;
-}
-
-.plan.featured a.btn.btn-primary, .plan.featured a.btn.btn-primary:hover
-	{
-	border-color: #222;
-	border-top: none;
-	border-left: none;
-	border-right: none
-}
-
-.plan.featured a.btn.btn-primary:hover {
-	background-color: #333 !important
 }
 
 .bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active,
@@ -306,12 +194,6 @@ background:rgba
 	color: #1d70b7;
 }
 
-.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus, .dropdown-menu>li.active>a
-	{
-	color: #1d70b7 !important;
-	?>
-}
-
 blockquote, .page-title:after, .eemail_textbox input[type="text"]:focus,
 	.woocommerce-pagination ul li span.current {
 	border-color: #1d70b7 !Important;
@@ -321,39 +203,8 @@ form .form-control:focus {
 	border-color: #1d70b7 !important;
 }
 
-.featured-tab .nav-tabs>li.active>a:after {
-	border-left-color: #1d70b7;
-}
-
-.plan.featured a.btn {
-	border-bottom-color: #1d70b7;
-}
-
 a:hover, a:focus, a:active, .footer-custom-menu li a:hover {
 	color: rgb(23, 89, 146)
-}
-
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active,
-	.btn-primary.active, .open .dropdown-toggle.btn-primary {
-	background-color: rgb(23, 89, 146);
-}
-
-/*********************   TOP NAVIGATION   **************************/
-.top-info {
-	background-color: #ffffff;
-}
-
-.top-info .topbar-sidebar, .top-info .topbar-sidebar p, .top-info .topbar-sidebar li
-	{
-	color: #333333
-}
-
-.top-info .topbar-sidebar a {
-	color: #666666 !important;
-}
-
-.top-info .topbar-sidebar a:hover {
-	color: #1d70b7 !important
 }
 
 /****************Custom background**************************/
@@ -364,44 +215,6 @@ a:hover, a:focus, a:active, .footer-custom-menu li a:hover {
 }
 
 /****************** MAIN NAVIGATION *******************/
-nav ul.nav.navbar-nav {
-	background: #ffffff;
-	background-attachment: fixed;
-	background-position: right top;
-}
-
-nav ul.nav.navbar-nav>li {
-	background: transparent;
-}
-
-nav ul.navbar-nav>li>a {
-	color: #20b0da;
-}
-
-nav ul.navbar-nav>li>a:hover {
-	color: #ffffff;
-}
-
-nav ul.navbar-nav li.active>a {
-	color: #ffffff !important;
-}
-
-nav ul.navbar-nav>li>a:hover {
-	
-}
-
-nav ul.navbar-nav ul.dropdown-menu>li {
-	background: #20b0da
-}
-
-nav ul.navbar-nav ul.dropdown-menu>li>a:hover {
-	color: #006ba0 !important
-}
-
-nav ul.navbar-nav ul.dropdown-menu>li>a {
-	border-bottom: 1px solid #006ba0;
-}
-
 h1 {
 	color: #20bcda;
 	font-weight: normal;
@@ -412,6 +225,7 @@ h1 {
 	font-weight: normal;
 }
 </style>
+
 <style type="text/css">
 .recentcomments a {
 	display: inline !important;
@@ -439,7 +253,7 @@ h1 {
 }
 </style>
 
-<!-- STILE BOTTONE CANDIDATURA -->
+<!-- STILE BOTTONE -->
 <style>
 .button {
 	border: none;
@@ -599,36 +413,10 @@ h1 {
 
 	<!--body inner-->
 
-	<script type="text/javascript">
-		jQuery( 'body' ).wrapInner( '<div class="animsition"></div>' ).removeClass( 'animsition' );
-		</script>
-	<script type="text/javascript">
-				function revslider_showDoubleJqueryError(sliderID) {
-					var errorMessage = "Revolution Slider Error: You have some jquery.js library include that comes after the revolution files js include.";
-					errorMessage += "<br> This includes make eliminates the revolution slider libraries, and make it not work.";
-					errorMessage += "<br><br> To fix it you can:<br>&nbsp;&nbsp;&nbsp; 1. In the Slider Settings -> Troubleshooting set option:  <strong><b>Put JS Includes To Body</b></strong> option to true.";
-					errorMessage += "<br>&nbsp;&nbsp;&nbsp; 2. Find the double jquery.js include and remove it.";
-					errorMessage = "<span style='font-size:16px;color:#BC0C06;'>" + errorMessage + "</span>";
-						jQuery(sliderID).show().html(errorMessage);
-				}
-			
-</script>
-	<script type='text/javascript'>
-/* <![CDATA[ */
-var wpcf7 = {"apiSettings":{"root":"https:\/\/www.idmconsulting.it\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
-/* ]]> */
-</script>
 	<script type='text/javascript'
 		src='https://www.idmconsulting.it/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.1'></script>
 	<script type='text/javascript'
 		src='https://www.idmconsulting.it/wp-content/plugins/responsive-accordion-and-collapse/js/bootstrap.js?ver=4.9.15'></script>
-	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-content/plugins/responsive-accordion-and-collapse/js/accordion.js?ver=4.9.15'></script>
-	<script type='text/javascript'>
-/* <![CDATA[ */
-var wpcf7_redirect_forms = {"2541":{"page_id":"2558","external_url":"","use_external_url":"","open_in_new_tab":"","http_build_query":"","http_build_query_selectively":"","http_build_query_selectively_fields":"","delay_redirect":"0","after_sent_script":"","thankyou_page_url":"https:\/\/www.idmconsulting.it\/landing-page-webinar-download\/"},"1356":{"page_id":"","external_url":"","use_external_url":"","open_in_new_tab":"","http_build_query":"","http_build_query_selectively":"","http_build_query_selectively_fields":"","delay_redirect":"","after_sent_script":"","thankyou_page_url":""}};
-/* ]]> */
-</script>
 	<script type='text/javascript'
 		src='https://www.idmconsulting.it/wp-content/plugins/wpcf7-redirect/js/wpcf7-redirect-script.js'></script>
 	<script type='text/javascript'
@@ -638,33 +426,23 @@ var wpcf7_redirect_forms = {"2541":{"page_id":"2558","external_url":"","use_exte
 	<script type='text/javascript'
 		src='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/lib/bower/isotope/dist/isotope.pkgd.min.js?ver=5.5.4'></script>
 	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/lib/bower/flexslider/jquery.flexslider-min.js?ver=5.5.4'></script>
-	<script type='text/javascript'
 		src='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/lib/prettyphoto/js/jquery.prettyPhoto.min.js?ver=5.5.4'></script>
 	<script type='text/javascript'
 		src='https://www.idmconsulting.it/wp-content/themes/dart/js/jquery.waypoints.min.js?ver=3.2'></script>
 	<script type='text/javascript'
 		src='https://www.idmconsulting.it/wp-content/themes/dart/js/jquery.easy-pie-chart.js?ver=3.2'></script>
 	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-content/themes/dart/js/jflickrfeed.min.js?ver=3.2'></script>
-	<script type='text/javascript'
 		src='https://www.idmconsulting.it/wp-content/themes/dart/js/jquery.validate.min.js?ver=3.2'></script>
 	<script type='text/javascript'
 		src='https://www.idmconsulting.it/wp-content/themes/dart/js/jquery.stellar.min.js?ver=3.2'></script>
 	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-content/themes/dart/js/jquery.mb.YTPlayer.js?ver=3.2'></script>
-	<script type='text/javascript'
 		src='https://www.idmconsulting.it/wp-content/themes/dart/js/custom.js?ver=3.2'></script>
-	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-content/plugins/youtube-embed-plus/scripts/fitvids.min.js?ver=12.2'></script>
 	<script type='text/javascript'
 		src='https://www.idmconsulting.it/wp-includes/js/wp-embed.min.js?ver=4.9.15'></script>
 	<script type='text/javascript'
 		src='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=5.5.4'></script>
 	<script type='text/javascript'
 		src='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/lib/bower/twbs-pagination/jquery.twbsPagination.min.js?ver=5.5.4'></script>
-	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/lib/owl-carousel2-dist/owl.carousel.min.js?ver=5.5.4'></script>
 	<script type='text/javascript'
 		src='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/lib/bower/imagesloaded/imagesloaded.pkgd.min.js?ver=4.9.15'></script>
 	<script type='text/javascript'
