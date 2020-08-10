@@ -56,6 +56,10 @@
 	<bean id="daoo" class="idm.dao.AmministrazioneDao">
 		<property name="template" ref="jt"></property>
 	</bean>
+	</bean>   
+	<bean id="col" class="idm.dao.ColloquioDao">
+		<property name="template" ref="jt"></property>
+	</bean> 
 
 
 	<!-- bind your messages.properties -->

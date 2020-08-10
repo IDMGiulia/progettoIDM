@@ -54,9 +54,9 @@ public class Candidato {
 	//percorso di studi del candidato
 	private String percorso;
 	
+	//elenco delle conoscenze
 	private List<String>conoscenze=new ArrayList<>();
-	
-	
+
 	public List<String> getConoscenze() {
 		return conoscenze;
 	}
