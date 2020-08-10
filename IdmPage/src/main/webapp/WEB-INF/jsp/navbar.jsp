@@ -217,6 +217,10 @@ nav ul.navbar-nav ul.dropdown-menu>li>a {
 									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1399"><a
 									href="https://www.idmconsulting.it/formazione/"
 									class="page-scroll" data-target="#formazione">Formazione</a></li>
+								<li id="menu-item-1399"
+					                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1399"><a
+					                  href="presentazione"
+					                  class="page-scroll">Academy IDM</a></li>
 								<li id="menu-item-1400"
 									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1400"><a
 									href="https://www.idmconsulting.it/assistenza/"

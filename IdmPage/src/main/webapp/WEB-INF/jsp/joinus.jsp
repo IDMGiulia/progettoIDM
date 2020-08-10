@@ -639,20 +639,21 @@ h1 {
 																</h4>
 															</div>
 															<div class="vc_tta-panel-body">
-																<div
-																	class="wpb_text_column wpb_content_element  vc_custom_1519396982742">
-																	<div class="wpb_wrapper">
-																		<p>
-																			Per conoscere tutte le informazioni riguardo alla
-																			nostra Academy <a href="presentazione">clicca qui</a>
-																		</p>
-																		<p>L' Academy è rivolta a candidati di entrambi i
-																			sessi ai sensi della legge (L.903/77 e D.Lgs n.
-																			98/2006, art 27).</p>
-
-																	</div>
-																</div>
-															</div>
+								                                <div
+								                                  class="wpb_text_column wpb_content_element  vc_custom_1519396982742">
+								                                  <div class="wpb_wrapper">
+								                                    <p>
+								                                      Per conoscere tutte le informazioni riguardo alla
+								                                      nostra Academy <a href="presentazione">clicca qui</a>
+								                                    </p>
+								                                    <p>Se conosci già la nostra Academy e vuoi candidarti direttamente <a href="candidaturaAc">clicca qui</a></p>
+								                                    <p>L' Academy è rivolta a candidati di entrambi i
+								                                      sessi ai sensi della legge (L.903/77 e D.Lgs n.
+								                                      98/2006, art 27).</p>
+								
+								                                  </div>
+								                                </div>
+								                              </div>
 														</div>
 
 														<!-- S .NET DEV TORINO -->
