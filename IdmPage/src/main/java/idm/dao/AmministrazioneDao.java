@@ -5,7 +5,9 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.Optional;
 
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.hibernate.boot.Metadata;
 import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
@@ -48,5 +50,13 @@ public class AmministrazioneDao {
 				.findFirst();
 		
 		return risultato;
+	}
+	
+	public void salva(Amministrazione amministrazione) {
+		Session session = factory.openSession();  
+		Transaction t = session.beginTransaction();
+		session.saveOrUpdate(amministrazione);
+		t.commit();
+		session.close();
 	}
 }

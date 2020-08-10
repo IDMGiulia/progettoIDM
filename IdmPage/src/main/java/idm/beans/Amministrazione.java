@@ -15,7 +15,18 @@ public class Amministrazione {
 
 	private int permessi;
 	
-//	public Amministrazione(@NotEmpty String username, @NotEmpty @Size(max = 50) String password,
+	private String token;
+	
+public String getToken() {
+		return token;
+	}
+	public void setToken(String token) {
+		this.token = token;
+	}
+	public int getPermessi() {
+		return permessi;
+	}
+	//	public Amministrazione(@NotEmpty String username, @NotEmpty @Size(max = 50) String password,
 //			@NotEmpty boolean permessi) {
 //		super();
 //		this.username = username;

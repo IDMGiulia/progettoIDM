@@ -19,6 +19,14 @@
 
 	<dependencies>
 
+		<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-crypto -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-crypto</artifactId>
+			<version>5.0.0.RELEASE</version>
+		</dependency>
+
+
 		<!-- DIPENDENZA PER AUTORIZZAZIONE OAUTH2 -->
 		<!-- https://mvnrepository.com/artifact/org.apache.oltu.oauth2/org.apache.oltu.oauth2.client -->
 		<dependency>

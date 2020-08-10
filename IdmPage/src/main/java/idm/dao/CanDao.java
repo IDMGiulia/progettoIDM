@@ -114,7 +114,7 @@ public class CanDao {
 			public CanComp mapRow(ResultSet rs, int row) throws SQLException {    
 				CanComp c=new CanComp();    
 				c.setCanId(rs.getInt(1));    
-				c.setCompetenza(rs.getString(3)); 
+				c.setCompetenza(rs.getString(3));
 				return c;    
 			}    
 		});    

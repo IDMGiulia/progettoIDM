@@ -10,5 +10,6 @@
     </id>      
     <property name="password"></property>  
     <property name="permessi"></property>
+    <property name="token"></property>
 	</class>  
 </hibernate-mapping>    

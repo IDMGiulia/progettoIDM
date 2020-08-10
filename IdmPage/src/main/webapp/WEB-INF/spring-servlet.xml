@@ -14,13 +14,19 @@
 		base-package="idm.control"></context:component-scan>
 	<mvc:annotation-driven />
 	<mvc:resources mapping="/img/**" location="/WEB-INF/img/" />
-	
+
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/jsp/"></property>
 		<property name="suffix" value=".jsp"></property>
 	</bean>
 
+<!--	<bean id="passwordEncoder"
+		class="org.jasypt.springsecurity4.springsecurity4.crypto.password.PasswordEncoder">
+		<property name="passwordEncryptor">
+			<ref bean="jasyptPasswordEncryptor" />
+		</property>
+	</bean> -->
 	<bean id="ds"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName"
@@ -34,26 +40,27 @@
 	<bean id="jt" class="org.springframework.jdbc.core.JdbcTemplate">
 		<property name="dataSource" ref="ds"></property>
 	</bean>
-	
+
 	<bean id="dao" class="idm.dao.CanDao">
 		<property name="template" ref="jt"></property>
-	</bean>  
-	
+	</bean>
+
 	<bean id="d" class="idm.dao.RecensioneDao">
 		<property name="template" ref="jt"></property>
-	</bean>  
-	
+	</bean>
+
 	<bean id="da" class="idm.dao.SeniorDao">
 		<property name="template" ref="jt"></property>
-	</bean> 
-	
+	</bean>
+
 	<bean id="daoo" class="idm.dao.AmministrazioneDao">
 		<property name="template" ref="jt"></property>
-	</bean>   
+	</bean>
 
-	
-	     <!-- bind your messages.properties -->
-	<bean class="org.springframework.context.support.ResourceBundleMessageSource"
+
+	<!-- bind your messages.properties -->
+	<bean
+		class="org.springframework.context.support.ResourceBundleMessageSource"
 		id="messageSource">
 		<property name="basename" value="messages" />
 		<property name="defaultEncoding" value="UTF-8" />

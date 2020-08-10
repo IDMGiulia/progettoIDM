@@ -1,26 +1,19 @@
 package idm.control;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import java.util.Calendar;
+import java.util.Optional;
 import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.support.SessionStatus;
-
 import idm.beans.Amministrazione;
-import idm.beans.Candidato;
-import idm.beans.Senior;
 import idm.dao.AmministrazioneDao;
-import idm.dao.SeniorDao;
 
 @Controller
 public class AmministrazioneController {
@@ -28,6 +21,10 @@ public class AmministrazioneController {
 	@Autowired
 	AmministrazioneDao dao;
 	
+	@Bean
+	public PasswordEncoder passwordEncoder() {
+	  return new BCryptPasswordEncoder();
+	}
 	
 	 //link al form di candidatura Senior 
 	@RequestMapping("/login")    
@@ -43,8 +40,14 @@ public class AmministrazioneController {
 	 *  because default request is GET*/    
 	@RequestMapping(value="/log",method = RequestMethod.POST)    
 	public String controllaLog(@Valid @ModelAttribute("log") Amministrazione amministrazione, Model m){ 
-	    if(dao.login(amministrazione.getUsername(), amministrazione.getPassword()).isPresent())
-	    	return "logindopo";//will derict to canconf   
+		Optional<Amministrazione> sara = dao.login(amministrazione.getUsername(), amministrazione.getPassword());
+	    if(sara.isPresent()) {
+	    	String token= sara.get().getUsername()+sara.get().getPassword()+Calendar.getInstance();
+	    	PasswordEncoder passwordEncoder=this.passwordEncoder();
+	    	sara.get().setToken(passwordEncoder.encode(token));
+	    	System.out.println(sara.get().getToken());
+	    	dao.salva(sara.get());
+	    	return "logindopo";}//will derict to canconf   }
 	    else {
 			return "login";
 		}
