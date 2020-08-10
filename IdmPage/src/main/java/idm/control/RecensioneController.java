@@ -1,5 +1,6 @@
 package idm.control;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.validation.Valid;
@@ -77,7 +78,6 @@ public class RecensioneController {
     public String editsave(@ModelAttribute("rec") Recensione rec){    
         dao.update(rec);    
         return "redirect:/amministraRecensioni";    
-    } 
-	
+    } 	
 	
 }
