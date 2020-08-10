@@ -96,7 +96,7 @@ h1 {
 					</div>
 					<div class="col-sm-2"></div>
 					<div class="col-sm-4">
-						<br> <a href="selezione" class="button button2">Selezione
+						<br> <a href="/IdmPage/selezione" class="button button2">Selezione
 							dei candidati</a>
 					</div>
 					<div class="col-sm-1"></div>
