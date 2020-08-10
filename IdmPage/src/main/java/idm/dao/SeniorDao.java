@@ -125,17 +125,16 @@ public class SeniorDao {
 	} 
 	
 	//metodo per la selezione dei senior
-	public List<Senior> getSeniorForParameter(String sede,String competenze, String stato){   
+	public List<Senior> getSeniorForParameter(String sede,String competenze, String stato, String pos){   
 	      List<Senior> senior= new ArrayList <Senior>();
 	      List<Senior> risultato = new ArrayList<>();
 	      senior = this.getSenior();
 	      risultato= senior.stream()
 	          .filter(x->x.getCompetenze().contains(competenze)
 	              &&((x.getLuogoCandidatura().equals(sede)||x.getLuogoCandidatura().contains("E")||sede.contains("E")))
-	              &&((x.getStato().equals(stato)||stato.compareTo("")==0)))
+	              &&((x.getStato().equals(stato)||stato.compareTo("")==0))
+	              &&((x.getPosizioneLav().equals(pos)|| x.getPosizioneLav().equals("E") || pos.contains("E"))))
 	          .collect(Collectors.toList());
-	      
-	      
 	          return risultato;    
 	    }
 	  

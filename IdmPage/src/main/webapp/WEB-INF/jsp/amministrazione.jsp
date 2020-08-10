@@ -120,8 +120,8 @@ h1 {
 							<td>${can.livello}</td>
 							<td>${can.paeseDiploma}</td>
 							<td>${can.percorso}</td>
-							<td><a href="deleteemp/${can.id}">Cancella</a></td>
-							<td><a href="editemp/${can.id}">Modifica</a></td>
+							<td><a href="/IdmPage/deleteemp/${can.id}">Cancella</a></td>
+							<td><a href="/IdmPage/editemp/${can.id}">Modifica</a></td>
 						</tr>
 					</c:forEach>
 				</table>

@@ -123,9 +123,9 @@ h1 {
 							<td>${can.paeseDiploma}</td>
 							<td>${can.percorso}</td>
 							<td>${can.posizioneLav}</td>
-							<td><a href="colloqui/${can.id}">Colloqui</a></td>
-							<td><a href="deletesen/${can.id}">Cancella</a></td>
-							<td><a href="editsen/${can.id}">Modifica</a></td>
+							<td><a href="/IdmPage/colloqui/${can.id}">Colloqui</a></td>
+							<td><a href="/IdmPage/deletesen/${can.id}">Cancella</a></td>
+							<td><a href="/IdmPage/editsen/${can.id}">Modifica</a></td>
 						</tr>
 					</c:forEach>
 				</table>

@@ -86,7 +86,7 @@ public class CanController {
     list=dao.getCandidatoForParameter(sede, compe+",", stato);
       m.addAttribute("list",list); 
           System.out.println(sede+compe+stato);
-         return "amministrazione2";    
+         return "amministrazione";    
   }
 
 

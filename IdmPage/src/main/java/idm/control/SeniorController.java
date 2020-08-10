@@ -102,10 +102,10 @@ public class SeniorController {
 	    
 		@RequestMapping(value="/select")    
 	    public String viewSenior(@RequestParam("sede") String sede, @RequestParam("competenza") String compe,
-	        @RequestParam("stato") String stato,Model m){ 
+	        @RequestParam("stato") String stato,@RequestParam("posizioneLav") String pos,Model m){ 
 	    List<Senior> list= new ArrayList<>();
-	    list=dao.getSeniorForParameter(sede, compe+",", stato);
+	    list=dao.getSeniorForParameter(sede, compe+",", stato,pos);
 	      m.addAttribute("list",list); 
-	         return "redirect:/amministraSenior";    
+	         return "amministraSenior";    
 	  }
 }
