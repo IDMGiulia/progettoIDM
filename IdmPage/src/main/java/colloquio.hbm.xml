@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD//EN"  
+ "http://hibernate.org/hibernate-mapping-3.0.dtd">  
+  
+ <hibernate-mapping>  
+  <class name="idm.beans.Colloquio" table="colloqui">  
+    <id name="id">  
+     <generator class="increment"></generator>  
+    </id>      
+    <property name="candidato"></property>
+    <property name="data"></property>
+    <property name="tipo"></property> 
+   	<property name="numero"></property> 
+    <property name="note"></property>
+    <property name="valutazione"></property>  
+	</class>  
+</hibernate-mapping>    

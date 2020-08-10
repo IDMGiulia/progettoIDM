@@ -20,6 +20,7 @@
     	<mapping resource="recensione.hbm.xml"/> 
     	<mapping resource="senior.hbm.xml"/>
     	<mapping resource="amministrazione.hbm.xml"/>
+    	<mapping resource="colloquio.hbm.xml"/>
   
     </session-factory>  
   
