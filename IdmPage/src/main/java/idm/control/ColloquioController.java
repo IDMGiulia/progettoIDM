@@ -19,6 +19,7 @@ import idm.beans.Candidato;
 import idm.beans.Colloquio;
 import idm.beans.Recensione;
 import idm.beans.Senior;
+import idm.dao.CanDao;
 import idm.dao.ColloquioDao;
 import idm.dao.RecensioneDao;
 import idm.dao.SeniorDao;
@@ -30,8 +31,10 @@ public class ColloquioController {
 	ColloquioDao dao;
 	@Autowired
 	SeniorDao senior;
+	@Autowired
+	CanDao can;
 	
-	 //collega candidato all'elenco dei colloqui"  
+	 //collega candidato all'elenco dei colloqui per i senior"  
     @RequestMapping(value="/colloqui/{id}")    
     public String crea(@PathVariable int id, Model m){    
     	List<Colloquio> list=dao.getColloquiCan("S".concat("_"+id));
@@ -39,6 +42,15 @@ public class ColloquioController {
         m.addAttribute("colloqui",list);  
         m.addAttribute("senior",s); 
         return "amministraColloqui";    
+    } 
+    
+    @RequestMapping(value="/colloquio/{id}")    
+    public String creaJ(@PathVariable int id, Model m){    
+    	List<Colloquio> list=dao.getColloquiCan("J".concat("_"+id));
+    	Candidato c=can.getCanById(id);
+        m.addAttribute("colloqui",list);  
+        m.addAttribute("cand",c); 
+        return "amministraColloquiJ";    
     } 
     
     //permette di aggiungere un nuovo colloquio
@@ -49,6 +61,16 @@ public class ColloquioController {
         m.addAttribute("col",col);  
         m.addAttribute("senior",s); 
         return "formColloquio";    
+    } 
+    
+    //permette di aggiungere un nuovo colloquio per i candidati
+    @RequestMapping(value="/aggiungiColloquio/{id}")
+    public String aggiungicJ(@PathVariable int id, Model m){   
+    	Colloquio col=new Colloquio();
+    	Candidato c= can.getCanById(id);
+        m.addAttribute("col",col);  
+        m.addAttribute("cand",c); 
+        return "formColloquioJ";    
     } 
     
 	@RequestMapping(value="/aggiungi",method = RequestMethod.POST)    
@@ -64,6 +86,21 @@ public class ColloquioController {
 	    	return "formColloquio";
 		} 
 		return "redirect:/amministraSenior"; 
+	} 
+	
+	@RequestMapping(value="/aggiungiJ",method = RequestMethod.POST)    
+	public String salvaColJ(@Valid @ModelAttribute("col") Colloquio col, BindingResult result, 
+			SessionStatus status,Model m){ 
+	    //Check validation errors
+	    if (result.hasErrors()) {   
+	        return "formColloquioJ";
+	    }
+	    try {
+	    dao.inserisci(col);
+	    }catch (Exception e) {
+	    	return "formColloquioJ";
+		} 
+		return "redirect:/amministrazione"; 
 	} 
     
 	

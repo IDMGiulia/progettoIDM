@@ -1,16 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<!DOCTYPE html> 
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>  
 <html lang="it">
-
 <head>
 <meta charset="utf-8" />
 <meta name="viewport"
 	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-<title>Candidature Academy | IDM - We simplify your work</title>
+<title>Form Colloquio | IDM - We simplify your work</title>
 
 <link rel="shortcut icon"
 	href="https://www.idmconsulting.it/wp-content/uploads/2016/01/idm-favicon.png" />
@@ -74,6 +72,36 @@ h1 {
 }
 </style>
 
+<!-- STILE BOTTONE -->
+<style>
+.button {
+	border: none;
+	color: white;
+	padding: 16px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	transition-duration: 0.4s;
+	cursor: pointer;
+}
+
+.button2 {
+	background-color: #DCF0FF;
+	color: black;
+	border: 2px solid #428BCA;
+	border-radius: 8px;
+}
+
+.button2:hover {
+	background-color: #428BCA;
+	color: white;
+	border: 2px solid #DCF0FF;
+	border-radius: 8px;
+}
+</style>
+
 </head>
 
 <body
@@ -84,65 +112,81 @@ h1 {
 
 	<div class="body-inner ">
 
-
 		<!-- Sezione Centrale della Pagina -->
 		<section class="main-wrapper pagecustom-1339">
-			<div class="container" style="margin-left: 30px">
+			<div class="container" style="margin-top: 50px">
 
-				<div class="row">
-					<div class="col-sm-1"></div>
-					<div class="col-sm-4">
-						<h1>Lista di candidati</h1>
-					</div>
-					<div class="col-sm-2"></div>
-					<div class="col-sm-4">
-						<br> <a href="/IdmPage/selezione" class="button button2">Selezione
-							dei candidati</a>
-					</div>
-					<div class="col-sm-1"></div>
+				<div style="text-align: center">
+					<h1>Aggiungi un colloquio</h1>
 				</div>
-				<br> <br>
-				<table>
-					<tr>
-						<th>Id</th>
-						<th>nome</th>
-						<th>Cognome</th>
-						<th>Email</th>
-						<th>Telefono</th>
-						<th>Competenze</th>
-						<th>sede</th>
-						<th>stato candidatura</th>
-						<th>Note</th>
-						<th>Livello istruzione</th>
-						<th>percorso</th>
-						<th>Colloqui</th>
-						<th>Cancella</th>
-						<th>Modifica</th>
-					</tr>
-					<c:forEach var="can" items="${list}">
-						<tr>
-							<td>${can.id}</td>
-							<td>${can.nome}</td>
-							<td>${can.cognome}</td>
-							<td>${can.email}</td>
-							<td>${can.telefono}</td>
-							<td>${can.competenze}</td>
-							<td>${can.luogoCandidatura}</td>
-							<td>${can.stato}</td>
-							<td>${can.note}</td>
-							<td>${can.livello}</td>
-							<td>${can.percorso}</td>
-							<td><a href="/IdmPage/colloquio/${can.id}">Colloqui</a></td>
-							<td><a href="/IdmPage/deleteemp/${can.id}">Cancella</a></td>
-							<td><a href="/IdmPage/editemp/${can.id}">Modifica</a></td>
-						</tr>
-					</c:forEach>
-				</table>
+				<br>
+
+				<form:form method="POST" action="/IdmPage/aggiungiJ" modelAttribute="col">
+
+					<!-- SEZIONE DATI PERSONALI -->
+					<div id="div_cv" class="row text-left">
+					<form:input path="candidato" hidden="hidden" type="text" value="J_${cand.id}"/>  
+						<div class="col-md-3">
+							<div class="form-group">
+								<label class="form-label">Data *</label>
+								<form:input path="data" type="text"/>
+							</div>
+						</div>
+						<div class="col-md-1"></div>
+						<div class="col-md-3">
+							<div class="form-group">
+								<label class="form-label">Tipo *</label>
+								<form:input path="tipo" type="text"/>
+							</div>
+						</div>
+						<div class="col-md-1"></div>
+						<div class="col-md-3">
+							<div class="form-group">
+								<label class="form-label">numero *</label>
+								<form:input path="numero" type="text"/>
+							</div>
+						</div>
+						<div class="col-md-1"></div>
+
+					<br>
+					<br>
+
+						<!-- RECENSIONE -->
+						<div id="div_cv" class="row text-left" style="text-align: center" >
+							<div class="col-md-2"></div>
+							<div class="col-md-6">
+								<div class="x">
+									<span><form:label path="note"><h3><b>Note:</b></h3></form:label></span>
+								</div>
+								<form:textarea path="note" style="width: 80%; height: 200px; border: none"
+									maxlength="1000" placeholder="Scrivi qui le note" />
+							</div>
+							<div class="col-md-2"></div>
+							<div class="col-md-3">
+							<div class="form-group">
+								<label class="form-label">valutazione *</label>
+								<form:input path="valutazione" type="number" placeholder="8"/>
+							</div>
+						</div>
+						<div class="col-md-1"></div>
+					</div>
+					</div>
+
+					<br>
+					<br>
+
+					<!-- BOTTONE SUBMIT -->
+					<div>
+						<div style="text-align: center">
+							<input type="submit" class="button button2"
+								value="Inserisci colloquio" />
+						</div>
+					</div>
+				</form:form>
+
 			</div>
 		</section>
-
 	</div>
-
 </body>
 
 </html>

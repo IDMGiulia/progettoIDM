@@ -10,7 +10,7 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-<title>Candidature Academy | IDM - We simplify your work</title>
+<title>Amministrazione Colloqui | IDM - We simplify your work</title>
 
 <link rel="shortcut icon"
 	href="https://www.idmconsulting.it/wp-content/uploads/2016/01/idm-favicon.png" />
@@ -89,55 +89,32 @@ h1 {
 		<section class="main-wrapper pagecustom-1339">
 			<div class="container" style="margin-left: 30px">
 
-				<div class="row">
-					<div class="col-sm-1"></div>
-					<div class="col-sm-4">
-						<h1>Lista di candidati</h1>
-					</div>
-					<div class="col-sm-2"></div>
-					<div class="col-sm-4">
-						<br> <a href="/IdmPage/selezione" class="button button2">Selezione
-							dei candidati</a>
-					</div>
-					<div class="col-sm-1"></div>
-				</div>
-				<br> <br>
+				<h1>Elenco dei controlli</h1>
+				<a href="/IdmPage/aggiungiColloquio/${cand.id}">Aggiungi un colloquio</a> <br> <br>
+				<br>
 				<table>
 					<tr>
-						<th>Id</th>
-						<th>nome</th>
-						<th>Cognome</th>
-						<th>Email</th>
-						<th>Telefono</th>
-						<th>Competenze</th>
-						<th>sede</th>
-						<th>stato candidatura</th>
-						<th>Note</th>
-						<th>Livello istruzione</th>
-						<th>percorso</th>
-						<th>Colloqui</th>
-						<th>Cancella</th>
-						<th>Modifica</th>
+						<th>Id Colloquio</th>
+						<th>Candidato</th>
+						<th>Data</th>
+						<th>tipo</th>
+						<th>numero</th>
+						<th>note</th>
+						<th>valutazione</th>
 					</tr>
-					<c:forEach var="can" items="${list}">
+					<c:forEach var="col" items="${colloqui}">
 						<tr>
-							<td>${can.id}</td>
-							<td>${can.nome}</td>
-							<td>${can.cognome}</td>
-							<td>${can.email}</td>
-							<td>${can.telefono}</td>
-							<td>${can.competenze}</td>
-							<td>${can.luogoCandidatura}</td>
-							<td>${can.stato}</td>
-							<td>${can.note}</td>
-							<td>${can.livello}</td>
-							<td>${can.percorso}</td>
-							<td><a href="/IdmPage/colloquio/${can.id}">Colloqui</a></td>
-							<td><a href="/IdmPage/deleteemp/${can.id}">Cancella</a></td>
-							<td><a href="/IdmPage/editemp/${can.id}">Modifica</a></td>
+							<td>${col.id}</td>
+							<td>${cand.nome} ${cand.cognome}</td>
+							<td>${col.data}</td>
+							<td>${col.tipo}</td>
+							<td>${col.numero}</td>
+							<td>${col.note}</td>
+							<td>${col.valutazione}</td>
 						</tr>
 					</c:forEach>
 				</table>
+
 			</div>
 		</section>
 
