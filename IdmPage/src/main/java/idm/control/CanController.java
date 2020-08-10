@@ -44,9 +44,7 @@ public class CanController {
 	{  
 		List<Recensione> list= new ArrayList<>();
 		list=Rdao.getApprovate();
-		int i=0;
 		m.addAttribute("rec",list); 
-		m.addAttribute("cost", i);
 		return "ac_home";  
 	}
 	
