@@ -132,7 +132,6 @@ h1 {
 
 						<form:hidden path="id" />
 						<form:hidden path="livello" />
-						<form:hidden path="paeseDiploma" />
 						<form:hidden path="percorso" />
 						<tr>
 							<td>Nome :</td>

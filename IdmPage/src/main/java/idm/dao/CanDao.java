@@ -102,7 +102,6 @@ public class CanDao {
 				e.setStato(rs.getString(8));
 				e.setNote(rs.getString(9));
 				e.setLivello(rs.getString(10));
-				e.setPaeseDiploma(rs.getString(11));
 				e.setPercorso(rs.getString(12));
 				return e;    
 			}    

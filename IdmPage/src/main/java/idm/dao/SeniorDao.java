@@ -108,7 +108,6 @@ public class SeniorDao {
 				e.setStato(rs.getString(8));
 				e.setNote(rs.getString(9));
 				e.setLivello(rs.getString(10));
-				e.setPaeseDiploma(rs.getString(11));
 				e.setPercorso(rs.getString(12));
 				e.setPosizioneLav(rs.getString(13));
 				return e;    

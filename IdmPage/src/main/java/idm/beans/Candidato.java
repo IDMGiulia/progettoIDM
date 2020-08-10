@@ -48,9 +48,6 @@ public class Candidato {
 	//Livello di istruzione del candidato
 	private String livello;
 	
-	//Paese in cui è stato ottenuto il diploma
-	private String paeseDiploma;
-	
 	//percorso di studi del candidato
 	private String percorso;
 	
@@ -135,12 +132,6 @@ public class Candidato {
 	}  
 	public String getLivello( ) {
 		return livello;
-	}
-	public String getPaeseDiploma() {
-		return paeseDiploma;
-	}
-	public void setPaeseDiploma(String paeseDiploma) {
-		this.paeseDiploma = paeseDiploma;
 	}
 	public String getPercorso() {
 		return percorso;

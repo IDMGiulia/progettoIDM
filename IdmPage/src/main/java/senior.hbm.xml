@@ -17,7 +17,6 @@
     <property name="stato" ></property>      
     <property name="note" ></property>  
     <property name="livello" ></property>
-    <property name="paeseDiploma" ></property>
     <property name="percorso" ></property>      
     <list name="favoriteFrameworks" table="sencomp" fetch="select" cascade="all">  
             <key column="sen_id" />  
