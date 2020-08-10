@@ -521,7 +521,7 @@ h1 {
 									<span><form:label path="recensione"><h3><b>Recensione:</b></h3></form:label></span>
 								</div>
 								<form:textarea path="recensione" style="width: 80%; height: 200px; border: none"
-									maxlength="400" placeholder="Scrivi qui la tua recensione da pubblicare..." />
+									maxlength="1000" placeholder="Scrivi qui la tua recensione da pubblicare..." />
 							</div>
 							<div class="col-md-2"></div>
 					</div>
