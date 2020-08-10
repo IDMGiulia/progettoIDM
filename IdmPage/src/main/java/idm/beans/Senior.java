@@ -48,15 +48,10 @@ public class Senior {
 	//Livello di istruzione del candidato
 	private String livello;
 	
-	//Paese in cui è stato ottenuto il diploma
-	private String paeseDiploma;
-	
 	//percorso di studi del candidato
 	private String percorso;
 	
 	private String posizioneLav;
-	
-	
 
 	public String getLivello() {
 		return livello;
@@ -64,14 +59,6 @@ public class Senior {
 
 	public void setLivello(String livello) {
 		this.livello = livello;
-	}
-
-	public String getPaeseDiploma() {
-		return paeseDiploma;
-	}
-
-	public void setPaeseDiploma(String paeseDiploma) {
-		this.paeseDiploma = paeseDiploma;
 	}
 
 	public String getPercorso() {

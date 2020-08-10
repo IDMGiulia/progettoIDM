@@ -311,14 +311,13 @@ h1 {
 						<div class="col-sm-1"></div>
 						<div class="col-sm-6" style="text-align: center">
 							<div class="row">
-								<div class="col-sm-2" style="text-align: left">
+								<div class="col-sm-6" style="text-align: left">
 									<h4>
 										<b>Nome: </b>
 									</h4>${can.nome}
 									<br>
 								</div>
-								<div class="col-sm-4"></div>
-								<div class="col-sm-2" style="text-align: left">
+								<div class="col-sm-6" style="text-align: left">
 									<h4>
 										<b>Cognome: </b>
 									</h4>${can.cognome}
@@ -326,14 +325,13 @@ h1 {
 								</div>
 							</div>
 							<div class="row">
-								<div class="col-sm-2" style="text-align: left">
+								<div class="col-sm-6" style="text-align: left">
 									<h4>
 										<b>Email: </b>
 									</h4>${can.email}
 									<br>
 								</div>
-								<div class="col-sm-4"></div>
-								<div class="col-sm-2" style="text-align: left">
+								<div class="col-sm-6" style="text-align: left">
 									<h4>
 										<b>Telefono: </b>
 									</h4>${can.telefono}
@@ -342,19 +340,13 @@ h1 {
 							</div>
 							<br>
 							<div class="row">
-								<div class="col-sm-4" style="text-align: left">
+								<div class="col-sm-6" style="text-align: left">
 									<h4>
 										<b>Titolo di studio: </b>
 									</h4>${can.livello}
 									<br>
 								</div>
-								<div class="col-sm-4" style="text-align: left">
-									<h4>
-										<b>Conseguito in: </b>
-									</h4>
-										${can.paeseDiploma}
-								</div>
-								<div class="col-sm-4" style="text-align: left">
+								<div class="col-sm-6" style="text-align: left">
 									<h4>
 										<b>Percorso: </b>
 									</h4>${can.percorso}

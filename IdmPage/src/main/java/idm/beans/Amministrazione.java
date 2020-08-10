@@ -3,8 +3,6 @@ package idm.beans;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
-import org.hibernate.type.descriptor.sql.TinyIntTypeDescriptor;
-
 public class Amministrazione {
 
 	@NotEmpty

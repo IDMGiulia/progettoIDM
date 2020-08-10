@@ -10,7 +10,10 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-<title>Tabella Candidature | IDM - We simplify your work</title>
+<title>Candidature Academy | IDM - We simplify your work</title>
+
+<link rel="shortcut icon"
+	href="https://www.idmconsulting.it/wp-content/uploads/2016/01/idm-favicon.png" />
 
 <link rel='stylesheet' id='bootstrap-css'
 	href='https://www.idmconsulting.it/wp-content/themes/dart/css/bootstrap.min.css?ver=4.9.15'
@@ -86,9 +89,19 @@ h1 {
 		<section class="main-wrapper pagecustom-1339">
 			<div class="container" style="margin-left: 30px">
 
-				<h1>Lista di candidati</h1>
-				<a href="selezione">selezione dei candidati</a> <br> <br>
-				<br>
+				<div class="row">
+					<div class="col-sm-1"></div>
+					<div class="col-sm-4">
+						<h1>Lista di candidati</h1>
+					</div>
+					<div class="col-sm-2"></div>
+					<div class="col-sm-4">
+						<br> <a href="selezione" class="button button2">Selezione
+							dei candidati</a>
+					</div>
+					<div class="col-sm-1"></div>
+				</div>
+				<br> <br>
 				<table>
 					<tr>
 						<th>Id</th>
@@ -101,7 +114,6 @@ h1 {
 						<th>stato candidatura</th>
 						<th>Note</th>
 						<th>Livello istruzione</th>
-						<th>luogo</th>
 						<th>percorso</th>
 						<th>Cancella</th>
 						<th>Modifica</th>
@@ -118,92 +130,16 @@ h1 {
 							<td>${can.stato}</td>
 							<td>${can.note}</td>
 							<td>${can.livello}</td>
-							<td>${can.paeseDiploma}</td>
 							<td>${can.percorso}</td>
 							<td><a href="/IdmPage/deleteemp/${can.id}">Cancella</a></td>
 							<td><a href="/IdmPage/editemp/${can.id}">Modifica</a></td>
 						</tr>
 					</c:forEach>
 				</table>
-
 			</div>
 		</section>
 
-
 	</div>
-
-	<!--body inner-->
-
-	<script type="text/javascript">
-		jQuery( 'body' ).wrapInner( '<div class="animsition"></div>' ).removeClass( 'animsition' );
-		</script>
-	<script type="text/javascript">
-				function revslider_showDoubleJqueryError(sliderID) {
-					var errorMessage = "Revolution Slider Error: You have some jquery.js library include that comes after the revolution files js include.";
-					errorMessage += "<br> This includes make eliminates the revolution slider libraries, and make it not work.";
-					errorMessage += "<br><br> To fix it you can:<br>&nbsp;&nbsp;&nbsp; 1. In the Slider Settings -> Troubleshooting set option:  <strong><b>Put JS Includes To Body</b></strong> option to true.";
-					errorMessage += "<br>&nbsp;&nbsp;&nbsp; 2. Find the double jquery.js include and remove it.";
-					errorMessage = "<span style='font-size:16px;color:#BC0C06;'>" + errorMessage + "</span>";
-						jQuery(sliderID).show().html(errorMessage);
-				}
-			
-</script>
-	<script type='text/javascript'>
-/* <![CDATA[ */
-var wpcf7 = {"apiSettings":{"root":"https:\/\/www.idmconsulting.it\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
-/* ]]> */
-</script>
-	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.1'></script>
-	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-content/plugins/responsive-accordion-and-collapse/js/bootstrap.js?ver=4.9.15'></script>
-	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-content/plugins/responsive-accordion-and-collapse/js/accordion.js?ver=4.9.15'></script>
-	<script type='text/javascript'>
-/* <![CDATA[ */
-var wpcf7_redirect_forms = {"2541":{"page_id":"2558","external_url":"","use_external_url":"","open_in_new_tab":"","http_build_query":"","http_build_query_selectively":"","http_build_query_selectively_fields":"","delay_redirect":"0","after_sent_script":"","thankyou_page_url":"https:\/\/www.idmconsulting.it\/landing-page-webinar-download\/"},"1356":{"page_id":"","external_url":"","use_external_url":"","open_in_new_tab":"","http_build_query":"","http_build_query_selectively":"","http_build_query_selectively_fields":"","delay_redirect":"","after_sent_script":"","thankyou_page_url":""}};
-/* ]]> */
-</script>
-	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-content/plugins/wpcf7-redirect/js/wpcf7-redirect-script.js'></script>
-	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-content/themes/dart/js/jquery.countdown.js?ver=3.2'></script>
-	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-content/themes/dart/js/jquery.easing.1.3.js?ver=3.2'></script>
-	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/lib/bower/isotope/dist/isotope.pkgd.min.js?ver=5.5.4'></script>
-	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/lib/prettyphoto/js/jquery.prettyPhoto.min.js?ver=5.5.4'></script>
-	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-content/themes/dart/js/jquery.waypoints.min.js?ver=3.2'></script>
-	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-content/themes/dart/js/jquery.easy-pie-chart.js?ver=3.2'></script>
-	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-content/themes/dart/js/jflickrfeed.min.js?ver=3.2'></script>
-	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-content/themes/dart/js/jquery.validate.min.js?ver=3.2'></script>
-	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-content/themes/dart/js/jquery.stellar.min.js?ver=3.2'></script>
-	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-content/themes/dart/js/jquery.mb.YTPlayer.js?ver=3.2'></script>
-	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-content/themes/dart/js/custom.js?ver=3.2'></script>
-	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-content/plugins/youtube-embed-plus/scripts/fitvids.min.js?ver=12.2'></script>
-	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-includes/js/wp-embed.min.js?ver=4.9.15'></script>
-	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=5.5.4'></script>
-	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/lib/bower/twbs-pagination/jquery.twbsPagination.min.js?ver=5.5.4'></script>
-	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/lib/bower/imagesloaded/imagesloaded.pkgd.min.js?ver=4.9.15'></script>
-	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-includes/js/underscore.min.js?ver=1.8.3'></script>
-	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/lib/waypoints/waypoints.min.js?ver=5.5.4'></script>
-	<script type='text/javascript'
-		src='https://www.idmconsulting.it/wp-content/plugins/js_composer/assets/js/dist/vc_grid.min.js?ver=5.5.4'></script>
 
 </body>
 

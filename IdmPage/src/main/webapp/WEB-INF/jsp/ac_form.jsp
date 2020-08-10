@@ -584,23 +584,6 @@ span {
 
 						<br><br>
 
-						<!-- PAESE DIPLOMA -->
-							<div class="col-md-1"></div>
-							<div class="col-md-4">
-								<form:label path="paeseDiploma">Ottenuto in: </form:label>
-							</div>
-							<div class="col-md-6">
-								<div class="radiobut">
-									<form:radiobutton path="paeseDiploma" value="Italia"
-										label="Italia" />
-									<form:radiobutton path="paeseDiploma" value="Paese Estero"
-										label="Paese Estero" />
-								</div>
-							</div>
-							<div class="col-md-1"></div>
-
-						<br><br>
-
 						<!-- PERCORSO DI STUDI -->
 							<div class="col-md-1"></div>
 							<div class="col-md-4">
