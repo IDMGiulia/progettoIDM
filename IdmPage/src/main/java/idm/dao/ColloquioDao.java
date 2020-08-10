@@ -54,7 +54,7 @@ public class ColloquioDao {
 			public Colloquio mapRow(ResultSet rs, int row) throws SQLException {    
 				Colloquio e=new Colloquio();    
 				e.setId(rs.getInt(1));    
-				e.setCandidato(rs.getInt(2));
+				e.setCandidato(rs.getString(2));
 				e.setData(rs.getString(3));
 				e.setTipo(rs.getString(4));
 				e.setNumero(rs.getString(5));
@@ -67,12 +67,12 @@ public class ColloquioDao {
 	
 	
 	//metodo per la selezione dei colloqui di un certo candidato
-	public List<Colloquio> getColloquiCan(int candidato){   
+	public List<Colloquio> getColloquiCan(String candidato){   
 	      List<Colloquio> colloqui= new ArrayList <Colloquio>();
 	      List<Colloquio> risultato = new ArrayList<>();
 	      colloqui = this.getColloqui();
 	      risultato= colloqui.stream()
-	          .filter(x->x.getCandidato()==candidato)
+	          .filter(x->x.getCandidato().equalsIgnoreCase(candidato))
 	          .collect(Collectors.toList());
 	          return risultato;    
 	    }

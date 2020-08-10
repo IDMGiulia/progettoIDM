@@ -482,32 +482,29 @@ h1 {
 				</div>
 				<br>
 
-				<form:form method="POST" action="aggiungi" modelAttribute="col">
+				<form:form method="POST" action="/IdmPage/aggiungi" modelAttribute="col">
 
 					<!-- SEZIONE DATI PERSONALI -->
 					<div id="div_cv" class="row text-left">
-					<form:input path="id" type="number" hidden="hidden" name="candidato" value="${col.candidato}"/>
+					<form:input path="candidato" hidden="hidden" type="text" value="S_${senior.id}"/>  
 						<div class="col-md-3">
 							<div class="form-group">
 								<label class="form-label">Data *</label>
-								<form:input path="data" type="data"
-									class="form-control form-control-sm" required="required"/>
+								<form:input path="data" type="text"/>
 							</div>
 						</div>
 						<div class="col-md-1"></div>
 						<div class="col-md-3">
 							<div class="form-group">
 								<label class="form-label">Tipo *</label>
-								<form:input path="tipo" type="text"
-									class="form-control form-control-sm" required="required"/>
+								<form:input path="tipo" type="text"/>
 							</div>
 						</div>
 						<div class="col-md-1"></div>
 						<div class="col-md-3">
 							<div class="form-group">
 								<label class="form-label">numero *</label>
-								<form:input path="numero" type="text"
-									class="form-control form-control-sm" required="required"/>
+								<form:input path="numero" type="text"/>
 							</div>
 						</div>
 						<div class="col-md-1"></div>
@@ -529,8 +526,7 @@ h1 {
 							<div class="col-md-3">
 							<div class="form-group">
 								<label class="form-label">valutazione *</label>
-								<form:input path="valutazione" type="number"
-									class="form-control form-control-sm" required="required"/>
+								<form:input path="valutazione" type="number" placeholder="8"/>
 							</div>
 						</div>
 						<div class="col-md-1"></div>

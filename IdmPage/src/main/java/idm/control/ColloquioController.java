@@ -34,7 +34,7 @@ public class ColloquioController {
 	 //collega candidato all'elenco dei colloqui"  
     @RequestMapping(value="/colloqui/{id}")    
     public String crea(@PathVariable int id, Model m){    
-    	List<Colloquio> list=dao.getColloquiCan(id);
+    	List<Colloquio> list=dao.getColloquiCan("S".concat("_"+id));
     	Senior s=senior.getSenById(id);
         m.addAttribute("colloqui",list);  
         m.addAttribute("senior",s); 
@@ -44,7 +44,6 @@ public class ColloquioController {
     //permette di aggiungere un nuovo colloquio
     @RequestMapping(value="/aggiungiColloqui/{id}")
     public String aggiungic(@PathVariable int id, Model m){   
-    	System.out.println("SONO ENTRATO QUI");
     	Colloquio col=new Colloquio();
     	Senior s=senior.getSenById(id);
         m.addAttribute("col",col);  
@@ -63,8 +62,8 @@ public class ColloquioController {
 	    dao.inserisci(col);
 	    }catch (Exception e) {
 	    	return "formColloquio";
-		}
-		return "redirect:/amministraColloqui"; 
+		} 
+		return "redirect:/amministraSenior"; 
 	} 
     
 	

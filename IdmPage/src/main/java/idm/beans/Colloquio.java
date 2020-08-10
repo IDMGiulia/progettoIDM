@@ -5,7 +5,7 @@ package idm.beans;
 public class Colloquio {
 	
 	private int id;
-	private int candidato;
+	private String candidato;
 	private String data;
 	private String tipo;
 	private String numero;
@@ -19,10 +19,10 @@ public class Colloquio {
 		this.id = id;
 	}
 	
-	public int getCandidato() {
+	public String getCandidato() {
 		return candidato;
 	}
-	public void setCandidato(int candidato) {
+	public void setCandidato(String candidato) {
 		this.candidato = candidato;
 	}
 	public String getData() {

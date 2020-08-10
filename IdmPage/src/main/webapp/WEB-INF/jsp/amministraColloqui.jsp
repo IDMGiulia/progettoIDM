@@ -108,9 +108,6 @@ h1 {
 							<td>${col.numero}</td>
 							<td>${col.note}</td>
 							<td>${col.valutazione}</td>
-							<td><a href="colloqui/${col.id}">Colloqui</a></td>
-							<td><a href="deletesen/${col.id}">Cancella</a></td>
-							<td><a href="editsen/${col.id}">Modifica</a></td>
 						</tr>
 					</c:forEach>
 				</table>

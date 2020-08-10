@@ -45,7 +45,6 @@ public class AmministrazioneController {
 	    	String token= sara.get().getUsername()+sara.get().getPassword()+Calendar.getInstance();
 	    	PasswordEncoder passwordEncoder=this.passwordEncoder();
 	    	sara.get().setToken(passwordEncoder.encode(token));
-	    	System.out.println(sara.get().getToken());
 	    	dao.salva(sara.get());
 	    	return "logindopo";}//will derict to canconf   }
 	    else {
