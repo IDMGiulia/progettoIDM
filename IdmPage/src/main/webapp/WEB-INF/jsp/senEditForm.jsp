@@ -98,6 +98,21 @@ h1 {
 }
 </style>
 
+<!-- STILE PER SPAZIARE I RADIOBUTTON -->
+<style>
+.radiobut {
+	text-align: center;
+}
+
+.radiobut input {
+	margin: 0px 0px 0px 0px;
+}
+
+.radiobut label {
+	margin: 0px 20px 0px 3px;
+}
+</style>
+
 </head>
 
 <body
@@ -117,12 +132,13 @@ h1 {
 				<form:form method="POST" action="/IdmPage/editsaveSenior">
 					<div class="row">
 					<div class="col-sm-1"></div>
-						<div class="col-sm-4">
+						<div class="col-sm-4" style="text-align: center">
 							<h1>Modifica il candidato senior</h1>
 						</div>
 						<div class="col-sm-2"></div>
 						<div class="col-sm-4">
-							<input type="submit" value="Modifica" class="button button2" style="margin-top: 30px" />
+						<br><br>
+							<input type="submit" value="Modifica" class="button button2"/>
 						</div>
 						<div class="col-sm-1"></div>
 					</div>
