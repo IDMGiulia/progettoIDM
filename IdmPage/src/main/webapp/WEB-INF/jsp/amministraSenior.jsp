@@ -198,7 +198,7 @@ $(function() {
 										${can.id}<br> Nome: ${can.nome}<br> Cognome:
 										${can.cognome}<br>
 										<div class="row">
-											<a href="/IdmPage/deleteemp/${can.id}"
+											<a href="/IdmPage/deletesen/${can.id}"
 												class="btn btn-secondary btn-block ml-1">Rimuovi</a>
 											<button type="button"
 												class="btn btn-secondary btn-block ml-1"
@@ -206,7 +206,7 @@ $(function() {
 										</div>
 									</div>
 									<button class="btn btn-primary" data-toggle="modal"
-										data-target="#myModal">Elimina candidato</button> <!--<a href="/IdmPage/deleteemp/${can.id}">Cancella</a>-->
+										data-target="#myModal">Elimina candidato</button> 
 								</td>
 								<td><a href="/IdmPage/editsen/${can.id}">Modifica</a></td>
 							</tr>
