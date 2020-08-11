@@ -221,11 +221,6 @@ $(function() {
 							
 							<!-- Body -->
 							<div class="modal-body"></div>
-							<!-- Footer -->
-							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary btn-block ml-1"
-									data-dismiss="modal" style="align:right">Annulla</button>
-							</div>
 						</div>
 					</div>
 				</div>
