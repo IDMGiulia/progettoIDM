@@ -194,16 +194,19 @@ $(function() {
 								<td><a href="/IdmPage/colloqui/${can.id}">Colloqui</a></td>
 								<td>
 									<div class="hidden">
-										<ul>
-											<li>Confermi di voler rimuovere il candidato?</li>
-											<li>ID: ${can.id}</li>
-											<li>Nome: ${can.nome}</li>
-											<li>Cognome: ${can.cognome}</li>
-											<li><a href="/IdmPage/deleteemp/${can.id}">Rimuovi</a></li>
-										</ul>
+										Confermi di voler rimuovere il candidato?<br> ID:
+										${can.id}<br> Nome: ${can.nome}<br> Cognome:
+										${can.cognome}<br>
+										<div class="row">
+											<a href="/IdmPage/deleteemp/${can.id}"
+												class="btn btn-secondary btn-block ml-1">Rimuovi</a>
+											<button type="button"
+												class="btn btn-secondary btn-block ml-1"
+												data-dismiss="modal">Annulla</button>
+										</div>
 									</div>
 									<button class="btn btn-primary" data-toggle="modal"
-										data-target="#myModal">Elimina candidato</button> <!--<a href="/IdmPage/deletesen/${can.id}">Cancella</a>-->
+										data-target="#myModal">Elimina candidato</button> <!--<a href="/IdmPage/deleteemp/${can.id}">Cancella</a>-->
 								</td>
 								<td><a href="/IdmPage/editsen/${can.id}">Modifica</a></td>
 							</tr>
