@@ -103,5 +103,16 @@ public class ColloquioController {
 		return "redirect:/amministrazione"; 
 	} 
     
+	// elenco di tutte le competenze "base"
+		 @ModelAttribute("tipoColloquio")
+		   public List<String> getWebFrameworkList() {
+		      List<String> tipoColloquio = new ArrayList<String>();
+		      tipoColloquio.add("Conoscitivo");
+		      tipoColloquio.add("Tecnico");
+		      tipoColloquio.add("Presso cliente");
+		      tipoColloquio.add("Finale");
+		      tipoColloquio.add("Altro");
+		      return tipoColloquio;
+		   }
 	
 }

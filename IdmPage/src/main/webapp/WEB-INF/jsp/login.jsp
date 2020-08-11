@@ -309,7 +309,7 @@ h1 {
 					<h1>Login per la parte amministrativa</h1>
 					<br>
 					<form:form method="POST" action="log" modelAttribute="log">
-						<div class="col-md-4"></div>
+						<div class="col-md-1"></div>
 						<div class="col-md-4">
 							<div class="form-group">
 								<label class="form-label">username *</label>
@@ -318,6 +318,7 @@ h1 {
 									placeholder="Inserisci il tuo username" />
 							</div>
 						</div>
+						<div class="col-md-2"></div>
 						<div class="col-md-4">
 							<div class="form-group">
 								<label class="form-label">Password *</label>
@@ -326,7 +327,8 @@ h1 {
 									placeholder="Inserisci la password" />
 							</div>
 						</div>
-					
+						<div class="col-md-1"></div>
+						<br>
 					<!-- BOTTONE CANDIDATI -->
 					<div>
 						<div style="text-align: center">

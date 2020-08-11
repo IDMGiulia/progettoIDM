@@ -132,26 +132,26 @@ h1 {
 								<form:input path="data" type="text"/>
 							</div>
 						</div>
-						<div class="col-md-1"></div>
-						<div class="col-md-3">
-							<div class="form-group">
-								<label class="form-label">Tipo *</label>
-								<form:input path="tipo" type="text"/>
+						<div class="col-md-2"></div>
+						<div class="col-md-2">
+						<label class="form-label">tipo colloquio *</label>
+							<div class="select">
+									<form:select items="${tipoColloquio}" path="tipo" />
 							</div>
 						</div>
 						<div class="col-md-1"></div>
-						<div class="col-md-3">
+						<div class="col-md-2">
 							<div class="form-group">
-								<label class="form-label">numero *</label>
-								<form:input path="numero" type="text"/>
+								<label class="form-label">valutazione *</label>
+								<form:input path="valutazione" type="number" />
 							</div>
 						</div>
-						<div class="col-md-1"></div>
+						<div class="col-md-2"></div>
 
 					<br>
 					<br>
 
-						<!-- RECENSIONE -->
+						<!-- NOTE -->
 						<div id="div_cv" class="row text-left" style="text-align: center" >
 							<div class="col-md-2"></div>
 							<div class="col-md-6">
@@ -163,11 +163,11 @@ h1 {
 							</div>
 							<div class="col-md-2"></div>
 							<div class="col-md-3">
-							<div class="form-group">
+							<%-- <div class="form-group">
 								<label class="form-label">valutazione *</label>
 								<form:input path="valutazione" type="number" placeholder="8"/>
+							</div> --%>
 							</div>
-						</div>
 						<div class="col-md-1"></div>
 					</div>
 					</div>

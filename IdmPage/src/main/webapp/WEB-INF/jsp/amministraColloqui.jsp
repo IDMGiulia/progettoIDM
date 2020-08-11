@@ -98,7 +98,6 @@ h1 {
 						<th>Candidato</th>
 						<th>Data</th>
 						<th>tipo</th>
-						<th>numero</th>
 						<th>note</th>
 						<th>valutazione</th>
 					</tr>
@@ -108,7 +107,6 @@ h1 {
 							<td>${senior.nome} ${senior.cognome}</td>
 							<td>${col.data}</td>
 							<td>${col.tipo}</td>
-							<td>${col.numero}</td>
 							<td>${col.note}</td>
 							<td>${col.valutazione}</td>
 						</tr>
