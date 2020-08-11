@@ -171,6 +171,7 @@ $(function() {
 							<th>Note</th>
 							<th>Livello istruzione</th>
 							<th>percorso</th>
+							<th>Colloqui</th>
 							<th>Cancella</th>
 							<th>Modifica</th>
 						</tr>
@@ -190,8 +191,6 @@ $(function() {
 								<td>${can.livello}</td>
 								<td>${can.percorso}</td>
 								<td><a href="/IdmPage/colloquio/${can.id}">Colloqui</a></td>
-								<td><a href="/IdmPage/deleteemp/${can.id}">Cancella</a></td>
-								<td><a href="/IdmPage/editemp/${can.id}">Modifica</a></td>
 								<td>
 									<div class="hidden">
 										<ul>
