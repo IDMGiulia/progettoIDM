@@ -384,11 +384,7 @@ h1 {
 /* Slides */
 .mySlides {
 	display: none;
-<<<<<<< HEAD:IdmPage/src/main/webapp/WEB-INF/jsp/home.jsp
-	padding: 40px;
-=======
 	padding: 30px;
->>>>>>> b6ef0ddcb46bffe75e3ec3be5cff722b33240cee:IdmPage/src/main/webapp/WEB-INF/jsp/ac_home.jsp
 	text-align: center;
 }
 

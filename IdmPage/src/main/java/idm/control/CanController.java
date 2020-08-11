@@ -3,7 +3,6 @@ package idm.control;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 import javax.validation.Valid;
 
@@ -20,11 +19,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.support.SessionStatus;
 
-import idm.beans.Amministrazione;
 import idm.beans.CanComp;
 import idm.beans.Candidato;
 import idm.beans.Recensione;
-import idm.dao.AmministrazioneDao;
 import idm.dao.CanDao;
 import idm.dao.RecensioneDao;
 

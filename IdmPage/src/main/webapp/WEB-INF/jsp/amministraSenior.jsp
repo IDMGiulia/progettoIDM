@@ -104,6 +104,25 @@ h1 {
 }
 </style>
 
+<script>
+$(function() {
+
+	  // when the modal is shown
+	  $('#myModal').on('show.bs.modal', function(e) {
+	    var $modal = $(this);
+
+	    // find the trigger button
+	    var $button = $(e.relatedTarget);
+
+	    // find the hidden div next to trigger button
+	    var $notifications = $button.siblings('div.hidden');
+
+	    // transfer content to modal body
+	    $modal.find('.modal-body').html($notifications.html());
+	  })
+	});
+</script>
+
 </head>
 
 <body
@@ -134,43 +153,75 @@ h1 {
 				</div>
 				<br> <br>
 				<table>
-					<tr>
-						<th>Id</th>
-						<th>nome</th>
-						<th>Cognome</th>
-						<th>Email</th>
-						<th>Telefono</th>
-						<th>Competenze</th>
-						<th>sede</th>
-						<th>stato candidatura</th>
-						<th>Note</th>
-						<th>Livello istruzione</th>
-						<th>percorso</th>
-						<th>posizione</th>
-						<th>colloqui</th>
-						<th>Cancella</th>
-						<th>Modifica</th>
-					</tr>
-					<c:forEach var="can" items="${list}">
+					<thead>
 						<tr>
-							<td>${can.id}</td>
-							<td>${can.nome}</td>
-							<td>${can.cognome}</td>
-							<td>${can.email}</td>
-							<td>${can.telefono}</td>
-							<td>${can.competenze}</td>
-							<td>${can.luogoCandidatura}</td>
-							<td>${can.stato}</td>
-							<td>${can.note}</td>
-							<td>${can.livello}</td>
-							<td>${can.percorso}</td>
-							<td>${can.posizioneLav}</td>
-							<td><a href="/IdmPage/colloqui/${can.id}">Colloqui</a></td>
-							<td><a href="/IdmPage/deletesen/${can.id}">Cancella</a></td>
-							<td><a href="/IdmPage/editsen/${can.id}">Modifica</a></td>
+							<th>Id</th>
+							<th>nome</th>
+							<th>Cognome</th>
+							<th>Email</th>
+							<th>Telefono</th>
+							<th>Competenze</th>
+							<th>sede</th>
+							<th>stato candidatura</th>
+							<th>Note</th>
+							<th>Livello istruzione</th>
+							<th>percorso</th>
+							<th>posizione</th>
+							<th>colloqui</th>
+							<th>Cancella</th>
+							<th>Modifica</th>
 						</tr>
-					</c:forEach>
+					</thead>
+					<tbody>
+						<c:forEach var="can" items="${list}">
+							<tr>
+								<td>${can.id}</td>
+								<td>${can.nome}</td>
+								<td>${can.cognome}</td>
+								<td>${can.email}</td>
+								<td>${can.telefono}</td>
+								<td>${can.competenze}</td>
+								<td>${can.luogoCandidatura}</td>
+								<td>${can.stato}</td>
+								<td>${can.note}</td>
+								<td>${can.livello}</td>
+								<td>${can.percorso}</td>
+								<td>${can.posizioneLav}</td>
+								<td><a href="/IdmPage/colloqui/${can.id}">Colloqui</a></td>
+								<td>
+									<div class="hidden">
+										<ul>
+											<li>Confermi di voler rimuovere il candidato?</li>
+											<li>ID: ${can.id}</li>
+											<li>Nome: ${can.nome}</li>
+											<li>Cognome: ${can.cognome}</li>
+											<li><a href="/IdmPage/deleteemp/${can.id}">Rimuovi</a></li>
+										</ul>
+									</div>
+									<button class="btn btn-primary" data-toggle="modal"
+										data-target="#myModal">Elimina candidato</button> <!--<a href="/IdmPage/deletesen/${can.id}">Cancella</a>-->
+								</td>
+								<td><a href="/IdmPage/editsen/${can.id}">Modifica</a></td>
+							</tr>
+						</c:forEach>
+					</tbody>
 				</table>
+
+				<div class="modal fade" id="myModal" role="dialog"
+					aria-labelledby="myModalLabel" aria-hidden="true" style="align:left">
+					<div class="modal-dialog" style="align:left">
+						<div class="modal-content">
+							
+							<!-- Body -->
+							<div class="modal-body"></div>
+							<!-- Footer -->
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary btn-block ml-1"
+									data-dismiss="modal" style="align:right">Annulla</button>
+							</div>
+						</div>
+					</div>
+				</div>
 
 			</div>
 		</section>

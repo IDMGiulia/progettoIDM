@@ -1,6 +1,5 @@
 package idm.control;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.validation.Valid;
@@ -15,12 +14,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.support.SessionStatus;
 
-import idm.beans.Candidato;
 import idm.beans.Colloquio;
-import idm.beans.Recensione;
 import idm.beans.Senior;
 import idm.dao.ColloquioDao;
-import idm.dao.RecensioneDao;
 import idm.dao.SeniorDao;
 
 @Controller
