@@ -213,7 +213,7 @@ $(function() {
 
 				<div class="modal fade" id="myModal" role="dialog"
 					aria-labelledby="myModalLabel" aria-hidden="true" style="align:left">
-					<div class="modal-dialog" style="align:left">
+					<div class="modal-dialog" style="margin-left: initial">
 						<div class="modal-content">
 							
 							<!-- Body -->
