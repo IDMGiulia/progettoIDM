@@ -25,6 +25,7 @@ public class Candidato {
 	@NotEmpty(message="telefono non valido")
 	private String telefono;
 	
+	private String provincia;
 	// stringa che contiene l'elenco delle competenze ed è l'ultima colonna della tabella candidato
 	private String competenze;
 	
@@ -53,7 +54,41 @@ public class Candidato {
 	
 	//elenco delle conoscenze
 	private List<String>conoscenze=new ArrayList<>();
+	
+	//livello di anzianità
+	private String anzianit;
+	
+	// per i senior (campo null per i junior)
+	private String posizioneLav;
 
+	
+	
+	@Override
+	public String toString() {
+		return "Candidato [id=" + id + ", nome=" + nome + ", cognome=" + cognome + ", email=" + email + ", telefono="
+				+ telefono + ", provincia=" + provincia + ", competenze=" + competenze + ", luogoCandidatura="
+				+ luogoCandidatura + ", stato=" + stato + ", note=" + note + ", livello=" + livello + ", percorso="
+				+ percorso + ", conoscenze=" + conoscenze + ", anzianit=" + anzianit + ", posizioneLav=" + posizioneLav
+				+ "]";
+	}
+	public String getProvincia() {
+		return provincia;
+	}
+	public void setProvincia(String provincia) {
+		this.provincia = provincia;
+	}
+	public String getAnzianit() {
+		return anzianit;
+	}
+	public void setAnzianit(String anzianit) {
+		this.anzianit = anzianit;
+	}
+	public String getPosizioneLav() {
+		return posizioneLav;
+	}
+	public void setPosizioneLav(String posizioneLav) {
+		this.posizioneLav = posizioneLav;
+	}
 	public List<String> getConoscenze() {
 		return conoscenze;
 	}

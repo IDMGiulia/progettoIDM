@@ -16,14 +16,17 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.support.SessionStatus;
 
-import idm.beans.Senior;
-import idm.dao.SeniorDao;
+import idm.beans.Candidato;
+import idm.dao.CanDao;
+
 
 @Controller
 public class SeniorController {
 	
 	@Autowired
-	SeniorDao dao;
+	CanDao can;
+	
+	
 	
 	@RequestMapping("/seniorSelection")  
 	public String display()  
@@ -34,7 +37,7 @@ public class SeniorController {
 	 //link al form di candidatura Senior 
 	@RequestMapping("/candidaturaSen")    
 	public String showformSen(Model m){   
-		Senior senior= new Senior();
+		Candidato senior= new Candidato();
 		m.addAttribute("sen", senior);  
 		return "senior_form";   
 	} 
@@ -55,14 +58,14 @@ public class SeniorController {
 	 *  into model object. You need to mention RequestMethod.POST method   
 	 *  because default request is GET*/    
 	@RequestMapping(value="/saveSenior",method = RequestMethod.POST)    
-	public String saveSen(@Valid @ModelAttribute("sen") Senior sen, BindingResult result, 
+	public String saveSen(@Valid @ModelAttribute("sen") Candidato sen, BindingResult result, 
 			SessionStatus status,Model m){ 
 	    //Check validation errors
 	    if (result.hasErrors()) {   
 	        return "senior_form";
 	    }
 	    try {
-	    dao.salva(sen); 
+	    can.salvaSen(sen); 
 	    }catch (Exception e) {
 	    	return "senior_form";
 		}
@@ -72,7 +75,7 @@ public class SeniorController {
 	//restituisce la tabella con tutti i senior candidati
 		@RequestMapping("/amministraSenior")    
 	    public String viewemp(Model m){    
-	        List<Senior> list=dao.getSenior();    
+	        List<Candidato> list=can.getCandidatoForAnzianit("Senior");   
 	        m.addAttribute("list",list);  
 	        return "amministraSenior";    
 	    }
@@ -80,7 +83,7 @@ public class SeniorController {
 		/* It deletes record for the given id in URL and redirects to /amministraSenior */    
 	    @RequestMapping(value="/deletesen/{id}",method = RequestMethod.GET)    
 	    public String delete(@PathVariable int id){    
-	        dao.deleteSenior(id);    
+	        can.deleteCandidato(id);  
 	        return "redirect:/amministraSenior";    
 	    } 
 	    
@@ -88,23 +91,24 @@ public class SeniorController {
 	     * The @PathVariable puts URL data into variable.*/    
 	    @RequestMapping(value="/editsen/{id}")    
 	    public String edit(@PathVariable int id, Model m){    
-	        Senior senior =dao.getSenById(id);
+	        Candidato senior = can.getCanById(id);
 	        m.addAttribute("command",senior );  
 	        return "senEditForm";    
 	    } 
 	    
 	    /* It updates model object. */    
 	    @RequestMapping(value="/editsaveSenior",method = RequestMethod.POST)    
-	    public String editsave(@ModelAttribute("sen") Senior sen){    
-	        dao.update(sen);    
+	    public String editsave(@ModelAttribute("sen") Candidato sen){    
+	        can.update(sen);
 	        return "redirect:/amministraSenior";    
 	    } 
 	    
 		@RequestMapping(value="/select")    
 	    public String viewSenior(@RequestParam("sede") String sede, @RequestParam("competenza") String compe,
 	        @RequestParam("stato") String stato,@RequestParam("posizioneLav") String pos,Model m){ 
-	    List<Senior> list= new ArrayList<>();
-	    list=dao.getSeniorForParameter(sede, compe+",", stato,pos);
+	    List<Candidato> list= new ArrayList<>();
+	    System.out.println(sede+" "+compe+" "+stato+" "+pos);
+	    list=can.getSeniorForParameter(sede, compe+",", stato,pos);
 	      m.addAttribute("list",list); 
 	         return "amministraSenior";    
 	  }

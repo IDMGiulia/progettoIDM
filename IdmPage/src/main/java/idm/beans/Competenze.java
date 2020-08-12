@@ -6,15 +6,7 @@ public class Competenze {
 	private String competenza;
 	private String tipo;
 	private List<Candidato> canandidato;
-	private List<Senior> senior;
-	
-	
-	public List<Senior> getSenior() {
-		return senior;
-	}
-	public void setSenior(List<Senior> senior) {
-		this.senior = senior;
-	}
+
 	public String getCompetenza() {
 		return competenza;
 	}

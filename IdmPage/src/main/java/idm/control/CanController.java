@@ -89,7 +89,7 @@ public class CanController {
 	//restituisce la tabella con tutti i candidati
 	@RequestMapping("/amministrazione")    
     public String viewemp(Model m){    
-        List<Candidato> list=dao.getCandidatos();    
+        List<Candidato> list=dao.getCandidatoForAnzianit("Academy");   
         m.addAttribute("list",list);  
         return "amministrazione";    
     }
@@ -157,25 +157,5 @@ public class CanController {
         return "redirect:/amministrazione";    
     } 
 	
-		
-		// metodo per vedere tutte le competenze, per ora non visibile lato client
-		@RequestMapping("/amministrazione1")    
-	    public String viewcomp(Model m){    
-	        List<CanComp> list=dao.getComp();    
-	        m.addAttribute("list",list);  
-	        return "viewComp";    
-	    }
-		
-		//selezione competenza singola (non utilizzato)
-		@RequestMapping(value="/visualll")    
-			public String viewCandidatii(@RequestParam("sede") String sede, @RequestParam("competenza") String compe,
-					@RequestParam("stato") String stato,Model m){   
-				List<Candidato> list=dao.getCandidatoForSede(sede);
-				list=dao.getCandidatoForStato(stato, list);
-				list=dao.getCandidatoComp((compe+","), list);
-				m.addAttribute("list",list); 
-		        System.out.println(sede+compe+stato);
-		       return "amministrazione2";    
-		}
-	
+
 }
