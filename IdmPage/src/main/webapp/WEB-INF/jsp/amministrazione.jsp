@@ -138,6 +138,7 @@ $(function() {
 							<th>Sede Scelta</th>
 							<th>Stato Candidatura</th>
 							<th>Domicilio</th>
+							<th>Altre Informazioni</th>
 							<th>Colloqui</th>
 							<th>Modifica</th>
 						</tr>
@@ -151,7 +152,29 @@ $(function() {
 								<td>${can.telefono}</td>
 								<td>${can.luogoCandidatura}</td>
 								<td>${can.stato}</td>
-								<td>${can.note}</td>
+								<td>${can.provincia}</td>
+								<td><div class="hidden" style="text-align:center">
+										Informazioni sul Candidato<br><br>
+										ID: ${can.id}<br>
+										Nome: ${can.nome}<br>
+										Cognome: ${can.cognome}<br>
+										Email: ${can.email}<br>
+										Telefono: ${can.telefono}<br>
+										Sede Scelta: ${can.luogoCandidatura}<br>
+										Posizione di Candidatura: ${can.posizioneLav}<br>
+										Stato della candidatura: ${can.stato}<br>
+										Competenze: ${can.competenze}<br>
+										Provincia di Residenza: ${can.provincia}<br>
+										Livello di Istruzione: ${can.livello}<br>
+										Percorso di Studi: ${can.percorso}<br>
+										Note sul Candidato: ${can.note}<br><br><br>
+
+										<!-- PULSANTI NEL MODAL -->
+										<button type="button" class="btn btn-secondary btn-block ml-1"
+											data-dismiss="modal" style="align: right">Chiudi</button>
+									</div>
+									<button class="button button3" data-toggle="modal"
+										data-target="#myModal" data-backdrop="false">Informazioni Complete</button></td>
 								<td><a href="/IdmPage/colloquio/${can.id}">Colloqui</a></td>
 								<td><a href="/IdmPage/editemp/${can.id}">Modifica</a></td>
 							</tr>
