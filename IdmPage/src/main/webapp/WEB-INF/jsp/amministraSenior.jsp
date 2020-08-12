@@ -81,6 +81,7 @@ h1 {
 <!-- FILE PULSANTI -->
 <jsp:include page="stili/pulsanti.jsp"></jsp:include>
 
+<!-- SCRIPT MODAL -->
 <script>
 $(function() {
 

@@ -302,119 +302,11 @@ h1 {
 <!-- FILE PULSANTI -->
 <jsp:include page="stili/pulsanti.jsp"></jsp:include>
 
-<!-- STILE CAROSELLO -->
-<style>
-/*EVITA IL SALTO TRA UNA FOTO E L'ALTRA*/
-.carousel-fade .carousel-inner .item {
-	opacity: 0;
-	transition-property: opacity;
-	transition: opacity ease-out .7s;
-}
-/*FA VEDERE IL CAROSELLO*/
-.carousel-fade .carousel-inner .active {
-	opacity: 1;
-}
-/*EVITA IL SALTO TRA UNA FOTO E L'ALTRA*/
-.carousel-fade .carousel-inner .active.left, .carousel-fade .carousel-inner .active.right
-	{
-	left: 0;
-	opacity: 0;
-	z-index: 1;
-}
-/*EVITA IL BIANCO TRA UNA FOTO E L'ALTRA*/
-.carousel-fade .carousel-inner .next.left, .carousel-fade .carousel-inner .prev.right
-	{
-	opacity: 1;
-}
+<!-- FILE CAROSELLO -->
+<jsp:include page="stili/carosello.jsp"></jsp:include>
 
-.carousel-inner img {
-	width: 100%;
-	height: 100%;
-	border-radius: 8px;
-}
-
-.carousel-1 {
-	height: 100%;
-	-webkit-background-size: cover;
-	background-size: cover;
-}
-
-.carousel-2 {
-	height: 100%;
-	-webkit-background-size: cover;
-	background-size: cover;
-}
-</style>
-
-<!-- STILE SLIDESHOW -->
-<style>
-
-/* Slideshow container */
-.slideshow-container {
-	position: relative;
-}
-
-/* Slides */
-.mySlides {
-	display: none;
-	padding: 30px;
-	text-align: center;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-	cursor: pointer;
-	position: relative;
-	top: 50%;
-	width: auto;
-	color: #888;
-	font-weight: bold;
-	font-size: 20px;
-	border-radius: 0 3px 3px 0;
-	user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-	position: absolute;
-	right: 0;
-	border-radius: 3px 0 0 3px;
-}
-
-/* Position the "prev button" to the left */
-.prev {
-	position: absolute;
-	left: 0;
-	border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-	background-color: rgba(0, 0, 0, 0.8);
-	color: white;
-}
-
-/* The dot/bullet/indicator container */
-.dot-container {
-	text-align: center;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-	cursor: pointer;
-	height: 15px;
-	width: 15px;
-	margin: 0 2px;
-	background-color: #bbb;
-	border-radius: 50%;
-	display: inline-block;
-}
-/* Add a background color to the active dot/circle */
-.active, .dot:hover {
-	background: transparent;
-}
-
-</style>
+<!-- FILE SLIDESHOW -->
+<jsp:include page="stili/slideshow.jsp"></jsp:include>
 
 </head>
 
@@ -427,7 +319,7 @@ h1 {
 	<div class="body-inner ">
 
 		<!-- Header Container -->
-		<jsp:include page="navbar.jsp"></jsp:include>
+		<jsp:include page="unique/navbar.jsp"></jsp:include>
 
 		<!-- Sezione Centrale della Pagina -->
 		<section class="main-wrapper pagecustom-1339">
@@ -527,7 +419,7 @@ h1 {
 								<b>Sedi Formative</b>
 							</h2>
 
-							<!-- CAROSELLO -->
+							<!-- SLIDESHOW -->
 							<div id="myCarousel" class="carousel slide slide carousel-fade"
 								data-ride="carousel" data-interval="5000">
 								<div class="carousel-inner">
@@ -592,7 +484,7 @@ h1 {
 								class="dot" onclick="currentSlide(2)"></span> <span class="dot"
 								onclick="currentSlide(3)"></span>
 						</div>
-						
+
 						<script>
 						function start(int i){
 							if(i=3 || i=6 || i=9){
@@ -653,7 +545,7 @@ h1 {
 		</section>
 
 		<!-- Sezione Footer della Pagina -->
-		<jsp:include page="footer.jsp"></jsp:include>
+		<jsp:include page="unique/footer.jsp"></jsp:include>
 
 	</div>
 

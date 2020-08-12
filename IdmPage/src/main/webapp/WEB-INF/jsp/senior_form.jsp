@@ -397,34 +397,11 @@ span {
 }
 </style>
 
-<style>
-.checkboxes {
-      text-align:center;
-     }
+<!-- FILE CHECKBOXES -->
+<jsp:include page="stili/checkbox.jsp"></jsp:include>
 
-    .checkboxes input{
-      margin: 0px 0px 0px 0px;
-     }
-
-     .checkboxes label{
-       margin: 0px 20px 0px 3px;
-     }
-</style>
-
-<!-- STILE PER SPAZIARE I RADIOBUTTON -->
-<style>
-.radiobut {
-	text-align: center;
-}
-
-.radiobut input {
-	margin: 0px 0px 0px 0px;
-}
-
-.radiobut label {
-	margin: 0px 35px 0px 3px;
-}
-</style>
+<!-- FILE RADIOBUTTON -->
+<jsp:include page="stili/radiobut.jsp"></jsp:include>
 
 </head>
 
@@ -437,7 +414,7 @@ span {
 	<div class="body-inner ">
 
 		<!-- Header Container -->
-		<jsp:include page="navbar.jsp"></jsp:include>
+		<jsp:include page="unique/navbar.jsp"></jsp:include>
 
 		<!-- Sezione Centrale della Pagina -->
 		<section class="main-wrapper pagecustom-1339">
@@ -502,6 +479,23 @@ span {
 								<form:errors path="telefono" cssClass="error" />
 							</div>
 						</div>
+						
+						<br>
+						
+						<div class="row">
+						<div class="col-md-1"></div>
+							<div class="col-md-4" style="text-align: center">
+								<label class="form-label">Provincia di Residenza *</label>
+							</div>
+							<div class="col-md-1"></div>
+							<div class="col-md-4" style="text-align: center">
+									<form:input path="provincia" type="text"
+										class="form-control form-control-sm" required="required"
+										placeholder="Torino" />
+									<form:errors path="provincia" cssClass="error" />
+							</div>
+							<div class="col-md-2"></div>
+						</div>
 						<ul class="nav nav-pills flex-column">
 						</ul>
 						<hr class="d-sm-none">
@@ -517,12 +511,7 @@ span {
 						<div class="col-md-1"></div>
 						<div class="col-md-4">
 							<div class="radiobut">
-								<form:radiobutton path="luogoCandidatura" value="Torino"
-									label="Torino" required="required"/>
-								<form:radiobutton path="luogoCandidatura" value="Milano"
-									label="Milano" />
-								<form:radiobutton path="luogoCandidatura" value="Entrambi"
-									label="Entrambi" />
+								<form:radiobuttons items="${Sede}" path="luogoCandidatura" required="required"/>
 							</div>
 						</div>
 						<div class="col-md-2"></div>
@@ -538,14 +527,7 @@ span {
 						</div>
 						<div class="col-md-7" style="text-align: center">
 							<div class="radiobut">
-								<form:radiobutton path="posizioneLav" value="Senior Java Developer"
-									label="Senior Java Developer" required="required"/>
-								<form:radiobutton path="posizioneLav" value="Senior .NET Developer"
-									label="Senior .NET Developer" />
-								<form:radiobutton path="posizioneLav" value="Senior System Application Engineer"
-									label="System Application Engineer" />
-								<form:radiobutton path="posizioneLav" value="Tutte le posizioni"
-									label="Tutte le posizioni" />
+								<form:radiobuttons items="${Posizioni}" path="posizioneLav" required="required"/>
 							</div>
 						</div>
 					</div>
@@ -651,7 +633,7 @@ span {
 		</section>
 
 		<!-- Sezione Footer della Pagina -->
-		<jsp:include page="footer.jsp"></jsp:include>
+		<jsp:include page="unique/footer.jsp"></jsp:include>
 
 	</div>
 

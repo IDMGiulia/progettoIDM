@@ -16,11 +16,11 @@
 <link rel="shortcut icon"
 	href="https://www.idmconsulting.it/wp-content/uploads/2016/01/idm-favicon.png" />
 <meta name="description"
-	content="IDM Consulting ottimizza la gestione dei processi aziendali riducendone i costi. Propone soluzioni strategiche di archivio garantendo sicurezza, affidabilità e innovazione." />
+	content="IDM Consulting ottimizza la gestione dei processi aziendali riducendone i costi. Propone soluzioni strategiche di archivio garantendo sicurezza, affidabilitÃ  e innovazione." />
 <link rel="canonical" href="https://www.idmconsulting.it/" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:description"
-	content="IDM Consulting ottimizza la gestione dei processi aziendali riducendone i costi. Propone soluzioni strategiche di archivio garantendo sicurezza, affidabilità e innovazione." />
+	content="IDM Consulting ottimizza la gestione dei processi aziendali riducendone i costi. Propone soluzioni strategiche di archivio garantendo sicurezza, affidabilitÃ  e innovazione." />
 <meta name="twitter:title" content="IDM - We simplify your work" />
 <meta name="twitter:image"
 	content="https://www.idmconsulting.it/wp-content/uploads/2015/10/Case-history.png" />
@@ -319,10 +319,6 @@ form .form-control:focus {
 	border-left-color: #1d70b7;
 }
 
-.plan.featured a.btn {
-	border-bottom-color: #1d70b7;
-}
-
 a:hover, a:focus, a:active, .footer-custom-menu li a:hover {
 	color: rgb(23, 89, 146)
 }
@@ -342,6 +338,7 @@ h1 {
 	font-weight: normal;
 }
 </style>
+
 <style type="text/css">
 .recentcomments a {
 	display: inline !important;
@@ -349,10 +346,6 @@ h1 {
 	margin: 0 !important;
 }
 </style>
-<meta name="generator"
-	content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress." />
-<meta name="generator"
-	content="Powered by Slider Revolution 5.4.8 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
 
 <style type="text/css" data-type="vc_custom-css">
 .vc_gitem-zone .vc-zone-link {
@@ -396,35 +389,11 @@ span {
 }
 </style>
 
-<!-- STILE CHECKBOXES -->
-<style>
-.checkboxes {
-      text-align:center;
-     }
+<!-- FILE CHECKBOXES -->
+<jsp:include page="stili/checkbox.jsp"></jsp:include>
 
-    .checkboxes input{
-      margin: 0px 0px 0px 0px;
-     }
-
-     .checkboxes label{
-       margin: 0px 20px 0px 3px;
-     }
-</style>
-
-<!-- STILE PER SPAZIARE I RADIOBUTTON -->
-<style>
-.radiobut {
-	text-align: center;
-}
-
-.radiobut input {
-	margin: 0px 0px 0px 0px;
-}
-
-.radiobut label {
-	margin: 0px 20px 0px 3px;
-}
-</style>
+<!-- FILE RADIOBUTTON -->
+<jsp:include page="stili/radiobut.jsp"></jsp:include>
 
 </head>
 
@@ -437,7 +406,7 @@ span {
 	<div class="body-inner ">
 
 		<!-- Header Container -->
-		<jsp:include page="navbar.jsp"></jsp:include>
+		<jsp:include page="unique/navbar.jsp"></jsp:include>
 
 		<!-- Sezione Centrale della Pagina -->
 		<section class="main-wrapper pagecustom-1339">
@@ -459,53 +428,74 @@ span {
 								<b>Dati Personali</b>
 							</legend>
 						</div>
-						<div class="col-md-4"></div>
-						<div class="col-md-4">
-							<div class="form-group">
-								<label class="form-label">Nome *</label>
-								<form:input path="nome" type="text"
-									class="form-control form-control-sm" required="required"
-									placeholder="Inserisci il tuo nome" />
-								<form:errors path="nome" cssClass="error" />
+						<div class="row">
+							<div class="col-md-4"></div>
+							<div class="col-md-4">
+								<div class="form-group">
+									<label class="form-label">Nome *</label>
+									<form:input path="nome" type="text"
+										class="form-control form-control-sm" required="required"
+										placeholder="Inserisci il tuo nome" />
+									<form:errors path="nome" cssClass="error" />
+								</div>
+							</div>
+
+							<div class="col-md-4">
+								<div class="form-group">
+									<label class="form-label">Cognome *</label>
+									<form:input path="cognome" type="text"
+										class="form-control form-control-sm" required="required"
+										placeholder="Inserisci il tuo cognome" />
+									<form:errors path="cognome" cssClass="error" />
+								</div>
 							</div>
 						</div>
 
-						<div class="col-md-4">
-							<div class="form-group">
-								<label class="form-label">Cognome *</label>
-								<form:input path="cognome" type="text"
-									class="form-control form-control-sm" required="required"
-									placeholder="Inserisci il tuo cognome" />
-								<form:errors path="cognome" cssClass="error" />
+						<div class="row">
+							<div class="col-md-4"></div>
+
+							<div class="col-md-4">
+								<div class="form-group">
+									<label class="form-label">Email *</label>
+									<form:input path="email" type="email"
+										class="form-control form-control-sm" required="required"
+										placeholder="example@email.it" />
+									<form:errors path="email" cssClass="error" />
+								</div>
+							</div>
+
+							<div class="col-md-4">
+								<div class="form-group">
+									<label class="form-label">Telefono *</label>
+									<form:input path="telefono" type="tel"
+										class="form-control form-control-sm" required="required"
+										placeholder="Inserisci il tuo numero di telefono"
+										pattern="[0-9]{10}|[0-9]{9}|[0-9]{8}" />
+									<form:errors path="telefono" cssClass="error" />
+								</div>
 							</div>
 						</div>
+						
+						<br>
 
-						<div class="col-md-4"></div>
-
-						<div class="col-md-4">
-							<div class="form-group">
-								<label class="form-label">Email *</label>
-								<form:input path="email" type="email"
-									class="form-control form-control-sm" required="required"
-									placeholder="example@email.it" />
-								<form:errors path="email" cssClass="error" />
+						<div class="row">
+						<div class="col-md-1"></div>
+							<div class="col-md-4" style="text-align: center">
+								<label class="form-label">Provincia di Residenza *</label>
 							</div>
+							<div class="col-md-1"></div>
+							<div class="col-md-4" style="text-align: center">
+									<form:input path="provincia" type="text"
+										class="form-control form-control-sm" required="required"
+										placeholder="Torino" />
+									<form:errors path="provincia" cssClass="error" />
+							</div>
+							<div class="col-md-2"></div>
 						</div>
 
-						<div class="col-md-4">
-							<div class="form-group">
-								<label class="form-label">Telefono *</label>
-								<form:input path="telefono" type="tel"
-									class="form-control form-control-sm" required="required"
-									placeholder="Inserisci il tuo numero di telefono"
-									pattern="[0-9]{10}|[0-9]{9}|[0-9]{8}" />
-								<form:errors path="telefono" cssClass="error" />
-							</div>
-						</div>
 						<ul class="nav nav-pills flex-column">
 						</ul>
 						<hr class="d-sm-none">
-
 					</div>
 
 					<!-- LUOGO DI CANDIDATURA -->
@@ -515,7 +505,7 @@ span {
 							<form:label path="luogoCandidatura">Luogo di candidatura preferito: *</form:label>
 						</div>
 						<div class="col-md-1"></div>
-						<div class="col-md-4">
+						<div class="col-md-4" style="text-align: center">
 							<div class="radiobut">
 								<form:radiobutton path="luogoCandidatura" value="Torino"
 									label="Torino" required="required"/>
@@ -629,7 +619,7 @@ span {
 		</section>
 
 		<!-- Sezione Footer della Pagina -->
-		<jsp:include page="footer.jsp"></jsp:include>
+		<jsp:include page="unique/footer.jsp"></jsp:include>
 
 	</div>
 

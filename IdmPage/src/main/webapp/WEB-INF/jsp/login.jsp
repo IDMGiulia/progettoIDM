@@ -257,7 +257,7 @@ h1 {
 	<div class="body-inner ">
 
 		<!-- Header Container -->
-		<jsp:include page="navbar.jsp"></jsp:include>
+		<jsp:include page="unique/navbar.jsp"></jsp:include>
 
 		<!-- Sezione Centrale della Pagina -->
 		<section class="main-wrapper pagecustom-1339">
@@ -305,7 +305,7 @@ h1 {
 		</section>
 
 		<!-- Sezione Footer della Pagina -->
-		<jsp:include page="footer.jsp"></jsp:include>
+		<jsp:include page="unique/footer.jsp"></jsp:include>
 		
 	</div>
 
