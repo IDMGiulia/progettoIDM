@@ -17,12 +17,13 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;  
 import org.springframework.jdbc.core.RowMapper;
 
-import idm.beans.CanComp;
+
 import idm.beans.Candidato;
 import idm.beans.Competenze; 
 
 
 public class CanDao {
+	
 	StandardServiceRegistry ssr = new StandardServiceRegistryBuilder().configure("hibernate.cfg.xml").build();  
     
 	Metadata meta = new MetadataSources(ssr).getMetadataBuilder().build();  
@@ -151,7 +152,7 @@ public class CanDao {
 	//metodo per eliminare un candidato
 	public int deleteCandidato(int id){    
 		String sql="delete from cand where id="+id+""; 
-		String sql1="delete from CanComp where can_id="+id+"";
+		String sql1="delete from cancomp where id_can="+id+"";
 		template.update(sql1); 
 		return template.update(sql);    
 	} 
@@ -180,15 +181,15 @@ public class CanDao {
 	    }
 	
 	//metodo per la selezione dei senior
-	public List<Candidato> getSeniorForParameter(String sede,String competenze, String stato, String pos){   
+	public List<Candidato> getForParameter(String anz,String sede,String competenze, String stato, String pos){   
 	      List<Candidato> senior= new ArrayList <Candidato>();
 	      List<Candidato> risultato = new ArrayList<>();
-	      senior = getCandidatoForAnzianit("Senior");
+	      senior = getCandidatoForAnzianit(anz);
 	      risultato= senior.stream()
 	          .filter(x->x.getCompetenze().contains(competenze)
-	              &&((x.getLuogoCandidatura().equals(sede)||x.getLuogoCandidatura().contains("E")||sede.contains("E")))
+	              &&((x.getLuogoCandidatura().equals(sede)||x.getLuogoCandidatura().contains("Entrambe")||sede.contains("Entrambe")))
 	              &&((x.getStato().equals(stato)||stato.compareTo("")==0))
-	          	&&((x.getPosizioneLav().equals(pos)|| x.getPosizioneLav().equals("E") || pos.contains("E"))))
+	          	&&((x.getPosizioneLav().equals(pos)|| x.getPosizioneLav().equals("Tutte le posizioni") || pos.contains("Tutte le posizioni"))))
 	          .collect(Collectors.toList());
 	          return risultato;    
 	    }
