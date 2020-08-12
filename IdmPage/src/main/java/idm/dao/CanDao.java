@@ -28,6 +28,7 @@ public class CanDao {
 	Metadata meta = new MetadataSources(ssr).getMetadataBuilder().build();  
 	  
 	SessionFactory factory = meta.getSessionFactoryBuilder().build();
+	
 	JdbcTemplate template;   
 
 	public void setTemplate(JdbcTemplate template) {    
@@ -58,9 +59,43 @@ public class CanDao {
 		candidato.setCompetenze(descrizione);
 		candidato.setFavoriteFrameworks(webFrameworkList);
 		candidato.setStato("Nuova");
+		candidato.setAnzianit("Academy");
 		Session session = factory.openSession();  
 		Transaction t = session.beginTransaction();
 		session.saveOrUpdate(candidato);
+		t.commit();
+		session.close();
+
+	}
+	
+	public void salvaSen(Candidato senior) {
+		
+		int num = senior.getComp().length;
+		String descrizione=senior.getCompetenze();
+		String [] compBox=descrizione.split(",");
+		List<Competenze> webFrameworkList = new ArrayList<Competenze>();
+		for (String el: compBox) {
+			if(el.isEmpty()) {
+				break;
+			}
+			Session session2 = factory.openSession();  
+			Transaction t2 = session2.beginTransaction();
+			Competenze competenze= new Competenze();
+			competenze.setCompetenza(el.toUpperCase());
+			competenze.setTipo("personale");
+			webFrameworkList.add(competenze);
+			session2.saveOrUpdate(competenze);
+			t2.commit();
+			session2.close();
+		}
+		descrizione=concatenaCompetenze(senior, webFrameworkList, num);
+		senior.setCompetenze(descrizione);
+		senior.setFavoriteFrameworks(webFrameworkList);
+		senior.setStato("Nuova");
+		senior.setAnzianit("Senior");
+		Session session = factory.openSession();  
+		Transaction t = session.beginTransaction();
+		session.saveOrUpdate(senior);
 		t.commit();
 		session.close();
 
@@ -87,9 +122,11 @@ public class CanDao {
 		}
 		return descrizione;
 	}
+	
+	
 	//metodo per visualizzare tutti i candidati
 	public List<Candidato> getCandidatos(){    
-		return template.query("select * from candidati",new RowMapper<Candidato>(){    
+		return template.query("select * from cand",new RowMapper<Candidato>(){    
 			public Candidato mapRow(ResultSet rs, int row) throws SQLException {    
 				Candidato e=new Candidato();    
 				e.setId(rs.getInt(1));    
@@ -97,83 +134,62 @@ public class CanDao {
 				e.setCognome(rs.getString(3));
 				e.setEmail(rs.getString(4));
 				e.setTelefono(rs.getString(5));
-				e.setCompetenze(rs.getString(6));  
-				e.setLuogoCandidatura(rs.getString(7));
-				e.setStato(rs.getString(8));
-				e.setNote(rs.getString(9));
-				e.setLivello(rs.getString(10));
+				e.setLuogoCandidatura(rs.getString(6));
+				e.setProvincia(rs.getString(7));
+				e.setCompetenze(rs.getString(8));
+				e.setStato(rs.getString(9));
+				e.setNote(rs.getString(10));
+				e.setLivello(rs.getString(11));
 				e.setPercorso(rs.getString(12));
+				e.setAnzianit(rs.getString(13));
+				e.setPosizioneLav(rs.getString(14));
 				return e;    
-			}    
-		});    
-	}
-	//metodo per visualizzare tutte le competenze
-	public List<CanComp> getComp(){    
-		return template.query("select * from can_comp",new RowMapper<CanComp>(){    
-			public CanComp mapRow(ResultSet rs, int row) throws SQLException {    
-				CanComp c=new CanComp();    
-				c.setCanId(rs.getInt(1));    
-				c.setCompetenza(rs.getString(3));
-				return c;    
 			}    
 		});    
 	}
 	
 	//metodo per eliminare un candidato
 	public int deleteCandidato(int id){    
-		String sql="delete from candidati where id="+id+""; 
-		String sql1="delete from can_comp where can_id="+id+"";
+		String sql="delete from cand where id="+id+""; 
+		String sql1="delete from CanComp where can_id="+id+"";
 		template.update(sql1); 
 		return template.update(sql);    
 	} 
 	
-	//metodo per selezionare i candidati con una certa sede
-	public List<Candidato> getCandidatoForSede(String sede){    
-	    List<Candidato> e = new ArrayList<>();
-	    e = this.getCandidatos();
-	    if(sede.contains("E"))
-	    	return e;
+	public List<Candidato> getCandidatoForAnzianit(String anzianit){
+		List<Candidato> candidato= new ArrayList <Candidato>();
 	    List<Candidato> risultato = new ArrayList<>();
-	    e.stream()
-	      .filter(x->x.getLuogoCandidatura().equals(sede)||x.getLuogoCandidatura().equals("E"))
-	      .forEach(x->risultato.add(x));
-	        return risultato;    
-	  }
-	
-	//metodo per selezionare i candidati con una certa stato
-	public List<Candidato> getCandidatoForStato(String stato, List<Candidato> e){ 
-		if(stato.compareTo("")==0) {
-			return e;
-		}
-	    List<Candidato> risultato = new ArrayList<>();
-	    e.stream()
-	      .filter(x->x.getStato().equals(stato))
-	      .forEach(x->risultato.add(x));
-	        return risultato;    
-	  }
-	
-	public List<Candidato> getCandidatoComp(String comp, List<Candidato> e){ 
-		if(comp.compareTo("*")==0) {
-			return e;
-		}
-	    List<Candidato> risultato = new ArrayList<>();
-	    e.stream()
-	      .filter(x->x.getCompetenze().contains(comp))
-	      .forEach(x->risultato.add(x));
-	        return risultato;    
-	  }
+	    candidato = this.getCandidatos();
+	    risultato= candidato.stream()
+		          .filter(x->x.getAnzianit().contains(anzianit))
+		          .collect(Collectors.toList());
+	    return risultato;
+	}
 	
 	public List<Candidato> getCandidatoForParameter(String sede,String competenze, String stato){   
 	      List<Candidato> candidato= new ArrayList <Candidato>();
 	      List<Candidato> risultato = new ArrayList<>();
-	      candidato = this.getCandidatos();
+	      candidato = getCandidatoForAnzianit("Academy");
 	      risultato= candidato.stream()
 	          .filter(x->x.getCompetenze().contains(competenze)
 	              &&((x.getLuogoCandidatura().equals(sede)||x.getLuogoCandidatura().contains("E")||sede.contains("E")))
 	              &&((x.getStato().equals(stato)||stato.compareTo("")==0)))
 	          .collect(Collectors.toList());
-	      
-	      
+
+	          return risultato;    
+	    }
+	
+	//metodo per la selezione dei senior
+	public List<Candidato> getSeniorForParameter(String sede,String competenze, String stato, String pos){   
+	      List<Candidato> senior= new ArrayList <Candidato>();
+	      List<Candidato> risultato = new ArrayList<>();
+	      senior = getCandidatoForAnzianit("Senior");
+	      risultato= senior.stream()
+	          .filter(x->x.getCompetenze().contains(competenze)
+	              &&((x.getLuogoCandidatura().equals(sede)||x.getLuogoCandidatura().contains("E")||sede.contains("E")))
+	              &&((x.getStato().equals(stato)||stato.compareTo("")==0))
+	          	&&((x.getPosizioneLav().equals(pos)|| x.getPosizioneLav().equals("E") || pos.contains("E"))))
+	          .collect(Collectors.toList());
 	          return risultato;    
 	    }
 	  
@@ -187,41 +203,8 @@ public class CanDao {
 	}
 
 	public Candidato getCanById(int id) {
-		String sql="select * from candidati where id=?";    
+		String sql="select * from cand where id=?";    
 	    return template.queryForObject(sql, new Object[]{id},new BeanPropertyRowMapper<Candidato>(Candidato.class));
 	}
 	
-
-	/*
-	public String gestisciComp (String [] framework) {
-		String elementoString="";
-		for ( String x: framework) {
-			elementoString=elementoString.concat(x);
-		}
-		return elementoString;
-	}
-		
-
-	public int salva(Candidato p){    
-		String competenze= p.getCompetenze().concat(gestisciComp(p.getFavoriteFrameworks()));
-		String sql="insert into candidati(nome,cognome,email,telefono,competenze) values('"+p.getNome()+"','"+p.getCognome()+"','"+p.getEmail()+"','"+p.getTelefono()+"','"+competenze+"')";  
-		return template.update(sql);    
-	}
-	
-public int update(Candidato p){  
-    String sql="update Emp99 set name='"+p.getName()+"', salary="+p.getSalary()+",designation='"+p.getDesignation()+"' where id="+p.getId()+"";    
-    return template.update(sql);    
-}   
-	public int delete(int id){    
-		String sql="delete from Emp99 where id="+id+"";    
-		return template.update(sql);    
-	}    
-	/*public Emp getEmpById(int id){    
-    String sql="select * from candidati where id=?";    
-    return template.queryForObject(sql, new Object[]{id},new BeanPropertyRowMapper<Emp>(Emp.class));    
-}   
-	
-	public static void main(String[] args) {
-		//idm.dao.CanDao;
-	} */   
 }

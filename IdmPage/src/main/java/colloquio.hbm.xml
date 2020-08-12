@@ -11,7 +11,6 @@
     <property name="candidato"></property>
     <property name="data"></property>
     <property name="tipo"></property> 
-<!--    	<property name="numero"></property>  -->
     <property name="note"></property>
     <property name="valutazione"></property>  
 	</class>  

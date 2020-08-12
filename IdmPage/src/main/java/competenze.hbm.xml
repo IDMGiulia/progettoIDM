@@ -8,6 +8,6 @@
     <id name="competenza">  
      <generator class="assigned"></generator>  
     </id>      
-    <property name="tipo"></property>  
+    <property name="tipo"></property> 
 	</class>  
 </hibernate-mapping>    
