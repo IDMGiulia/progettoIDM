@@ -299,35 +299,8 @@ h1 {
 }
 </style>
 
-<!-- STILE BOTTONE CANDIDATURA -->
-<style>
-.button {
-	border: none;
-	color: white;
-	padding: 16px 32px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-	margin: 4px 2px;
-	transition-duration: 0.4s;
-	cursor: pointer;
-}
-
-.button2 {
-	background-color: #DCF0FF;
-	color: black;
-	border: 2px solid #428BCA;
-	border-radius: 8px;
-}
-
-.button2:hover {
-	background-color: #428BCA;
-	color: white;
-	border: 2px solid #DCF0FF;
-	border-radius: 8px;
-}
-</style>
+<!-- FILE PULSANTI -->
+<jsp:include page="stili/pulsanti.jsp"></jsp:include>
 
 <!-- STILE CAROSELLO -->
 <style>
@@ -467,25 +440,25 @@ h1 {
 				<div style="text-align: center">
 					<h1>Academy IDM</h1>
 					<h5 style="text-align: left">
-						Ideata con l&#39; obiettivo di introdurre metodologie qualificate
+						Ideata con l' obiettivo di introdurre metodologie qualificate
 						e riconosciute dal mercato in un sistema di formazione e training
 						adeguato alla flessibilit&#224; del mondo ICT.<br> Con i
 						nostri corsi avrai modo di formarti per divenire un &quot;JUNIOR
 						JAVA FULL STACK&quot; ovvero consulente in ambito Java.<br>
-						Oltre alle conoscenze teoriche legate all&#39; argomento Java,
+						Oltre alle conoscenze teoriche legate all' argomento Java,
 						imparerai il comportamento da tenere presso la societ&#224;
 						cliente, principalmente realt&#224; di System Integrator, la
 						gestione ed organizzazione di progetti, le metodologie di sviluppo
 						e organizzazione delle attivit&#224;, la valutazione dei tempi di
 						una attivit&#224;, le figure coinvolte in un progetto IT e la
-						gestione delle relazioni all&#39; interno del gruppo di lavoro.<br>
+						gestione delle relazioni all' interno del gruppo di lavoro.<br>
 						I nostri corsi, della durata di 40h / 60h teoriche vengono
 						realizzati di presenza in aula, ed alternano momenti di formazione
 						didattica frontale a momenti di formazione esperienziale.<br>
 						In questo modo potrai mettere in pratica quanto appreso durante la
 						lezione attraverso esercizi pratici e il confronto con il docente
 						ed i tuoi colleghi.<br> Se sei una persona curiosa, dinamica
-						e l&#39; universo Java &#232; la tua passione, l&#39; Academy di
+						e l' universo Java &#232; la tua passione, l'Academy di
 						IDM Consulting &#232; quello che fa per te!
 					</h5>
 					<br>
@@ -560,13 +533,13 @@ h1 {
 								<div class="carousel-inner">
 									<div class="item active carousel-1">
 										<div class="container">
-											<img src="<%=request.getContextPath()%>/img/T.jpg"
+											<img src="<%=request.getContextPath()%>/img/Torino.jpg"
 												alt="Torino">
 										</div>
 									</div>
 									<div class="item carousel-2">
 										<div class="container">
-											<img src="<%=request.getContextPath()%>/img/M.jpg"
+											<img src="<%=request.getContextPath()%>/img/Milano.jpg"
 												alt="Milano">
 										</div>
 									</div>

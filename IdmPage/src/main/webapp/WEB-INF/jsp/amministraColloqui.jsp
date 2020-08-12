@@ -90,7 +90,7 @@ h1 {
 			<div class="container" style="margin-left: 30px">
 
 				<h1>Elenco dei controlli</h1>
-				<a href="/IdmPage/aggiungiColloqui/${senior.id}">Aggiungi un colloquio</a> <br> <br>
+				<a href="/IdmPage/aggiungiColloqui/${cand.id}">Aggiungi un colloquio</a> <br> <br>
 				<br>
 				<table>
 					<tr>
@@ -104,7 +104,7 @@ h1 {
 					<c:forEach var="col" items="${colloqui}">
 						<tr>
 							<td>${col.id}</td>
-							<td>${senior.nome} ${senior.cognome}</td>
+							<td>${cand.nome} ${cand.cognome}</td>
 							<td>${col.data}</td>
 							<td>${col.tipo}</td>
 							<td>${col.note}</td>

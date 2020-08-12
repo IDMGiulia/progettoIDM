@@ -163,18 +163,6 @@ a.navbar-brand, ul.navbar-nav li a:hover, ul.navbar-nav li a:focus, ul.navbar-na
 	border-top-color: #1d70b7;
 }
 
-.plan.featured a.btn.btn-primary, .plan.featured a.btn.btn-primary:hover
-	{
-	border-color: #222;
-	border-top: none;
-	border-left: none;
-	border-right: none
-}
-
-.plan.featured a.btn.btn-primary:hover {
-	background-color: #333 !important
-}
-
 .bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active,
 	.woocommerce-pagination ul li span.current {
 	background-color: #1d70b7 !important;
@@ -254,35 +242,8 @@ h1 {
 }
 </style>
 
-<!-- STILE BOTTONE CANDIDATURA -->
-<style>
-.button {
-	border: none;
-	color: white;
-	padding: 16px 32px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-	margin: 4px 2px;
-	transition-duration: 0.4s;
-	cursor: pointer;
-}
-
-.button2 {
-	background-color: #DCF0FF;
-	color: black;
-	border: 2px solid #428BCA;
-	border-radius: 8px;
-}
-
-.button2:hover {
-	background-color: #428BCA;
-	color: white;
-	border: 2px solid #DCF0FF;
-	border-radius: 8px;
-}
-</style>
+<!-- FILE PULSANTI -->
+<jsp:include page="stili/pulsanti.jsp"></jsp:include>
 
 </head>
 
@@ -310,16 +271,16 @@ h1 {
 					<br>
 					<form:form method="POST" action="log" modelAttribute="log">
 						<div class="col-md-1"></div>
-						<div class="col-md-4">
+						<div class="col-md-4" style="text-align: left">
 							<div class="form-group">
-								<label class="form-label">username *</label>
+								<label class="form-label">Username *</label>
 								<form:input path="username" type="text"
 									class="form-control form-control-sm" required="required"
 									placeholder="Inserisci il tuo username" />
 							</div>
 						</div>
 						<div class="col-md-2"></div>
-						<div class="col-md-4">
+						<div class="col-md-4" style="text-align: left">
 							<div class="form-group">
 								<label class="form-label">Password *</label>
 								<form:input path="password" type="text"

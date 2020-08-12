@@ -159,11 +159,6 @@ img.wp-smiley, img.emoji {
 	src='https://www.idmconsulting.it/wp-content/themes/dart/js/jquery.bxslider.min.js?ver=3.0.1'></script>
 <script type='text/javascript'
 	src='https://www.idmconsulting.it/wp-content/themes/dart/js/smoothscroll.js?ver=4.9.15'></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var _EPYT_ = {"ajaxurl":"https:\/\/www.idmconsulting.it\/wp-admin\/admin-ajax.php","security":"5f590b1437","gallery_scrolloffset":"20","eppathtoscripts":"https:\/\/www.idmconsulting.it\/wp-content\/plugins\/youtube-embed-plus\/scripts\/","epresponsiveselector":"[\"iframe.__youtube_prefs_widget__\"]","epdovol":"1","version":"12.2","evselector":"iframe.__youtube_prefs__[src], iframe[src*=\"youtube.com\/embed\/\"], iframe[src*=\"youtube-nocookie.com\/embed\/\"]","ajax_compat":"","ytapi_load":"light","stopMobileBuffer":"1","vi_active":"","vi_js_posttypes":[]};
-/* ]]> */
-</script>
 <script type='text/javascript'
 	src='https://www.idmconsulting.it/wp-content/plugins/youtube-embed-plus/scripts/ytprefs.min.js?ver=12.2'></script>
 <link rel='https://api.w.org/'
@@ -393,17 +388,6 @@ h1 {
 	font-weight: normal;
 }
 </style>
-<style type="text/css">
-.recentcomments a {
-	display: inline !important;
-	padding: 0 !important;
-	margin: 0 !important;
-}
-</style>
-<meta name="generator"
-	content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress." />
-<meta name="generator"
-	content="Powered by Slider Revolution 5.4.8 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
 
 <style type="text/css" data-type="vc_custom-css">
 .vc_gitem-zone .vc-zone-link {
@@ -430,35 +414,8 @@ h1 {
 }
 </style>
 
-<!-- STILE BOTTONE CANDIDATURA -->
-<style>
-.button {
-	border: none;
-	color: white;
-	padding: 16px 32px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-	margin: 4px 2px;
-	transition-duration: 0.4s;
-	cursor: pointer;
-}
-
-.button2 {
-	background-color: #DCF0FF;
-	color: black;
-	border: 2px solid #428BCA;
-	border-radius: 8px;
-}
-
-.button2:hover {
-	background-color: #428BCA;
-	color: white;
-	border: 2px solid #DCF0FF;
-	border-radius: 8px;
-}
-</style>
+<!-- FILE PULSANTI -->
+<jsp:include page="stili/pulsanti.jsp"></jsp:include>
 
 </head>
 

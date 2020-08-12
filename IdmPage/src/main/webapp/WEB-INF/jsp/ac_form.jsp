@@ -379,35 +379,8 @@ h1 {
 }
 </style>
 
-<!-- STILE BOTTONE CANDIDATURA -->
-<style>
-.button {
-	border: none;
-	color: white;
-	padding: 16px 32px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-	margin: 4px 2px;
-	transition-duration: 0.4s;
-	cursor: pointer;
-}
-
-.button2 {
-	background-color: #DCF0FF;
-	color: black;
-	border: 2px solid #428BCA;
-	border-radius: 8px;
-}
-
-.button2:hover {
-	background-color: #428BCA;
-	color: white;
-	border: 2px solid #DCF0FF;
-	border-radius: 8px;
-}
-</style>
+<!-- FILE PULSANTI -->
+<jsp:include page="stili/pulsanti.jsp"></jsp:include>
 
 <!-- ALLINEAMENTO VERTICALE PER LE COMPETENZE AGGIUNTIVE -->
 <style>
@@ -423,6 +396,7 @@ span {
 }
 </style>
 
+<!-- STILE CHECKBOXES -->
 <style>
 .checkboxes {
       text-align:center;
@@ -543,11 +517,11 @@ span {
 						<div class="col-md-1"></div>
 						<div class="col-md-4">
 							<div class="radiobut">
-								<form:radiobutton path="luogoCandidatura" value="T"
+								<form:radiobutton path="luogoCandidatura" value="Torino"
 									label="Torino" required="required"/>
-								<form:radiobutton path="luogoCandidatura" value="M"
+								<form:radiobutton path="luogoCandidatura" value="Milano"
 									label="Milano" />
-								<form:radiobutton path="luogoCandidatura" value="E"
+								<form:radiobutton path="luogoCandidatura" value="Entrambi"
 									label="Entrambi" />
 							</div>
 						</div>

@@ -11,6 +11,8 @@
 
 <title>Modifica Candidati | IDM - We simplify your work</title>
 
+<link rel="shortcut icon"
+	href="https://www.idmconsulting.it/wp-content/uploads/2016/01/idm-favicon.png" />
 <link rel='stylesheet' id='bootstrap-css'
 	href='https://www.idmconsulting.it/wp-content/themes/dart/css/bootstrap.min.css?ver=4.9.15'
 	type='text/css' media='all' />
@@ -54,6 +56,7 @@
 			});
 		});
 </script>
+
 <style type="text/css">
 /****************Custom background**************************/
 .body-inner {
@@ -66,37 +69,29 @@ h1 {
 	font-weight: normal;
 }
 </style>
-</head>
 
-<!-- STILE BOTTONE SALVATAGGIO -->
-<style>
-.button {
-	border: none;
-	color: white;
-	padding: 16px 32px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-	margin: 4px 2px;
-	transition-duration: 0.4s;
-	cursor: pointer;
-}
+<!-- SCRIPT MODAL -->
+<script>
+$(function() {
 
-.button2 {
-	background-color: #DCF0FF;
-	color: black;
-	border: 2px solid #428BCA;
-	border-radius: 8px;
-}
+	  // when the modal is shown
+	  $('#myModal').on('show.bs.modal', function(e) {
+	    var $modal = $(this);
 
-.button2:hover {
-	background-color: #428BCA;
-	color: white;
-	border: 2px solid #DCF0FF;
-	border-radius: 8px;
-}
-</style>
+	    // find the trigger button
+	    var $button = $(e.relatedTarget);
+
+	    // find the hidden div next to trigger button
+	    var $notifications = $button.siblings('div.hidden');
+
+	    // transfer content to modal body
+	    $modal.find('.modal-body').html($notifications.html());
+	  })
+	});
+</script>
+
+<!-- FILE PULSANTI -->
+<jsp:include page="stili/pulsanti.jsp"></jsp:include>
 
 </head>
 
@@ -111,55 +106,82 @@ h1 {
 
 		<!-- Sezione Centrale della Pagina -->
 		<section class="main-wrapper pagecustom-1339">
-			<div class="container" style="margin-top: 30px">
-
-
-				<form:form method="POST" action="/IdmPage/editsave">
-					<div class="row">
+			<div class="container">
+				
+				<!-- SEZIONE CON TITOLO E TASTO RIMUOVI -->
+				<div class="row">
 					<div class="col-sm-1"></div>
-						<div class="col-sm-4">
-							<h1>Modifica il candidato</h1>
-						</div>
-						<div class="col-sm-2"></div>
-						<div class="col-sm-4">
-							<input type="submit" value="Aggiorna" class="button button2" style="margin-top: 30px" />
-						</div>
-						<div class="col-sm-1"></div>
+					<div class="col-sm-4">
+						<h1>Modifica il candidato</h1>
 					</div>
+					<div class="col-sm-2"></div>
+					<div class="col-sm-4">
+					
+					<!-- MODAL A COMPARSA -->
+						<div class="hidden">
+							Confermi di voler rimuovere il candidato?<br> ID: ${can.id}<br>
+							Nome: ${can.nome}<br> Cognome: ${can.cognome}<br><br>
+							
+							<!-- PULSANTI NEL MODAL -->
+							<div class="row">
+								<div class="col-sm-6">
+									<a href="/IdmPage/deleteemp/${can.id}"
+										class="btn btn-primary btn-block ml-1">Rimuovi</a>
+								</div>
+								<div class="col-sm-6">
+									<button type="button" class="btn btn-secondary btn-block ml-1"
+										data-dismiss="modal" style="align: right">Annulla</button>
+								</div>
+							</div>
+						</div>
+						<button class="button button3" data-toggle="modal"
+							data-target="#myModal" style="margin-top: 30px" data-backdrop="false">Elimina
+							candidato</button>
+
+					</div>
+					<div class="col-sm-1"></div>
+				</div>
+				<form:form method="POST" action="/IdmPage/editsave">
 
 
+					<!-- CAMPI CON INFORMAZIONI CANDIDATO -->
 					<table>
 
 						<form:hidden path="id" />
 						<form:hidden path="livello" />
 						<form:hidden path="percorso" />
+						<form:hidden path="anzianit" />
 						<tr>
 							<td>Nome :</td>
-							<td><form:input path="nome" required="required"/></td>
+							<td><form:input path="nome" required="required" /></td>
 						</tr>
 						<tr>
 							<td>Cognome :</td>
-							<td><form:input path="cognome" required="required"/></td>
+							<td><form:input path="cognome" required="required" /></td>
 						</tr>
 						<tr>
 							<td>Telefono :</td>
-							<td><form:input path="telefono" type="tel" required="required" pattern="[0-9]{10}|[0-9]{9}|[0-9]{8}"/></td>
+							<td><form:input path="telefono" type="tel"
+									required="required" pattern="[0-9]{10}|[0-9]{9}|[0-9]{8}" /></td>
 						</tr>
 						<tr>
 							<td>Email :</td>
-							<td><form:input path="email" type="email" required="required"/></td>
+							<td><form:input path="email" type="email"
+									required="required" /></td>
 						</tr>
-						<tr style="height:20px;">
+						<tr style="height: 20px;">
 							<td>Competenze :</td>
-							<td><form:textarea style="width: 80%; height: 100%; border: none" maxlength="180" path="competenze" /></td>
+							<td><form:textarea
+									style="width: 80%; height: 100%; border: none" maxlength="180"
+									path="competenze" /></td>
 						</tr>
 
 						<tr>
 							<td>Luogo candidatura:</td>
 							<td><form:select path="luogoCandidatura">
-									<form:option value="M" label="Milano" />
-									<form:option value="T" label="Torino" />
-									<form:option value="E" label="Entrambi" />
+									<form:option value="Milano" label="Milano" />
+									<form:option value="Torino" label="Torino" />
+									<form:option value="Entrambi" label="Entrambi" />
 								</form:select></td>
 						</tr>
 
@@ -176,10 +198,31 @@ h1 {
 
 						<tr>
 							<td>Note sul candidato :</td>
-							<td><form:textarea path="note" maxlength="140" style="width: 80%; height: 100%; border: none" /></td>
+							<td><form:textarea path="note" maxlength="140"
+									style="width: 80%; height: 100%; border: none" /></td>
 						</tr>
 					</table>
+
+					<!-- BOTTONE AGGIORNA -->
+					<div class="row" style="text-align: center">
+						<div class="col-sm-4"></div>
+						<div class="col-sm-4">
+							<input type="submit" value="Aggiorna" class="button button2" />
+						</div>
+						<div class="col-sm-4"></div>
+					</div>
 				</form:form>
+
+				<div class="modal fade" id="myModal">
+					<div class="modal-dialog">
+						<div class="modal-content">
+
+							<!-- Body -->
+							<div class="modal-body"></div>
+
+						</div>
+					</div>
+				</div>
 
 			</div>
 		</section>

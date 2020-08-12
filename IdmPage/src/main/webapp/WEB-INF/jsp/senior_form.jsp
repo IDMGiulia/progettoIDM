@@ -380,35 +380,8 @@ h1 {
 }
 </style>
 
-<!-- STILE BOTTONE CANDIDATURA -->
-<style>
-.button {
-	border: none;
-	color: white;
-	padding: 16px 32px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-	margin: 4px 2px;
-	transition-duration: 0.4s;
-	cursor: pointer;
-}
-
-.button2 {
-	background-color: #DCF0FF;
-	color: black;
-	border: 2px solid #428BCA;
-	border-radius: 8px;
-}
-
-.button2:hover {
-	background-color: #428BCA;
-	color: white;
-	border: 2px solid #DCF0FF;
-	border-radius: 8px;
-}
-</style>
+<!-- FILE PULSANTI -->
+<jsp:include page="stili/pulsanti.jsp"></jsp:include>
 
 <!-- ALLINEAMENTO VERTICALE PER LE COMPETENZE AGGIUNTIVE -->
 <style>
@@ -449,7 +422,7 @@ span {
 }
 
 .radiobut label {
-	margin: 0px 20px 0px 3px;
+	margin: 0px 35px 0px 3px;
 }
 </style>
 
@@ -544,11 +517,11 @@ span {
 						<div class="col-md-1"></div>
 						<div class="col-md-4">
 							<div class="radiobut">
-								<form:radiobutton path="luogoCandidatura" value="T"
+								<form:radiobutton path="luogoCandidatura" value="Torino"
 									label="Torino" required="required"/>
-								<form:radiobutton path="luogoCandidatura" value="M"
+								<form:radiobutton path="luogoCandidatura" value="Milano"
 									label="Milano" />
-								<form:radiobutton path="luogoCandidatura" value="E"
+								<form:radiobutton path="luogoCandidatura" value="Entrambi"
 									label="Entrambi" />
 							</div>
 						</div>
@@ -563,14 +536,16 @@ span {
 						<div class="col-md-4">
 							<form:label path="posizioneLav">Posizione per la quale ci si intende candidare: *</form:label>
 						</div>
-						<div class="col-md-7">
+						<div class="col-md-7" style="text-align: center">
 							<div class="radiobut">
 								<form:radiobutton path="posizioneLav" value="Senior Java Developer"
 									label="Senior Java Developer" required="required"/>
 								<form:radiobutton path="posizioneLav" value="Senior .NET Developer"
 									label="Senior .NET Developer" />
-								<form:radiobutton path="posizioneLav" value="Entrambe le posizioni"
-									label="Entrambe le posizioni" />
+								<form:radiobutton path="posizioneLav" value="Senior System Application Engineer"
+									label="System Application Engineer" />
+								<form:radiobutton path="posizioneLav" value="Tutte le posizioni"
+									label="Tutte le posizioni" />
 							</div>
 						</div>
 					</div>
@@ -588,12 +563,12 @@ span {
 
 						<!-- LIVELLO DI ISTRUZIONE -->
 							<div class="col-md-1"></div>
-							<div class="col-md-4">
+							<div class="col-md-3">
 								<form:label path="livello">Livello di Istruzione:</form:label>
 							</div>
-							<div class="col-md-6" style="text-align: center">
+							<div class="col-md-7" style="text-align: center">
 								<div class="radiobut">
-									<form:radiobutton path="livello" value="Scuola Media Superiore"
+									<form:radiobutton path="livello" value="Scuola Superiore"
 										label="Diploma di Scuola Superiore" />
 									<form:radiobutton path="livello" value="Laurea Triennale"
 										label="Laurea Triennale" />

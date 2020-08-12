@@ -19,12 +19,12 @@
 
 <!-- This site is optimized with the Yoast SEO plugin v9.2.1 - https://yoast.com/wordpress/plugins/seo/ -->
 <meta name="description"
-	content="IDM Consulting ottimizza la gestione dei processi aziendali riducendone i costi. Propone soluzioni strategiche di archivio garantendo sicurezza, affidabilità e innovazione." />
+	content="IDM Consulting ottimizza la gestione dei processi aziendali riducendone i costi. Propone soluzioni strategiche di archivio garantendo sicurezza, affidabilit&#224; e innovazione." />
 <link rel="canonical"
 	href="https://www.idmconsulting.it/chi-siamo/offerte-di-lavoro/" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:description"
-	content="IDM Consulting ottimizza la gestione dei processi aziendali riducendone i costi. Propone soluzioni strategiche di archivio garantendo sicurezza, affidabilità e innovazione." />
+	content="IDM Consulting ottimizza la gestione dei processi aziendali riducendone i costi. Propone soluzioni strategiche di archivio garantendo sicurezza, affidabilit&#224; e innovazione." />
 <meta name="twitter:title"
 	content="Lavora con noi | IDM - We simplify your work" />
 <meta name="twitter:image"
@@ -204,7 +204,7 @@ window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overl
 	AddToYourFavorites: "Aggiungi ai favoriti",
 	SendFromWebOrProgram: "Invia da qualsiasi indirizzo email o programma di posta elettronica",
 	EmailProgram: "Programma di posta elettronica",
-	More: "Di più&#8230;",
+	More: "Di piÃ¹&#8230;",
 	ThanksForSharing: "Thanks for sharing!",
 	ThanksForFollowing: "Thanks for following!"
 };
@@ -542,7 +542,7 @@ h1 {
 												<div class="vc_tta-panels-container">
 													<div class="vc_tta-panels">
 
-														<!-- S JAVA DEV TORINO -->
+														<!-- S JAVA DEV TORINO / MILANO -->
 														<div class="vc_tta-panel" id="1495547727866-0e18e9be-dc78"
 															data-vc-content=".vc_tta-panel-body">
 															<div class="vc_tta-panel-heading">
@@ -552,7 +552,7 @@ h1 {
 																		data-vc-accordion
 																		data-vc-container=".vc_tta-container"><span
 																		class="vc_tta-title-text">SENIOR JAVA DEVELOPER
-																			_ Torino</span><i
+																			_ Torino/Milano</span><i
 																		class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a>
 																</h4>
 															</div>
@@ -566,7 +566,7 @@ h1 {
 																		</p>
 																		<p>
 																			La risorsa, con almeno 4 anni di esperienza sulle
-																			piattaforme <strong>JAVA EE</strong>, verrà coinvolta
+																			piattaforme <strong>JAVA EE</strong>, verr&#224; coinvolta
 																			nelle diverse fasi del ciclo di vita del software
 																			&#8211; analisi, sviluppo, test &#8211; nell'ambito
 																			di progetti rivolti allo sviluppo sia di soluzioni
@@ -574,7 +574,7 @@ h1 {
 																			integrazioni per conto di clienti.
 																		</p>
 																		<p>
-																			<strong>Competenze tecniche</strong>
+																			<strong>Competenze tecniche:</strong>
 																		</p>
 																		<ul>
 																			<li>Comprovata esperienza di sviluppo
@@ -590,20 +590,20 @@ h1 {
 																			<li>Buona conoscenza della lingua inglese</li>
 																		</ul>
 																		<p>
-																			<strong>Caratteristiche personali</strong>
+																			<strong>Caratteristiche personali:</strong>
 																		</p>
 																		<ul>
-																			<li>Ottima capacità di team working</li>
+																			<li>Ottima capacit&#224; di team working</li>
 																			<li>Ottima comunicazione orale e scritta</li>
 																			<li>Predisposizione alle relazioni
 																				interpersonali</li>
-																			<li>Apertura e flessibilità</li>
-																			<li>Proattività</li>
+																			<li>Apertura e flessibilit&#224;</li>
+																			<li>Proattivit&#224;</li>
 																		</ul>
 																		<p>
 																			<strong>Sede di lavoro</strong>
 																		</p>
-																		<p>Torino, con disponibilità a brevi trasferte</p>
+																		<p>Torino, con disponibilit&#224; a brevi trasferte</p>
 																		<p>
 																			<em> La forma contrattuale ed il trattamento
 																				economico saranno valutati individualmente, in
@@ -614,9 +614,9 @@ h1 {
 																			entrambi i sessi ai sensi della legge (L.903/77 e
 																			D.Lgs n. 98/2006, art 27).</p>
 																		<p>
-																			L&#8217;interessato è invitato a inviare la propria
-																			candidatura tramite <a href="candidaturaSen">questo
-																				form</a>.
+																			L'interessato &#232; invitato a inviare la propria
+																			candidatura tramite <a href="candidaturaSen"><b>questo
+																				form</b></a>.
 																		</p>
 
 																	</div>
@@ -624,39 +624,7 @@ h1 {
 															</div>
 														</div>
 
-														<!-- J JAVA DEV TORINO -->
-														<div class="vc_tta-panel" id="1519396897075-d521093d-323a"
-															data-vc-content=".vc_tta-panel-body">
-															<div class="vc_tta-panel-heading">
-																<h4
-																	class="vc_tta-panel-title vc_tta-controls-icon-position-left">
-																	<a href="#1519396897075-d521093d-323a"
-																		data-vc-accordion
-																		data-vc-container=".vc_tta-container"><span
-																		class="vc_tta-title-text">JUNIOR J2EE DEVELOPER
-																			CON FORMAZIONE _ Torino</span><i
-																		class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a>
-																</h4>
-															</div>
-															<div class="vc_tta-panel-body">
-								                                <div
-								                                  class="wpb_text_column wpb_content_element  vc_custom_1519396982742">
-								                                  <div class="wpb_wrapper">
-								                                    <p>
-								                                      Per conoscere tutte le informazioni riguardo alla
-								                                      nostra Academy <a href="presentazione">clicca qui</a>
-								                                    </p>
-								                                    <p>Se conosci già la nostra Academy e vuoi candidarti direttamente <a href="candidaturaAc">clicca qui</a></p>
-								                                    <p>L' Academy è rivolta a candidati di entrambi i
-								                                      sessi ai sensi della legge (L.903/77 e D.Lgs n.
-								                                      98/2006, art 27).</p>
-								
-								                                  </div>
-								                                </div>
-								                              </div>
-														</div>
-
-														<!-- S .NET DEV TORINO -->
+														<!-- S .NET DEV TORINO / MILANO -->
 														<div class="vc_tta-panel" id="1495547724870-545a2c73-9826"
 															data-vc-content=".vc_tta-panel-body">
 															<div class="vc_tta-panel-heading">
@@ -666,7 +634,7 @@ h1 {
 																		data-vc-accordion
 																		data-vc-container=".vc_tta-container"><span
 																		class="vc_tta-title-text">SENIOR .NET DEVELOPER
-																			_ Torino</span><i
+																			_ Torino/Milano</span><i
 																		class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a>
 																</h4>
 															</div>
@@ -679,7 +647,7 @@ h1 {
 																				ricercando un SENIOR .NET DEVELOPER</strong>
 																		</p>
 																		<p>La risorsa, con almeno 4 anni di esperienza
-																			sulle piattaforme Microsoft, verrà coinvolta nelle
+																			sulle piattaforme Microsoft, verr&#224; coinvolta nelle
 																			diverse fasi del ciclo di vita del software &#8211;
 																			analisi, sviluppo, test &#8211; nell'ambito di
 																			progetti rivolti allo sviluppo sia di soluzioni
@@ -703,17 +671,17 @@ h1 {
 																			<strong>Caratteristiche personali</strong>
 																		</p>
 																		<ul>
-																			<li>Ottima capacità di team working</li>
+																			<li>Ottima capacit&#224; di team working</li>
 																			<li>Ottima comunicazione orale e scritta</li>
 																			<li>Predisposizione alle relazioni
 																				interpersonali</li>
-																			<li>Apertura e flessibilità</li>
-																			<li>Proattività</li>
+																			<li>Apertura e flessibilit&#224;</li>
+																			<li>Proattivit&#224;</li>
 																		</ul>
 																		<p>
 																			<strong>Sede di lavoro</strong>
 																		</p>
-																		<p>Torino, con disponibilità a brevi trasferte</p>
+																		<p>Torino, con disponibilit&#224; a brevi trasferte</p>
 																		<p>
 																			<em> La forma contrattuale ed il trattamento
 																				economico saranno valutati individualmente, in
@@ -724,9 +692,9 @@ h1 {
 																			entrambi i sessi ai sensi della legge (L.903/77 e
 																			D.Lgs n. 98/2006, art 27).</p>
 																		<p>
-																			L&#8217;interessato è invitato a inviare la propria
-																			candidatura tramite <a href="candidaturaSen">questo
-																				form</a>.
+																			L&#8217;interessato &#232; invitato a inviare la propria
+																			candidatura tramite <a href="candidaturaSen"><b>questo
+																				form</b></a>.
 																		</p>
 																		<p>&nbsp;</p>
 																		<p>&nbsp;</p>
@@ -736,7 +704,7 @@ h1 {
 															</div>
 														</div>
 
-														<!-- S .NET DEV MILANO -->
+														<!-- SYSTEM APPLICATION ENGINEER -->
 														<div class="vc_tta-panel" id="1519397071129-d69d726d-83f0"
 															data-vc-content=".vc_tta-panel-body">
 															<div class="vc_tta-panel-heading">
@@ -745,8 +713,8 @@ h1 {
 																	<a href="#1519397071129-d69d726d-83f0"
 																		data-vc-accordion
 																		data-vc-container=".vc_tta-container"><span
-																		class="vc_tta-title-text">SENIOR .NET DEVELOPER
-																			_ Milano</span><i
+																		class="vc_tta-title-text">SYSTEM
+																			APPLICATION ENGINEER _ Milano</span><i
 																		class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a>
 																</h4>
 															</div>
@@ -755,81 +723,126 @@ h1 {
 																	class="wpb_text_column wpb_content_element  vc_custom_1519397372031">
 																	<div class="wpb_wrapper">
 																		<p>
-																			Per importante progetto in ambito assicurativo,
-																			stiamo ricercando un <strong>SENIOR .NET
-																				DEVELOPER</strong>
+																			<strong>Per il potenziamento del team
+																				interno di progetti verso grandi clienti stiamo
+																				ricercando una figura di: SYSTEM APPLICATION
+																				ENGINEER</strong>
 																		</p>
-																		<p>La risorsa, con almeno 3 anni di esperienza
-																			sulle piattaforme Microsoft, verrà coinvolta nelle
-																			diverse fasi del ciclo di vita del software &#8211;
-																			analisi, sviluppo, test &#8211; nell'ambito di
-																			progetti rivolti allo sviluppo sia di soluzioni
-																			software che delle loro personalizzazioni e
-																			integrazioni.</p>
 																		<p>
-																			<strong>Competenze tecniche<span
-																				data-zcqa="value_DESCRIPTION"
-																				class="labelVal mL45 widP60"><span
-																					class="bCardHover jo-des"
-																					data-zcqa="value_DESCRIPTION"></span></span></strong>
-																		</p>
+																			<strong>Competenze tecniche della mansione:</strong>
 																		<ul>
-																			<li class="ox-12c8476211-MsoListParagraph"><span>Ottima
-																					conoscenza di ASP.NET MVC 3/4/5, HTML 5, Bootstrap,
-																					AngularJS, JQuery, C#, Web Api, REST</span></li>
-																			<li class="ox-12c8476211-MsoListParagraph"><span>Ottima
-																					conoscenza IDE di sviluppo MS Visual Studio
-																					2010/2013/2015 </span></li>
-																			<li class="ox-12c8476211-MsoListParagraph"><span>Buona
-																					conoscenza del linguaggio SQL</span></li>
-																			<li class="ox-12c8476211-MsoListParagraph"><span>Buona
-																					conoscenza di ORM (NHibernate, Entity Framework)</span></li>
-																			<li class="ox-12c8476211-MsoListParagraph"><span>Buona
-																					conoscenza di MS SQL Server</span></li>
-																			<li class="ox-12c8476211-MsoListParagraph"><span>Buona
-																					conoscenza della piattaforma MS Team Foundation
-																					Server</span></li>
-																			<li class="ox-12c8476211-MsoListParagraph"><span>Buona
-																					Conoscenza dei principali design patterns (Ioc,
-																					factory, repository, ecc.)</span></li>
-																			<li class="ox-12c8476211-MsoListParagraph"><span>Basi
-																					di architetture software</span></li>
+																			<li>Ottime capacit&#224; e conoscenze nell'ambito
+																				dell'amministrazione dei sistemi Linux, Windows,
+																				VMWare, Active Directory</li>
+																			<li>Ottime capacit&#224; e conoscenze nell'ambito
+																				della gestione dei DBMS (Oracle Server, MS SQL
+																				Server)</li>
+																			<li>Buone capacit&#224; e conoscenze nell'ambito
+																				della gestione dei Java web application server</li>
+																			<li>Costituir&#224; requisito preferenziale la
+																				conoscenza del sistema documentale</li>
+																			<li>Costituir&#224; requisito preferenziale la
+																				capacit&#224; di tuning e performance dei DBMS</li>
+																			<li>Costituir&#224; requisito preferenziale la
+																				conoscenza di architetture a microservizi,
+																				metodologie di Continuous Integration</li>
 																		</ul>
-																		<p>
-																			<strong>Caratteristiche personali</strong>
-																		</p>
+
+																		<strong>Caratteristiche personali:</strong>
 																		<ul>
-																			<li>Ottima capacità di team working</li>
+																			<li>Esperienza nella posizione di almeno 5 anni</li>
+																			<li>Ottima capacit&#224; di team working</li>
 																			<li>Ottima comunicazione orale e scritta</li>
 																			<li>Predisposizione alle relazioni
 																				interpersonali</li>
-																			<li>Apertura e flessibilità</li>
-																			<li>Proattività</li>
+																			<li>Apertura e flessibilit&#224;</li>
+																			<li>Proattivit&#224; Titolo di studio:</li>
+																			<li>Laurea in ambito tecnico-informatico</li>
 																		</ul>
+																		<p><strong>Sede di lavoro:</strong></p>
+																		<p>Milano con disponibilit&#224; a brevi trasferte
+																			nazionali</p>
 																		<p>
-																			<strong>Sede di lavoro</strong>
-																		</p>
-																		<p>Milano centro</p>
-																		<p>
-																			<em> La forma contrattuale ed il trattamento
-																				economico saranno valutati individualmente, in
-																				relazione all`esperienza e alle effettive competenze
-																				della persona.</em>
-																		</p>
+																		<em>La forma contrattuale ed il trattamento
+																			economico saranno valutati individualmente, in
+																			relazione all`esperienza e alle effettive competenze
+																			della persona.</em></p>
 																		<p>Il presente annuncio si rivolge a candidati di
 																			entrambi i sessi ai sensi della legge (L.903/77 e
 																			D.Lgs n. 98/2006, art 27).</p>
-																		<p>
-																			L&#8217;interessato è invitato a inviare la propria
-																			candidatura tramite <a href="candidaturaSen">questo
-																				form</a>.
-																		</p>
-
+																		<p>L'interessato &#232; invitato a inviare la propria
+																			candidatura tramite <a href="candidaturaSen"><b>questo
+																				form</b></a> rilasciando specifico consenso al trattamento
+																			dei dati personali, ai sensi della L. 196/03.</p>
 																	</div>
 																</div>
 															</div>
 														</div>
+														
+														<!-- JUNIOR JAVA DEV TORINO / MILANO-->
+														<div class="vc_tta-panel" id="1519396897075-d521093d-323a"
+															data-vc-content=".vc_tta-panel-body">
+															<div class="vc_tta-panel-heading">
+																<h4
+																	class="vc_tta-panel-title vc_tta-controls-icon-position-left">
+																	<a href="#1519396897075-d521093d-323a"
+																		data-vc-accordion
+																		data-vc-container=".vc_tta-container"><span
+																		class="vc_tta-title-text">JUNIOR J2EE DEVELOPER
+																			CON FORMAZIONE _ Torino/Milano</span><i
+																		class="vc_tta-controls-icon vc_tta-controls-icon-plus"></i></a>
+																</h4>
+															</div>
+															<div class="vc_tta-panel-body">
+																<div
+																	class="wpb_text_column wpb_content_element  vc_custom_1519396982742">
+																	<div class="wpb_wrapper">
+																		<strong>Per crescita di organico siamo alla ricerca di
+																			3 figure JUNIOR JAVA/J2EE DEVELOPER</strong><br>
+																		<p>Le risorse saranno inserite su attivit&#224; di
+																			sviluppo software per progetti di medio-lungo
+																			termine.</p>
+																		<p>
+																			Requisiti richiesti:
+																			</p>
+																			<ul>
+																			<li>Esperienza minima su JAVA Standard Edition</li>
+																			<li>Esperienza minima su IDE di sviluppo come Eclipse o Jbuilder</li>
+																			<li>Buona conoscenza di almeno un DB relazione</li>
+																			<li>Conoscenza dei fondamenti dei frameworks</li>
+																			<li>Buona conoscenza della lingua Inglese</li>
+																			<li>Laurea Triennale in Informatica o similari</li>
+																			<li>Disponibilit&#224; a brevi trasferte</li>
+																		</ul>
+																		<p><strong>Data la situazione contingente l'inizio delle
+																			attivit&#224; sar&#224; da considerarsi in smart working.</strong></p>
+																		<p>
+																			Per conoscere tutte le informazioni riguardo alla
+																			nostra Academy <a href="presentazione"><b>clicca qui</b></a>.
+																		</p>
+																		<p>
+																		<em>La forma contrattuale ed il trattamento
+																			economico saranno valutati individualmente, in
+																			relazione all`esperienza e alle effettive competenze
+																			della persona.</em></p>
+																		<p>Il presente annuncio si rivolge a candidati di
+																			entrambi i sessi ai sensi della legge (L.903/77 e
+																			D.Lgs n. 98/2006, art 27).</p>
 
+																		<p>
+																			L'interessato &#232; invitato a inviare la propria
+																			candidatura tramite <a href="candidaturaAc"><b>questo
+																				form</b></a> rilasciando specifico consenso al trattamento
+																			dei dati personali, ai sensi della L. 196/03.
+																		</p>
+
+																		<p>L' Academy &#232; rivolta a candidati di entrambi i
+																			sessi ai sensi della legge (L.903/77 e D.Lgs n.
+																			98/2006, art 27).</p>
+																	</div>
+																</div>
+															</div>
+														</div>
 													</div>
 												</div>
 											</div>
@@ -839,7 +852,6 @@ h1 {
 							</div>
 						</div>
 					</div>
-
 				</div>
 			</div>
 		</section>
@@ -847,6 +859,7 @@ h1 {
 		<!-- Sezione Footer della Pagina -->
 		<jsp:include page="footer.jsp"></jsp:include>
 	</div>
+	
 	<!--boddy inner-->
 	
 	<script type='text/javascript'
@@ -855,11 +868,6 @@ h1 {
 		src='https://www.idmconsulting.it/wp-content/plugins/responsive-accordion-and-collapse/js/bootstrap.js?ver=4.9.15'></script>
 	<script type='text/javascript'
 		src='https://www.idmconsulting.it/wp-content/plugins/responsive-accordion-and-collapse/js/accordion.js?ver=4.9.15'></script>
-	<script type='text/javascript'>
-/* <![CDATA[ */
-var wpcf7_redirect_forms = {"2541":{"page_id":"2558","external_url":"","use_external_url":"","open_in_new_tab":"","http_build_query":"","http_build_query_selectively":"","http_build_query_selectively_fields":"","delay_redirect":"0","after_sent_script":"","thankyou_page_url":"https:\/\/www.idmconsulting.it\/landing-page-webinar-download\/"},"1356":{"page_id":"","external_url":"","use_external_url":"","open_in_new_tab":"","http_build_query":"","http_build_query_selectively":"","http_build_query_selectively_fields":"","delay_redirect":"","after_sent_script":"","thankyou_page_url":""}};
-/* ]]> */
-</script>
 	<script type='text/javascript'
 		src='https://www.idmconsulting.it/wp-content/plugins/wpcf7-redirect/js/wpcf7-redirect-script.js'></script>
 	<script type='text/javascript'

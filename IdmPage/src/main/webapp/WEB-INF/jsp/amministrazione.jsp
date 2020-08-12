@@ -77,40 +77,13 @@ h1 {
 	color: #20bcda;
 	font-weight: normal;
 }
-</style>
-
-<!-- STILE BOTTONE CANDIDATURA -->
-<style>
-.button {
-	border: none;
-	color: white;
-	padding: 16px 32px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-	margin: 4px 2px;
-	transition-duration: 0.4s;
-	cursor: pointer;
-}
-
-.button2 {
-	background-color: #DCF0FF;
-	color: black;
-	border: 2px solid #428BCA;
-	border-radius: 8px;
-}
-
-.button2:hover {
-	background-color: #428BCA;
-	color: white;
-	border: 2px solid #DCF0FF;
-	border-radius: 8px;
-}
 
 </style>
 
+<!-- FILE PULSANTI -->
+<jsp:include page="stili/pulsanti.jsp"></jsp:include>
 
+<!-- SCRIPT MODAL -->
 <script>
 $(function() {
 
@@ -146,68 +119,40 @@ $(function() {
 			<div class="container" style="margin-left: 30px">
 
 				<div class="row">
-					<div class="col-sm-1"></div>
-					<div class="col-sm-4">
+					<div class="col-sm-6" style="text-align: center">
 						<h1>Lista di candidati</h1>
 					</div>
-					<div class="col-sm-2"></div>
-					<div class="col-sm-4">
+					<div class="col-sm-6" style="text-align: center">
 						<br> <a href="/IdmPage/selezione" class="button button2">Selezione
 							dei candidati</a>
 					</div>
-					<div class="col-sm-1"></div>
 				</div>
-				<br> <br>
+				<br>
 				<table>
 					<thead>
 						<tr>
-							<th>Id</th>
-							<th>nome</th>
+							<th>Nome</th>
 							<th>Cognome</th>
 							<th>Email</th>
 							<th>Telefono</th>
-							<th>Competenze</th>
-							<th>sede</th>
-							<th>stato candidatura</th>
-							<th>Note</th>
-							<th>Livello istruzione</th>
-							<th>percorso</th>
+							<th>Sede Scelta</th>
+							<th>Stato Candidatura</th>
+							<th>Domicilio</th>
 							<th>Colloqui</th>
-							<th>Cancella</th>
 							<th>Modifica</th>
 						</tr>
 					</thead>
 					<tbody>
 						<c:forEach var="can" items="${list}">
 							<tr>
-								<td>${can.id}</td>
 								<td>${can.nome}</td>
 								<td>${can.cognome}</td>
 								<td>${can.email}</td>
 								<td>${can.telefono}</td>
-								<td>${can.competenze}</td>
 								<td>${can.luogoCandidatura}</td>
 								<td>${can.stato}</td>
 								<td>${can.note}</td>
-								<td>${can.livello}</td>
-								<td>${can.percorso}</td>
 								<td><a href="/IdmPage/colloquio/${can.id}">Colloqui</a></td>
-								<td>
-									<div class="hidden">
-										Confermi di voler rimuovere il candidato?<br> ID:
-										${can.id}<br> Nome: ${can.nome}<br> Cognome:
-										${can.cognome}<br>
-										<div class="row">
-											<a href="/IdmPage/deleteemp/${can.id}"
-												class="btn btn-secondary btn-block ml-1">Rimuovi</a>
-											<button type="button"
-												class="btn btn-secondary btn-block ml-1"
-												data-dismiss="modal" style="align: right">Annulla</button>
-										</div>
-									</div>
-									<button class="btn btn-primary" data-toggle="modal"
-										data-target="#myModal">Elimina candidato</button> <!--<a href="/IdmPage/deleteemp/${can.id}">Cancella</a>-->
-								</td>
 								<td><a href="/IdmPage/editemp/${can.id}">Modifica</a></td>
 							</tr>
 						</c:forEach>
