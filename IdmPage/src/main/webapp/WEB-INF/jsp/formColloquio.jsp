@@ -94,11 +94,11 @@ h1 {
 				</div>
 				<br>
 
-				<form:form method="POST" action="/IdmPage/aggiungi" modelAttribute="col">
+				<form:form method="POST" action="/IdmPage/aggiungi/${cand.id}" modelAttribute="col">
 
 					<!-- SEZIONE DATI PERSONALI -->
 					<div id="div_cv" class="row text-left">
-					<form:input path="candidato" hidden="hidden" type="text" value="S_${senior.id}"/>  
+					<form:input path="candidato" hidden="hidden" type="number" value="${cand.id}"/>  
 						<div class="col-md-3">
 							<div class="form-group">
 								<label class="form-label">Data *</label>
