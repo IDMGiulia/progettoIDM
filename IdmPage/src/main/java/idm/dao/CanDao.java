@@ -167,19 +167,6 @@ public class CanDao {
 	    return risultato;
 	}
 	
-	public List<Candidato> getCandidatoForParameter(String sede,String competenze, String stato){   
-	      List<Candidato> candidato= new ArrayList <Candidato>();
-	      List<Candidato> risultato = new ArrayList<>();
-	      candidato = getCandidatoForAnzianit("Academy");
-	      risultato= candidato.stream()
-	          .filter(x->x.getCompetenze().contains(competenze)
-	              &&((x.getLuogoCandidatura().equals(sede)||x.getLuogoCandidatura().contains("E")||sede.contains("E")))
-	              &&((x.getStato().equals(stato)||stato.compareTo("")==0)))
-	          .collect(Collectors.toList());
-
-	          return risultato;    
-	    }
-	
 	//metodo per la selezione dei senior
 	public List<Candidato> getForParameter(String anz,String sede,String competenze, String stato, String pos){   
 	      List<Candidato> senior= new ArrayList <Candidato>();
@@ -187,7 +174,7 @@ public class CanDao {
 	      senior = getCandidatoForAnzianit(anz);
 	      risultato= senior.stream()
 	          .filter(x->x.getCompetenze().contains(competenze)
-	              &&((x.getLuogoCandidatura().equals(sede)||x.getLuogoCandidatura().contains("Entrambe")||sede.contains("Entrambe")))
+	              &&((x.getLuogoCandidatura().equals(sede)||x.getLuogoCandidatura().contains("Entrambi")||sede.contains("Entrambi")))
 	              &&((x.getStato().equals(stato)||stato.compareTo("")==0))
 	          	&&((x.getPosizioneLav().equals(pos)|| x.getPosizioneLav().equals("Tutte le posizioni") || pos.contains("Tutte le posizioni"))))
 	          .collect(Collectors.toList());

@@ -100,7 +100,7 @@ public class CanController {
 	 @ModelAttribute("Sede")
 	   public List<String> Sede() {
 	      List<String> sede = new ArrayList<String>();
-	      sede.add("Entrambe");
+	      sede.add("Entrambi");
 	      sede.add("Torino");
 	      sede.add("Milano");
 	      return sede;
