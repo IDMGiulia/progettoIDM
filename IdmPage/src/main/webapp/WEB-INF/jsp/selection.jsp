@@ -88,34 +88,33 @@ h1 {
 			<div class="container"
 				style="margin-top: 30px; margin-bottom: 20%; text-align: center">
 
-				<form action="/IdmPage/select/">
+				<form action="/IdmPage/select/${anz}">
 					<br>
 					<br>
 					<br>
 					<br> Scegli una sede: <select name="sede" id="sede">
-						<option value="E">Entrambe</option>
-						<option value="M">Milano</option>
-						<option value="T">Torino</option>
+						<c:forEach var="val" items="${Sede}">
+							<option value="${val}">${val}</option>
+						</c:forEach>
 					</select> <br> <br> Scegli una competenza: <select
 						name="competenza" id="competenza">
 						<option value="">Tutte le competenze</option>
-						<c:forEach var="val" items="${webFrameworkList1}">
+						<c:forEach var="val" items="${webFrameworkList}">
 							<option value="${val}">${val}</option>
 						</c:forEach>
 					</select> <br> <br> Nuovo stato candidatura: 
 						<select name="stato" id="stato">
 						<option value="">Tutti gli stati</option>
-						<option value="Nuova">Nuova</option>
-						<option value="Selezione in corso">Selezione in corso</option>
-						<option value="Disponibile">Disponibile</option>
-						<option value="Non disponibile">Non disponibile</option>
+						<c:forEach var="val" items="${StatoCand}">
+							<option value="${val}">${val}</option>
+						</c:forEach>
 					</select> 
 					<br> <br> 
 						Posizione scelta: 
 						<select name="posizioneLav" id="posizioneLav">
-						<option value="E">Entrambe le posizioni</option>
-						<option value="SJ">Senior Java Developer</option>
-						<option value="SDN">Senior .NET Developer</option>	
+						<c:forEach var="val" items="${Posizioni}">
+							<option value="${val}">${val}</option>
+						</c:forEach>
 					</select> 
 					<br> <br> 
 					<input type="submit"

@@ -119,13 +119,13 @@ $(function() {
 					
 					<!-- MODAL A COMPARSA -->
 						<div class="hidden">
-							Confermi di voler rimuovere il candidato?<br> ID: ${can.id}<br>
-							Nome: ${can.nome}<br> Cognome: ${can.cognome}<br><br>
+							Confermi di voler rimuovere il candidato?<br> ID: ${command.id}<br>
+							Nome: ${command.nome}<br> Cognome: ${command.cognome}<br><br>
 							
 							<!-- PULSANTI NEL MODAL -->
 							<div class="row">
 								<div class="col-sm-6">
-									<a href="/IdmPage/deleteemp/${can.id}"
+									<a href="/IdmPage/deleteemp/${command.id}"
 										class="btn btn-primary btn-block ml-1">Rimuovi</a>
 								</div>
 								<div class="col-sm-6">
