@@ -595,7 +595,7 @@ span {
 							<div class="col-md-1"></div>
 							<div class="col-md-5">
 								<div class="checkboxes">
-									<form:checkboxes items="${webFrameworkList1}" path="comp" />
+									<form:checkboxes items="${webFrameworkList}" path="comp" />
 								</div>
 							</div>
 							<div class="col-md-1"></div>
