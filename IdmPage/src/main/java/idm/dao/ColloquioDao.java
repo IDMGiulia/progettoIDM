@@ -39,7 +39,7 @@ public class ColloquioDao {
 	public void inserisci(Colloquio colloquio) {
 		Session session = factory.openSession();  
 		Transaction t = session.beginTransaction();
-		session.saveOrUpdate(colloquio);
+		session.save(colloquio);
 		t.commit();
 		session.close();
 	}
