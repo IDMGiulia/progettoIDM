@@ -31,6 +31,29 @@
 	border: 2px solid #DCF0FF;
 }
 
+.button2small {
+	background-color: #DCF0FF;
+	border: none;
+	margin: none;
+}
+
+.button2small:hover {
+	background-color: #428BCA;
+	border: none;
+	margin: none;
+}
+
+.button2x {
+	background-color: #DCF0FF;
+	border: 2px solid #428BCA;
+	font-size: 12px;
+}
+
+.button2x:hover {
+	background-color: #428BCA;
+	border: 2px solid #DCF0FF;
+}
+
 /****************PULSANTE ROSSO CHIARO CHE DIVENTA ROSSO SCURO CON EFFETTO ARROTONDATO**************************/
 .button3 {
 	background-color: #ffcccc;
@@ -51,5 +74,18 @@
 .btn-primary:hover {
 	background-color: #e60000 !important;
 	color: white !important;
+}
+
+/****************Pulsante download**************************/
+.buttonDL {
+	background-color: #DCF0FF;
+	border: none;
+	margin: none;
+	font-size: 14px;
+	padding: 5px 10px;
+}
+
+.buttonDL:hover {
+	background-color: #428BCA;
 }
 </style>

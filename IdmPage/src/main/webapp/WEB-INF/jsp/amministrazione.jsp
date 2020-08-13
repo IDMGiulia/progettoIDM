@@ -137,9 +137,10 @@ $(function() {
 							<th>Sede Scelta</th>
 							<th>Stato Candidatura</th>
 							<th>Domicilio</th>
-							<th>Altre Informazioni</th>
 							<th>Colloqui</th>
+							<th>Altre Informazioni</th>
 							<th>Modifica</th>
+							<th>CV</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -152,6 +153,7 @@ $(function() {
 								<td>${can.luogoCandidatura}</td>
 								<td>${can.stato}</td>
 								<td>${can.provincia}</td>
+								<td><a href="/IdmPage/colloquio/${can.id}" class="button button2small">Colloquio</a></td>
 								<td><div class="hidden" style="text-align:center">
 										Informazioni sul Candidato<br><br>
 										ID: ${can.id}<br>
@@ -172,10 +174,10 @@ $(function() {
 										<button type="button" class="btn btn-secondary btn-block ml-1"
 											data-dismiss="modal" style="align: right">Chiudi</button>
 									</div>
-									<button class="button button2" data-toggle="modal"
+									<button class="button button2x" data-toggle="modal"
 										data-target="#myModal" data-backdrop="false">Informazioni Complete</button></td>
-								<td><a href="/IdmPage/colloquio/${can.id}">Colloquio</a></td>
-								<td><a href="/IdmPage/editemp/${can.id}">Modifica</a></td>
+								<td><a href="/IdmPage/editemp/${can.id}" class="button button2small">Modifica</a></td>
+								<td><button class="button buttonDL">&#8681;</button></td>
 							</tr>
 						</c:forEach>
 					</tbody>
