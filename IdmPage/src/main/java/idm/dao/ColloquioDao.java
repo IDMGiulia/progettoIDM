@@ -3,6 +3,7 @@ package idm.dao;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -70,6 +71,7 @@ public class ColloquioDao {
 	      colloqui = this.getColloqui();
 	      risultato= colloqui.stream()
 	          .filter(x->x.getCandidato()==candidato)
+	          .sorted(Comparator.comparingInt(Colloquio::getId).reversed())
 	          .collect(Collectors.toList());
 	          return risultato;    
 	    }

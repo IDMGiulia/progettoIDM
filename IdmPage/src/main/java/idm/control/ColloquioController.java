@@ -109,5 +109,15 @@ public class ColloquioController {
 	        m.addAttribute("cand",c);
 	        return "amministraColloqui";  
 		}
+		
+		/* link per tornare dai colloqui alla tabella corretta*/    
+		@RequestMapping(value="/amministra/{id}")    
+		public String Amministrazione(@PathVariable int id){     
+			if(can.getCanById(id).getAnzianit().equals("Academy"))
+				return "redirect:/amministrazione"; 
+			else {
+				return "redirect:/amministraSenior";
+			}
+		}
 
 }

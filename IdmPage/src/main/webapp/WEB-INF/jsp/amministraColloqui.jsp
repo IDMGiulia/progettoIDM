@@ -96,7 +96,7 @@ h1 {
 						<h1>Elenco dei colloqui</h1>
 					</div>
 					<!-- PULSANTE BACK --> <!-- BISOGNA CORREGGERE, IL LINK ORA E' SOLO PER RIEMPIMENTO -->
-					<br> <a href="/IdmPage/amministrazione" 
+					<br> <a href="/IdmPage/amministra/${cand.id}" 
               				class="button button2"><b>&#8617;</b> &ensp; Torna alla tabella</a>
 				</div>
 				<br>
@@ -116,7 +116,7 @@ h1 {
 						<c:forEach var="col" items="${colloqui}">
 							<tr>
 								<td>${col.id}</td>
-								<td>${cand.nome}${cand.cognome}</td>
+								<td>${cand.nome} ${cand.cognome}</td>
 								<td>${col.data}</td>
 								<td>${col.tipo}</td>
 								<td>${col.note}</td>
