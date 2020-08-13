@@ -74,6 +74,9 @@ h1 {
 }
 </style>
 
+<!-- FILE PULSANTI -->
+<jsp:include page="stili/pulsanti.jsp"></jsp:include>
+
 </head>
 
 <body
@@ -88,29 +91,39 @@ h1 {
 		<!-- Sezione Centrale della Pagina -->
 		<section class="main-wrapper pagecustom-1339">
 			<div class="container" style="margin-left: 30px">
-
-				<h1>Elenco dei controlli</h1>
-				<a href="/IdmPage/aggiungiColloqui/${cand.id}">Aggiungi un colloquio</a> <br> <br>
+				<div class="row">
+					<div class="col-sm-6" style="text-align: center">
+						<h1>Elenco dei colloqui</h1>
+					</div>
+					<div class="col-sm-6" style="text-align: center; margin-top: 10px">
+						<br> <a href="/IdmPage/aggiungiColloqui/${cand.id}"
+							class="button button2">Aggiungi un colloquio</a>
+					</div>
+				</div>
 				<br>
 				<table>
-					<tr>
-						<th>Id Colloquio</th>
-						<th>Candidato</th>
-						<th>Data</th>
-						<th>tipo</th>
-						<th>note</th>
-						<th>valutazione</th>
-					</tr>
-					<c:forEach var="col" items="${colloqui}">
+					<thead>
 						<tr>
-							<td>${col.id}</td>
-							<td>${cand.nome} ${cand.cognome}</td>
-							<td>${col.data}</td>
-							<td>${col.tipo}</td>
-							<td>${col.note}</td>
-							<td>${col.valutazione}</td>
+							<th>Id Colloquio</th>
+							<th>Candidato</th>
+							<th>Data</th>
+							<th>tipo</th>
+							<th>note</th>
+							<th>valutazione</th>
 						</tr>
-					</c:forEach>
+					</thead>
+					<tbody>
+						<c:forEach var="col" items="${colloqui}">
+							<tr>
+								<td>${col.id}</td>
+								<td>${cand.nome}${cand.cognome}</td>
+								<td>${col.data}</td>
+								<td>${col.tipo}</td>
+								<td>${col.note}</td>
+								<td>${col.valutazione}</td>
+							</tr>
+						</c:forEach>
+					</tbody>
 				</table>
 
 			</div>

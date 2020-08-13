@@ -122,9 +122,8 @@ $(function() {
 					<div class="col-sm-6" style="text-align: center">
 						<h1>Lista di candidati</h1>
 					</div>
-					<div class="col-sm-6" style="text-align: center">
-						<br> <a href="/IdmPage/selezione/${anz}" class="button button2">Selezione
-							dei candidati</a>
+					<div class="col-sm-6" style="text-align: center; margin-top: 10px">
+						<br> <a href="/IdmPage/selezione/${anz}" class="button button2">Filtra candidati</a>
 					</div>
 				</div>
 				<br>
@@ -169,13 +168,13 @@ $(function() {
 										Percorso di Studi: ${can.percorso}<br>
 										Note sul Candidato: ${can.note}<br><br><br>
 
-										<!-- PULSANTI NEL MODAL -->
+										<!-- PULSANTE NEL MODAL -->
 										<button type="button" class="btn btn-secondary btn-block ml-1"
 											data-dismiss="modal" style="align: right">Chiudi</button>
 									</div>
-									<button class="button button3" data-toggle="modal"
+									<button class="button button2" data-toggle="modal"
 										data-target="#myModal" data-backdrop="false">Informazioni Complete</button></td>
-								<td><a href="/IdmPage/colloquio/${can.id}">Colloqui</a></td>
+								<td><a href="/IdmPage/colloquio/${can.id}">Colloquio</a></td>
 								<td><a href="/IdmPage/editemp/${can.id}">Modifica</a></td>
 							</tr>
 						</c:forEach>
