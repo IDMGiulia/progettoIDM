@@ -122,8 +122,11 @@ $(function() {
 					<div class="col-sm-6" style="text-align: center">
 						<h1>Lista di candidati</h1>
 					</div>
-					<div class="col-sm-6" style="text-align: center; margin-top: 10px">
+					<div class="col-sm-3" style="text-align: center; margin-top: 10px">
 						<br> <a href="/IdmPage/selezione/${anz}" class="button button2">Filtra candidati</a>
+					</div>
+					<div class="col-sm-3" style="text-align: center; margin-top: 10px">
+						<br> <a href="/IdmPage/selezione/${anz}" class="button button2"><b>&#8634;</b> &ensp; Cambia Tabella</a>
 					</div>
 				</div>
 				<br>
@@ -177,7 +180,7 @@ $(function() {
 									<button class="button button2x" data-toggle="modal"
 										data-target="#myModal" data-backdrop="false">Informazioni Complete</button></td>
 								<td><a href="/IdmPage/editemp/${can.id}" class="button button2small">Modifica</a></td>
-								<td><button class="button buttonDL">&#8681;</button></td>
+								<td><button class="button buttonDL"><b>&#8681;</b></button></td>
 							</tr>
 						</c:forEach>
 					</tbody>
