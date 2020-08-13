@@ -61,6 +61,7 @@ public class CanDao {
 		candidato.setFavoriteFrameworks(webFrameworkList);
 		candidato.setStato("Nuova");
 		candidato.setAnzianit("Academy");
+		candidato.setPosizioneLav("Tutte le posizioni");
 		Session session = factory.openSession();  
 		Transaction t = session.beginTransaction();
 		session.saveOrUpdate(candidato);
