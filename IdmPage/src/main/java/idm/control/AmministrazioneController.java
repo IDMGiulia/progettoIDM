@@ -42,9 +42,10 @@ public class AmministrazioneController {
 	public String controllaLog(@Valid @ModelAttribute("log") Amministrazione amministrazione, Model m){ 
 		Optional<Amministrazione> sara = dao.login(amministrazione.getUsername(), amministrazione.getPassword());
 	    if(sara.isPresent()) {
-	    	String token= sara.get().getUsername()+sara.get().getPassword()+Calendar.getInstance();
+	    	String toke= sara.get().getUsername()+sara.get().getPassword()+Calendar.getInstance();
 	    	PasswordEncoder passwordEncoder=this.passwordEncoder();
-	    	sara.get().setToken(passwordEncoder.encode(token));
+	    	String token = passwordEncoder.encode(toke);
+	    	sara.get().setToken(token);
 	    	dao.salva(sara.get());
 	    	m.addAttribute("token",token);
 	    	return "logindopo";}//will derict to canconf   }
