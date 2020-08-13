@@ -46,6 +46,7 @@ public class AmministrazioneController {
 	    	PasswordEncoder passwordEncoder=this.passwordEncoder();
 	    	sara.get().setToken(passwordEncoder.encode(token));
 	    	dao.salva(sara.get());
+	    	m.addAttribute("token",token);
 	    	return "logindopo";}//will derict to canconf   }
 	    else {
 			return "login";

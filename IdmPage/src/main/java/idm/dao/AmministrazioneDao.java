@@ -52,6 +52,16 @@ public class AmministrazioneDao {
 		return risultato;
 	}
 	
+	public Optional<Amministrazione> verificaToken(String token){
+		List<Amministrazione>list=this.getAmministrazione();
+		Optional<Amministrazione> risultato=null;
+		risultato=list.stream()
+				.filter(x->x.getToken().equals(token))
+				.findFirst();
+		
+		return risultato;
+	}
+	
 	public void salva(Amministrazione amministrazione) {
 		Session session = factory.openSession();  
 		Transaction t = session.beginTransaction();

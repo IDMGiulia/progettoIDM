@@ -96,7 +96,7 @@ h1 {
 					<br> <br><br>
 					<div class="row">
 						<div class="col-sm-4" style="text-align: right">
-							<a href="amministrazione" class="button button2">Gestione candidature Academy</a>
+							<a href="/IdmPage/amministrazione/${token}" class="button button2">Gestione candidature Academy</a>
 						</div>
 						<div class="col-sm-4" style="text-align: center">
 							<a href="amministraRecensioni" class="button button2">Gestione recensioni</a>

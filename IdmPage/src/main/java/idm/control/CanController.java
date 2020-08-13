@@ -21,6 +21,7 @@ import org.springframework.web.bind.support.SessionStatus;
 
 import idm.beans.Candidato;
 import idm.beans.Recensione;
+import idm.dao.AmministrazioneDao;
 import idm.dao.CanDao;
 import idm.dao.RecensioneDao;
 
@@ -32,6 +33,8 @@ public class CanController {
 	CanDao dao;
 	@Autowired    
 	RecensioneDao Rdao;
+	@Autowired    
+	AmministrazioneDao aDao;
 
 	
 	//link iniziale che manda alla home
@@ -77,13 +80,16 @@ public class CanController {
 	}
 	
 	//restituisce la tabella con tutti i candidati
-	@RequestMapping("/amministrazione")    
-    public String viewemp(Model m){
+	@RequestMapping("/amministrazione/{token}")    
+    public String viewemp(Model m,@PathVariable String token){
+		if(aDao.verificaToken(token).isPresent()) {
 		String anzianit="Academy";
         List<Candidato> list=dao.getCandidatoForAnzianit(anzianit);
         m.addAttribute("anz", anzianit);
         m.addAttribute("list",list);  
-        return "amministrazione";    
+        return "amministrazione";    }
+		
+		return "login";
     }
 	
 	// elenco di tutti gli stadi della selezione
