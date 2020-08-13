@@ -477,18 +477,16 @@ span {
 						</div>
 						
 						<br>
-
+						
+						<!-- PROVINCIA DI RESIDENZA -->
 						<div class="row">
-						<div class="col-md-1"></div>
+							<div class="col-md-1"></div>
 							<div class="col-md-4" style="text-align: center">
 								<label class="form-label">Provincia di Residenza *</label>
 							</div>
-							<div class="col-md-1"></div>
-							<div class="col-md-4" style="text-align: center">
-									<form:input path="provincia" type="text"
-										class="form-control form-control-sm" required="required"
-										placeholder="Torino" />
-									<form:errors path="provincia" cssClass="error" />
+							<div class="col-md-2"></div>
+							<div class="col-md-3" style="text-align: left">
+								<form:select items="${Provincia}" path="provincia" />
 							</div>
 							<div class="col-md-2"></div>
 						</div>
@@ -608,6 +606,7 @@ span {
 								value="Invia la tua candidatura" />
 						</div>
 					</div>
+				
 				</form:form>
 
 			</div>
