@@ -3,8 +3,12 @@ package idm.dao;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
+
+import javax.validation.Valid;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -162,13 +166,17 @@ public class CanDao {
 		List<Candidato> candidato= new ArrayList <Candidato>();
 	    List<Candidato> risultato = new ArrayList<>();
 	    candidato = this.getCandidatos();
+	    Comparator<Candidato> compareByStato = Comparator
+                .comparing(Candidato::getStato).reversed()
+                .thenComparingInt(Candidato::getId);
 	    risultato= candidato.stream()
 		          .filter(x->x.getAnzianit().contains(anzianit))
+		          .sorted(compareByStato)
 		          .collect(Collectors.toList());
 	    return risultato;
 	}
 	
-	//metodo per la selezione dei senior
+	//metodo per la selezione dei candidati
 	public List<Candidato> getForParameter(String anz,String sede,String competenze, String stato, String pos){   
 	      List<Candidato> senior= new ArrayList <Candidato>();
 	      List<Candidato> risultato = new ArrayList<>();
@@ -179,7 +187,7 @@ public class CanDao {
 	              &&((x.getStato().equals(stato)||stato.compareTo("")==0))
 	          	&&((x.getPosizioneLav().equals(pos)|| x.getPosizioneLav().equals("Tutte le posizioni") || pos.contains("Tutte le posizioni"))))
 	          .collect(Collectors.toList());
-	          return risultato;    
+	      return risultato;    
 	    }
 	  
 	public void update(Candidato can) {
@@ -194,6 +202,17 @@ public class CanDao {
 	public Candidato getCanById(int id) {
 		String sql="select * from cand where id=?";    
 	    return template.queryForObject(sql, new Object[]{id},new BeanPropertyRowMapper<Candidato>(Candidato.class));
+	}
+	
+	//metodo per controllare se un candidato sta candidandosi più di una volta. True=già presente, false=prima volta che si candida
+	public boolean controlla(Candidato can) {
+		List<Candidato> candidato= new ArrayList <Candidato>();
+		candidato = this.getCandidatos();
+		for (Candidato c : candidato) {
+			if(c.getEmail().equalsIgnoreCase(can.getEmail()) || c.getTelefono().equals(can.getTelefono()))
+				return true;
+		}
+		return false;
 	}
 	
 }

@@ -189,10 +189,10 @@ $(function() {
 							<td>Nuovo stato candidatura:</td>
 							<td><form:select path="stato">
 									<form:option value="Nuova" label="Nuova" />
-									<form:option value="Selezione in corso"
+									<form:option value=" Selezione in corso"
 										label="Selezione in corso" />
-									<form:option value="Disponibile" label="Disponibile" />
-									<form:option value="Non disponibile" label="Non disponibile" />
+									<form:option value=" Disponibile" label="Disponibile" />
+									<form:option value="  Non disponibile" label="Non disponibile" />
 								</form:select></td>
 						</tr>
 

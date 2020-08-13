@@ -101,9 +101,9 @@ public class CanController {
 	   public List<String> StatoCand() {
 	      List<String> statoCand = new ArrayList<String>();
 	      statoCand.add("Nuova");
-	      statoCand.add("Selezione in corso");
-	      statoCand.add("Disponibile");
-	      statoCand.add("Non disponibile");
+	      statoCand.add(" Selezione in corso");
+	      statoCand.add(" Disponibile");
+	      statoCand.add("  Non disponibile");
 	      return statoCand;
 	   }
 	 
@@ -144,6 +144,10 @@ public class CanController {
 	@RequestMapping(value="/save",method = RequestMethod.POST)    
 	public String save(@Valid @ModelAttribute("can") Candidato can, BindingResult result, 
 			SessionStatus status,Model m){ 
+		//metodo che controlla se il candidato è già presente
+		if(dao.controlla(can)) {
+			return "errore";
+		}
 	    //Check validation errors
 	    if (result.hasErrors()) {   
 	        return "ac_form";
@@ -203,6 +207,9 @@ public class CanController {
 	@RequestMapping(value="/saveSenior",method = RequestMethod.POST)    
 	public String saveSen(@Valid @ModelAttribute("sen") Candidato sen, BindingResult result, 
 			SessionStatus status,Model m){ 
+		if(dao.controlla(sen)) {
+			return "errore";
+		}
 	    //Check validation errors
 	    if (result.hasErrors()) {   
 	        return "senior_form";
