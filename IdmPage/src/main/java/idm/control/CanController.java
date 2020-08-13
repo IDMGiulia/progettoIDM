@@ -76,16 +76,6 @@ public class CanController {
 		return "rispostadierrore";  
 	}
 	
-	@RequestMapping(value="/visual")    
-    public String viewCandidati(@RequestParam("sede") String sede, @RequestParam("competenza") String compe,
-        @RequestParam("stato") String stato,Model m){ 
-    List<Candidato> list= new ArrayList<>();
-    list=dao.getCandidatoForParameter(sede, compe+",", stato);
-      m.addAttribute("list",list); 
-         return "amministrazione";    
-  }
-
-
 	//restituisce la tabella con tutti i candidati
 	@RequestMapping("/amministrazione")    
     public String viewemp(Model m){
