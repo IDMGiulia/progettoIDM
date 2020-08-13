@@ -81,7 +81,7 @@ public class CanController {
 	
 	//restituisce la tabella con tutti i candidati
 	@RequestMapping("/amministrazione/{token}")    
-    public String viewemp(Model m,@PathVariable String token){
+    public String viewemp(@PathVariable String token, Model m){
 		if(aDao.verificaToken(token).isPresent()) {
 		String anzianit="Academy";
         List<Candidato> list=dao.getCandidatoForAnzianit(anzianit);
