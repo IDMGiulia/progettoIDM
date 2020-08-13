@@ -123,8 +123,7 @@ $(function() {
 						<h1>Lista di candidati</h1>
 					</div>
 					<div class="col-sm-6" style="text-align: center; margin-top: 10px">
-						<br> <a href="/IdmPage/selezione/${anz}" class="button button2">Selezione
-							dei candidati</a>
+						<br> <a href="/IdmPage/selezione/${anz}" class="button button2">Filtra candidati</a>
 					</div>
 				</div>
 				<br>
