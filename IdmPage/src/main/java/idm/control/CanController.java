@@ -117,7 +117,6 @@ public class CanController {
 	@ModelAttribute("Provincia")
 	public List<String> Provincia() {
 		List<String> provincia = new ArrayList<String>();
-		provincia.add("");
 		provincia.add("Agrigento");
 		provincia.add("Alessandria");
 		provincia.add("Ancona");
@@ -346,10 +345,10 @@ public class CanController {
 
 	@RequestMapping(value="/select/{anz}")    
 	public String viewSenior(@PathVariable String anz,@RequestParam("sede") String sede, @RequestParam("competenza") String compe,
-			@RequestParam("stato") String stato,@RequestParam("posizioneLav") String pos,Model m){ 
+			@RequestParam("stato") String stato,@RequestParam("posizioneLav") String pos,@RequestParam("provincia") String prov,Model m){ 
 		List<Candidato> list= new ArrayList<>();
 		System.out.println(sede+" "+compe+" "+stato+" "+pos);
-		list=dao.getForParameter(anz,sede, compe+",", stato,pos);
+		list=dao.getForParameter(anz,sede, compe+",", stato,pos,prov);
 		m.addAttribute("list",list); 
 		return "amministrazione";    
 	}

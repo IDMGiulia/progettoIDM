@@ -8,10 +8,16 @@ public class Colloquio {
 	private int candidato;
 	private String data;
 	private String tipo;
-	private String numero;
 	private String note;
 	private float valutazione;
 	
+	
+	
+	@Override
+	public String toString() {
+		return "Colloquio [id=" + id + ", candidato=" + candidato + ", data=" + data + ", tipo=" + tipo + ", note="
+				+ note + ", valutazione=" + valutazione + "]";
+	}
 	public int getId() {
 		return id;
 	}
@@ -38,12 +44,6 @@ public class Colloquio {
 	}
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
-	}
-	public String getNumero() {
-		return numero;
-	}
-	public void setNumero(String numero) {
-		this.numero = numero;
 	}
 	public String getNote() {
 		return note;

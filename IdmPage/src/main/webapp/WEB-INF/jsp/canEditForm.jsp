@@ -151,6 +151,8 @@ $(function() {
 						<form:hidden path="livello" />
 						<form:hidden path="percorso" />
 						<form:hidden path="anzianit" />
+						<form:hidden path="posizioneLav" />
+						<form:hidden path="provincia" />
 						<tr>
 							<td>Nome :</td>
 							<td><form:input path="nome" required="required" /></td>

@@ -17,6 +17,7 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;  
 import org.springframework.jdbc.core.RowMapper;
 
+import idm.beans.Candidato;
 import idm.beans.Colloquio;
 
 
@@ -76,6 +77,21 @@ public class ColloquioDao {
 	public Colloquio getColById(int id) {
 		String sql="select * from colloqui where id=?";    
 	    return template.queryForObject(sql, new Object[]{id},new BeanPropertyRowMapper<Colloquio>(Colloquio.class));
+	}
+	
+	//metodo per eliminare un colloquio
+	public int deleteColloquio(int id){    
+		String sql="delete from colloqui where id="+id+""; 
+		return template.update(sql);    
+	} 
+	
+	public void updateCol(Colloquio col) {
+		Session session = factory.openSession();  
+		Transaction t = session.beginTransaction();
+		session.update(col);
+		t.commit();
+		session.close();
+		
 	}
 
 }

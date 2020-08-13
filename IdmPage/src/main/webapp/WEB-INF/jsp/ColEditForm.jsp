@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <html lang="it">
 
 <head>
@@ -9,8 +9,10 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-<title>Selezione Candidati | IDM - We simplify your work</title>
+<title>Modifica Candidati | IDM - We simplify your work</title>
 
+<link rel="shortcut icon"
+	href="https://www.idmconsulting.it/wp-content/uploads/2016/01/idm-favicon.png" />
 <link rel='stylesheet' id='bootstrap-css'
 	href='https://www.idmconsulting.it/wp-content/themes/dart/css/bootstrap.min.css?ver=4.9.15'
 	type='text/css' media='all' />
@@ -54,10 +56,8 @@
 			});
 		});
 </script>
-<style type="text/css"> /******************global color****************************/
-	table th {
-	background-color: #1d70b7;
-}
+
+<style type="text/css">
 /****************Custom background**************************/
 .body-inner {
 	background-image:
@@ -69,6 +69,26 @@ h1 {
 	font-weight: normal;
 }
 </style>
+
+<!-- SCRIPT MODAL -->
+<script>
+$(function() {
+
+	  // when the modal is shown
+	  $('#myModal').on('show.bs.modal', function(e) {
+	    var $modal = $(this);
+
+	    // find the trigger button
+	    var $button = $(e.relatedTarget);
+
+	    // find the hidden div next to trigger button
+	    var $notifications = $button.siblings('div.hidden');
+
+	    // transfer content to modal body
+	    $modal.find('.modal-body').html($notifications.html());
+	  })
+	});
+</script>
 
 <!-- FILE PULSANTI -->
 <jsp:include page="stili/pulsanti.jsp"></jsp:include>
@@ -83,55 +103,106 @@ h1 {
 
 	<div class="body-inner ">
 
+
 		<!-- Sezione Centrale della Pagina -->
 		<section class="main-wrapper pagecustom-1339">
-			<div class="container"
-				style="margin-top: 30px; margin-bottom: 20%; text-align: center">
+			<div class="container">
+				
+				<!-- SEZIONE CON TITOLO E TASTO RIMUOVI -->
+				<div class="row">
+					<div class="col-sm-1"></div>
+					<div class="col-sm-4">
+						<h1>Modifica Colloquio</h1>
+					</div>
+					<div class="col-sm-2"></div>
+					<div class="col-sm-4">
+					
+					<!-- MODAL A COMPARSA -->
+						<div class="hidden">
+							Confermi di voler rimuovere il colloquio?
+							
+							<!-- PULSANTI NEL MODAL -->
+							<div class="row">
+								<div class="col-sm-6">
+									<a href="/IdmPage/deletecol/${col.id}"
+										class="btn btn-primary btn-block ml-1">Rimuovi</a>
+								</div>
+								<div class="col-sm-6">
+									<button type="button" class="btn btn-secondary btn-block ml-1"
+										data-dismiss="modal" style="align: right">Annulla</button>
+								</div>
+							</div>
+						</div>
+						<button class="button button3" data-toggle="modal"
+							data-target="#myModal" style="margin-top: 30px" data-backdrop="false">Elimina
+							colloquio</button>
 
-				<form action="/IdmPage/select/${anz}">
-					<br>
-					<br>
-					<br>
-					<br> Scegli una sede: <select name="sede" id="sede">
-						<c:forEach var="val" items="${Sede}">
-							<option value="${val}">${val}</option>
-						</c:forEach>
-					</select> <br> <br> Scegli una competenza: <select
-						name="competenza" id="competenza">
-						<option value="">Tutte le competenze</option>
-						<c:forEach var="val" items="${webFrameworkList}">
-							<option value="${val}">${val}</option>
-						</c:forEach>
-					</select> <br> <br> Nuovo stato candidatura: 
-						<select name="stato" id="stato">
-						<option value="">Tutti gli stati</option>
-						<c:forEach var="val" items="${StatoCand}">
-							<option value="${val}">${val}</option>
-						</c:forEach>
-					</select> 
-					<br> <br> 
-						Posizione scelta: 
-						<select name="posizioneLav" id="posizioneLav">
-						<c:forEach var="val" items="${Posizioni}">
-							<option value="${val}">${val}</option>
-						</c:forEach>
-						</select> 
-						<br> <br> 
-						Provincia: 
-						<select name="provincia" id="provincia">
-						<option value="">Tutte le province</option>
-						<c:forEach var="val" items="${Provincia}">
-							<option value="${val}">${val}</option>
-						</c:forEach>
-						</select> 
-					<br> <br> 
-					<input type="submit"
-						value="Conferma Selezione" class="button button2">
-				</form>
+					</div>
+					<div class="col-sm-1"></div>
+				</div>
+				<form:form method="POST" action="/IdmPage/aggiorna" modelAttribute="col">
+
+
+					<!-- CAMPI CON INFORMAZIONI COLLOQUIO -->
+					<table>
+
+						<form:hidden path="id" />
+						<form:hidden path="candidato" />
+						<tr>
+							<td>Data :</td>
+							<td><form:input path="data" required="required" /></td>
+						</tr>
+						<tr>
+							<td>tipo colloquio * :</td>
+							<td><form:select path="tipo">
+									<form:option value="Conoscitivo" label="Conoscitivo" />
+									<form:option value="Tecnico"
+										label="Tecnico" />
+									<form:option value="Presso cliente" label="Presso cliente" />
+									<form:option value="Finale" label="Finale" />
+									<form:option value="Altro" label="Altro" />
+							</form:select></td>
+						</tr>
+						<tr>
+							<td>valutazione :</td>
+							<td><form:input path="valutazione" type="number"
+									required="required"/></td>
+						</tr>
+
+						<tr>
+							<td>Note sul colloquio :</td>
+							<td><form:textarea path="note" maxlength="140"
+									style="width: 80%; height: 100%; border: none" /></td>
+						</tr>
+					</table>
+
+					<!-- BOTTONE AGGIORNA -->
+					<div class="row" style="text-align: center">
+						<div class="col-sm-4"></div>
+						<div class="col-sm-4">
+							<input type="submit" value="Aggiorna" class="button button2" />
+						</div>
+						<div class="col-sm-4"></div>
+					</div>
+				</form:form>
+
+				<div class="modal fade" id="myModal">
+					<div class="modal-dialog">
+						<div class="modal-content">
+
+							<!-- Body -->
+							<div class="modal-body"></div>
+
+						</div>
+					</div>
+				</div>
 
 			</div>
 		</section>
+
+
 	</div>
 
 </body>
+
 </html>

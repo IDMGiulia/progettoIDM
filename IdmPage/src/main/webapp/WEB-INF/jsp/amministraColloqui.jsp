@@ -95,10 +95,9 @@ h1 {
 					<div class="col-sm-6" style="text-align: center">
 						<h1>Elenco dei colloqui</h1>
 					</div>
-					<div class="col-sm-6" style="text-align: center; margin-top: 10px">
-						<br> <a href="/IdmPage/aggiungiColloqui/${cand.id}"
-							class="button button2">Aggiungi un colloquio</a>
-					</div>
+					<!-- PULSANTE BACK --> <!-- BISOGNA CORREGGERE, IL LINK ORA E' SOLO PER RIEMPIMENTO -->
+					<br> <a href="/IdmPage/amministrazione" 
+              				class="button button2"><b>&#8617;</b> &ensp; Torna alla tabella</a>
 				</div>
 				<br>
 				<table>
@@ -110,6 +109,7 @@ h1 {
 							<th>tipo</th>
 							<th>note</th>
 							<th>valutazione</th>
+							<th>Modifica</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -121,11 +121,20 @@ h1 {
 								<td>${col.tipo}</td>
 								<td>${col.note}</td>
 								<td>${col.valutazione}</td>
+								<td><a href="/IdmPage/editcol/${col.id}">Modifica</a></td>
 							</tr>
 						</c:forEach>
 					</tbody>
 				</table>
-
+				<!-- PULSANTE AGGIUNGI COLLOQUIO -->
+			        <div class="row">
+			          <div class="col-sm-4"></div>
+			          <div class="col-sm-4" style="text-align: center">
+			            <a href="/IdmPage/aggiungiColloqui/${cand.id}"
+			              class="button button2">Aggiungi un colloquio</a>
+			            <div class="col-sm-4"></div>
+			          </div>
+			        </div>
 			</div>
 		</section>
 

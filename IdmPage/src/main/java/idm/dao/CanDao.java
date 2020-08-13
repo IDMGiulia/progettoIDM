@@ -158,7 +158,9 @@ public class CanDao {
 	public int deleteCandidato(int id){    
 		String sql="delete from cand where id="+id+""; 
 		String sql1="delete from cancomp where id_can="+id+"";
+		String sql2="delete from colloqui where candidato="+id+"";
 		template.update(sql1); 
+		template.update(sql2); 
 		return template.update(sql);    
 	} 
 	
@@ -177,13 +179,15 @@ public class CanDao {
 	}
 	
 	//metodo per la selezione dei candidati
-	public List<Candidato> getForParameter(String anz,String sede,String competenze, String stato, String pos){   
+	public List<Candidato> getForParameter(String anz,String sede,String competenze, String stato
+											,String pos, String prov){   
 	      List<Candidato> senior= new ArrayList <Candidato>();
 	      List<Candidato> risultato = new ArrayList<>();
 	      senior = getCandidatoForAnzianit(anz);
 	      risultato= senior.stream()
 	          .filter(x->x.getCompetenze().contains(competenze)
 	              &&((x.getLuogoCandidatura().equals(sede)||x.getLuogoCandidatura().contains("Entrambi")||sede.contains("Entrambi")))
+	              &&((x.getProvincia().equals(prov)||prov.compareTo("")==0))
 	              &&((x.getStato().equals(stato)||stato.compareTo("")==0))
 	          	&&((x.getPosizioneLav().equals(pos)|| x.getPosizioneLav().equals("Tutte le posizioni") || pos.contains("Tutte le posizioni"))))
 	          .collect(Collectors.toList());

@@ -66,15 +66,48 @@ public class ColloquioController {
 	} 
 	
 	// elenco di tutte le competenze "base"
-		 @ModelAttribute("tipoColloquio")
-		   public List<String> getWebFrameworkList() {
-		      List<String> tipoColloquio = new ArrayList<String>();
-		      tipoColloquio.add("Conoscitivo");
-		      tipoColloquio.add("Tecnico");
-		      tipoColloquio.add("Presso cliente");
-		      tipoColloquio.add("Finale");
-		      tipoColloquio.add("Altro");
-		      return tipoColloquio;
-		   }
-	
+	 @ModelAttribute("tipoColloquio")
+	   public List<String> getWebFrameworkList() {
+	      List<String> tipoColloquio = new ArrayList<String>();
+	      tipoColloquio.add("Conoscitivo");
+	      tipoColloquio.add("Tecnico");
+	      tipoColloquio.add("Presso cliente");
+	      tipoColloquio.add("Finale");
+	      tipoColloquio.add("Altro");
+	      return tipoColloquio;
+	   }
+		 
+		 /* It displays object data into form for the given id.   
+			 * The @PathVariable puts URL data into variable.*/    
+		@RequestMapping(value="/editcol/{id}")    
+		public String editCol(@PathVariable int id, Model m){   
+			Colloquio col=dao.getColById(id); 
+			m.addAttribute("col",col);  
+			return "ColEditForm";    
+		}
+		
+		/* It deletes record for the given id in URL and redirects to /viewemp */    
+		@RequestMapping(value="/deletecol/{id}",method = RequestMethod.GET)    
+		public String delete(@PathVariable int id, Model m){ 
+			Colloquio colloquio=dao.getColById(id);
+			dao.deleteColloquio(id);
+			List<Colloquio> list=dao.getColloquiCan(colloquio.getCandidato());
+	    	Candidato c=can.getCanById(id);
+	        m.addAttribute("colloqui",list);  
+	        m.addAttribute("cand",c);
+			return "amministraColloqui";
+		}
+		
+		/* It updates model object. */    
+		@RequestMapping(value="/aggiorna",method = RequestMethod.POST)    
+		public String aggiorna(@ModelAttribute("col") Colloquio col, Model m){   
+			dao.updateCol(col);
+			int canId=col.getCandidato();
+			List<Colloquio> list=dao.getColloquiCan(canId);
+	    	Candidato c=can.getCanById(canId);
+	        m.addAttribute("colloqui",list);  
+	        m.addAttribute("cand",c);
+	        return "amministraColloqui";  
+		}
+
 }
