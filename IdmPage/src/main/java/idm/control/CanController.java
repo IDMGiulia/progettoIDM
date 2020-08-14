@@ -54,6 +54,17 @@ public class CanController {
 		m.addAttribute("anz", anz);
 		return "selection";  
 	}
+	
+	//invia da una pagina all'altra
+	@RequestMapping("/cambia/{anz}")  
+	public String cambia(@PathVariable String anz)  
+	{  
+		if(anz.equals("Academy"))
+			return "redirect:/amministraSenior"; 
+		else {
+			return "redirect:/amministrazione";
+		} 
+	}
 
 	// Link che porta dal canconf.jsp alla pagina di conferma finale (response)
 	@RequestMapping("/risposta/{nome}")  

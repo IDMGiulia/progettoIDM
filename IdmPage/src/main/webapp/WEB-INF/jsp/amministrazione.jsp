@@ -120,13 +120,13 @@ $(function() {
 
 				<div class="row">
 					<div class="col-sm-6" style="text-align: center">
-						<h1>Lista di candidati</h1>
+						<h1>Lista di candidati ${anz}</h1>
 					</div>
 					<div class="col-sm-3" style="text-align: center; margin-top: 10px">
 						<br> <a href="/IdmPage/selezione/${anz}" class="button button2">Filtra candidati</a>
 					</div>
 					<div class="col-sm-3" style="text-align: center; margin-top: 10px">
-						<br> <a href="/IdmPage/selezione/${anz}" class="button button2"><b>&#8634;</b> &ensp; Cambia Tabella</a>
+						<br> <a href="/IdmPage/cambia/${anz}" class="button button2"><b>&#8634;</b> &ensp; Cambia Tabella</a>
 					</div>
 				</div>
 				<br>
