@@ -36,6 +36,7 @@ public class AmministrazioneDao {
 				a.setUsername(rs.getString(1));
 				a.setPassword(rs.getString(2));
 				a.setPermessi(rs.getInt(3));
+				a.setToken(rs.getString(4));
 				return a;
 			}
 		});
