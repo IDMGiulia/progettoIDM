@@ -23,8 +23,14 @@ public class FileUploadServlet extends HttpServlet {
     /* Directory where uploaded files will be saved, its relative to
      * the web application directory.
      */
-    private static final String UPLOAD_DIR = "C:\\candidature_cv";
-     
+    
+    //bisogna inserire la propria location per salvare correttamente i cv e poterli leggere
+    private static final String UPLOAD_DIR = "C:\\Users\\Davide Milan\\Desktop\\progettoIDM\\IdmPage\\src\\main\\webapp\\WEB-INF\\img";
+    
+    /*QUELLA STANDARD
+     * private static final String UPLOAD_DIR = "C:\\candidature_cv";
+     */
+    
     protected void doPost(HttpServletRequest request,
             HttpServletResponse response) throws ServletException, IOException {
         // gets absolute path of the web application
@@ -47,12 +53,18 @@ public class FileUploadServlet extends HttpServlet {
             part.write(uploadFilePath + File.separator + fileName);
         	}
         }
-        String nomeR="/risposta/" + request.getParameter("nome");
+        boolean controllo=false;
+        if(controlloEstensione(fileName))
+        	controllo=true;
+        fileName=fileName.replace(".", "$");
+        String nomeR="/risposta/" + fileName;
         String nomeE= "/errore/" + request.getParameter("nome");
-        if(controlloEstensione(fileName)) {
+        if(controllo) {
+        	System.out.println("dentro if"+fileName);
         request.setAttribute("message", fileName + " File uploaded successfully!");
         getServletContext().getRequestDispatcher(nomeR).forward(
-                request, response);}
+                request, response);
+        }
         else getServletContext().getRequestDispatcher(nomeE).forward(
                 request, response);
     }
@@ -65,6 +77,7 @@ public class FileUploadServlet extends HttpServlet {
         String[] tokens = contentDisp.split(";");
         for (String token : tokens) {
             if (token.trim().startsWith("filename")) {
+            	token=token.replaceAll("( )+","_");
                 return ("_"+token.substring(token.indexOf("=") + 2, token.length()-1));
             }
         }
@@ -72,18 +85,25 @@ public class FileUploadServlet extends HttpServlet {
     }
     
     private boolean controlloEstensione(String fileName) {
-    	if(fileName.endsWith(".odf"))
+    	if(fileName.endsWith(".odf")) {
     		return true;
-    	if(fileName.endsWith("odt"))
+    	}
+    	if(fileName.endsWith("odt")) {
     		return true;
-    	if(fileName.endsWith(".txt"))
+    	}
+    	if(fileName.endsWith(".txt")) {
     		return true;
-    	if(fileName.endsWith(".pdf"))
+    	}
+    	if(fileName.endsWith(".pdf")) {
     		return true;
-    	if(fileName.endsWith(".doc"))
+    	}
+    	if(fileName.endsWith(".doc")) {
     		return true;
-    	if(fileName.endsWith(".docx"))
+    	}
+    	if(fileName.endsWith(".docx")) {
+
     		return true;
+    	}
     	return false;
     }
 }

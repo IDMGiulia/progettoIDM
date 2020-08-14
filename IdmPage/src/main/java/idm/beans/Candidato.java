@@ -60,9 +60,16 @@ public class Candidato {
 	
 	// per i senior (campo null per i junior)
 	private String posizioneLav;
+	
+	private String cv;
+	
 
-	
-	
+	public String getCv() {
+		return cv;
+	}
+	public void setCv(String cv) {
+		this.cv = cv;
+	}
 	@Override
 	public String toString() {
 		return "Candidato [id=" + id + ", nome=" + nome + ", cognome=" + cognome + ", email=" + email + ", telefono="
