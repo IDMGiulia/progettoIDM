@@ -179,8 +179,13 @@ $(function() {
 									</div>
 									<button class="button button2x" data-toggle="modal"
 										data-target="#myModal" data-backdrop="false">Informazioni Complete</button></td>
+										
 								<td><a href="/IdmPage/editemp/${can.id}" class="button button2small">Modifica</a></td>
-								<td><button class="button buttonDL"><b>&#8681;</b></button></td>
+
+								<td>
+								<a href="<%=request.getContextPath()%>/img/cv/${can.cv}" download>
+								<button class="button buttonDL"><b>&#8681;</b></button>
+								</a>
 							</tr>
 						</c:forEach>
 					</tbody>

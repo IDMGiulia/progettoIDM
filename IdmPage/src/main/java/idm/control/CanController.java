@@ -67,10 +67,12 @@ public class CanController {
 	}
 
 	// Link che porta dal canconf.jsp alla pagina di conferma finale (response)
-	@RequestMapping("/risposta/{nome}")  
-	public String risposta(@PathVariable String nome,Model m)  
+	@RequestMapping("/risposta/{cv}")  
+	public String risposta(@PathVariable String cv,Model m)  
 	{  
-		m.addAttribute("nome",nome.split("_")[2]);
+		cv=cv.replace("$",".");
+		dao.salvaNFile(cv);
+		m.addAttribute("nome",cv.split("_")[2]);
 		return "response";  
 	}
 

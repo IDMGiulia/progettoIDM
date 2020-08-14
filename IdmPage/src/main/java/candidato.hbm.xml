@@ -20,7 +20,8 @@
     <property name="livello" ></property>
     <property name="percorso" ></property>
     <property name="anzianit" ></property>
-    <property name="posizioneLav" ></property>            
+    <property name="posizioneLav" ></property>
+    <property name="cv" ></property>             
   	<list name="favoriteFrameworks" table="cancomp" fetch="select" cascade="all">  
             <key column="id_can" />  
             	 <index column="type"></index>  

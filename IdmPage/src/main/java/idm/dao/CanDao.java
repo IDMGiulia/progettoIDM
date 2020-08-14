@@ -149,6 +149,7 @@ public class CanDao {
 				e.setPercorso(rs.getString(12));
 				e.setAnzianit(rs.getString(13));
 				e.setPosizioneLav(rs.getString(14));
+				e.setCv(rs.getString(15));
 				return e;    
 			}    
 		});    
@@ -218,5 +219,12 @@ public class CanDao {
 		}
 		return false;
 	}
+
+	public void salvaNFile(String nome) {
+		 int id= Integer.parseInt(nome.split("_")[0]);
+		 Candidato candidato= getCanById(id);
+		 candidato.setCv(nome);
+		 update(candidato);
+		 }
 	
 }
