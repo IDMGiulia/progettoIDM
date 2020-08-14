@@ -98,52 +98,97 @@ h1 {
 
 					<!-- SEZIONE DATI PERSONALI -->
 					<div id="div_cv" class="row text-left">
-					<form:input path="candidato" hidden="hidden" type="number" value="${cand.id}"/>  
-						<div class="col-md-3">
+						<form:input path="candidato" hidden="hidden" type="number"
+							value="${cand.id}" />
+						<div class="col-md-5" style="text-align: left">
 							<div class="form-group">
-								<label class="form-label">Data *</label>
-								<form:input path="data" type="text"/>
+								<label class="form-label">Data e Ora: *</label>
+								<div id="pick-date">
+
+									<fieldset>
+										<!-- vgn_ca -->
+										<div class="row">
+											<div class="col-sm-6">
+												<input type="date" id="data" value="" min=""
+													required="required">
+											</div>
+											<div class="col-sm-6">
+												<select id="biglietti_ora_p" name="departureTime">
+													<option value="7:00">7:00</option>
+													<option value="7:30">7:30</option>
+													<option value="8:00">8:00</option>
+													<option value="8:30">8:30</option>
+													<option value="9:00">9:00</option>
+													<option value="9:30">9:30</option>
+													<option value="10:00">10:00</option>
+													<option value="10:30">10:30</option>
+													<option value="11:00">11:00</option>
+													<option value="11:30">11:30</option>
+													<option value="12:00">12:00</option>
+													<option value="12:30">12:30</option>
+													<option value="13:00">13:00</option>
+													<option value="13:30">13:30</option>
+													<option value="14:00">14:00</option>
+													<option value="14:30">14:30</option>
+													<option value="15:00">15:00</option>
+													<option value="15:30">15:30</option>
+													<option value="16:00">16:00</option>
+													<option value="16:30">16:30</option>
+													<option value="17:00">17:00</option>
+													<option value="17:30">17:30</option>
+													<option value="18:00">18:00</option>
+													<option value="18:30">18:30</option>
+													<option value="19:00">19:00</option>
+													<option value="19:30">19:30</option>
+													<option value="20:00">20:00</option>
+													<option value="20:30">20:30</option>
+												</select>
+											</div>
+										</div>
+									</fieldset>
+
+								</div>
 							</div>
 						</div>
-						<div class="col-md-2"></div>
-						<div class="col-md-2">
-						<label class="form-label">tipo colloquio *</label>
+						<div class="col-md-4" style="text-align: left">
+							<label class="form-label">tipo colloquio *</label>
 							<div class="select">
-									<form:select items="${tipoColloquio}" path="tipo" />
+								<form:select items="${tipoColloquio}" path="tipo" />
 							</div>
 						</div>
-						<div class="col-md-1"></div>
-						<div class="col-md-2">
+						<div class="col-md-3" style="text-align: left">
 							<div class="form-group">
-								<label class="form-label">valutazione *</label>
+								<label class="form-label">valutazione *</label><br>
 								<form:input path="valutazione" type="number" />
 							</div>
 						</div>
-						<div class="col-md-2"></div>
-
-					<br>
-					<br>
+					</div>
+						<br> 
 
 						<!-- NOTE -->
-						<div id="div_cv" class="row text-left" style="text-align: center" >
-							<div class="col-md-2"></div>
-							<div class="col-md-6">
-								<div class="x">
-									<span><form:label path="note"><h3><b>Note:</b></h3></form:label></span>
-								</div>
-								<form:textarea path="note" style="width: 80%; height: 200px; border: none"
-									maxlength="1000" placeholder="Scrivi qui le note" />
+						<div class="row">
+
+							<div class="col-md-4"></div>
+
+							<div class="col-md-4" style="text-align: center">
+								<span><form:label path="note">
+										<h3>
+											<b>Note:</b>
+										</h3>
+									</form:label> </span>
 							</div>
-							<div class="col-md-2"></div>
-							<div class="col-md-3">
-							<%-- <div class="form-group">
-								<label class="form-label">valutazione *</label>
-								<form:input path="valutazione" type="number" placeholder="8"/>
-							</div> --%>
+							<div class="col-md-4"></div>
+						</div>
+						<div class="row">
+							<div class="col-md-3"></div>
+							<div class="col-md-6" style="text-align: center">
+								<form:textarea path="note"
+									style="width: 80%; height: 200px; border: none"
+									maxlength="1000" placeholder="Scrivi qui le note..." />
 							</div>
-						<div class="col-md-1"></div>
-					</div>
-					</div>
+							<div class="col-md-3"></div>
+
+						</div>
 
 					<br>
 					<br>
