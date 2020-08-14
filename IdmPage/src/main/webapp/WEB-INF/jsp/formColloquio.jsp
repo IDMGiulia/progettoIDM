@@ -103,17 +103,17 @@ h1 {
 						<div class="col-md-5" style="text-align: left">
 							<div class="form-group">
 								<label class="form-label">Data e Ora: *</label>
-								<div id="pick-date">
+								<div id="data">
 
 									<fieldset>
 										<!-- vgn_ca -->
 										<div class="row">
 											<div class="col-sm-6">
-												<input type="date" id="data" value="" min=""
+												<input type="date" id="data" name="data"
 													required="required">
 											</div>
 											<div class="col-sm-6">
-												<select id="biglietti_ora_p" name="departureTime">
+												<select id="data" name="data">
 													<option value="7:00">7:00</option>
 													<option value="7:30">7:30</option>
 													<option value="8:00">8:00</option>
