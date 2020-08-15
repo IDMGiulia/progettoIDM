@@ -365,4 +365,11 @@ public class CanController {
 		m.addAttribute("list",list); 
 		return "amministrazione";    
 	}
+	
+	//link alla pagina senior
+		@RequestMapping("/ritorna")  
+		public String ritorna()  
+		{  
+			return "logindopo";  
+		}
 }

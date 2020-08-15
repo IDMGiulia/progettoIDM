@@ -74,6 +74,9 @@ h1 {
 }
 </style>
 
+<!-- FILE PULSANTI -->
+<jsp:include page="stili/pulsanti.jsp"></jsp:include>
+
 </head>
 
 <body
@@ -88,10 +91,15 @@ h1 {
 		<section class="main-wrapper pagecustom-1339">
 			<div class="container" style="margin-left: 30px">
 
-				<div style="text-align: center">
-					<h1>Lista recensioni</h1>
+				<div class="row">
+					<div class="col-sm-6" style="text-align: center">
+						<h1>Lista recensioni</h1>
+					</div>
+					<div class="col-sm-6" style="text-align: center; margin-top: 30px">
+						<a href="ritorna" class="button button2">Ritorna alla scelta</a>
+					</div>
 				</div>
-				
+
 				<br>
 				
 				<table>
