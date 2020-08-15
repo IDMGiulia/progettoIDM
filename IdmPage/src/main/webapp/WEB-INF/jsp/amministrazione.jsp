@@ -158,20 +158,20 @@ $(function() {
 								<td>${can.provincia}</td>
 								<td><a href="/IdmPage/colloquio/${can.id}" class="button button2small">Colloquio</a></td>
 								<td><div class="hidden" style="text-align:center">
-										Informazioni sul Candidato<br><br>
-										ID: ${can.id}<br>
-										Nome: ${can.nome}<br>
-										Cognome: ${can.cognome}<br>
-										Email: ${can.email}<br>
-										Telefono: ${can.telefono}<br>
-										Sede Scelta: ${can.luogoCandidatura}<br>
-										Posizione di Candidatura: ${can.posizioneLav}<br>
-										Stato della candidatura: ${can.stato}<br>
-										Competenze: ${can.competenze}<br>
-										Provincia di Residenza: ${can.provincia}<br>
-										Livello di Istruzione: ${can.livello}<br>
-										Percorso di Studi: ${can.percorso}<br>
-										Note sul Candidato: ${can.note}<br><br><br>
+										<h3>Informazioni sul Candidato</h3><br><br>
+										<b>ID: </b>&ensp;${can.id}<br>
+										<b>Nome: </b>&ensp;${can.nome}<br>
+										<b>Cognome: </b>&ensp;${can.cognome}<br>
+										<b>Email: </b>&ensp;${can.email}<br>
+										<b>Telefono: </b>&ensp;${can.telefono}<br>
+										<b>Sede Scelta: </b>&ensp;${can.luogoCandidatura}<br>
+										<b>Posizione di Candidatura: </b>&ensp;${can.posizioneLav}<br>
+										<b>Stato della candidatura: </b>&ensp;${can.stato}<br>
+										<b>Competenze: </b>&ensp;${can.competenze}<br>
+										<b>Provincia di Residenza: </b>&ensp;${can.provincia}<br>
+										<b>Livello di Istruzione: </b>&ensp;${can.livello}<br>
+										<b>Percorso di Studi: </b>&ensp;${can.percorso}<br>
+										<b>Note sul Candidato: </b>&ensp;${can.note}<br><br><br>
 
 										<!-- PULSANTE NEL MODAL -->
 										<button type="button" class="btn btn-secondary btn-block ml-1"
