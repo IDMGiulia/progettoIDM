@@ -90,9 +90,9 @@ public class ColloquioController {
 		@RequestMapping(value="/deletecol/{id}",method = RequestMethod.GET)    
 		public String delete(@PathVariable int id, Model m){ 
 			Colloquio colloquio=dao.getColById(id);
+	    	Candidato c=can.getCanById(id);
 			dao.deleteColloquio(id);
 			List<Colloquio> list=dao.getColloquiCan(colloquio.getCandidato());
-	    	Candidato c=can.getCanById(id);
 	        m.addAttribute("colloqui",list);  
 	        m.addAttribute("cand",c);
 			return "amministraColloqui";
