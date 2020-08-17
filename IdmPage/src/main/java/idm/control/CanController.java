@@ -3,7 +3,6 @@ package idm.control;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
 import java.util.Optional;
 
@@ -67,7 +66,7 @@ public class CanController {
 	    	String toke= sara.get().getUsername()+sara.get().getPassword()+LocalDateTime.now();
 	    	PasswordEncoder passwordEncoder=this.passwordEncoder();
 	    	token = passwordEncoder.encode(toke);
-	    	System.out.println(token);}
+	    	}
 	    	while(token.contains("/")||token.contains("."));
 	    	sara.get().setToken(token);
 	    	aDao.salva(sara.get());
@@ -78,10 +77,6 @@ public class CanController {
 		}
 	} 
 	
-
-		
-
-
 	//link iniziale che manda alla home
 	@RequestMapping("/presentazione")  
 	public String display(Model m)  
@@ -143,7 +138,9 @@ public class CanController {
 		List<Candidato> list=dao.getCandidatoForAnzianit(anzianit);
 		m.addAttribute("anz", anzianit);
 		m.addAttribute("list",list);  
-		return "amministrazione";    
+		return "amministrazione";   	
+	}
+	
 	@RequestMapping("/amministrazione/{token}")    
 	public String viewemp(@PathVariable String token, Model m){
 //	@RequestMapping("/amministrazione")  
@@ -152,9 +149,7 @@ public class CanController {
 //	    m.addAttribute("log", amministrazione);
 //	    System.out.println(m.getAttribute("token")+"/n");
 //		String token =(String) m.getAttribute("token");
-		System.out.println(token);
 		if(aDao.verificaToken(token).isPresent()) {
-			System.out.println("dentro l'if");
 			String anzianit="Academy";
 			List<Candidato> list=dao.getCandidatoForAnzianit(anzianit);
 			m.addAttribute("anz", anzianit);
@@ -412,15 +407,7 @@ public class CanController {
 	    dao.salvaSen(sen); 
 	    }catch (Exception e) {
 	    	return "senior_form";
-		//Check validation errors
-		if (result.hasErrors()) {   
-			return "senior_form";
-		}
-		try {
-			dao.salvaSen(sen); 
-		}catch (Exception e) {
-			return "senior_form";
-		}
+	    } 	
 		return "senior_cv";//will derict to canconf   
 	} 
 
@@ -438,7 +425,6 @@ public class CanController {
 	public String viewSenior(@PathVariable String anz,@RequestParam("sede") String sede, @RequestParam("competenza") String compe,
 			@RequestParam("stato") String stato,@RequestParam("posizioneLav") String pos,@RequestParam("provincia") String prov,Model m){ 
 		List<Candidato> list= new ArrayList<>();
-		System.out.println(sede+" "+compe+" "+stato+" "+pos);
 		list=dao.getForParameter(anz,sede, compe+",", stato,pos,prov);
 		m.addAttribute("list",list); 
 		return "amministrazione";    
