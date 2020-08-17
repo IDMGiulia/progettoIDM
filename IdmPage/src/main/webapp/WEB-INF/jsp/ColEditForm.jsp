@@ -109,13 +109,11 @@ $(function() {
 			<div class="container">
 				
 				<!-- SEZIONE CON TITOLO E TASTO RIMUOVI -->
-				<div class="row">
-					<div class="col-sm-1"></div>
-					<div class="col-sm-4">
+				<div class="row" style="text-align:center">
+					<div class="col-sm-6">
 						<h1>Modifica Colloquio</h1>
 					</div>
-					<div class="col-sm-2"></div>
-					<div class="col-sm-4">
+					<div class="col-sm-3">
 					
 					<!-- MODAL A COMPARSA -->
 						<div class="hidden">
@@ -136,9 +134,10 @@ $(function() {
 						<button class="button button3" data-toggle="modal"
 							data-target="#myModal" style="margin-top: 30px" data-backdrop="false">Elimina
 							colloquio</button>
-
 					</div>
-					<div class="col-sm-1"></div>
+					<div class="col-sm-3">
+					<a href="/IdmPage/colloquio/${command.id}/${token}" class="button button4" style="margin-top: 30px">Annulla</a>
+					</div>
 				</div>
 				<form:form method="POST" action="/IdmPage/aggiorna" modelAttribute="col">
 
