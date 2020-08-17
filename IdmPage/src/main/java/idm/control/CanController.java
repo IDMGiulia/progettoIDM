@@ -117,7 +117,7 @@ public class CanController {
 	@RequestMapping("/risposta/{cv}")  
 	public String risposta(@PathVariable String cv,Model m)  
 	{  
-		cv=cv.replace("$",".");
+		cv=cv.replace("£",".");
 		dao.salvaNFile(cv);
 		m.addAttribute("nome",cv.split("_")[2]);
 		return "response";  

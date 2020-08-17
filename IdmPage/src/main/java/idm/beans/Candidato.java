@@ -63,7 +63,6 @@ public class Candidato {
 	
 	private String cv;
 	
-
 	public String getCv() {
 		return cv;
 	}

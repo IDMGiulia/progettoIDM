@@ -56,7 +56,7 @@ public class FileUploadServlet extends HttpServlet {
         boolean controllo=false;
         if(controlloEstensione(fileName))
         	controllo=true;
-        fileName=fileName.replace(".", "$");
+        fileName=fileName.replace(".", "£");
         String nomeR="/risposta/" + fileName;
         String nomeE= "/errore/" + request.getParameter("nome");
         if(controllo) {
