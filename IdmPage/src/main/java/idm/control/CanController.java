@@ -429,15 +429,6 @@ public class CanController {
 	    }catch (Exception e) {
 	    	return "senior_form";
 	    } 	
-		//Check validation errors
-		if (result.hasErrors()) {   
-			return "senior_form";
-		}
-		try {
-			dao.salvaSen(sen); 
-		}catch (Exception e) {
-			return "senior_form";
-		}
 		return "senior_cv";//will derict to canconf   
 	}
 
