@@ -1,11 +1,17 @@
 package idm.control;
 
+
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -17,8 +23,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.support.SessionStatus;
 
+import idm.beans.Amministrazione;
 import idm.beans.Candidato;
 import idm.beans.Recensione;
+import idm.dao.AmministrazioneDao;
 import idm.dao.CanDao;
 import idm.dao.RecensioneDao;
 
@@ -29,7 +37,46 @@ public class CanController {
 	CanDao dao;
 	@Autowired    
 	RecensioneDao Rdao;
-
+	@Autowired    
+	AmministrazioneDao aDao;
+	
+	@Bean
+	public PasswordEncoder passwordEncoder() {
+	  return new BCryptPasswordEncoder();
+	}
+	
+	 //link al form di candidatura Senior 
+	@RequestMapping("/login")    
+	public String log (Model m){   
+		Amministrazione amministrazione= new Amministrazione();
+		m.addAttribute("log", amministrazione);  
+		return "login";   
+	} 
+	
+	
+	/*It saves object into database. The @ModelAttribute puts request data  
+	 *  into model object. You need to mention RequestMethod.POST method   
+	 *  because default request is GET*/    
+	@RequestMapping(value="/log",method = RequestMethod.POST)    
+	public String controllaLog(@Valid @ModelAttribute("log") Amministrazione amministrazione, Model m){ 
+		Optional<Amministrazione> sara = aDao.login(amministrazione.getUsername(), amministrazione.getPassword());
+		String token;
+	    if(sara.isPresent()) {
+	    	do {
+	    	String toke= sara.get().getUsername()+sara.get().getPassword()+LocalDateTime.now();
+	    	PasswordEncoder passwordEncoder=this.passwordEncoder();
+	    	token = passwordEncoder.encode(toke);
+	    	}
+	    	while(token.contains("/")||token.contains("."));
+	    	sara.get().setToken(token);
+	    	aDao.salva(sara.get());
+	    	m.addAttribute("token",token);
+	    	return "logindopo";}//will derict to canconf   }
+	    else {
+			return "login";
+		}
+	} 
+	
 	//link iniziale che manda alla home
 	@RequestMapping("/presentazione")  
 	public String display(Model m)  
@@ -91,7 +138,25 @@ public class CanController {
 		List<Candidato> list=dao.getCandidatoForAnzianit(anzianit);
 		m.addAttribute("anz", anzianit);
 		m.addAttribute("list",list);  
-		return "amministrazione";    
+		return "amministrazione";   	
+	}
+	
+	@RequestMapping("/amministrazione/{token}")    
+	public String viewemp(@PathVariable String token, Model m){
+//	@RequestMapping("/amministrazione")  
+//	public String viewemp( Model m){
+//		Amministrazione amministrazione= new Amministrazione();
+//	    m.addAttribute("log", amministrazione);
+//	    System.out.println(m.getAttribute("token")+"/n");
+//		String token =(String) m.getAttribute("token");
+		if(aDao.verificaToken(token).isPresent()) {
+			String anzianit="Academy";
+			List<Candidato> list=dao.getCandidatoForAnzianit(anzianit);
+			m.addAttribute("anz", anzianit);
+			m.addAttribute("list",list);  
+			return "amministrazione";    }
+
+		return "redirect:/login";
 	}
 
 	// elenco di tutti gli stadi della selezione
@@ -342,7 +407,7 @@ public class CanController {
 	    dao.salvaSen(sen); 
 	    }catch (Exception e) {
 	    	return "senior_form";
-		}
+	    } 	
 		return "senior_cv";//will derict to canconf   
 	} 
 
@@ -360,16 +425,15 @@ public class CanController {
 	public String viewSenior(@PathVariable String anz,@RequestParam("sede") String sede, @RequestParam("competenza") String compe,
 			@RequestParam("stato") String stato,@RequestParam("posizioneLav") String pos,@RequestParam("provincia") String prov,Model m){ 
 		List<Candidato> list= new ArrayList<>();
-		System.out.println(sede+" "+compe+" "+stato+" "+pos);
 		list=dao.getForParameter(anz,sede, compe+",", stato,pos,prov);
 		m.addAttribute("list",list); 
 		return "amministrazione";    
 	}
 	
-	//link alla pagina senior
-		@RequestMapping("/ritorna")  
-		public String ritorna()  
-		{  
-			return "logindopo";  
-		}
+	//link alla pagina con i pulsanti
+	@RequestMapping("/ritorna")  
+	public String ritorna()  
+	{  
+		return "logindopo";  
+	}
 }
