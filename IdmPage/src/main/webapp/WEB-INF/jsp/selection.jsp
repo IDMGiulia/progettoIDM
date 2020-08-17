@@ -88,7 +88,7 @@ h1 {
 			<div class="container"
 				style="margin-top: 30px; margin-bottom: 20%; text-align: center">
 
-				<form action="/IdmPage/select/${anz}">
+				<form action="/IdmPage/select/${anz}/${token}">
 					<br>
 					<br>
 					<br>

@@ -96,7 +96,7 @@ h1 {
 						<h1>Elenco dei colloqui</h1>
 					</div>
 					<!-- PULSANTE BACK --> <!-- BISOGNA CORREGGERE, IL LINK ORA E' SOLO PER RIEMPIMENTO -->
-					<br> <a href="/IdmPage/amministra/${cand.id}" 
+					<br> <a href="/IdmPage/amministra/${cand.id}/${token}" 
               				class="button button2"><b>&#8617;</b> &ensp; Torna alla tabella</a>
 				</div>
 				<br>
@@ -130,7 +130,7 @@ h1 {
 			        <div class="row">
 			          <div class="col-sm-4"></div>
 			          <div class="col-sm-4" style="text-align: center">
-			            <a href="/IdmPage/aggiungiColloqui/${cand.id}"
+			            <a href="/IdmPage/aggiungiColloqui/${cand.id}/${token}"
 			              class="button button2">Aggiungi un colloquio</a>
 			            <div class="col-sm-4"></div>
 			          </div>

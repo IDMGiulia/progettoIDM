@@ -125,7 +125,7 @@ $(function() {
 							<!-- PULSANTI NEL MODAL -->
 							<div class="row">
 								<div class="col-sm-6">
-									<a href="/IdmPage/deleteemp/${command.id}"
+									<a href="/IdmPage/deleteemp/${command.id}/${token}"
 										class="btn btn-primary btn-block ml-1">Rimuovi</a>
 								</div>
 								<div class="col-sm-6">
@@ -141,7 +141,7 @@ $(function() {
 					</div>
 					<div class="col-sm-1"></div>
 				</div>
-				<form:form method="POST" action="/IdmPage/editsave">
+				<form:form method="POST" action="/IdmPage/editsave/${token}">
 
 
 					<!-- CAMPI CON INFORMAZIONI CANDIDATO -->

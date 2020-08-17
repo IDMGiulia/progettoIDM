@@ -94,7 +94,7 @@ h1 {
 				</div>
 				<br>
 
-				<form:form method="POST" action="/IdmPage/aggiungi/${cand.id}" modelAttribute="col">
+				<form:form method="POST" action="/IdmPage/aggiungi/${cand.id}/${token}" modelAttribute="col">
 
 					<!-- SEZIONE DATI PERSONALI -->
 					<div id="div_cv" class="row text-left">

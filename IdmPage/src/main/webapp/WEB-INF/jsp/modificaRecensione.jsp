@@ -86,7 +86,7 @@ h1 {
 			<div class="container" style="margin-top: 30px">
 
 
-				<form:form method="POST" action="/IdmPage/editsalva">
+				<form:form method="POST" action="/IdmPage/editsalva/${token} ">
 					<div class="row">
 					<div class="col-sm-1"></div>
 						<div class="col-sm-4">

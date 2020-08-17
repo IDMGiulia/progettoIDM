@@ -39,26 +39,27 @@ public class CanController {
 	RecensioneDao Rdao;
 	@Autowired    
 	AmministrazioneDao aDao;
-	
+
 	@Bean
 	public PasswordEncoder passwordEncoder() {
-	  return new BCryptPasswordEncoder();
+		return new BCryptPasswordEncoder();
 	}
-	
-	 //link al form di candidatura Senior 
+
+	//link al form di candidatura Senior 
 	@RequestMapping("/login")    
-	public String log (Model m){   
+	public String login (Model m){   
 		Amministrazione amministrazione= new Amministrazione();
 		m.addAttribute("log", amministrazione);  
 		return "login";   
 	} 
-	
-	
+
+
 	/*It saves object into database. The @ModelAttribute puts request data  
 	 *  into model object. You need to mention RequestMethod.POST method   
 	 *  because default request is GET*/    
 	@RequestMapping(value="/log",method = RequestMethod.POST)    
-	public String controllaLog(@Valid @ModelAttribute("log") Amministrazione amministrazione, Model m){ 
+	public String log(@Valid @ModelAttribute("log") Amministrazione amministrazione, Model m){ 
+		
 		Optional<Amministrazione> sara = aDao.login(amministrazione.getUsername(), amministrazione.getPassword());
 		String token;
 	    if(sara.isPresent()) {
@@ -77,6 +78,26 @@ public class CanController {
 		}
 	} 
 	
+		if(sara.isPresent()) {
+			do {
+				String toke= sara.get().getUsername()+sara.get().getPassword()+LocalDateTime.now();
+				PasswordEncoder passwordEncoder=this.passwordEncoder();
+				token = passwordEncoder.encode(toke);
+				System.out.println(token);}
+			while(token.contains("/")||token.contains("."));
+			sara.get().setToken(token);
+			aDao.salva(sara.get());
+			m.addAttribute("token",token);
+			return "logindopo";}//will derict to canconf   }
+		else {
+			return "login";
+		}
+	} 
+
+
+
+
+
 	//link iniziale che manda alla home
 	@RequestMapping("/presentazione")  
 	public String display(Model m)  
@@ -95,22 +116,33 @@ public class CanController {
 	}
 
 	//invia alla pagina per selezionare alcuni candidati
-	@RequestMapping("/selezione/{anz}")  
-	public String selezione(@PathVariable String anz,Model m)  
+	@RequestMapping("/selezione/{anz}/{token}")  
+	public String selezione(@PathVariable String anz, @PathVariable String token,Model m)  
 	{  
-		m.addAttribute("anz", anz);
-		return "selection";  
+		if(aDao.verificaToken(token).isPresent()) {
+			m.addAttribute("anz", anz);
+			m.addAttribute("token", token);
+			return "selection";  
+		}
+		return "redirect:/login";
+
 	}
-	
+
 	//invia da una pagina all'altra
-	@RequestMapping("/cambia/{anz}")  
-	public String cambia(@PathVariable String anz)  
+	@RequestMapping("/cambia/{anz}/{token}")  
+	public String cambia(@PathVariable String anz,@PathVariable String token)  
 	{  
-		if(anz.equals("Academy"))
-			return "redirect:/amministraSenior"; 
-		else {
-			return "redirect:/amministrazione";
-		} 
+		if(aDao.verificaToken(token).isPresent()) {
+			if(anz.equals("Academy")) {
+				String url ="redirect:/amministraSenior/"+token;
+				return url;}
+			else {
+				String url ="redirect:/amministrazione/"+token;
+				return url;
+			} 
+
+		}
+		return "redirect:/login";
 	}
 
 	// Link che porta dal canconf.jsp alla pagina di conferma finale (response)
@@ -149,11 +181,30 @@ public class CanController {
 //	    m.addAttribute("log", amministrazione);
 //	    System.out.println(m.getAttribute("token")+"/n");
 //		String token =(String) m.getAttribute("token");
+	//	//restituisce la tabella con tutti i candidati
+	//	@RequestMapping("/amministrazione")    
+	//	public String viewemp(Model m){
+	//		String anzianit="Academy";
+	//		List<Candidato> list=dao.getCandidatoForAnzianit(anzianit);
+	//		m.addAttribute("anz", anzianit);
+	//		m.addAttribute("list",list);  
+	//		return "amministrazione";    }
+	//	
+	@RequestMapping("/amministrazione/{token}")    
+	public String amministrazione(@PathVariable String token, Model m){
+		//	@RequestMapping("/amministrazione")  
+		//	public String viewemp( Model m){
+		//		Amministrazione amministrazione= new Amministrazione();
+		//	    m.addAttribute("log", amministrazione);
+		//	    System.out.println(m.getAttribute("token")+"/n");
+		//		String token =(String) m.getAttribute("token");
+		System.out.println(token);
 		if(aDao.verificaToken(token).isPresent()) {
 			String anzianit="Academy";
 			List<Candidato> list=dao.getCandidatoForAnzianit(anzianit);
 			m.addAttribute("anz", anzianit);
-			m.addAttribute("list",list);  
+			m.addAttribute("list",list); 
+			m.addAttribute("token",token);
 			return "amministrazione";    }
 
 		return "redirect:/login";
@@ -170,16 +221,16 @@ public class CanController {
 	}
 
 	// elenco di tutti gli stadi della selezione
-	 @ModelAttribute("StatoCand")
-	   public List<String> StatoCand() {
-	      List<String> statoCand = new ArrayList<String>();
-	      statoCand.add("Nuova");
-	      statoCand.add(" Selezione in corso");
-	      statoCand.add(" Disponibile");
-	      statoCand.add("  Non disponibile");
-	      return statoCand;
-	   }
-	 
+	@ModelAttribute("StatoCand")
+	public List<String> StatoCand() {
+		List<String> statoCand = new ArrayList<String>();
+		statoCand.add("Nuova");
+		statoCand.add(" Selezione in corso");
+		statoCand.add(" Disponibile");
+		statoCand.add("  Non disponibile");
+		return statoCand;
+	}
+
 	// elenco di tutte le posizioni possibili
 	@ModelAttribute("Posizioni")
 	public List<String> Posizioni() {
@@ -309,7 +360,7 @@ public class CanController {
 
 	// elenco di tutte le competenze "base"
 	@ModelAttribute("webFrameworkList")
-	public List<String> getWebFrameworkList() {
+	public List<String> WebFrameworkList() {
 		List<String> webFrameworkList = new ArrayList<String>();
 		webFrameworkList.add("Java");
 		webFrameworkList.add("Javascript");
@@ -321,7 +372,7 @@ public class CanController {
 
 	//link al form di candidatura Academy
 	@RequestMapping("/candidaturaAc")    
-	public String showform(Model m){   
+	public String candidaturaAc(Model m){   
 		Candidato candidato= new Candidato();
 		m.addAttribute("can", candidato);  
 		return "ac_form";   
@@ -337,54 +388,67 @@ public class CanController {
 		if(dao.controlla(can)) {
 			return "errore";
 		}
-	    //Check validation errors
-	    if (result.hasErrors()) {   
-	        return "ac_form";
-	    }
-	    try {
-	    dao.salva(can); 
-	    }catch (Exception e) {
-	    	ObjectError error = new ObjectError("competenze","hai inserito troppi caratteri nel campo altre competenze");
-	    	result.addError(error);
-	    	return "ac_form";
+		//Check validation errors
+		if (result.hasErrors()) {   
+			return "ac_form";
+		}
+		try {
+			dao.salva(can); 
+		}catch (Exception e) {
+			ObjectError error = new ObjectError("competenze","hai inserito troppi caratteri nel campo altre competenze");
+			result.addError(error);
+			return "ac_form";
 		}
 		return "ac_cv";//will derict to canconf   
 	} 
 
 	/* It deletes record for the given id in URL and redirects to /viewemp */    
-	@RequestMapping(value="/deleteemp/{id}",method = RequestMethod.GET)    
-	public String delete(@PathVariable int id){       
-		if(dao.getCanById(id).getAnzianit().equals("Academy")) {
-			dao.deleteCandidato(id);
-			return "redirect:/amministrazione"; 
+	@RequestMapping(value="/deleteemp/{id}/{token}",method = RequestMethod.GET)    
+	public String deleteEmp(@PathVariable int id, @PathVariable String token){   
+		if(aDao.verificaToken(token).isPresent()) {
+			if(dao.getCanById(id).getAnzianit().equals("Academy")) {
+				dao.deleteCandidato(id);
+				String url ="redirect:/amministrazione/"+token;
+				return url;
+			}
+			else {
+				dao.deleteCandidato(id);
+				String url ="redirect:/amministraSenior/"+token;
+				return url;}
 		}
-		dao.deleteCandidato(id);
-		return "redirect:/amministraSenior";
+		return "redirect:/login";
 	} 
 
 	/* It displays object data into form for the given id.   
 	 * The @PathVariable puts URL data into variable.*/    
-	@RequestMapping(value="/editemp/{id}")    
-	public String edit(@PathVariable int id, Model m){   
-		Candidato emp=dao.getCanById(id); 
-		m.addAttribute("command",emp);  
-		return "canEditForm";    
+	@RequestMapping(value="/editemp/{id}/{token}")    
+	public String editTemp(@PathVariable int id, @PathVariable String token, Model m){   
+		if(aDao.verificaToken(token).isPresent()) {
+			Candidato emp=dao.getCanById(id); 
+			m.addAttribute("command",emp);  
+			m.addAttribute("token",token);
+			return "canEditForm";   }
+		return "redirect:/login";
 	} 
 
 	/* It updates model object. */    
-	@RequestMapping(value="/editsave",method = RequestMethod.POST)    
-	public String editsave(@ModelAttribute("can") Candidato can){    
-		dao.update(can);  
-		if(can.getAnzianit().equals("Academy"))
-			return "redirect:/amministrazione"; 
-		else {
-			return "redirect:/amministraSenior";
-		}
+	@RequestMapping(value="/editsave/{token}",method = RequestMethod.POST)    
+	public String editSave(@PathVariable String token, @ModelAttribute("can") Candidato can){ 
+		if(aDao.verificaToken(token).isPresent()) {
+			dao.update(can);  
+			if(can.getAnzianit().equals("Academy")) {
+				String url ="redirect:/amministrazione/"+token;
+				return url; }
+			else {
+				String url ="redirect:/amministraSenior/"+token;
+				return url;
+			}}
+		return "redirect:/login";
 	} 
 
 	//link al form di candidatura Senior 
 	@RequestMapping("/candidaturaSen")    
-	public String showformSen(Model m){   
+	public String candidaturaSen(Model m){   
 		Candidato senior= new Candidato();
 		m.addAttribute("sen", senior);  
 		return "senior_form";   
@@ -394,7 +458,7 @@ public class CanController {
 	 *  into model object. You need to mention RequestMethod.POST method   
 	 *  because default request is GET*/    
 	@RequestMapping(value="/saveSenior",method = RequestMethod.POST)    
-	public String saveSen(@Valid @ModelAttribute("sen") Candidato sen, BindingResult result, 
+	public String saveSenior(@Valid @ModelAttribute("sen") Candidato sen, BindingResult result, 
 			SessionStatus status,Model m){ 
 		if(dao.controlla(sen)) {
 			return "errore";
@@ -408,21 +472,35 @@ public class CanController {
 	    }catch (Exception e) {
 	    	return "senior_form";
 	    } 	
+		//Check validation errors
+		if (result.hasErrors()) {   
+			return "senior_form";
+		}
+		try {
+			dao.salvaSen(sen); 
+		}catch (Exception e) {
+			return "senior_form";
+		}
 		return "senior_cv";//will derict to canconf   
-	} 
-
-	//restituisce la tabella con tutti i senior candidati
-	@RequestMapping("/amministraSenior")    
-	public String viewSen(Model m){ 
-		String anzianit="Senior";
-		List<Candidato> list=dao.getCandidatoForAnzianit(anzianit);
-		m.addAttribute("anz", anzianit);   
-		m.addAttribute("list",list);  
-		return "amministrazione";    
 	}
 
-	@RequestMapping(value="/select/{anz}")    
-	public String viewSenior(@PathVariable String anz,@RequestParam("sede") String sede, @RequestParam("competenza") String compe,
+	//restituisce la tabella con tutti i senior candidati
+	@RequestMapping("/amministraSenior/{token}")    
+	public String amministraSenior(@PathVariable String token,Model m){ 
+		if(aDao.verificaToken(token).isPresent()) {
+			String anzianit="Senior";
+			List<Candidato> list=dao.getCandidatoForAnzianit(anzianit);
+			m.addAttribute("anz", anzianit);   
+			m.addAttribute("list",list); 
+			m.addAttribute("token",token);
+			return "amministrazione";    
+		}
+
+		return "redirect:/login";
+	}
+
+	@RequestMapping(value="/select/{anz}/{token}")    
+	public String select(@PathVariable String anz,@PathVariable String token,@RequestParam("sede") String sede, @RequestParam("competenza") String compe,
 			@RequestParam("stato") String stato,@RequestParam("posizioneLav") String pos,@RequestParam("provincia") String prov,Model m){ 
 		List<Candidato> list= new ArrayList<>();
 		list=dao.getForParameter(anz,sede, compe+",", stato,pos,prov);
