@@ -78,6 +78,9 @@ h1 {
 	font-weight: normal;
 }
 
+.modal-body {
+   background-image: url('https://www.idmconsulting.it/wp-content/uploads/2015/07/Background-esagoni-piccoli.png');
+}
 </style>
 
 <!-- FILE PULSANTI -->
@@ -175,7 +178,7 @@ $(function() {
 
 										<!-- PULSANTE NEL MODAL -->
 										<button type="button" class="btn btn-secondary btn-block ml-1"
-											data-dismiss="modal" style="align: right">Chiudi</button>
+											data-dismiss="modal" style="align: right; background-color: #d8d8c0 !important">Chiudi</button>
 									</div>
 									<button class="button button2x" data-toggle="modal"
 										data-target="#myModal" data-backdrop="false">Informazioni Complete</button></td>
