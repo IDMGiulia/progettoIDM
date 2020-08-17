@@ -358,7 +358,22 @@ public class CanController {
 		}
 		return "ac_cv";//will derict to canconf   
 	} 
-
+	
+	/* It deletes record for the given id in URL and redirects to /viewemp */    
+	@RequestMapping(value="annullaCan/{anzianit}/{token}",method = RequestMethod.GET)    
+	public String annullaCan(@PathVariable String anzianit, @PathVariable String token){   
+		if(aDao.verificaToken(token).isPresent()) {
+			if(anzianit.equals("Academy")) {
+				String url ="redirect:/amministrazione/"+token;
+				return url;
+			}
+			else {
+				String url ="redirect:/amministraSenior/"+token;
+				return url;}
+		}
+		return "redirect:/login";
+	} 
+	
 	/* It deletes record for the given id in URL and redirects to /viewemp */    
 	@RequestMapping(value="/deleteemp/{id}/{token}",method = RequestMethod.GET)    
 	public String deleteEmp(@PathVariable int id, @PathVariable String token){   

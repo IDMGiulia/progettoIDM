@@ -138,7 +138,7 @@ $(function() {
 
 					</div>
 					<div class="col-sm-3">
-					<a href="/IdmPage/amministraRecensioni/${command.anzianit}/${token}"
+					<a href="/IdmPage/annullaCan/${command.anzianit}/${token}"
 							class="button button4" style="margin-top: 30px">Annulla</a>
 					</div>
 				</div>
