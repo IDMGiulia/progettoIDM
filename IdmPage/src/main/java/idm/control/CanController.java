@@ -366,10 +366,10 @@ public class CanController {
 		return "amministrazione";    
 	}
 	
-	//link alla pagina senior
-		@RequestMapping("/ritorna")  
-		public String ritorna()  
-		{  
-			return "logindopo";  
-		}
+	//link alla pagina con i pulsanti
+	@RequestMapping("/ritorna")  
+	public String ritorna()  
+	{  
+		return "logindopo";  
+	}
 }
