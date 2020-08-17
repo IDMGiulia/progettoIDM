@@ -44,7 +44,13 @@ public class CanController {
 	public PasswordEncoder passwordEncoder() {
 		return new BCryptPasswordEncoder();
 	}
-
+	
+	//link al form di candidatura Senior 
+	@RequestMapping("img/cv/")    
+	public String erroreCv (Model m){   
+		return "cvErrore";   
+	} 
+	
 	//link al form di candidatura Senior 
 	@RequestMapping("/login")    
 	public String login (Model m){   
