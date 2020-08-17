@@ -65,6 +65,17 @@
 	border: 2px solid #ffcccc;
 }
 
+/****************PULSANTE GRIGIO CHIARO CHE DIVENTA GRIGIO SCURO CON EFFETTO ARROTONDATO**************************/
+.button4 {
+	background-color: #dadad7;
+	border: 2px solid #6b6b61;
+}
+
+.button4:hover {
+	background-color: #6b6b61;
+	border: 2px solid #dadad7;
+}
+
 /****************Pulsante conferma eliminazione in modal (primary base modficato il colore)**************************/
 .btn-primary {
 	background-color: #ffcccc !important;

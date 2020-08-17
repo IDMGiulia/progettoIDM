@@ -11,6 +11,8 @@
 
 <title>Modifica Candidati | IDM - We simplify your work</title>
 
+<link rel="shortcut icon"
+	href="https://www.idmconsulting.it/wp-content/uploads/2016/01/idm-favicon.png" />
 <link rel='stylesheet' id='bootstrap-css'
 	href='https://www.idmconsulting.it/wp-content/themes/dart/css/bootstrap.min.css?ver=4.9.15'
 	type='text/css' media='all' />
@@ -70,6 +72,26 @@ h1 {
 <!-- FILE PULSANTI -->
 <jsp:include page="stili/pulsanti.jsp"></jsp:include>
 
+<!-- SCRIPT MODAL -->
+<script>
+$(function() {
+
+	  // when the modal is shown
+	  $('#myModal').on('show.bs.modal', function(e) {
+	    var $modal = $(this);
+
+	    // find the trigger button
+	    var $button = $(e.relatedTarget);
+
+	    // find the hidden div next to trigger button
+	    var $notifications = $button.siblings('div.hidden');
+
+	    // transfer content to modal body
+	    $modal.find('.modal-body').html($notifications.html());
+	  })
+	});
+</script>
+
 </head>
 
 <body
@@ -85,21 +107,40 @@ h1 {
 		<section class="main-wrapper pagecustom-1339">
 			<div class="container" style="margin-top: 30px">
 
+				<div class="row" style="text-align: center">
+					<div class="col-sm-6">
+						<h1>Modifica la recensione</h1>
+					</div>
+					<div class="col-sm-3">
+						<!-- MODAL A COMPARSA -->
+						<div class="hidden">
+							Confermi di voler rimuovere la recensione?<br>
+							<br>
 
-				<form:form method="POST" action="/IdmPage/editsalva/${token} ">
-					<div class="row">
-					<div class="col-sm-1"></div>
-						<div class="col-sm-4">
-							<h1>Modifica la recensione</h1>
+							<!-- PULSANTI NEL MODAL -->
+							<div class="row">
+								<div class="col-sm-6">
+									<a href="/IdmPage/deleteRec/${command.recId}/${token}"
+										class="btn btn-primary btn-block ml-1">Cancella</a>
+								</div>
+								<div class="col-sm-6">
+									<button type="button" class="btn btn-secondary btn-block ml-1"
+										data-dismiss="modal" style="align: right">Annulla</button>
+								</div>
+							</div>
 						</div>
-						<div class="col-sm-2"></div>
-						<div class="col-sm-4">
-							<input type="submit" value="Aggiorna" class="button button2" style="margin-top: 30px" />
-						</div>
-						<div class="col-sm-1"></div>
+						<button class="button button3" data-toggle="modal"
+							data-target="#myModal" style="margin-top: 30px"
+							data-backdrop="false">Rimuovi recensione</button>
+					</div>
+					<div class="col-sm-3">
+						<a href="/IdmPage/amministraRecensioni/${token}"
+							class="button button4" style="margin-top: 30px">Annulla</a>
 					</div>
 
-
+				</div>
+				<form:form method="POST" action="/IdmPage/editsalva/${token} ">
+				
 					<table>
 
 						<form:hidden path="recId" />
@@ -124,6 +165,26 @@ h1 {
 						</tr>
 					</table>
 				</form:form>
+				<div class="row">
+					<div class="col-sm-4"></div>
+					<div class="col-sm-4" style="text-align:center">
+						<input type="submit" value="Aggiorna" class="button button2"
+							style="margin-top: 30px" />
+					</div>
+					<div class="col-sm-4"></div>
+				</div>
+				
+				<!-- MODAL -->
+				<div class="modal fade" id="myModal">
+					<div class="modal-dialog">
+						<div class="modal-content">
+
+							<!-- Body -->
+							<div class="modal-body"></div>
+
+						</div>
+					</div>
+				</div>
 
 			</div>
 		</section>

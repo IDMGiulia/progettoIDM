@@ -109,7 +109,6 @@ h1 {
 						<th>Cognome</th>
 						<th>Recensioni</th>
 						<th>Stato</th>
-						<th>Cancella</th>
 						<th>Modifica</th>
 					</tr>
 					<c:forEach var="rec" items="${list}">
@@ -119,8 +118,7 @@ h1 {
 							<td>${rec.cognome}</td>
 							<td>${rec.recensione}</td>
 							<td>${rec.approvata}</td>
-							<td><a href="/IdmPage/deleteRec/${rec.recId}/${token}">Cancella</a></td>
-							<td><a href="/IdmPage/editRec/${rec.recId}/${token}">Modifica</a></td>
+							<td><a href="/IdmPage/editRec/${rec.recId}/${token}" class="button button2small">Modifica</a></td>
 						</tr>
 					</c:forEach>
 				</table>

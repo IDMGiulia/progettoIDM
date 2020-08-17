@@ -110,12 +110,10 @@ $(function() {
 				
 				<!-- SEZIONE CON TITOLO E TASTO RIMUOVI -->
 				<div class="row">
-					<div class="col-sm-1"></div>
-					<div class="col-sm-4">
+					<div class="col-sm-6">
 						<h1>Modifica il candidato</h1>
 					</div>
-					<div class="col-sm-2"></div>
-					<div class="col-sm-4">
+					<div class="col-sm-3">
 					
 					<!-- MODAL A COMPARSA -->
 						<div class="hidden">
@@ -139,7 +137,10 @@ $(function() {
 							candidato</button>
 
 					</div>
-					<div class="col-sm-1"></div>
+					<div class="col-sm-3">
+					<a href="/IdmPage/amministraRecensioni/${command.anzianit}/${token}"
+							class="button button4" style="margin-top: 30px">Annulla</a>
+					</div>
 				</div>
 				<form:form method="POST" action="/IdmPage/editsave/${token}">
 
