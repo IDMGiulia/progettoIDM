@@ -36,6 +36,7 @@ public class AmministrazioneDao {
 				a.setUsername(rs.getString(1));
 				a.setPassword(rs.getString(2));
 				a.setPermessi(rs.getInt(3));
+				a.setToken(rs.getString(4));
 				return a;
 			}
 		});
@@ -47,6 +48,16 @@ public class AmministrazioneDao {
 		Optional<Amministrazione> risultato=null;
 		risultato=list.stream()
 				.filter(x->x.getUsername().equals(username)&&x.getPassword().equals(password))
+				.findFirst();
+		
+		return risultato;
+	}
+	
+	public Optional<Amministrazione> verificaToken(String token){
+		List<Amministrazione>list=this.getAmministrazione();
+		Optional<Amministrazione> risultato=null;
+		risultato=list.stream()
+				.filter(x->x.getToken().equals(token))
 				.findFirst();
 		
 		return risultato;
