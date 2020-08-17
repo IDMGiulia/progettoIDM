@@ -100,10 +100,10 @@ h1 {
 							<!--<a href="/IdmPage/amministrazione" class="button button2">Gestione candidature Academy</a>-->
 						</div>
 						<div class="col-sm-4" style="text-align: center">
-							<a href="amministraRecensioni" class="button button2">Gestione recensioni</a>
+							<a href="/IdmPage/amministraRecensioni/${token}" class="button button2">Gestione recensioni</a>
 						</div>
 						<div class="col-sm-4" style="text-align: left">
-							<a href="amministraSenior" class="button button2">Gestione candidature Senior</a>
+							<a href="/IdmPage/amministraSenior/${token}" class="button button2">Gestione candidature Senior</a>
 						</div>
 					</div>
 				</div>

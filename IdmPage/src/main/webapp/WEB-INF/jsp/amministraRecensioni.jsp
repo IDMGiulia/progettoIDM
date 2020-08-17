@@ -119,8 +119,8 @@ h1 {
 							<td>${rec.cognome}</td>
 							<td>${rec.recensione}</td>
 							<td>${rec.approvata}</td>
-							<td><a href="deleteRec/${rec.recId}">Cancella</a></td>
-							<td><a href="editRec/${rec.recId}">Modifica</a></td>
+							<td><a href="/IdmPage/deleteRec/${rec.recId}/${token}">Cancella</a></td>
+							<td><a href="/IdmPage/editRec/${rec.recId}/${token}">Modifica</a></td>
 						</tr>
 					</c:forEach>
 				</table>

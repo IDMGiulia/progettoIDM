@@ -123,10 +123,10 @@ $(function() {
 						<h1>Lista di candidati ${anz}</h1>
 					</div>
 					<div class="col-sm-3" style="text-align: center; margin-top: 10px">
-						<br> <a href="/IdmPage/selezione/${anz}" class="button button2">Filtra candidati</a>
+						<br> <a href="/IdmPage/selezione/${anz}/${token}" class="button button2">Filtra candidati</a>
 					</div>
 					<div class="col-sm-3" style="text-align: center; margin-top: 10px">
-						<br> <a href="/IdmPage/cambia/${anz}" class="button button2"><b>&#8634;</b> &ensp; Cambia Tabella</a>
+						<br> <a href="/IdmPage/cambia/${anz}/${token}" class="button button2"><b>&#8634;</b> &ensp; Cambia Tabella</a>
 					</div>
 				</div>
 				<br>
@@ -156,7 +156,7 @@ $(function() {
 								<td>${can.luogoCandidatura}</td>
 								<td>${can.stato}</td>
 								<td>${can.provincia}</td>
-								<td><a href="/IdmPage/colloquio/${can.id}" class="button button2small">Colloquio</a></td>
+								<td><a href="/IdmPage/colloquio/${can.id}/${token}" class="button button2small">Colloquio</a></td>
 								<td><div class="hidden" style="text-align:center">
 										<h3>Informazioni sul Candidato</h3><br><br>
 										<b>ID: </b>&ensp;${can.id}<br>
@@ -180,7 +180,7 @@ $(function() {
 									<button class="button button2x" data-toggle="modal"
 										data-target="#myModal" data-backdrop="false">Informazioni Complete</button></td>
 										
-								<td><a href="/IdmPage/editemp/${can.id}" class="button button2small">Modifica</a></td>
+								<td><a href="/IdmPage/editemp/${can.id}/${token}" class="button button2small">Modifica</a></td>
 
 								<td>
 								<a href="<%=request.getContextPath()%>/img/cv/${can.cv}" download>
