@@ -1,13 +1,19 @@
 package idm.control;
 
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
+import java.util.Optional;
 
 import javax.validation.Valid;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -19,6 +25,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.support.SessionStatus;
 
+import idm.beans.Amministrazione;
 import idm.beans.Candidato;
 import idm.beans.Recensione;
 import idm.dao.AmministrazioneDao;
@@ -35,6 +42,46 @@ public class CanController {
 	RecensioneDao Rdao;
 	@Autowired    
 	AmministrazioneDao aDao;
+	
+	@Bean
+	public PasswordEncoder passwordEncoder() {
+	  return new BCryptPasswordEncoder();
+	}
+	
+	 //link al form di candidatura Senior 
+	@RequestMapping("/login")    
+	public String log (Model m){   
+		Amministrazione amministrazione= new Amministrazione();
+		m.addAttribute("log", amministrazione);  
+		return "login";   
+	} 
+	
+	
+	/*It saves object into database. The @ModelAttribute puts request data  
+	 *  into model object. You need to mention RequestMethod.POST method   
+	 *  because default request is GET*/    
+	@RequestMapping(value="/log",method = RequestMethod.POST)    
+	public String controllaLog(@Valid @ModelAttribute("log") Amministrazione amministrazione, Model m){ 
+		Optional<Amministrazione> sara = aDao.login(amministrazione.getUsername(), amministrazione.getPassword());
+		String token;
+	    if(sara.isPresent()) {
+	    	do {
+	    	String toke= sara.get().getUsername()+sara.get().getPassword()+LocalDateTime.now();
+	    	PasswordEncoder passwordEncoder=this.passwordEncoder();
+	    	token = passwordEncoder.encode(toke);
+	    	System.out.println(token);}
+	    	while(token.contains("/")||token.contains("."));
+	    	sara.get().setToken(token);
+	    	aDao.salva(sara.get());
+	    	m.addAttribute("token",token);
+	    	return "logindopo";}//will derict to canconf   }
+	    else {
+			return "login";
+		}
+	} 
+	
+
+		
 
 
 	//link iniziale che manda alla home
@@ -80,12 +127,15 @@ public class CanController {
 	}
 
 	//restituisce la tabella con tutti i candidati
-//	@RequestMapping("/amministrazione/{token}")    
-//	public String viewemp(@PathVariable String token, Model m){
-	@RequestMapping("/amministrazione")  
-	public String viewemp( Model m){
-		System.out.println("dentro il metodo");
-		String token =(String) m.getAttribute("token");
+	@RequestMapping("/amministrazione/{token}")    
+	public String viewemp(@PathVariable String token, Model m){
+//	@RequestMapping("/amministrazione")  
+//	public String viewemp( Model m){
+//		Amministrazione amministrazione= new Amministrazione();
+//	    m.addAttribute("log", amministrazione);
+//	    System.out.println(m.getAttribute("token")+"/n");
+//		String token =(String) m.getAttribute("token");
+		System.out.println(token);
 		if(aDao.verificaToken(token).isPresent()) {
 			System.out.println("dentro l'if");
 			String anzianit="Academy";
@@ -94,7 +144,7 @@ public class CanController {
 			m.addAttribute("list",list);  
 			return "amministrazione";    }
 
-		return "login";
+		return "redirect:/login";
 	}
 
 	// elenco di tutti gli stadi della selezione
