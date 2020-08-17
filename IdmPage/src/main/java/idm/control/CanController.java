@@ -76,27 +76,7 @@ public class CanController {
 	    else {
 			return "login";
 		}
-	} 
-	
-		if(sara.isPresent()) {
-			do {
-				String toke= sara.get().getUsername()+sara.get().getPassword()+LocalDateTime.now();
-				PasswordEncoder passwordEncoder=this.passwordEncoder();
-				token = passwordEncoder.encode(toke);
-				System.out.println(token);}
-			while(token.contains("/")||token.contains("."));
-			sara.get().setToken(token);
-			aDao.salva(sara.get());
-			m.addAttribute("token",token);
-			return "logindopo";}//will derict to canconf   }
-		else {
-			return "login";
-		}
-	} 
-
-
-
-
+	}
 
 	//link iniziale che manda alla home
 	@RequestMapping("/presentazione")  
@@ -174,30 +154,7 @@ public class CanController {
 	}
 	
 	@RequestMapping("/amministrazione/{token}")    
-	public String viewemp(@PathVariable String token, Model m){
-//	@RequestMapping("/amministrazione")  
-//	public String viewemp( Model m){
-//		Amministrazione amministrazione= new Amministrazione();
-//	    m.addAttribute("log", amministrazione);
-//	    System.out.println(m.getAttribute("token")+"/n");
-//		String token =(String) m.getAttribute("token");
-	//	//restituisce la tabella con tutti i candidati
-	//	@RequestMapping("/amministrazione")    
-	//	public String viewemp(Model m){
-	//		String anzianit="Academy";
-	//		List<Candidato> list=dao.getCandidatoForAnzianit(anzianit);
-	//		m.addAttribute("anz", anzianit);
-	//		m.addAttribute("list",list);  
-	//		return "amministrazione";    }
-	//	
-	@RequestMapping("/amministrazione/{token}")    
 	public String amministrazione(@PathVariable String token, Model m){
-		//	@RequestMapping("/amministrazione")  
-		//	public String viewemp( Model m){
-		//		Amministrazione amministrazione= new Amministrazione();
-		//	    m.addAttribute("log", amministrazione);
-		//	    System.out.println(m.getAttribute("token")+"/n");
-		//		String token =(String) m.getAttribute("token");
 		System.out.println(token);
 		if(aDao.verificaToken(token).isPresent()) {
 			String anzianit="Academy";
