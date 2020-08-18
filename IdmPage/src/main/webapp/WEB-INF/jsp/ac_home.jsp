@@ -255,13 +255,6 @@ a:hover, a:focus, a:active, .footer-custom-menu li a:hover {
 	color: rgb(23, 89, 146)
 }
 
-/****************Custom background**************************/
-.body-inner {
-	background-image:
-		url('https://www.idmconsulting.it/wp-content/uploads/2015/07/Background-esagoni-piccoli.png');
-	background-position: 0 0;
-}
-
 /****************** MAIN NAVIGATION *******************/
 h1 {
 	color: #20bcda;
@@ -298,6 +291,9 @@ h1 {
 	margin-top: 44px !important;
 }
 </style>
+
+<!-- FILE SFONDO -->
+<jsp:include page="stili/sfondo.jsp"></jsp:include>
 
 <!-- FILE PULSANTI -->
 <jsp:include page="stili/pulsanti.jsp"></jsp:include>

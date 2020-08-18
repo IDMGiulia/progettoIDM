@@ -9,7 +9,7 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-<title>Modifica Candidati | IDM - We simplify your work</title>
+<title>Modifica Candidato | IDM - We simplify your work</title>
 
 <link rel="shortcut icon"
 	href="https://www.idmconsulting.it/wp-content/uploads/2016/01/idm-favicon.png" />
@@ -58,17 +58,14 @@
 </script>
 
 <style type="text/css">
-/****************Custom background**************************/
-.body-inner {
-	background-image:
-		url('https://www.idmconsulting.it/wp-content/uploads/2015/07/Background-esagoni-piccoli.png');
-	background-position: 0 0;
-}
 h1 {
 	color: #20bcda;
 	font-weight: normal;
 }
 </style>
+
+<!-- FILE SFONDO -->
+<jsp:include page="stili/sfondo.jsp"></jsp:include>
 
 <!-- SCRIPT MODAL -->
 <script>
@@ -195,13 +192,18 @@ $(function() {
 									<form:option value=" Selezione in corso"
 										label="Selezione in corso" />
 									<form:option value=" Disponibile" label="Disponibile" />
-									<form:option value="  Non disponibile" label="Non disponibile" />
+									<form:option value="  Scartato" label="Scartato" />
 								</form:select></td>
 						</tr>
 
 						<tr>
-							<td>Note sul candidato :</td>
-							<td><form:textarea path="note" maxlength="140"
+							<td>Storico note sul candidato :</td>
+							<td><form:textarea path="note" maxlength="800"
+									style="width: 80%; height: 150px; border: none" /></td>
+						</tr>
+						<tr>
+							<td>Aggiungi una nuova nota sul candidato :</td>
+							<td><form:textarea path="nuovaNota" maxlength="140"
 									style="width: 80%; height: 100%; border: none" /></td>
 						</tr>
 					</table>

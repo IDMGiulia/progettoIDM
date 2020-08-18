@@ -62,17 +62,15 @@
 	table th {
 	background-color: #1d70b7;
 }
-/****************Custom background**************************/
-.body-inner {
-	background-image:
-		url('https://www.idmconsulting.it/wp-content/uploads/2015/07/Background-esagoni-piccoli.png');
-	background-position: 0 0;
-}
-h1 {
+
+h1 { 
 	color: #20bcda;
 	font-weight: normal;
 }
 </style>
+
+<!-- FILE SFONDO -->
+<jsp:include page="stili/sfondo.jsp"></jsp:include>
 
 <!-- FILE PULSANTI -->
 <jsp:include page="stili/pulsanti.jsp"></jsp:include>

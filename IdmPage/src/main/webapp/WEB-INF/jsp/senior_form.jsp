@@ -327,12 +327,7 @@ form .form-control:focus {
 a:hover, a:focus, a:active, .footer-custom-menu li a:hover {
 	color: rgb(23, 89, 146)
 }
-/****************Custom background**************************/
-.body-inner {
-	background-image:
-		url('https://www.idmconsulting.it/wp-content/uploads/2015/07/Background-esagoni-piccoli.png');
-	background-position: 0 0;
-}
+
 h1 {
 	color: #20bcda;
 	font-weight: normal;
@@ -396,6 +391,9 @@ span {
   vertical-align: middle;
 }
 </style>
+
+<!-- FILE SFONDO -->
+<jsp:include page="stili/sfondo.jsp"></jsp:include>
 
 <!-- FILE CHECKBOXES -->
 <jsp:include page="stili/checkbox.jsp"></jsp:include>

@@ -345,119 +345,6 @@ form .form-control:focus {
 	border-color: #1d70b7 !important;
 }
 
-.featured-tab .nav-tabs>li.active>a:after {
-	border-left-color: #1d70b7;
-}
-
-.plan.featured a.btn {
-	border-bottom-color: #1d70b7;
-}
-
-a:hover, a:focus, a:active, .footer-custom-menu li a:hover {
-	color: rgb(23, 89, 146)
-}
-
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active,
-	.btn-primary.active, .open .dropdown-toggle.btn-primary {
-	background-color: rgb(23, 89, 146);
-}
-
-/*********************   TOP NAVIGATION   **************************/
-.top-info {
-	background-color: #ffffff;
-}
-
-.top-info .topbar-sidebar, .top-info .topbar-sidebar p, .top-info .topbar-sidebar li
-	{
-	color: #333333
-}
-
-.top-info .topbar-sidebar a {
-	color: #666666 !important;
-}
-
-.top-info .topbar-sidebar a:hover {
-	color: #1d70b7 !important
-}
-
-/****************Custom background**************************/
-.body-inner {
-	background-image:
-		url('https://www.idmconsulting.it/wp-content/uploads/2015/07/Background-esagoni-piccoli.png');
-	background-position: 0 0;
-}
-/*************************Header*****************/
-#header, #inner-header {
-	background-color: #ffffff;
-	background-position: 0 0;
-}
-
-/********************footer*******************/
-#footer {
-	background-color: #d8d8d8;
-	background-position: 0 0;
-}
-
-.footer-bottom {
-	background-image:
-		url('https://www.idmconsulting.it/wp-content/uploads/2015/04/Footer-background.png');
-	background-position: 0 0;
-}
-
-.footer-widget>h3.footer-title {
-	color: #1d70b7;
-}
-
-.footer-widget>h3.footer-title span {
-	background: transparent;
-}
-
-#footer .footer-widget a, #footer .footer-widget li a {
-	color: #1d70b7;
-}
-
-#footer .footer-widget a:hover, #footer .footer-widget li a:hover {
-	color: #000000;
-}
-/****************** MAIN NAVIGATION *******************/
-nav ul.nav.navbar-nav {
-	background: #ffffff;
-	background-attachment: fixed;
-	background-position: right top;
-}
-
-nav ul.nav.navbar-nav>li {
-	background: transparent;
-}
-
-nav ul.navbar-nav>li>a {
-	color: #20b0da;
-}
-
-nav ul.navbar-nav>li>a:hover {
-	color: #ffffff;
-}
-
-nav ul.navbar-nav li.active>a {
-	color: #ffffff !important;
-}
-
-nav ul.navbar-nav>li>a:hover {
-	
-}
-
-nav ul.navbar-nav ul.dropdown-menu>li {
-	background: #20b0da
-}
-
-nav ul.navbar-nav ul.dropdown-menu>li>a:hover {
-	color: #006ba0 !important
-}
-
-nav ul.navbar-nav ul.dropdown-menu>li>a {
-	border-bottom: 1px solid #006ba0;
-}
-
 h1 {
 	color: #20bcda;
 	font-weight: normal;
@@ -506,6 +393,10 @@ h1 {
 	padding-left: 30px !important;
 }
 </style>
+
+<!-- FILE SFONDO -->
+<jsp:include page="stili/sfondo.jsp"></jsp:include>
+
 </head>
 <body
 	class="page-template page-template-homepage-template page-template-homepage-template-php page page-id-528 page-child parent-pageid-1177 wpb-js-composer js-comp-ver-5.5.4 vc_responsive animsition"

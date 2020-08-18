@@ -197,7 +197,7 @@ public class CanController {
 		statoCand.add("Nuova");
 		statoCand.add(" Selezione in corso");
 		statoCand.add(" Disponibile");
-		statoCand.add("  Non disponibile");
+		statoCand.add("  Scartato");
 		return statoCand;
 	}
 
