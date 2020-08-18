@@ -136,7 +136,7 @@ $(function() {
 							colloquio</button>
 					</div>
 					<div class="col-sm-3">
-					<a href="/IdmPage/colloquio/${command.id}/${token}" class="button button4" style="margin-top: 30px">Annulla</a>
+					<a href="/IdmPage/colloquio/${col.candidato}/${token}" class="button button4" style="margin-top: 30px">Annulla</a>
 					</div>
 				</div>
 				<form:form method="POST" action="/IdmPage/aggiorna/${col.id}/${token} " modelAttribute="col">
