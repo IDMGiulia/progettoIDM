@@ -200,8 +200,13 @@ $(function() {
 						</tr>
 
 						<tr>
-							<td>Note sul candidato :</td>
-							<td><form:textarea path="note" maxlength="140"
+							<td>Storico note sul candidato :</td>
+							<td><form:textarea path="note" maxlength="800"
+									style="width: 80%; height: 100%; border: none" /></td>
+						</tr>
+						<tr>
+							<td>Aggiungi una nuova nota sul candidato :</td>
+							<td><form:textarea path="nuovaNota" maxlength="140"
 									style="width: 80%; height: 100%; border: none" /></td>
 						</tr>
 					</table>
