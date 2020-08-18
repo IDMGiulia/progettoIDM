@@ -52,6 +52,14 @@ public class CanController {
 	} 
 	
 	//link al form di candidatura Senior 
+	@RequestMapping("/download/{id}")    
+	public String download (@PathVariable int id,Model m){ 
+		Candidato candidato = dao.getCanById(id);
+		m.addAttribute("cv",candidato.getCv());
+		return "download";   
+	} 
+	
+	//link al form di candidatura Senior 
 	@RequestMapping("/login")    
 	public String login (Model m){   
 		Amministrazione amministrazione= new Amministrazione();

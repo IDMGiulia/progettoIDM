@@ -25,11 +25,11 @@ public class FileUploadServlet extends HttpServlet {
      */
     
     //bisogna inserire la propria location per salvare correttamente i cv e poterli leggere
-    private static final String UPLOAD_DIR = "C:\\Users\\Davide Milan\\Desktop\\progettoIDM\\IdmPage\\src\\main\\webapp\\WEB-INF\\img\\cv";
+    //private static final String UPLOAD_DIR = "C:\\Users\\Davide Milan\\Desktop\\progettoIDM\\IdmPage\\src\\main\\webapp\\WEB-INF\\img\\cv";
     
-    /*QUELLA STANDARD
-     * private static final String UPLOAD_DIR = "C:\\candidature_cv";
-     */
+    //QUELLA STANDARD
+     private static final String UPLOAD_DIR = "C:\\candidature_cv";
+     
     
     protected void doPost(HttpServletRequest request,
             HttpServletResponse response) throws ServletException, IOException {
