@@ -44,20 +44,20 @@ public class CanController {
 	public PasswordEncoder passwordEncoder() {
 		return new BCryptPasswordEncoder();
 	}
-	
+
 	//link al form di candidatura Senior 
 	@RequestMapping("/download/{id}")    
 	public String download (@PathVariable int id,Model m){ 
 		Candidato candidato = dao.getCanById(id);
 		String cv = candidato.getCv();
-			if(cv.isEmpty() || cv.equals(""))
-				return "cvErrore";
-			else {
-				m.addAttribute("cv",candidato.getCv());
-				return "download";   
+		if(cv.isEmpty() || cv.equals(""))
+			return "cvErrore";
+		else {
+			m.addAttribute("cv",candidato.getCv());
+			return "download";   
 		}
 	} 
-	
+
 	//link al form di candidatura Senior 
 	@RequestMapping("/login")    
 	public String login (Model m){   
@@ -72,21 +72,21 @@ public class CanController {
 	 *  because default request is GET*/    
 	@RequestMapping(value="/log",method = RequestMethod.POST)    
 	public String log(@Valid @ModelAttribute("log") Amministrazione amministrazione, Model m){ 
-		
+
 		Optional<Amministrazione> sara = aDao.login(amministrazione.getUsername(), amministrazione.getPassword());
 		String token;
-	    if(sara.isPresent()) {
-	    	do {
-	    	String toke= sara.get().getUsername()+sara.get().getPassword()+LocalDateTime.now();
-	    	PasswordEncoder passwordEncoder=this.passwordEncoder();
-	    	token = passwordEncoder.encode(toke);
-	    	}
-	    	while(token.contains("/")||token.contains("."));
-	    	sara.get().setToken(token);
-	    	aDao.salva(sara.get());
-	    	m.addAttribute("token",token);
-	    	return "logindopo";}//will derict to canconf   }
-	    else {
+		if(sara.isPresent()) {
+			do {
+				String toke= sara.get().getUsername()+sara.get().getPassword()+LocalDateTime.now();
+				PasswordEncoder passwordEncoder=this.passwordEncoder();
+				token = passwordEncoder.encode(toke);
+			}
+			while(token.contains("/")||token.contains("."));
+			sara.get().setToken(token);
+			aDao.salva(sara.get());
+			m.addAttribute("token",token);
+			return "logindopo";}//will derict to canconf   }
+		else {
 			return "login";
 		}
 	}
@@ -165,7 +165,7 @@ public class CanController {
 		m.addAttribute("list",list);  
 		return "amministrazione";   	
 	}
-	
+
 	@RequestMapping("/amministrazione/{token}")    
 	public String amministrazione(@PathVariable String token, Model m){
 		System.out.println(token);
@@ -371,7 +371,7 @@ public class CanController {
 		}
 		return "ac_cv";//will derict to canconf   
 	} 
-	
+
 	/* It deletes record for the given id in URL and redirects to /viewemp */    
 	@RequestMapping(value="annullaCan/{anzianit}/{token}",method = RequestMethod.GET)    
 	public String annullaCan(@PathVariable String anzianit, @PathVariable String token){   
@@ -386,7 +386,7 @@ public class CanController {
 		}
 		return "redirect:/login";
 	} 
-	
+
 	/* It deletes record for the given id in URL and redirects to /viewemp */    
 	@RequestMapping(value="/deleteemp/{id}/{token}",method = RequestMethod.GET)    
 	public String deleteEmp(@PathVariable int id, @PathVariable String token){   
@@ -420,6 +420,8 @@ public class CanController {
 	@RequestMapping(value="/editsave/{token}",method = RequestMethod.POST)    
 	public String editSave(@PathVariable String token, @ModelAttribute("can") Candidato can){ 
 		if(aDao.verificaToken(token).isPresent()) {
+			if(!can.getNuovaNota().isEmpty())
+				can.setNote(can.getNote()+LocalDateTime.now()+"     "+can.getNuovaNota()+"\n");
 			dao.update(can);  
 			if(can.getAnzianit().equals("Academy")) {
 				String url ="redirect:/amministrazione/"+token;
@@ -448,15 +450,15 @@ public class CanController {
 		if(dao.controlla(sen)) {
 			return "errore";
 		}
-	    //Check validation errors
-	    if (result.hasErrors()) {   
-	        return "senior_form";
-	    }
-	    try {
-	    dao.salvaSen(sen); 
-	    }catch (Exception e) {
-	    	return "senior_form";
-	    } 	
+		//Check validation errors
+		if (result.hasErrors()) {   
+			return "senior_form";
+		}
+		try {
+			dao.salvaSen(sen); 
+		}catch (Exception e) {
+			return "senior_form";
+		} 	
 		return "senior_cv";//will derict to canconf   
 	}
 
@@ -483,7 +485,7 @@ public class CanController {
 		m.addAttribute("list",list); 
 		return "amministrazione";    
 	}
-	
+
 	//link alla pagina con i pulsanti
 	@RequestMapping("/ritorna")  
 	public String ritorna()  

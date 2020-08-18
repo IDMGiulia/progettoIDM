@@ -46,6 +46,14 @@ public class Candidato {
 	//campo in cui Sara può inserire delle note sui candidati
 	private String note;
 	
+	private String nuovaNota;
+	
+	public String getNuovaNota() {
+		return nuovaNota;
+	}
+	public void setNuovaNota(String nuovaNota) {
+		this.nuovaNota = nuovaNota;
+	}
 	//Livello di istruzione del candidato
 	private String livello;
 	
