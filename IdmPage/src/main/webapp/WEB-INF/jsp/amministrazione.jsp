@@ -186,8 +186,7 @@ $(function() {
 								<td><a href="/IdmPage/editemp/${can.id}/${token}" class="button button2small">Modifica</a></td>
 
 								<td>
-								<a href="<%=request.getContextPath()%>/img/cv/${can.cv}" download>
-								<button class="button buttonDL"><b>&#8681;</b></button>
+								<a href="/IdmPage/download/${can.id}" class="button buttonDL"><b>&#8681;</b>
 								</a>
 							</tr>
 						</c:forEach>
