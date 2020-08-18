@@ -124,7 +124,7 @@ $(function() {
 							<!-- PULSANTI NEL MODAL -->
 							<div class="row">
 								<div class="col-sm-6">
-									<a href="/IdmPage/deletecol/${col.id}"
+									<a href="/IdmPage/deletecol/${col.id}/${token}"
 										class="btn btn-primary btn-block ml-1">Rimuovi</a>
 								</div>
 								<div class="col-sm-6">
@@ -140,7 +140,7 @@ $(function() {
 					</div>
 					<div class="col-sm-1"></div>
 				</div>
-				<form:form method="POST" action="/IdmPage/aggiorna" modelAttribute="col">
+				<form:form method="POST" action="/IdmPage/aggiorna/${col.id}/${token} " modelAttribute="col">
 
 
 					<!-- CAMPI CON INFORMAZIONI COLLOQUIO -->
