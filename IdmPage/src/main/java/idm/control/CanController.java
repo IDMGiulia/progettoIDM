@@ -46,17 +46,16 @@ public class CanController {
 	}
 	
 	//link al form di candidatura Senior 
-	@RequestMapping("img/cv/")    
-	public String erroreCv (Model m){   
-		return "cvErrore";   
-	} 
-	
-	//link al form di candidatura Senior 
 	@RequestMapping("/download/{id}")    
 	public String download (@PathVariable int id,Model m){ 
 		Candidato candidato = dao.getCanById(id);
-		m.addAttribute("cv",candidato.getCv());
-		return "download";   
+		String cv = candidato.getCv();
+			if(cv.isEmpty() || cv.equals(""))
+				return "cvErrore";
+			else {
+				m.addAttribute("cv",candidato.getCv());
+				return "download";   
+		}
 	} 
 	
 	//link al form di candidatura Senior 
