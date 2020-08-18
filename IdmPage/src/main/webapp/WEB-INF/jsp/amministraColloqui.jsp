@@ -121,7 +121,7 @@ h1 {
 								<td>${col.tipo}</td>
 								<td>${col.note}</td>
 								<td>${col.valutazione}</td>
-								<td><a href="/IdmPage/editcol/${col.id}">Modifica</a></td>
+								<td><a href="/IdmPage/editcol/${col.id}/${token}">Modifica</a></td>
 							</tr>
 						</c:forEach>
 					</tbody>

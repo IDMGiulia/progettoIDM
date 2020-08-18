@@ -41,6 +41,7 @@ public class ColloquioController {
 			m.addAttribute("colloqui",list);  
 			m.addAttribute("cand",c);
 			m.addAttribute("token",token);
+			m.addAttribute("id",id);
 
 			return "amministraColloqui";   }
 		return "redirect:/login";
@@ -122,6 +123,60 @@ public class ColloquioController {
 	        return "amministraColloqui";  
 		}
 		
+	@ModelAttribute("tipoColloquio")
+	public List<String> getWebFrameworkList() {
+		List<String> tipoColloquio = new ArrayList<String>();
+		tipoColloquio.add("Conoscitivo");
+		tipoColloquio.add("Tecnico");
+		tipoColloquio.add("Presso cliente");
+		tipoColloquio.add("Finale");
+		tipoColloquio.add("Altro");
+		return tipoColloquio;
+	}
+
+	/* It displays object data into form for the given id.   
+	 * The @PathVariable puts URL data into variable.*/    
+	@RequestMapping(value="/editcol/{id}/{token}")    
+	public String editCol(@PathVariable int id,@PathVariable String token, Model m){   
+		if(aDao.verificaToken(token).isPresent()) {
+			m.addAttribute("token",token);
+			Colloquio col=dao.getColById(id); 
+			m.addAttribute("col",col);  
+			return "ColEditForm";   } 
+		return "redirect:/login";
+	}
+
+	/* It deletes record for the given id in URL and redirects to /viewemp */    
+	@RequestMapping(value="/deletecol/{id}/{token}",method = RequestMethod.GET)    
+	public String delete(@PathVariable int id,@PathVariable String token, Model m){ 
+		if(aDao.verificaToken(token).isPresent()) {
+			Colloquio colloquio=dao.getColById(id);
+			Candidato c=can.getCanById(colloquio.getCandidato());
+			dao.deleteColloquio(id);
+			List<Colloquio> list=dao.getColloquiCan(colloquio.getCandidato());
+			m.addAttribute("colloqui",list);  
+			m.addAttribute("cand",c);
+			String url ="redirect:/colloquio/"+c.getId()+"/"+ token;
+			return url;}
+		return "redirect:/login";
+
+	}
+
+	/* It updates model object. */    
+	@RequestMapping(value="/aggiorna/{id}/{token}",method = RequestMethod.POST)    
+	public String aggiorna(@PathVariable int id, @PathVariable String token,@ModelAttribute("col") Colloquio col, Model m){ 
+		if(aDao.verificaToken(token).isPresent()) {
+			dao.updateCol(col);
+			int canId=dao.getColById(id).getCandidato();
+			List<Colloquio> list=dao.getColloquiCan(canId);
+			Candidato c=can.getCanById(canId);
+			m.addAttribute("colloqui",list);  
+			m.addAttribute("cand",c);
+			String url ="redirect:/colloquio/"+canId+"/"+ token;
+			return url;}
+		return "redirect:/login";
+	}
+
 	/* link per tornare dai colloqui alla tabella corretta*/    
 	@RequestMapping(value="/amministra/{id}/{token}")    
 	public String Amministrazione(@PathVariable int id,@PathVariable String token){    
