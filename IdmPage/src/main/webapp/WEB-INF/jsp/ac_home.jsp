@@ -479,12 +479,6 @@ h1 {
 							onclick="plusSlides(-1)">&#8249;</a> <a class="next"
 							style="display: block; padding: 16px" onclick="plusSlides(1)">&#8250;</a>
 
-						<div class="dot-container">
-							<span class="dot" onclick="currentSlide(1)"></span> <span
-								class="dot" onclick="currentSlide(2)"></span> <span class="dot"
-								onclick="currentSlide(3)"></span>
-						</div>
-
 						<script>
 						function start(int i){
 							if(i=3 || i=6 || i=9){
