@@ -139,7 +139,7 @@ $(function() {
 					</div>
 
 				</div>
-				<form:form method="POST" action="/IdmPage/editsalva/${token} ">
+				<form:form method="POST" action="/IdmPage/editsalva/${token}">
 				
 					<table>
 
@@ -164,7 +164,7 @@ $(function() {
 								</form:select></td>
 						</tr>
 					</table>
-				</form:form>
+				
 				<div class="row">
 					<div class="col-sm-4"></div>
 					<div class="col-sm-4" style="text-align:center">
@@ -173,7 +173,7 @@ $(function() {
 					</div>
 					<div class="col-sm-4"></div>
 				</div>
-				
+				</form:form>
 				<!-- MODAL -->
 				<div class="modal fade" id="myModal">
 					<div class="modal-dialog">
