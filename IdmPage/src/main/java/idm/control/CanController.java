@@ -49,8 +49,13 @@ public class CanController {
 	@RequestMapping("/download/{id}")    
 	public String download (@PathVariable int id,Model m){ 
 		Candidato candidato = dao.getCanById(id);
-		String cv = candidato.getCv();
-		if(cv.isEmpty() || cv.equals(""))
+		String cv="";
+		try {
+		cv= candidato.getCv();
+		}catch (Exception e) {
+			return "cvErrore";
+		}
+		if(!cv.contains("."))
 			return "cvErrore";
 		else {
 			m.addAttribute("cv",candidato.getCv());
@@ -211,6 +216,7 @@ public class CanController {
 		posizioni.add("Tutte le posizioni");
 		return posizioni;
 	}
+	
 
 	// elenco di tutte le province possibili
 	@ModelAttribute("Provincia")
@@ -339,6 +345,39 @@ public class CanController {
 		webFrameworkList.add("SQL");
 		return webFrameworkList;
 	}
+	
+	// elenco di tutte le competenze "base"
+	@ModelAttribute("competenze")
+	public List<String> competenze() {
+		List<String> competenze = new ArrayList<String>();
+		competenze.add("Java");
+		competenze.add("Javascript");
+		competenze.add("Angular JS");
+		competenze.add("HTML/CSS");
+		competenze.add("SQL");
+		competenze.add("Python");
+		competenze.add("C");
+		competenze.add("C++");
+		competenze.add("MySql");
+		competenze.add("HeidiSQL");
+		competenze.add("MongoDB");
+		competenze.add("Oracle");
+		competenze.add("Angula JS");
+		competenze.add("Hibernate");
+		competenze.add("Spring");
+		competenze.add("Spring MVC");
+		competenze.add("Eclipse");
+		competenze.add("Maven");
+		competenze.add("Struts");
+		competenze.add("Soap UI");
+		competenze.add("Atom");
+		competenze.add("Spring Tool Suite");
+		competenze.add("Android");
+		competenze.add("IOS");
+		competenze.add("GlassFish");
+		competenze.add("TomCat");
+		return competenze;
+	}
 
 	//link al form di candidatura Academy
 	@RequestMapping("/candidaturaAc")    
@@ -347,6 +386,13 @@ public class CanController {
 		m.addAttribute("can", candidato);  
 		return "ac_form";   
 	} 
+	
+	//link al form di aggiornameto candidato
+		@RequestMapping(value="/aggiorna",method = RequestMethod.POST)    
+		public String aggiorna(@ModelAttribute("command") Candidato can, Model m){   
+			dao.salva(can);
+			return "ac_cv";  
+		}
 
 	/*It saves object into database. The @ModelAttribute puts request data  
 	 *  into model object. You need to mention RequestMethod.POST method   
@@ -355,7 +401,9 @@ public class CanController {
 	public String save(@Valid @ModelAttribute("can") Candidato can, BindingResult result, 
 			SessionStatus status,Model m){ 
 		//metodo che controlla se il candidato è già presente
-		if(dao.controlla(can)) {
+		Candidato candidato=dao.controlla(can);
+		if(candidato.getId()!=can.getId()) {
+			m.addAttribute("command",candidato); 
 			return "errore";
 		}
 		//Check validation errors
@@ -447,18 +495,17 @@ public class CanController {
 	@RequestMapping(value="/saveSenior",method = RequestMethod.POST)    
 	public String saveSenior(@Valid @ModelAttribute("sen") Candidato sen, BindingResult result, 
 			SessionStatus status,Model m){ 
-		if(dao.controlla(sen)) {
-			return "errore";
-		}
+//		Candidato senior =dao.controlla(sen);
+//		if(sen.getId()!=senior.getId()) {
+//			
+//			return "errore";
+//		}
 		//Check validation errors
 		if (result.hasErrors()) {   
+			
 			return "senior_form";
 		}
-		try {
-			dao.salvaSen(sen); 
-		}catch (Exception e) {
-			return "senior_form";
-		} 	
+			dao.salvaSen(sen); 	
 		return "senior_cv";//will derict to canconf   
 	}
 

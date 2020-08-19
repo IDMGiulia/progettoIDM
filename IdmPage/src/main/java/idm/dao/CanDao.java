@@ -72,7 +72,7 @@ public class CanDao {
 	}
 	
 	public void salvaSen(Candidato senior) {
-		
+		Candidato vecchio=this.controlla2(senior);
 		int num = senior.getComp().length;
 		String descrizione=senior.getCompetenze();
 		String [] compBox=descrizione.split(",");
@@ -94,11 +94,17 @@ public class CanDao {
 		descrizione=concatenaCompetenze(senior, webFrameworkList, num);
 		senior.setCompetenze(descrizione);
 		senior.setFavoriteFrameworks(webFrameworkList);
-		senior.setStato("Nuova");
+		if(vecchio.getId()==senior.getId())
+			senior.setStato("Nuova");
+		else {
+			senior.setStato("Duplicato");
+			String nome =vecchio.toString();
+			senior.setNote("Duplicato di: "+nome);
+		}
 		senior.setAnzianit("Senior");
 		Session session = factory.openSession();  
 		Transaction t = session.beginTransaction();
-		session.saveOrUpdate(senior);
+		session.save(senior);
 		t.commit();
 		session.close();
 
@@ -207,15 +213,27 @@ public class CanDao {
 	}
 	
 	//metodo per controllare se un candidato sta candidandosi più di una volta. True=già presente, false=prima volta che si candida
-	public boolean controlla(Candidato can) {
+	public Candidato controlla(Candidato can) {
 		List<Candidato> candidato= new ArrayList <Candidato>();
 		candidato = this.getCandidatos();
 		for (Candidato c : candidato) {
 			if(c.getEmail().equalsIgnoreCase(can.getEmail()) || c.getTelefono().equals(can.getTelefono()))
-				return true;
+				return c;
 		}
-		return false;
+		return can;
 	}
+	
+	//metodo per controllare se un candidato sta candidandosi più di una volta. True=già presente, false=prima volta che si candida
+		public Candidato controlla2(Candidato can) {
+			List<Candidato> candidato= new ArrayList <Candidato>();
+			candidato = this.getCandidatos();
+			for (Candidato c : candidato) {
+				if( c.getNome().equalsIgnoreCase(can.getNome()) && c.getCognome().equalsIgnoreCase(can.getCognome())&&
+						c.getEmail().equalsIgnoreCase(can.getEmail()) && c.getTelefono().equals(can.getTelefono()))
+					return c;
+			}
+			return can;
+		}
 
 	public void salvaNFile(String nome) {
 		 int id= Integer.parseInt(nome.split("_")[0]);
