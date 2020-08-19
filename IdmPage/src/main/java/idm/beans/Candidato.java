@@ -79,11 +79,10 @@ public class Candidato {
 	}
 	@Override
 	public String toString() {
-		return "Candidato [id=" + id + ", nome=" + nome + ", cognome=" + cognome + ", email=" + email + ", telefono="
+		return "Candidato: nome=" + nome + ", cognome=" + cognome + ", email=" + email + ", telefono="
 				+ telefono + ", provincia=" + provincia + ", competenze=" + competenze + ", luogoCandidatura="
 				+ luogoCandidatura + ", stato=" + stato + ", note=" + note + ", livello=" + livello + ", percorso="
-				+ percorso + ", conoscenze=" + conoscenze + ", anzianit=" + anzianit + ", posizioneLav=" + posizioneLav
-				+ "]";
+				+ percorso + ", conoscenze=" + conoscenze + ", anzianit=" + anzianit + ", posizioneLav=" + posizioneLav;
 	}
 	public String getProvincia() {
 		return provincia;

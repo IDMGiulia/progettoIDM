@@ -193,6 +193,7 @@ $(function() {
 										label="Selezione in corso" />
 									<form:option value=" Disponibile" label="Disponibile" />
 									<form:option value="  Scartato" label="Scartato" />
+									<form:option value="Eliminato" label="Eliminato" />
 								</form:select></td>
 						</tr>
 

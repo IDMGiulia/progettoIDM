@@ -203,6 +203,7 @@ public class CanController {
 		statoCand.add(" Selezione in corso");
 		statoCand.add(" Disponibile");
 		statoCand.add("  Scartato");
+		statoCand.add("Eliminato");
 		return statoCand;
 	}
 
@@ -400,12 +401,6 @@ public class CanController {
 	@RequestMapping(value="/save",method = RequestMethod.POST)    
 	public String save(@Valid @ModelAttribute("can") Candidato can, BindingResult result, 
 			SessionStatus status,Model m){ 
-		//metodo che controlla se il candidato è già presente
-		Candidato candidato=dao.controlla(can);
-		if(candidato.getId()!=can.getId()) {
-			m.addAttribute("command",candidato); 
-			return "errore";
-		}
 		//Check validation errors
 		if (result.hasErrors()) {   
 			return "ac_form";
@@ -495,17 +490,15 @@ public class CanController {
 	@RequestMapping(value="/saveSenior",method = RequestMethod.POST)    
 	public String saveSenior(@Valid @ModelAttribute("sen") Candidato sen, BindingResult result, 
 			SessionStatus status,Model m){ 
-//		Candidato senior =dao.controlla(sen);
-//		if(sen.getId()!=senior.getId()) {
-//			
-//			return "errore";
-//		}
 		//Check validation errors
-		if (result.hasErrors()) {   
-			
+		if (result.hasErrors()) {   	
 			return "senior_form";
 		}
+		try {
 			dao.salvaSen(sen); 	
+		}catch (Exception e) {
+			return "senior_form";
+		}
 		return "senior_cv";//will derict to canconf   
 	}
 

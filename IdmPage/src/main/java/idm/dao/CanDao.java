@@ -38,7 +38,7 @@ public class CanDao {
 	}
 
 	public void salva(Candidato candidato) {
-		
+		Candidato vecchio=this.controlla2(candidato);
 		int num = candidato.getComp().length;
 		String descrizione=candidato.getCompetenze();
 		String [] compBox=descrizione.split(",");
@@ -60,7 +60,13 @@ public class CanDao {
 		descrizione=concatenaCompetenze(candidato, webFrameworkList, num);
 		candidato.setCompetenze(descrizione);
 		candidato.setFavoriteFrameworks(webFrameworkList);
-		candidato.setStato("Nuova");
+		if(vecchio.getId()==candidato.getId())
+			candidato.setStato("Nuova");
+		else {
+			candidato.setStato("Duplicato");
+			String nome =vecchio.toString();
+			candidato.setNote("Duplicato di: "+nome);
+		}
 		candidato.setAnzianit("Academy");
 		candidato.setPosizioneLav("Tutte le posizioni");
 		Session session = factory.openSession();  
@@ -176,7 +182,8 @@ public class CanDao {
                 .comparing(Candidato::getStato).reversed()
                 .thenComparingInt(Candidato::getId);
 	    risultato= candidato.stream()
-		          .filter(x->x.getAnzianit().contains(anzianit))
+		          .filter(x->x.getAnzianit().contains(anzianit)
+		        		  &&(!x.getStato().equals("Eliminato")))
 		          .sorted(compareByStato)
 		          .collect(Collectors.toList());
 	    return risultato;
