@@ -420,8 +420,13 @@ public class CanController {
 	@RequestMapping(value="/editsave/{token}",method = RequestMethod.POST)    
 	public String editSave(@PathVariable String token, @ModelAttribute("can") Candidato can){ 
 		if(aDao.verificaToken(token).isPresent()) {
-			if(!can.getNuovaNota().isEmpty())
-				can.setNote(can.getNote()+LocalDateTime.now()+"     "+can.getNuovaNota()+"\n");
+			if(can.getNote().isEmpty()) {
+				if(!can.getNuovaNota().isEmpty())
+					can.setNote(LocalDateTime.now()+"     "+can.getNuovaNota());}
+			else {
+				if(!can.getNuovaNota().isEmpty())
+					can.setNote(can.getNote()+"\n"+LocalDateTime.now()+"     "+can.getNuovaNota());
+				}
 			dao.update(can);  
 			if(can.getAnzianit().equals("Academy")) {
 				String url ="redirect:/amministrazione/"+token;
