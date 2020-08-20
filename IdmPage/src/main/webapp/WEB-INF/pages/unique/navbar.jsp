@@ -236,7 +236,7 @@ nav ul.navbar-nav ul.dropdown-menu>li>a {
 							data-target="#news">News</a></li>
 						<li id="menu-item-2161"
 							class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2161"><a
-							href="https://www.idmconsulting.it/chi-siamo/offerte-di-lavoro/"
+							href="joinus"
 							class="page-scroll" data-target="#lavora-con-noi">Lavora con
 								noi</a></li>
 					</ul>

@@ -3,7 +3,7 @@
 
 <head>
 <link rel="stylesheet"
-	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	href="css/font-awesome.min2.css">
 <style type="text/css">
 /********************footer*******************/
 #footer {
@@ -13,7 +13,7 @@
 
 .footer-bottom {
 	background-image:
-		url('https://www.idmconsulting.it/wp-content/uploads/2015/04/Footer-background.png');
+		url('img/footer-background.png');
 	background-position: 0 0;
 }
 
@@ -87,7 +87,7 @@
 					<ul id="menu-idm" class="footer-bottom-menu">
 						<li id="menu-item-540"
 							class="menu-item menu-item-type-post_type menu-item-object-page menu-item-540"><a
-							href="https://www.idmconsulting.it/chi-siamo/offerte-di-lavoro/">Lavora
+							href="joinus">Lavora
 								con noi</a></li>
 						<li id="menu-item-539"
 							class="menu-item menu-item-type-post_type menu-item-object-page menu-item-539"><a

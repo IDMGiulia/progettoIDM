@@ -16,6 +16,7 @@
 	<mvc:resources mapping="/img/**" location="/resources/img/" />
 	<mvc:resources mapping="/css/**" location="/resources/css/" />
 	<mvc:resources mapping="/js/**" location="/resources/js/" />
+	<mvc:resources mapping="/others/**" location="/resources/others/" />
 
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">

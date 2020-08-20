@@ -10,61 +10,8 @@
 
 <title>Scelta Amministrazione | IDM - We simplify your work</title>
 
-<link rel="shortcut icon"
-	href="img/favicon.png" />
-
-<link rel='stylesheet' id='bootstrap-css'
-	href='https://www.idmconsulting.it/wp-content/themes/dart/css/bootstrap.min.css?ver=4.9.15'
-	type='text/css' media='all' />
-<link rel='stylesheet' id='main-styles-css'
-	href='https://www.idmconsulting.it/wp-content/themes/dart/style.css?ver=4.9.15'
-	type='text/css' media='all' />
-<link rel='stylesheet' id='dynamic-styles-css'
-	href='https://www.idmconsulting.it/wp-content/themes/dart/css/dynamic-styles.php?ver=4.9.15'
-	type='text/css' media='all' />
-<link rel='stylesheet' id='Dart-raleway-css'
-	href='https://fonts.googleapis.com/css?family=Raleway%3A400%2C100%2C300%2C500%2C600%2C700&#038;ver=4.9.15'
-	type='text/css' media='all' />
-<link rel='stylesheet' id='page-transition-animsition-css'
-	href='https://www.idmconsulting.it/wp-content/plugins/page-transition/css/animsition.min.css?ver=1.3'
-	type='text/css' media='all' />
-
-<script
-	src="js/jquery.min.js"></script>
-<script
-	src="js/bootstrap.min.js"></script>
-<script type='text/javascript'
-	src='js/jquery.js'></script>
-<script type='text/javascript'
-	src='js/jquery-migrate.min.js'></script>
-<script type='text/javascript'
-	src='js/jquery.animsition.min.js'></script>
-<script type='text/javascript'
-	src='js/bootstrap.js'></script>
-<script type='text/javascript'
-	src='js/smoothscroll.js'></script>
-<script type="text/javascript">
-		jQuery( document ).ready( function($) {
-			$('.animsition').animsition({
-				inClass : 'fade-in',
-				outClass : 'fade-out',
-				inDuration : 1500,
-				outDuration : 800,
-				loading : false,
-				touchSupport: false,
-				linkElement: '.animsition-link, a[href]:not([target="_blank"]):not([href^="https://www.idmconsulting.it/#"]):not([href^="#"]):not([href*="javascript"]):not([href*=".jpg"]):not([href*=".jpeg"]):not([href*=".gif"]):not([href*=".png"]):not([href*=".mov"]):not([href*=".swf"]):not([href*=".mp4"]):not([href*=".flv"]):not([href*=".avi"]):not([href*=".mp3"]):not([href^="mailto:"]):not([class="no-animation"])'
-			});
-		});
-</script>
-<style type="text/css">
-h1 {
-	color: #20bcda;
-	font-weight: normal;
-}
-</style>
-
-<!-- FILE SFONDO -->
-<jsp:include page="stili/sfondo.jsp"></jsp:include>
+<!-- FILE STILE BASE -->
+<jsp:include page="stili/common-style.jsp"></jsp:include>
 
 <!-- FILE PULSANTI -->
 <jsp:include page="stili/pulsanti.jsp"></jsp:include>
