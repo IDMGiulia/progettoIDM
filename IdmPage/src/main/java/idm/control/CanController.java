@@ -579,10 +579,10 @@ public class CanController {
 	}
 
 	@RequestMapping(value="/select/{anz}/{token}")    
-	public String select(@PathVariable String anz,@PathVariable String token,@RequestParam("sede") String sede, @RequestParam("competenza") String compe,
+	public String select(@PathVariable String anz,@PathVariable String token,@RequestParam("sede") String sede, @RequestParam("competenza") List<String> compe,
 			@RequestParam("stato") String stato,@RequestParam("posizioneLav") String pos,@RequestParam("provincia") String prov,Model m){ 
 		List<Candidato> list= new ArrayList<>();
-		list=dao.getForParameter(anz,sede, compe+",", stato,pos,prov);
+		list=dao.getForParameter(anz,sede, compe, stato,pos,prov);
 		m.addAttribute("list",list); 
 		return "amministrazione";    
 	}

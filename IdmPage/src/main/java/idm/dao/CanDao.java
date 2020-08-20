@@ -3,6 +3,7 @@ package idm.dao;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -188,37 +189,38 @@ public class CanDao {
 		          .collect(Collectors.toList());
 	    return risultato;
 	}
-	
+
 	//metodo per la selezione dei candidati
-	public List<Candidato> getForParameter(String anz,String sede,String competenze, String stato
-											,String pos, String prov){   
-	      List<Candidato> senior= new ArrayList <Candidato>();
-	      List<Candidato> risultato = new ArrayList<>();
-	      senior = getCandidatoForAnzianit(anz);
-	      risultato= senior.stream()
-	          .filter(x->x.getCompetenze().contains(competenze)
-	              &&((x.getLuogoCandidatura().equals(sede)||x.getLuogoCandidatura().contains("Entrambi")||sede.contains("Entrambi")))
-	              &&((x.getProvincia().equals(prov)||prov.compareTo("")==0))
-	              &&((x.getStato().equals(stato)||stato.compareTo("")==0))
-	          	&&((x.getPosizioneLav().equals(pos)|| x.getPosizioneLav().equals("Tutte le posizioni") || pos.contains("Tutte le posizioni"))))
-	          .collect(Collectors.toList());
-	      return risultato;    
-	    }
-	  
+	public List<Candidato> getForParameter(String anz,String sede,List<String> competenze, String stato
+			,String pos, String prov){   
+		List<Candidato> senior= new ArrayList <Candidato>();
+		List<Candidato> risultato = new ArrayList<>();
+		senior = getCandidatoForAnzianit(anz);
+
+		risultato= senior.stream()
+				.filter(x-> (x.getLuogoCandidatura().equals(sede)||x.getLuogoCandidatura().contains("Entrambi")||sede.contains("Entrambi"))
+						&&((x.getProvincia().equals(prov)||prov.compareTo("")==0))
+						&&((x.getStato().equals(stato)||stato.compareTo("")==0))
+						&&((x.getPosizioneLav().equals(pos)|| x.getPosizioneLav().equals("Tutte le posizioni") || pos.contains("Tutte le posizioni"))
+						&& Arrays.asList(x.getCompetenze().split(",")).containsAll(competenze)))
+				.collect(Collectors.toList());
+		return risultato;    
+	}
+
 	public void update(Candidato can) {
 		Session session = factory.openSession();  
 		Transaction t = session.beginTransaction();
 		session.update(can);
 		t.commit();
 		session.close();
-		
+
 	}
 
 	public Candidato getCanById(int id) {
 		String sql="select * from cand where id=?";    
-	    return template.queryForObject(sql, new Object[]{id},new BeanPropertyRowMapper<Candidato>(Candidato.class));
+		return template.queryForObject(sql, new Object[]{id},new BeanPropertyRowMapper<Candidato>(Candidato.class));
 	}
-	
+
 	//metodo per controllare se un candidato sta candidandosi più di una volta. True=già presente, false=prima volta che si candida
 	public Candidato controlla(Candidato can) {
 		List<Candidato> candidato= new ArrayList <Candidato>();
