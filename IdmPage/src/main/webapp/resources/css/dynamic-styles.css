@@ -1,0 +1,275 @@
+p:empty{display:none;}
+.tp-caption a.btn.btn-primary{
+	color: #fff !important;
+}
+
+.pageHead .slider-wrapper{
+margin-bottom:0;
+}
+.home-sidebar{
+z-index: 100;
+}
+
+.tp-bullets {bottom:60px !important;}
+span.count::first-letter{}
+
+/* MODIFICHE GBS */
+#header {opacity:0.95}
+
+
+.navbar-brand {
+    background-color: #fff !important;
+    padding: 10px!important;
+}
+.navbar-nav {
+    margin-top: 9px !important;
+}
+
+.inner-title-content h1 {
+    color: #20b0da;
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.vc_custom_1419240516480 {
+    background-color: #fffff !important;
+}
+
+
+nav ul.navbar-nav > li > a {
+    color: #20b0da;
+    text-transform:uppercase;
+}
+
+.vc_gitem_row {
+    background: #2691cd none repeat scroll 0 0 !important;
+    box-sizing: border-box;
+    margin-left: 0;
+    margin-right: 0;
+    padding: inherit;
+}
+
+.whiteuppercase {
+    text-transform:uppercase;
+    color:#ffffff !important;
+}
+
+.footer-bottom-menu li a {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    margin-right:17px;
+}
+
+.footer-bottom-menu li a:hover {
+    color: #20b0da;
+    font-size: 14px;
+    font-weight: 500;
+    margin-right:17px;
+}
+
+.vc_gitem-zone .vc-zone-link {
+    border: 1px solid #428bca !important;
+}
+
+.post-media {
+    display:none !important;
+}
+
+h1 {
+    color:#428bca !important;
+    font-weight:bold !important;
+    margin: 40px 0px 20px 0px;
+}
+
+ul {
+    margin-left:13px !important;
+    padding-left:0px !important;
+}
+
+h3 {
+    line-height:normal !important;
+}
+
+nav ul.navbar-nav ul.dropdown-menu li a {
+    border-bottom: 1px solid #ffffff !important;
+}
+
+ul.navbar-nav li a:focus {
+    color: #ffffff !important;
+}
+
+.vc_grid.vc_grid-owl-theme .vc_grid-owl-dots.vc_grid-radio_dots.vc_grid-owl-dots-color-grey .vc_grid-owl-dot.active span .vc_grid.vc_grid-owl-theme .vc_grid-owl-dots.vc_grid-radio_dots.vc_grid-owl-dots-color-grey .vc_grid-owl-dot:hover span .vc_grid.vc_grid-owl-theme .vc_grid-owl-dots.vc_grid-square_dots.vc_grid-owl-dots-color-grey .vc_grid-owl-dot.active span .vc_grid.vc_grid-owl-theme .vc_grid-owl-dots.vc_grid-square_dots.vc_grid-owl-dots-color-grey .vc_grid-owl-dot:hover span {
+    background-color: #999 !important;
+    border-color: #006ba0 !important;
+}
+.vc_grid.vc_grid-owl-theme .vc_grid-owl-dots.vc_grid-radio_dots.vc_grid-owl-dots-color-grey .vc_grid-owl-dot span .vc_grid.vc_grid-owl-theme .vc_grid-owl-dots.vc_grid-square_dots.vc_grid-owl-dots-color-grey .vc_grid-owl-dot span {
+    border-color: #006ba0 !important;
+}
+
+input[type="text"] {
+    background: #dddddd none repeat scroll 0 0;
+    border: medium none;
+    padding: 4px 10px;
+    width: 290px;
+}
+
+input[type="email"] {
+    background: #dddddd none repeat scroll 0 0;
+    border: medium none;
+    padding: 4px 10px;
+    width: 290px;
+}
+
+input[type="tel"] {
+    background: #dddddd none repeat scroll 0 0;
+    border: medium none;
+    padding: 4px 10px;
+    width: 290px;
+}
+
+
+textarea {
+    background: #dddddd none repeat scroll 0 0;
+    border: medium none;
+    padding: 4px 10px;
+    width: 290px;
+    height:150px;
+}
+
+#footer {
+    margin-top: 100px !important;
+}
+
+.dropdown-menu li a {
+    padding: 8px 15px !important;
+}
+
+.navbar-nav li a {
+    padding: 15px !important;
+    font-weight: 400;
+}
+
+.fa-search::before {
+    display:none;
+}
+
+nav ul.navbar-nav ul.dropdown-menu li:last-child a {
+    border-bottom:  none !important;
+}
+
+ul.breadcrumb li a {
+    color: #000;
+    font-size: 16px;
+    margin-right: 8px !important;
+}
+
+/*FINE MODIFICHE*/
+@media (max-width: 480px) {
+/* ----------- iPhone 4 and 4S ----------- */
+
+/* Portrait and Landscape */
+
+H3.mobile{
+font-size:18px !important;
+text-align:left !important;
+}
+
+
+}
+.pagecustom-11{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-160{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-172{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-178{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-182{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-184{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-187{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-190{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-197{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-524{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-13{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-105{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-107{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-112{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-114{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-119{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-121{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-123{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-134{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-136{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-242{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-247{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-15{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-19{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-532{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-534{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-1046{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-44{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-46{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-1071{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-526{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-1100{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-1104{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-599{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-1113{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-1115{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-1129{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-1339{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-66{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-67{background-position:center top}	
+.pagecustom-68{background-position:center top}	
+.pagecustom-69{background-position:center top}	
+.pagecustom-84{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-86{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-88{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-607{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-616{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-622{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-626{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-372{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-639{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-1154{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-1571{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-1574{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-1576{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-1578{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-1580{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-1583{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-1585{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-1587{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-2466{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-1156{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-645{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-647{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-649{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-1161{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-398{background-position:center top}	
+.pagecustom-1177{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-528{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-530{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-1174{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-1179{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-1181{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-823{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-825{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-2455{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-1720{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-1726{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-1732{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-1736{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-1738{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-699{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-955{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-703{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-705{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-2499{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-709{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-710{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-457{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-715{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-717{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-209{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-2533{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-232{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-1005{background-repeat:repeat !important;background-position:center top}	
+.pagecustom-2558{background-repeat:repeat !important;background-position:center top}	

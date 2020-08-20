@@ -45,7 +45,7 @@
 						<div class="textwidget">
 							<div class="footer-about-us">
 								<img
-									src="https://www.idmconsulting.it/wp-content/uploads/2015/04/IDM-consulting-footer.png"
+									src="img/logo-footer.png"
 									alt="about">
 								<p class="desc">
 									Via Accademia Albertina, 37 - 10123 - Torino (TO)<br> T.
@@ -106,7 +106,7 @@
 						role="button" title="Click to return to the top of page"
 						data-toggle="tooltip" data-placement="left"> <img
 						class="wow flipInY"
-						src="https://www.idmconsulting.it/wp-content/uploads/2015/04/IDM-footer2.png"
+						src="img/logo-footer2.png"
 						alt="to top">
 					</a>
 				</div>

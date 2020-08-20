@@ -95,7 +95,7 @@ nav ul.navbar-nav ul.dropdown-menu>li>a {
 							class="icon-bar"></span>
 					</button>
 					<a class="navbar-brand" href="https://www.idmconsulting.it"> <img
-						src="<%=request.getContextPath()%>/img/logo.png"
+						src="img/logo.png"
 						alt="" class="img-responsive" />
 
 					</a>

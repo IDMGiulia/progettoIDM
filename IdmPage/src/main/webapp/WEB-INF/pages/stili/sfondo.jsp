@@ -6,7 +6,7 @@
 
 .body-inner {
 	background-image:
-		url('./img/sfondo.png');
+		url('img/sfondo.png');
 	background-position: 0 0;
 }
 </style>

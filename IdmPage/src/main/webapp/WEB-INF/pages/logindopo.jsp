@@ -11,7 +11,7 @@
 <title>Scelta Amministrazione | IDM - We simplify your work</title>
 
 <link rel="shortcut icon"
-	href="https://www.idmconsulting.it/wp-content/uploads/2016/01/idm-favicon.png" />
+	href="img/favicon.png" />
 
 <link rel='stylesheet' id='bootstrap-css'
 	href='https://www.idmconsulting.it/wp-content/themes/dart/css/bootstrap.min.css?ver=4.9.15'
@@ -30,19 +30,19 @@
 	type='text/css' media='all' />
 
 <script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	src="js/jquery.min.js"></script>
 <script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+	src="js/bootstrap.min.js"></script>
 <script type='text/javascript'
-	src='https://www.idmconsulting.it/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+	src='js/jquery.js'></script>
 <script type='text/javascript'
-	src='https://www.idmconsulting.it/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+	src='js/jquery-migrate.min.js'></script>
 <script type='text/javascript'
-	src='https://www.idmconsulting.it/wp-content/plugins/page-transition/js/jquery.animsition.min.js?ver=1.3'></script>
+	src='js/jquery.animsition.min.js'></script>
 <script type='text/javascript'
-	src='https://www.idmconsulting.it/wp-content/themes/dart/js/bootstrap.js?ver=3.0.1'></script>
+	src='js/bootstrap.js'></script>
 <script type='text/javascript'
-	src='https://www.idmconsulting.it/wp-content/themes/dart/js/smoothscroll.js?ver=4.9.15'></script>
+	src='js/smoothscroll.js'></script>
 <script type="text/javascript">
 		jQuery( document ).ready( function($) {
 			$('.animsition').animsition({
