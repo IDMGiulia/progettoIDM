@@ -94,13 +94,13 @@ h1 {
 						<c:forEach var="val" items="${Sede}">
 							<option value="${val}">${val}</option>
 						</c:forEach>
-					</select> <br> <br> Scegli una competenza: <select
-						name="competenza" id="competenza">
-						<option value="">Tutte le competenze</option>
-						<c:forEach var="val" items="${webFrameworkList}">
-							<option value="${val}">${val}</option>
+					</select> <br> <br> 
+					Scegli una competenza:<br>
+						<c:forEach var="val" items="${competenze}">
+							<input type="checkbox" id="${val}">
+							<label>${val}</label><br>
 						</c:forEach>
-					</select> <br> <br> Nuovo stato candidatura: 
+					 <br> <br> Nuovo stato candidatura: 
 						<select name="stato" id="stato">
 						<option value="">Tutti gli stati</option>
 						<c:forEach var="val" items="${StatoCand}">
