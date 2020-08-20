@@ -634,6 +634,7 @@ span {
 						<br> <br>
 
 						<!-- ALTRE COMPETENZE -->
+							<div class="row">
 							<div class="col-md-0"></div>
 							<div class="col-md-4" >
 									<label class="form-label" >Altre competenze (inserirle separate da virgola): </label>
@@ -644,8 +645,7 @@ span {
 									maxlength="140" placeholder="es. Swift, Ruby, Assembly, ..." />
 							</div>
 							<div class="col-md-1"></div>
-
-					</div>
+						</div>
 
 					<br>
 					<br>

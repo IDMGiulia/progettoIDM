@@ -23,7 +23,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.support.SessionStatus;
 
-import antlr.StringUtils;
 import idm.beans.Amministrazione;
 import idm.beans.Candidato;
 import idm.beans.Recensione;
