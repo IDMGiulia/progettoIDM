@@ -344,6 +344,67 @@ public class CanController {
 	}
 	
 	// elenco di tutte le competenze "base"
+			@ModelAttribute("linguaggi")
+			public List<String> linguaggi() {
+				List<String> competenze = new ArrayList<String>();
+				competenze.add("Java");
+				competenze.add("Javascript");
+				competenze.add("Angular JS");
+				competenze.add("HTML/CSS");
+				competenze.add("SQL");
+				competenze.add("Python");
+				competenze.add("C");
+				competenze.add("C++");
+				return competenze;
+			}	
+			
+			// elenco di tutte le competenze "base"
+			@ModelAttribute("database")
+			public List<String> database() {
+				List<String> competenze = new ArrayList<String>();
+				competenze.add("MySql");
+				competenze.add("HeidiSQL");
+				competenze.add("MongoDB");
+				competenze.add("Oracle");
+				return competenze;
+			}
+		
+			// elenco di tutte le competenze "base"
+			@ModelAttribute("framework")
+			public List<String> framework() {
+				List<String> competenze = new ArrayList<String>();
+				competenze.add("Angula JS");
+				competenze.add("Hibernate");
+				competenze.add("Spring");
+				competenze.add("Spring MVC");
+				return competenze;
+			}
+			
+			// elenco di tutte le competenze "base"
+			@ModelAttribute("software")
+			public List<String> software() {
+				List<String> competenze = new ArrayList<String>();
+				competenze.add("Eclipse");
+				competenze.add("Maven");
+				competenze.add("Struts");
+				competenze.add("Soap UI");
+				competenze.add("Atom");
+				competenze.add("Spring Tool Suite");
+				return competenze;
+			}
+			
+			// elenco di tutte le competenze "base"
+			@ModelAttribute("altro")
+			public List<String> altro() {
+				List<String> competenze = new ArrayList<String>();
+				competenze.add("Android");
+				competenze.add("IOS");
+				competenze.add("GlassFish");
+				competenze.add("TomCat");
+				return competenze;
+			}
+	
+	// elenco di tutte le competenze "base"
 	@ModelAttribute("competenze")
 	public List<String> competenze() {
 		List<String> competenze = new ArrayList<String>();

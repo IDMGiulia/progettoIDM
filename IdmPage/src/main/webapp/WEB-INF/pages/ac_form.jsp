@@ -565,29 +565,82 @@ span {
 							</legend>
 						</div>
 						<!--COMPETENZE BASI-->
-							<div class="col-md-1"></div>
-							<div class="col-md-4">
-								<form:label path="comp">Competenze Principali: </form:label>
-							</div>
-							<div class="col-md-1"></div>
-							<div class="col-md-5">
-								<div class="checkboxes">
-									<form:checkboxes items="${competenze}" path="comp" />
+						<div class="checkboxes">
+							<div class="row">
+								<div class="col-md-1"></div>
+								<div class="col-md-2">
+									<form:label path="comp">Linguaggi: </form:label>
 								</div>
+								<div class="col-md-2"></div>
+								<div class="col-md-7">
+									<form:checkboxes style="vertical-align:right" items="${linguaggi}" path="comp" />
+								</div>
+								<div class="col-md-0"></div>
 							</div>
-							<div class="col-md-1"></div>
-
+							<br>
+							<br>
+							<div class="row">
+								<div class="col-md-1"></div>
+								<div class="col-md-2">
+									<form:label path="comp">Database: </form:label>
+								</div>
+								<div class="col-md-3"></div>
+								<div class="col-md-5">
+									<form:checkboxes items="${database}" path="comp" />
+								</div>
+								<div class="col-md-1"></div>
+							</div>
+							<br>
+							<br>
+							<div class="row">
+								<div class="col-md-1"></div>
+								<div class="col-md-2">
+									<form:label path="comp">Framework: </form:label>
+								</div>
+								<div class="col-md-3"></div>
+								<div class="col-md-5">
+									<form:checkboxes items="${framework}" path="comp" />
+								</div>
+								<div class="col-md-1"></div>
+							</div>
+							<br>
+							<br>
+							<div class="row">
+								<div class="col-md-1"></div>
+								<div class="col-md-2">
+									<form:label path="comp">Software: </form:label>
+								</div>
+								<div class="col-md-2"></div>
+								<div class="col-md-7">
+									<form:checkboxes items="${software}" path="comp" />
+								</div>
+								<div class="col-md-0"></div>
+							</div>
+							<br>
+								<br>
+							<div class="row">
+								<div class="col-md-1"></div>
+								<div class="col-md-2">
+									<form:label path="comp">Altro: </form:label>
+								</div>
+								<div class="col-md-3"></div>
+								<div class="col-md-5">
+									<form:checkboxes items="${altro}" path="comp" />
+								</div>
+								<div class="col-md-1"></div>
+							</div>
+							</div>
+						</div>
 						<br> <br>
 
 						<!-- ALTRE COMPETENZE -->
-							<div class="col-md-1"></div>
-							<div class="col-md-4">
-								<div class="x">
-									<span><form:label path="comp">Altre competenze (inserirle separate da virgola): </form:label></span>
-								</div>
+							<div class="col-md-0"></div>
+							<div class="col-md-4" >
+									<label class="form-label" >Altre competenze (inserirle separate da virgola): </label>
 							</div>
+							<div class="col-md-1"></div>
 							<div class="col-md-6">
-								<form:textarea path="competenze" style="width: 80%; height: 80px; border: none"
+								<form:textarea path="competenze" style="width: 100%; height: 90px; border: none"
 									maxlength="140" placeholder="es. Swift, Ruby, Assembly, ..." />
 							</div>
 							<div class="col-md-1"></div>
@@ -596,7 +649,6 @@ span {
 
 					<br>
 					<br>
-
 					<!-- BOTTONE CANDIDATI -->
 					<div>
 						<div style="text-align: center">
