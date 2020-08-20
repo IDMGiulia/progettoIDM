@@ -23,6 +23,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.support.SessionStatus;
 
+import antlr.StringUtils;
 import idm.beans.Amministrazione;
 import idm.beans.Candidato;
 import idm.beans.Recensione;
@@ -49,13 +50,8 @@ public class CanController {
 	@RequestMapping("/download/{id}")    
 	public String download (@PathVariable int id,Model m){ 
 		Candidato candidato = dao.getCanById(id);
-		String cv="";
-		try {
-		cv= candidato.getCv();
-		}catch (Exception e) {
-			return "cvErrore";
-		}
-		if(!cv.contains("."))
+		String cv= candidato.getCv();
+		if(cv == null)
 			return "cvErrore";
 		else {
 			m.addAttribute("cv",candidato.getCv());
