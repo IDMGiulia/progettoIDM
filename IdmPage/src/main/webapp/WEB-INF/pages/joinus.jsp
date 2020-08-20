@@ -411,7 +411,7 @@ h1 {
 		<section class="main-wrapper pagecustom-528">
 			<div class="container">
 				<p>
-					<img src="<%=request.getContextPath()%>/img/banner.jpg"
+					<img src="img/banner.jpg"
 						alt="banner2"/>
 				</p>
 				<div class="row">
