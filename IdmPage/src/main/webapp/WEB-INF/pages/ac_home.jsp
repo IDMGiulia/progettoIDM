@@ -10,10 +10,6 @@
 
 <title>Academy IDM | IDM - We simplify your work</title>
 
-<link rel="alternate" type="application/rss+xml" title="RSS2.0"
-	href="https://www.idmconsulting.it/feed/" />
-<link rel="pingback" href="https://www.idmconsulting.it/xmlrpc.php" />
-
 <!-- FILE STILI COMUNI -->
 <jsp:include page="stili/common-style.jsp"></jsp:include>
 
@@ -260,9 +256,6 @@
 		<jsp:include page="unique/footer.jsp"></jsp:include>
 
 	</div>
-
-<!-- FILE SCRIPT FINALI -->
-<jsp:include page="stili/script-final.jsp"></jsp:include>
 
 </body>
 

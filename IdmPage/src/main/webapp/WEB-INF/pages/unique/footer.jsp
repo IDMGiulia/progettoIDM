@@ -2,8 +2,7 @@
 	pageEncoding="ISO-8859-1"%>
 
 <head>
-<link rel="stylesheet"
-	href="css/font-awesome.min2.css">
+
 <style type="text/css">
 /********************footer*******************/
 #footer {
