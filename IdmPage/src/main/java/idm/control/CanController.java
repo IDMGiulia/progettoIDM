@@ -5,6 +5,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import javax.validation.Valid;
 
@@ -577,6 +578,15 @@ public class CanController {
 
 		return "redirect:/login";
 	}
+	
+	@RequestMapping(value="/selectCognome/{anz}/{token}")    
+	public String selectCognome(@PathVariable String anz,@PathVariable String token,@RequestParam("cognome") String cognome,Model m){ 
+		List<Candidato> list= new ArrayList<>();
+		list= dao.getCandidatos().stream().filter(x-> x.getCognome().contains(cognome)).collect(Collectors.toList());
+		m.addAttribute("list",list); 
+		return "amministrazione";    
+	}
+
 
 	@RequestMapping(value="/select/{anz}/{token}")    
 	public String select(@PathVariable String anz,@PathVariable String token,@RequestParam("sede") String sede, @RequestParam("competenza") List<String> compe,
