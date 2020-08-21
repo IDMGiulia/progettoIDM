@@ -90,14 +90,14 @@
 								con noi</a></li>
 						<li id="menu-item-539"
 							class="menu-item menu-item-type-post_type menu-item-object-page menu-item-539"><a
-							href="https://www.idmconsulting.it/chi-siamo/contatti/">Contatti</a></li>
+							href="contatti">Contatti</a></li>
 						<li id="menu-item-1050"
 							class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1050"><a
-							href="https://www.idmconsulting.it/cookie-policy/">Cookie
+							href="cookie-policy">Cookie
 								Policy</a></li>
 						<li id="menu-item-2502"
 							class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2502"><a
-							href="https://www.idmconsulting.it/policy/">Policy</a></li>
+							href="policy">Policy</a></li>
 					</ul>
 				</div>
 				<div class="col-md-2">

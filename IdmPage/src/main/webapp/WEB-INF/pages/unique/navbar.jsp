@@ -124,7 +124,7 @@ nav ul.navbar-nav ul.dropdown-menu>li>a {
 									class="page-scroll" data-target="#partners">Partners</a></li>
 								<li id="menu-item-1445"
 									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1445"><a
-									href="https://www.idmconsulting.it/chi-siamo/contatti/"
+									href="contatti"
 									class="page-scroll" data-target="#contatti">Contatti</a></li>
 							</ul></li>
 						<li id="menu-item-1163"
