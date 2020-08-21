@@ -111,16 +111,16 @@ nav ul.navbar-nav ul.dropdown-menu>li>a {
 							<ul class="dropdown-menu">
 								<li id="menu-item-1191"
 									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1191"><a
-									href="https://www.idmconsulting.it/chi-siamo/mission/"
+									href="mission"
 									class="page-scroll" data-target="#mission">Mission</a></li>
 								<li id="menu-item-1190"
 									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1190"><a
-									href="https://www.idmconsulting.it/chi-siamo/case-studies/"
+									href="case-studies"
 									class="page-scroll" data-target="#case-studies">Case
 										Studies</a></li>
 								<li id="menu-item-1189"
 									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1189"><a
-									href="https://www.idmconsulting.it/chi-siamo/partners/"
+									href="partners"
 									class="page-scroll" data-target="#partners">Partners</a></li>
 								<li id="menu-item-1445"
 									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1445"><a
@@ -129,110 +129,110 @@ nav ul.navbar-nav ul.dropdown-menu>li>a {
 							</ul></li>
 						<li id="menu-item-1163"
 							class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1163 dropdown"><a
-							href="https://www.idmconsulting.it/soluzioni/"
+							href="soluzioni"
 							class="dropdown-toggle" data-toggle="dropdown"
 							data-target="#soluzioni">Soluzioni<i class="fa fa-caret-down"></i></a>
 							<ul class="dropdown-menu">
 								<li id="menu-item-1169"
 									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1169"><a
-									href="https://www.idmconsulting.it/soluzioni/enterprise-content-management/"
+									href="enterprise-content-management"
 									class="page-scroll"
 									data-target="#enterprise-content-management">Enterprise
 										Content Management</a></li>
 								<li id="menu-item-1165"
 									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1165"><a
-									href="https://www.idmconsulting.it/soluzioni/business-process-management/"
+									href="process-management"
 									class="page-scroll" data-target="#business-process-management">Business
 										Process Management</a></li>
 								<li id="menu-item-1168"
 									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1168"><a
-									href="https://www.idmconsulting.it/soluzioni/collaboration/"
+									href="collaboration"
 									class="page-scroll" data-target="#collaboration">Collaboration</a></li>
 								<li id="menu-item-1167"
 									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1167"><a
-									href="https://www.idmconsulting.it/soluzioni/corporate-portal/"
+									href="corporate-portal"
 									class="page-scroll" data-target="#corporate-portal">Corporate
 										Portal</a></li>
 								<li id="menu-item-1859"
 									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1859"><a
-									href="https://www.idmconsulting.it/soluzioni/system-management/"
+									href="system-management"
 									class="page-scroll" data-target="#system-management">System
 										Management</a></li>
 								<li id="menu-item-1166"
 									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1166"><a
-									href="https://www.idmconsulting.it/soluzioni/business-intelligence/"
+									href="business"
 									class="page-scroll" data-target="#business-intelligence">Business
 										Intelligence</a></li>
 							</ul></li>
 						<li id="menu-item-1170"
 							class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1170 dropdown"><a
-							href="https://www.idmconsulting.it/software/"
+							href="software"
 							class="dropdown-toggle" data-toggle="dropdown"
 							data-target="#software">Software<i class="fa fa-caret-down"></i></a>
 							<ul class="dropdown-menu">
 								<li id="menu-item-1599"
 									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1599"><a
-									href="https://www.idmconsulting.it/software/winder/"
+									href="winder"
 									class="page-scroll" data-target="#winder">WINDER</a></li>
 								<li id="menu-item-1606"
 									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1606"><a
-									href="https://www.idmconsulting.it/software/ibm/"
+									href="ibm"
 									class="page-scroll" data-target="#ibm">IBM</a></li>
 								<li id="menu-item-1601"
 									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1601"><a
-									href="https://www.idmconsulting.it/software/kofax/"
+									href="kofax"
 									class="page-scroll" data-target="#kofax">KOFAX</a></li>
 								<li id="menu-item-1605"
 									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1605"><a
-									href="https://www.idmconsulting.it/software/cvision/"
+									href="cvision"
 									class="page-scroll" data-target="#cvision">CVISION</a></li>
 								<li id="menu-item-2469"
 									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2469"><a
-									href="https://www.idmconsulting.it/software/panda/"
+									href="panda"
 									class="page-scroll" data-target="#panda">PANDA</a></li>
 								<li id="menu-item-1600"
 									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1600"><a
-									href="https://www.idmconsulting.it/software/infocert/"
+									href="infocert"
 									class="page-scroll" data-target="#infocert">INFOCERT</a></li>
 								<li id="menu-item-1602"
 									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1602"><a
-									href="https://www.idmconsulting.it/software/vmware/"
+									href="vmware"
 									class="page-scroll" data-target="#vmware">VMWARE</a></li>
 							</ul></li>
 						<li id="menu-item-2160"
 							class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2160 dropdown"><a
-							href="https://www.idmconsulting.it/servizi/"
+							href="progetti"
 							class="dropdown-toggle" data-toggle="dropdown"
 							data-target="#servizi">Servizi<i class="fa fa-caret-down"></i></a>
 							<ul class="dropdown-menu">
 								<li id="menu-item-1401"
 									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1401"><a
-									href="https://www.idmconsulting.it/progetti/"
+									href="progetti"
 									class="page-scroll" data-target="#progetti">Progetti</a></li>
 								<li id="menu-item-1398"
 									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1398"><a
-									href="https://www.idmconsulting.it/consulenza/"
+									href="consulenza"
 									class="page-scroll" data-target="#consulenza">Consulenza</a></li>
 								<li id="menu-item-1399"
 									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1399"><a
-									href="https://www.idmconsulting.it/formazione/"
+									href="formazione"
 									class="page-scroll" data-target="#formazione">Formazione</a></li>
 								<li id="menu-item-1399"
 					                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1399"><a
-					                  href="presentazione"
+					                  href="academy"
 					                  class="page-scroll">Academy IDM</a></li>
 								<li id="menu-item-1400"
 									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1400"><a
-									href="https://www.idmconsulting.it/assistenza/"
+									href="assistenza"
 									class="page-scroll" data-target="#assistenza">Assistenza</a></li>
 								<li id="menu-item-1173"
 									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1173"><a
-									href="https://www.idmconsulting.it/supporto/"
+									href="supporto"
 									class="page-scroll" data-target="#supporto">Supporto</a></li>
 							</ul></li>
 						<li id="menu-item-1317"
 							class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1317"><a
-							href="https://www.idmconsulting.it/news/" class="page-scroll"
+							href="news" class="page-scroll"
 							data-target="#news">News</a></li>
 						<li id="menu-item-2161"
 							class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2161"><a

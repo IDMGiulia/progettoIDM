@@ -9,13 +9,10 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-<title>Login Amministrazione | IDM - We simplify your work</title>
+<title>Cookie Policy | IDM - We simplify your work</title>
 
 <!-- FILE STILI COMUNI -->
-<jsp:include page="stili/common-style.jsp"></jsp:include>
-
-<!-- FILE PULSANTI -->
-<jsp:include page="stili/pulsanti.jsp"></jsp:include>
+<jsp:include page="../stili/common-style.jsp"></jsp:include>
 
 </head>
 
@@ -29,12 +26,13 @@
 	<div class="body-inner ">
 
 		<!-- Header Container -->
-		<jsp:include page="unique/navbar.jsp"></jsp:include>
+		<jsp:include page="../navbar/navbar.jsp"></jsp:include>
 
 		<!-- Sezione Centrale della Pagina -->
 		<section class="main-wrapper pagecustom-1339">
 			<div class="container" style="margin-top: 30px">
 
+			<br><br><br><br>
 
 				<div class="row">
 					<div class="col-md-12 main-content">
@@ -47,6 +45,7 @@
 						<hr />
 						<p style="text-align: justify;">
 						</p>
+						<br>
 						<div class="s3" id="iaf2p2zi"
 							data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.1.1.$SITE_PAGES.$cb11.1.$iaf2p2zi">
 							<p class="font_8">I cookie sono stringhe di testo di piccole
@@ -173,7 +172,7 @@
 		</section>
 
 		<!-- Sezione Footer della Pagina -->
-		<jsp:include page="unique/footer.jsp"></jsp:include>
+		<jsp:include page="../footer/footer.jsp"></jsp:include>
 		
 	</div>
 

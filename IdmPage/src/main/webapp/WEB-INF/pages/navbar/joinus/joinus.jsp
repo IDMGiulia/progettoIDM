@@ -11,7 +11,7 @@
 <title>Lavora con noi | IDM - We simplify your work</title>
 
 <!-- FILE STILI COMUNI -->
-<jsp:include page="stili/common-style.jsp"></jsp:include>
+<jsp:include page="../../stili/common-style.jsp"></jsp:include>
 
 <script type='text/javascript'
 		src='js/vc-accordion.min.js'></script>
@@ -56,7 +56,7 @@
 	<div class="body-inner ">
 
 		<!-- Header Container -->
-		<jsp:include page="navbar/navbar.jsp"></jsp:include>
+		<jsp:include page="../../navbar/navbar.jsp"></jsp:include>
 
 		<div class="pageHead"></div>
 		<section class="main-wrapper pagecustom-528">
@@ -400,7 +400,7 @@
 		</section>
 		
 		<!-- Sezione Footer della Pagina -->
-		<jsp:include page="footer/footer.jsp"></jsp:include>
+		<jsp:include page="../../footer/footer.jsp"></jsp:include>
 	</div>
 	
 	</body>

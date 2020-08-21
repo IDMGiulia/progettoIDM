@@ -11,10 +11,10 @@
 <title>Candidatura Academy | IDM - We simplify your work</title>
 
 <!-- FILE STILI COMUNI -->
-<jsp:include page="stili/common-style.jsp"></jsp:include>
+<jsp:include page="../../stili/common-style.jsp"></jsp:include>
 
 <!-- FILE PULSANTI -->
-<jsp:include page="stili/pulsanti.jsp"></jsp:include>
+<jsp:include page="../../stili/pulsanti.jsp"></jsp:include>
 
 <!-- ALLINEAMENTO VERTICALE PER LE COMPETENZE AGGIUNTIVE -->
 <style>
@@ -31,10 +31,10 @@ span {
 </style>
 
 <!-- FILE CHECKBOXES -->
-<jsp:include page="stili/checkbox.jsp"></jsp:include>
+<jsp:include page="../../stili/checkbox.jsp"></jsp:include>
 
 <!-- FILE RADIOBUTTON -->
-<jsp:include page="stili/radiobut.jsp"></jsp:include>
+<jsp:include page="../../stili/radiobut.jsp"></jsp:include>
 
 </head>
 
@@ -47,7 +47,7 @@ span {
 	<div class="body-inner ">
 
 		<!-- Header Container -->
-		<jsp:include page="navbar/navbar.jsp"></jsp:include>
+		<jsp:include page="../../navbar/navbar.jsp"></jsp:include>
 
 		<!-- Sezione Centrale della Pagina -->
 		<section class="main-wrapper pagecustom-1339">
@@ -265,7 +265,7 @@ span {
 		</section>
 
 		<!-- Sezione Footer della Pagina -->
-		<jsp:include page="footer/footer.jsp"></jsp:include>
+		<jsp:include page="../../footer/footer.jsp"></jsp:include>
 
 	</div>
 	

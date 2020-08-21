@@ -11,16 +11,16 @@
 <title>Academy IDM | IDM - We simplify your work</title>
 
 <!-- FILE STILI COMUNI -->
-<jsp:include page="stili/common-style.jsp"></jsp:include>
+<jsp:include page="../../stili/common-style.jsp"></jsp:include>
 
 <!-- FILE PULSANTI -->
-<jsp:include page="stili/pulsanti.jsp"></jsp:include>
+<jsp:include page="../../stili/pulsanti.jsp"></jsp:include>
 
 <!-- FILE CAROSELLO -->
-<jsp:include page="stili/carosello.jsp"></jsp:include>
+<jsp:include page="../../stili/carosello.jsp"></jsp:include>
 
 <!-- FILE SLIDESHOW -->
-<jsp:include page="stili/slideshow.jsp"></jsp:include>
+<jsp:include page="../../stili/slideshow.jsp"></jsp:include>
 
 </head>
 
@@ -33,7 +33,7 @@
 	<div class="body-inner ">
 
 		<!-- Header Container -->
-		<jsp:include page="navbar/navbar.jsp"></jsp:include>
+		<jsp:include page="../navbar.jsp"></jsp:include>
 
 		<!-- Sezione Centrale della Pagina -->
 		<section class="main-wrapper pagecustom-1339">
@@ -194,22 +194,6 @@
 							style="display: block; padding: 16px" onclick="plusSlides(1)">&#8250;</a>
 
 						<script>
-						function start(int i){
-							if(i=3 || i=6 || i=9){
-							<div class="mySlides">
-								<div class="row">
-							}
-						}
-						
-						function stop(int i){
-							if(i==2 || i== 5 || i ==7){
-								</div>
-							</div>
-							}
-						}
-						</script>
-
-						<script>
 					var slideIndex = 1;
 					showSlides(slideIndex);
 					
@@ -253,7 +237,7 @@
 		</section>
 
 		<!-- Sezione Footer della Pagina -->
-		<jsp:include page="footer/footer.jsp"></jsp:include>
+		<jsp:include page="../../footer/footer.jsp"></jsp:include>
 
 	</div>
 

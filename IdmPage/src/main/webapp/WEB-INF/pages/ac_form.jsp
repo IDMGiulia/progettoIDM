@@ -47,7 +47,7 @@ span {
 	<div class="body-inner ">
 
 		<!-- Header Container -->
-		<jsp:include page="unique/navbar.jsp"></jsp:include>
+		<jsp:include page="navbar/navbar.jsp"></jsp:include>
 
 		<!-- Sezione Centrale della Pagina -->
 		<section class="main-wrapper pagecustom-1339">
@@ -306,7 +306,7 @@ span {
 		</section>
 
 		<!-- Sezione Footer della Pagina -->
-		<jsp:include page="unique/footer.jsp"></jsp:include>
+		<jsp:include page="footer/footer.jsp"></jsp:include>
 
 	</div>
 

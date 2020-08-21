@@ -11,10 +11,10 @@
 <title>Conferma Candidatura | IDM - We simplify your work</title>
 
 <!-- FILE STILI COMUNI -->
-<jsp:include page="stili/common-style.jsp"></jsp:include>
+<jsp:include page="../../../stili/common-style.jsp"></jsp:include>
 
 <!-- FILE PULSANTI -->
-<jsp:include page="stili/pulsanti.jsp"></jsp:include>
+<jsp:include page="../../../stili/pulsanti.jsp"></jsp:include>
 
 </head>
 
@@ -27,7 +27,7 @@
 	<div class="body-inner ">
 
 		<!-- Header Container -->
-		<jsp:include page="navbar/navbar.jsp"></jsp:include>
+		<jsp:include page="../../../navbar/navbar.jsp"></jsp:include>
 
 		<!-- Sezione Centrale della Pagina -->
 		<section class="main-wrapper pagecustom-1339">
@@ -47,13 +47,13 @@
 								<div class="col-sm-6" style="text-align: left">
 									<h4>
 										<b>Nome: </b>
-									</h4>${sen.nome}
+									</h4>${can.nome}
 									<br>
 								</div>
 								<div class="col-sm-6" style="text-align: left">
 									<h4>
 										<b>Cognome: </b>
-									</h4>${sen.cognome}
+									</h4>${can.cognome}
 									<br>
 								</div>
 							</div>
@@ -61,13 +61,13 @@
 								<div class="col-sm-6" style="text-align: left">
 									<h4>
 										<b>Email: </b>
-									</h4>${sen.email}
+									</h4>${can.email}
 									<br>
 								</div>
 								<div class="col-sm-6" style="text-align: left">
 									<h4>
 										<b>Telefono: </b>
-									</h4>${sen.telefono}
+									</h4>${can.telefono}
 									<br>
 								</div>
 							</div>
@@ -76,22 +76,13 @@
 								<div class="col-sm-6" style="text-align: left">
 									<h4>
 										<b>Titolo di studio: </b>
-									</h4>${sen.livello}
+									</h4>${can.livello}
 									<br>
 								</div>
 								<div class="col-sm-6" style="text-align: left">
 									<h4>
 										<b>Percorso: </b>
-									</h4>${sen.percorso}
-									<br>
-								</div>
-							</div>
-							<br>
-							<div class="row">
-								<div class="col-sm-12" style="text-align: left">
-									<h4>
-										<b>Posizione per la quale ci si intende candidare: </b>
-									</h4>${sen.posizioneLav}
+									</h4>${can.percorso}
 									<br>
 								</div>
 							</div>
@@ -99,7 +90,7 @@
 							<div style="text-align: left">
 								<h4>
 									<b>Competenze Inserite: </b>
-								</h4>${sen.competenze}
+								</h4>${can.competenze}
 							</div>
 							<br>
 						</div>
@@ -112,7 +103,7 @@
 								<div>
 								<br>
 									<img
-										src="img/${sen.luogoCandidatura}.jpg"
+										src="img/${can.luogoCandidatura}.jpg"
 										style="border-radius: 8px;" alt="">
 								</div>
 							</div>
@@ -129,7 +120,7 @@
 						<div class="row">
 							<div class="col-sm-5"></div>
 							<div class="col-sm-3">
-								<input type="text" hidden="hidden" name="nome" value="${sen.id}_${sen.cognome}_${sen.nome}"> 
+								<input type="text" hidden="hidden" name="nome" value="${can.id}_${can.cognome}_${can.nome}"> 
 								<input type="file" name="fileName" required="required" accept=".odf,.odt,.txt,.pdf,.doc,.docx">
 							</div>
 							<div class="col-sm-4"></div>
@@ -141,10 +132,10 @@
 		</section>
 
 		<!-- Sezione Footer della Pagina -->
-		<jsp:include page="footer/footer.jsp"></jsp:include>
+		<jsp:include page="../../../footer/footer.jsp"></jsp:include>
 		
 	</div>
-	
+
 </body>
 
 </html>

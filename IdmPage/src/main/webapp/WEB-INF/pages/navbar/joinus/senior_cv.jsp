@@ -11,10 +11,10 @@
 <title>Conferma Candidatura | IDM - We simplify your work</title>
 
 <!-- FILE STILI COMUNI -->
-<jsp:include page="stili/common-style.jsp"></jsp:include>
+<jsp:include page="../../stili/common-style.jsp"></jsp:include>
 
 <!-- FILE PULSANTI -->
-<jsp:include page="stili/pulsanti.jsp"></jsp:include>
+<jsp:include page="../../stili/pulsanti.jsp"></jsp:include>
 
 </head>
 
@@ -27,7 +27,7 @@
 	<div class="body-inner ">
 
 		<!-- Header Container -->
-		<jsp:include page="navbar/navbar.jsp"></jsp:include>
+		<jsp:include page="../../navbar/navbar.jsp"></jsp:include>
 
 		<!-- Sezione Centrale della Pagina -->
 		<section class="main-wrapper pagecustom-1339">
@@ -141,7 +141,7 @@
 		</section>
 
 		<!-- Sezione Footer della Pagina -->
-		<jsp:include page="footer/footer.jsp"></jsp:include>
+		<jsp:include page="../../footer/footer.jsp"></jsp:include>
 		
 	</div>
 	
