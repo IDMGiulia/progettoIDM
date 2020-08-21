@@ -1,6 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 
+<link rel="alternate" type="application/rss+xml" title="RSS2.0"
+	href="others/feed.xml" />
+<link rel="pingback" href="https://www.idmconsulting.it/xmlrpc.php" />
+
 <link rel="shortcut icon"
 	href="img/favicon.png" />
 
@@ -29,7 +33,7 @@
 	href='css/bootstrap-front.css'
 	type='text/css' media='all' />
 <link rel='stylesheet' id='font-awesome-css'
-	href='css/font-awesome.min2.css'
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
 	type='text/css' media='all' />
 <link rel='stylesheet' id='animate-css'
 	href='css/animate.css'
