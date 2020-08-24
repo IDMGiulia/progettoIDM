@@ -36,11 +36,38 @@ public class IdmController {
 		public String partners () {
 			return "navbar/chi-siamo/partners";
 		}
-	
-		@RequestMapping("/case-studies")    
-		public String caseStudies () {
-			return "navbar/chi-siamo/case-studies";
-		}
+		
+		// CASE STUDIES
+		
+			@RequestMapping("/case-studies")    
+			public String caseStudies () {
+				return "navbar/chi-siamo/case-studies/case-studies";
+			}
+		
+			@RequestMapping("/conqord-oil")    
+			public String conqordOil () {
+				return "navbar/chi-siamo/case-studies/conqord-oil";
+			}
+			
+			@RequestMapping("/gulliver")    
+			public String gulliver () {
+				return "navbar/chi-siamo/case-studies/gulliver";
+			}
+			
+			@RequestMapping("/mediaset")    
+			public String mediaset () {
+				return "navbar/chi-siamo/case-studies/mediaset";
+			}
+			
+			@RequestMapping("/ipas")    
+			public String ipas () {
+				return "navbar/chi-siamo/case-studies/ipas";
+			}
+			
+			@RequestMapping("/unifarma")    
+			public String unifarma () {
+				return "navbar/chi-siamo/case-studies/unifarma";
+			}
 		
 	// SERVIZI
 	
