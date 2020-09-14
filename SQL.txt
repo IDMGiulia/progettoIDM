@@ -1,31 +1,59 @@
-// Sprint 1
+// script creazie tabelle
 
-CREATE TABLE `springmvc`.`candidati` (
+CREATE TABLE `springmvc`.`cand`  (
   `id` int NOT NULL,
   `nome` varchar(255) DEFAULT NULL,
-  `cognome` varchar(255) DEFAULT NULL,
-  `email` varchar(255) DEFAULT NULL,
+  `cognome` varchar(50) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
   `telefono` varchar(255) DEFAULT NULL,
-  `competenze` varchar(4000) DEFAULT NULL,
   `luogoCandidatura` varchar(255) DEFAULT NULL,
-  `stato` varchar(255) DEFAULT 'NUOVO',
-  `note` varchar(255) DEFAULT NULL,
+  `provincia` varchar(255) DEFAULT NULL,
+  `competenze` varchar(1000) DEFAULT NULL,
+  `stato` varchar(255) DEFAULT NULL,
+  `note` varchar(1000) DEFAULT NULL,
   `livello` varchar(255) DEFAULT NULL,
-  `paeseDiploma` varchar(255) DEFAULT NULL,
   `percorso` varchar(255) DEFAULT NULL,
+  `anzianit` varchar(255) DEFAULT NULL,
+  `posizioneLav` varchar(255) DEFAULT NULL,
+  `cv` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) 
-
+)  
 
 CREATE TABLE `springmvc`.`competenze` (
   `competenza` VARCHAR(45) NOT NULL,
   `tipo` VARCHAR(45) NULL,
   PRIMARY KEY (`competenza`));
-  
-  
+    
 CREATE TABLE `springmvc`.`can_comp` (
   `can_id` INT NOT NULL,
   `competenze` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`can_id`, `competenze`));
+
+CREATE TABLE `springmvc`.`recensione` (
+  `recId` int NOT NULL,
+  `nome` varchar(255) DEFAULT NULL,
+  `cognome` varchar(255) DEFAULT NULL,
+  `recensione` varchar(255) DEFAULT NULL,
+  `approvata` bit(1) DEFAULT NULL,
+  PRIMARY KEY (`recId`)
+)
+
+CREATE TABLE `springmvc`.`amministrazione` (
+  `username` varchar(50) NOT NULL,
+  `password` varchar(45) NOT NULL,
+  `permessi` int DEFAULT NULL,
+  `token` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`username`)
+) 
+
+CREATE TABLE `springmvc`.`colloqui` (
+  `id` int NOT NULL,
+  `candidato` int DEFAULT NULL,
+  `data` varchar(255) DEFAULT NULL,
+  `tipo` varchar(255) DEFAULT NULL,
+  `note` varchar(255) DEFAULT NULL,
+  `valutazione` float DEFAULT NULL,
+  PRIMARY KEY (`id`)
+)
   
   
